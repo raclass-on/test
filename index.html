@@ -362,13 +362,76 @@ label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.92rem
 }
 #toast.show { transform: translateX(-50%) translateY(0); }
 
-/* Level test box */
-#levelTestBox {
-  background: #f0f4ff;
-  border: 1.5px solid #c7d9ff;
-  border-radius: var(--radius);
+/* Placement test */
+.placement-prompt {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 14px;
   padding: 18px 16px;
-  margin: 12px 0;
+  margin-bottom: 14px;
+  transition: border-color 0.2s;
+}
+.placement-prompt.has-text { border-color: var(--primary); }
+.placement-prompt.optional-prompt { border-style: dashed; }
+.placement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.placement-level-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #f3f4f6;
+  color: var(--muted);
+}
+.optional-tag {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  background: #f9fafb;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.placement-instruction {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  line-height: 1.45;
+}
+.placement-tip {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.placement-result-box {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border: 2px solid #6ee7b7;
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.placement-result-level {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+.placement-result-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 6px 0 10px;
+}
+.placement-result-reason {
+  font-size: 0.93rem;
+  color: #065f46;
+  line-height: 1.55;
 }
 
 /* No errors banner */
@@ -473,25 +536,73 @@ label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.92rem
     <h2>📊 내 단계를 선택해요</h2>
     <p style="color:var(--muted);font-size:0.93rem;margin-bottom:14px">지금 내 영어 실력에 맞는 단계를 골라보세요! 언제든지 바꿀 수 있어요.</p>
 
-    <button class="btn btn-outline" style="margin-bottom:12px" onclick="toggleLevelTest()">
-      🤔 내 단계를 모르겠어요 — AI가 알아봐 줄게요!
+    <button class="btn btn-outline" style="margin-bottom:12px" onclick="showScreen('placement')">
+      🔍 내 단계를 모르겠어요 — 배치 테스트 받기
     </button>
-
-    <div id="levelTestBox" style="display:none">
-      <h3 style="margin-bottom:6px">간단한 영어 문장을 써보세요</h3>
-      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:10px">
-        예: "오늘 학교에서 무엇을 했나요?" 영어로 자유롭게 써보세요.<br>
-        짧아도 괜찮아요! AI가 알맞은 단계를 찾아줄게요.
-      </p>
-      <textarea id="levelTestInput" class="en-input" placeholder="Write one or two sentences in English..." rows="3" style="min-height:90px"></textarea>
-      <button class="btn btn-primary" style="margin-top:10px" onclick="autoDetectLevel()">📊 내 단계 자동으로 찾기</button>
-    </div>
 
     <div class="level-grid" id="levelGrid"></div>
   </div>
 
   <button class="btn btn-success" id="confirmLevelBtn" onclick="confirmLevel()" style="display:none;margin-top:6px">
     이 단계로 시작하기! →
+  </button>
+</div>
+
+<!-- ════════════════════════════════════════
+     SCREEN 2-B: 배치 테스트
+════════════════════════════════════════ -->
+<div id="scr-placement" class="screen">
+  <div class="topbar">
+    <div class="topbar-title">🔍 단계 찾기 테스트</div>
+    <button class="btn btn-ghost btn-sm" onclick="showScreen('levelSelect')">← 돌아가기</button>
+  </div>
+
+  <div class="card">
+    <h2>📝 내 실력을 확인해요</h2>
+    <p style="color:var(--muted);font-size:0.92rem;margin-bottom:6px">
+      아래 문제들을 차례로 읽고, <strong>쓸 수 있는 것만</strong> 영어로 써보세요.<br>
+      어려운 문제는 건너뛰어도 괜찮아요! 쓴 내용을 바탕으로 AI가 딱 맞는 단계를 찾아줄게요.
+    </p>
+    <div style="font-size:0.83rem;color:var(--primary);font-weight:600">
+      ✅ 쓴 문제가 많을수록 더 정확하게 측정돼요
+    </div>
+  </div>
+
+  <div id="placementPromptsArea"></div>
+
+  <button class="btn btn-primary" onclick="submitPlacement()">
+    📊 내 단계 분석하기 →
+  </button>
+  <button class="btn btn-ghost" style="margin-top:10px" onclick="showScreen('levelSelect')">
+    직접 단계 고르기
+  </button>
+</div>
+
+<!-- ════════════════════════════════════════
+     SCREEN 2-C: 배치 테스트 결과
+════════════════════════════════════════ -->
+<div id="scr-placementResult" class="screen">
+  <div class="topbar">
+    <div class="topbar-title">🔍 단계 분석 결과</div>
+  </div>
+
+  <div class="placement-result-box">
+    <div style="font-size:1rem;color:#065f46;font-weight:700;margin-bottom:8px">추천 단계</div>
+    <div class="placement-result-level" id="placementResultLevel">—</div>
+    <div class="placement-result-name" id="placementResultName"></div>
+    <div class="placement-result-reason" id="placementResultReason"></div>
+  </div>
+
+  <div class="card" id="placementDetailCard">
+    <h3>📋 문제별 피드백</h3>
+    <div id="placementDetail"></div>
+  </div>
+
+  <button class="btn btn-success" onclick="applyPlacementLevel()">
+    이 단계로 시작하기! →
+  </button>
+  <button class="btn btn-outline" style="margin-top:10px" onclick="showScreen('levelSelect')">
+    직접 단계 고르기
   </button>
 </div>
 
@@ -699,6 +810,7 @@ function init() {
     document.getElementById('apiKeyInput').value = maskKey(S.apiKey);
   }
   buildLevelGrid();
+  buildPlacementPrompts();
   showScreen('settings');
 }
 
@@ -798,44 +910,203 @@ function goToLevelSelect() {
 }
 
 // ── LEVEL SELECT ──────────────────────────
-function toggleLevelTest() {
-  const box = document.getElementById('levelTestBox');
-  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+
+// ── PLACEMENT TEST ────────────────────────
+const PLACEMENT_PROMPTS = [
+  {
+    id: 'p1',
+    band: 'A1',
+    bandClass: 'badge-A1',
+    range: '1~3단계',
+    instruction: '자신을 소개하는 짧은 영어 문장을 써보세요.',
+    tip: '이름, 나이, 좋아하는 것 중 하나라도 영어로 써보세요.',
+    placeholder: 'My name is... / I like... / I am...',
+    optional: false,
+    minWords: 0,
+  },
+  {
+    id: 'p2',
+    band: 'A2',
+    bandClass: 'badge-A2',
+    range: '4~7단계',
+    instruction: '어제 한 일을 영어로 2~3문장으로 써보세요.',
+    tip: '어디 갔는지, 무엇을 먹었는지, 무엇을 했는지 등',
+    placeholder: 'Yesterday, I...',
+    optional: false,
+    minWords: 0,
+  },
+  {
+    id: 'p3',
+    band: 'B1',
+    bandClass: 'badge-B1',
+    range: '8~11단계',
+    instruction: '좋아하는 계절을 고르고, 그 이유를 4~5문장으로 써보세요.',
+    tip: '왜 좋은지, 그 계절에 보통 무엇을 하는지 써보세요.',
+    placeholder: 'My favorite season is... because...',
+    optional: true,
+    minWords: 0,
+  },
+  {
+    id: 'p4',
+    band: 'B2',
+    bandClass: 'badge-B2',
+    range: '12~15단계',
+    instruction: '도시 생활과 시골 생활을 비교하고, 어느 쪽을 선호하는지 이유와 함께 한 단락으로 써보세요.',
+    tip: '장단점 비교, 본인의 의견과 근거를 포함해보세요.',
+    placeholder: 'Living in a city and living in the countryside both have advantages...',
+    optional: true,
+    minWords: 0,
+  },
+  {
+    id: 'p5',
+    band: 'C1/C2',
+    bandClass: 'badge-C1',
+    range: '16~20단계',
+    instruction: '기술 발전이 사람들의 의사소통 방식에 어떤 영향을 미쳤는지 분석하는 단락을 써보세요.',
+    tip: '긍정적·부정적 영향, 구체적 예시, 자신의 견해를 포함하면 좋아요.',
+    placeholder: 'The rapid advancement of technology has fundamentally transformed...',
+    optional: true,
+    minWords: 0,
+  },
+];
+
+let placementLevel = null;
+
+function buildPlacementPrompts() {
+  const area = document.getElementById('placementPromptsArea');
+  area.innerHTML = '';
+  PLACEMENT_PROMPTS.forEach((p, idx) => {
+    const div = document.createElement('div');
+    div.className = 'placement-prompt' + (p.optional ? ' optional-prompt' : '');
+    div.id = 'pp_' + p.id;
+    div.innerHTML =
+      '<div class="placement-header">' +
+        '<span class="placement-level-label badge ' + p.bandClass + '">' + p.band + ' · ' + p.range + '</span>' +
+        (p.optional ? '<span class="optional-tag">선택 (어려우면 건너뛰어도 OK)</span>' : '<span class="optional-tag" style="color:var(--primary)">✏️ 도전해보세요</span>') +
+      '</div>' +
+      '<div class="placement-instruction">' + (idx + 1) + '. ' + esc(p.instruction) + '</div>' +
+      '<div class="placement-tip">💡 ' + esc(p.tip) + '</div>' +
+      '<textarea class="en-input" id="pt_' + p.id + '" placeholder="' + esc(p.placeholder) + '" rows="3" style="min-height:80px"></textarea>';
+    area.appendChild(div);
+
+    // Border highlight when typing
+    const ta = div.querySelector('textarea');
+    ta.addEventListener('input', () => {
+      div.classList.toggle('has-text', ta.value.trim().length > 0);
+    });
+  });
 }
 
-async function autoDetectLevel() {
-  const txt = document.getElementById('levelTestInput').value.trim();
-  if (!txt) { showToast('영어 문장을 먼저 써주세요!'); return; }
+async function submitPlacement() {
+  // Gather answers
+  const answers = PLACEMENT_PROMPTS.map(p => ({
+    range: p.range,
+    band: p.band,
+    instruction: p.instruction,
+    text: (document.getElementById('pt_' + p.id).value || '').trim(),
+  }));
 
-  showLoading('단계를 분석하고 있어요...');
+  const written = answers.filter(a => a.text.length > 0);
+  if (written.length === 0) {
+    showToast('적어도 하나의 문제에 답을 써주세요! ✏️');
+    return;
+  }
+
+  showLoading('AI 선생님이 꼼꼼히 분석하고 있어요...');
   try {
     const schema = {
       type: 'OBJECT',
       properties: {
         recommended_level: { type: 'INTEGER' },
-        reason_ko: { type: 'STRING' }
+        level_name_ko: { type: 'STRING' },
+        reason_ko: { type: 'STRING' },
+        per_prompt: {
+          type: 'ARRAY',
+          items: {
+            type: 'OBJECT',
+            properties: {
+              range:      { type: 'STRING' },
+              skipped:    { type: 'BOOLEAN' },
+              feedback_ko:{ type: 'STRING' },
+              estimated_band: { type: 'STRING' }
+            },
+            required: ['range','skipped','feedback_ko','estimated_band']
+          }
+        }
       },
-      required: ['recommended_level', 'reason_ko']
+      required: ['recommended_level','level_name_ko','reason_ko','per_prompt']
     };
+
+    const promptsText = answers.map((a, i) =>
+      '문제 ' + (i+1) + ' [' + a.band + ' / ' + a.range + ']: ' + a.instruction + '\n' +
+      '학생 답: ' + (a.text ? '"' + a.text + '"' : '(건너뜀)')
+    ).join('\n\n');
+
     const result = await callGemini(
-      '너는 한국 학생을 위한 영어 글쓰기 튜터다.',
-      '학생이 쓴 영어: "' + txt + '"\n\n' +
-      '이 학생의 영어 실력에 맞는 단계(1~20)를 추천해줘. ' +
-      'A1=1~3단계, A2=4~7단계, B1=8~11단계, B2=12~15단계, C1=16~18단계, C2=19~20단계. ' +
-      'reason_ko는 30자 이내로 짧게.',
+      SYSTEM_PROMPT,
+      '다음은 한국 학생이 단계 배치 테스트에서 쓴 답변이야. 각 문제의 답변 수준을 분석해서 1~20단계 중 가장 적합한 단계를 추천해줘.\n\n' +
+      '단계 기준: A1=1~3, A2=4~7, B1=8~11, B2=12~15, C1=16~18, C2=19~20\n\n' + promptsText + '\n\n' +
+      '분석 규칙:\n' +
+      '- 건너뛴 문제는 skipped=true, feedback_ko는 "건너뛰었어요"\n' +
+      '- 쓴 문제마다 문법·어휘·표현 수준을 평가해서 estimated_band(A1/A2/B1/B2/C1/C2)와 feedback_ko(2~3문장 부드러운 한국어 피드백)\n' +
+      '- recommended_level: 전체 답변을 종합한 1~20 정수\n' +
+      '- level_name_ko: 예) "B1 중급 9단계"\n' +
+      '- reason_ko: 왜 이 단계를 추천하는지 학생이 이해하기 쉽게 2~3문장',
       schema
     );
-    if (result && result.recommended_level) {
-      const n = Math.max(1, Math.min(20, Math.round(result.recommended_level)));
-      selectLevel(n);
-      showToast('📊 ' + n + '단계를 추천해요! ' + (result.reason_ko || ''));
-      document.getElementById('levelTestBox').style.display = 'none';
+
+    if (result) {
+      renderPlacementResult(result);
     }
   } catch (e) {
     // error already shown
   } finally {
     hideLoading();
   }
+}
+
+function renderPlacementResult(data) {
+  placementLevel = Math.max(1, Math.min(20, Math.round(data.recommended_level || 8)));
+  document.getElementById('placementResultLevel').textContent = placementLevel + '단계';
+  document.getElementById('placementResultName').textContent  = data.level_name_ko || '';
+  document.getElementById('placementResultReason').textContent = data.reason_ko || '';
+
+  const detail = document.getElementById('placementDetail');
+  detail.innerHTML = '';
+
+  if (data.per_prompt) {
+    data.per_prompt.forEach((p, i) => {
+      const div = document.createElement('div');
+      div.style.cssText = 'padding:12px 0;border-bottom:1px solid #e8ecf5;';
+      if (i === data.per_prompt.length - 1) div.style.borderBottom = 'none';
+
+      const prompt = PLACEMENT_PROMPTS[i];
+      const skipped = p.skipped;
+      div.innerHTML =
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">' +
+          '<span class="badge ' + (prompt ? prompt.bandClass : '') + '">' + (p.estimated_band || '') + '</span>' +
+          '<strong style="font-size:0.9rem">' + esc(p.range || '') + '</strong>' +
+          (skipped ? '<span style="color:var(--muted);font-size:0.82rem">— 건너뜀</span>' : '') +
+        '</div>' +
+        '<div style="font-size:0.88rem;color:' + (skipped ? 'var(--muted)' : 'var(--text)') + ';line-height:1.5">' +
+          esc(p.feedback_ko || '') +
+        '</div>';
+      detail.appendChild(div);
+    });
+  }
+
+  showScreen('placementResult');
+}
+
+function applyPlacementLevel() {
+  if (!placementLevel) return;
+  S.currentLevel = placementLevel;
+  S.selectedLevel = placementLevel;
+  localStorage.setItem('ws_level', placementLevel);
+  updateChips();
+  updateProgress();
+  buildLevelGrid();
+  startWriting();
 }
 
 function confirmLevel() {
