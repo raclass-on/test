@@ -30,5 +30,6 @@ export const api = {
   adminLogin: (password) => call('admin-login', { password }),
   adminList: (adminToken) => call('admin-list', { adminToken }),
   adminUpdate: (adminToken, course, name, op) => call('admin-update', { adminToken, course, name, op }),
+  adminSetPassword: (adminToken, course, name, newPassword) => call('admin-set-password', { adminToken, course, name, newPassword }),
   adminScores: (adminToken) => call('admin-scores', { adminToken }),
 }

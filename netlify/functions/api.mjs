@@ -182,6 +182,22 @@ export default async (req) => {
         return json({ ok: true, status: rec.status })
       }
 
+      // ── 어드민: 학생 비밀번호 재설정 ────────────────
+      case 'admin-set-password': {
+        if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)
+        const { course, name, newPassword } = body
+        if (!newPassword || String(newPassword).length < 1)
+          return json({ error: '새 비밀번호를 입력하세요.' }, 400)
+        const key = sKey(course, name)
+        const rec = await db.get(key, { type: 'json' })
+        if (!rec) return json({ error: 'not found' }, 404)
+        const salt = crypto.randomBytes(8).toString('hex')
+        rec.salt = salt
+        rec.hash = hashPw(newPassword, salt)
+        await db.setJSON(key, rec)
+        return json({ ok: true })
+      }
+
       // ── 어드민: 전체 점수 조회 ──────────────────────
       case 'admin-scores': {
         if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)

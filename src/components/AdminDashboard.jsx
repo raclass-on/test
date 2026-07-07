@@ -38,6 +38,17 @@ export default function AdminDashboard({ adminToken }) {
     }
   }
 
+  const resetPw = async (course, name) => {
+    const pw = prompt(`${name} 학생의 새 비밀번호를 입력하세요.`)
+    if (pw == null || pw.trim() === '') return
+    try {
+      await api.adminSetPassword(adminToken, course, name, pw)
+      alert(`${name} 학생의 비밀번호를 변경했어요.`)
+    } catch (e) {
+      alert(e.message)
+    }
+  }
+
   const pending = students.filter((s) => s.status === 'pending')
   const approved = students.filter((s) => s.status === 'approved')
   const rejected = students.filter((s) => s.status === 'rejected')
@@ -68,6 +79,7 @@ export default function AdminDashboard({ adminToken }) {
                 <div className="admin-actions">
                   <button className="btn small btn-success" onClick={() => act(s.course, s.name, 'approve')}>승인</button>
                   <button className="btn small btn-outline" onClick={() => act(s.course, s.name, 'reject')}>거절</button>
+                  <button className="btn small btn-outline" onClick={() => resetPw(s.course, s.name)}>비번 재설정</button>
                 </div>
               </div>
             ))
@@ -81,6 +93,7 @@ export default function AdminDashboard({ adminToken }) {
               <div key={s.course + s.name} className="admin-row">
                 <div><b>{s.name}</b> <span className="muted">· {courseName(s.course)}</span></div>
                 <div className="admin-actions">
+                  <button className="btn small btn-outline" onClick={() => resetPw(s.course, s.name)}>비번 재설정</button>
                   <button className="btn small btn-outline" onClick={() => act(s.course, s.name, 'delete')}>삭제</button>
                 </div>
               </div>
