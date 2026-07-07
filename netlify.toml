@@ -6,8 +6,5 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-# SPA fallback (함수 경로 /api 는 함수가 먼저 처리하므로 영향 없음)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# 백엔드 API: v2 함수가 /api 경로를 직접 처리합니다 (netlify/functions/api.mjs).
+# 이 앱은 클라이언트 라우팅이 없는 단일 페이지라 SPA 폴백 리다이렉트는 두지 않습니다.
