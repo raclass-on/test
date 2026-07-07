@@ -1,9 +1,9 @@
 // ============================================================================
-//  문법 문제 데이터 (자동 생성 · 워크북 20% 활용 + 80% 신규)
-//  courses: 반(1-B / 2-B)별로 8개 유닛, 각 유닛 = 객관식(mc) 40 + 주관식(sa) 10
-//    mc 항목: { q, options[4], answer(정답 인덱스 0-3), explain }
-//    sa 항목: { q, answers[](정답 후보들, 정규화 후 일치하면 정답), explain }
-//  ※ 문제 내용을 고치려면 이 파일의 해당 항목만 수정하세요.
+//  문법 문제 데이터 (자동 생성 + 문법 검수 완료 · 워크북 20% 활용 + 80% 신규)
+//  courses: 반(1-B / 2-B)별 8유닛, 각 유닛 = 객관식(mc) 40 + 주관식(sa) 10
+//    mc: { q, options[4], answer(정답 인덱스 0-3), explain }
+//    sa: { q, answers[](정답 후보), explain }
+//  ※ 문제 수정 시 이 파일의 해당 항목만 고치세요.
 // ============================================================================
 
 export const courses = [
@@ -1650,7 +1650,7 @@ export const courses = [
               "collect",
               "collects",
               "collecting",
-              "to collect"
+              "collected"
             ],
             "answer": 2,
             "explain": "be동사 뒤 보어 자리에 동명사가 올 수 있다. collecting이 정답이다."
@@ -1969,7 +1969,7 @@ export const courses = [
               "Swim",
               "Swiming",
               "Swimming",
-              "To swim"
+              "To swimming"
             ],
             "answer": 2,
             "explain": "주어 자리에 동명사가 오며 swim은 m을 하나 더 써서 Swimming이 된다."
@@ -2865,7 +2865,7 @@ export const courses = [
             "options": [
               "I try again when I make a mistake.",
               "I make a mistake when I try again.",
-              "When I try again, I make a mistake often.",
+              "When I try again, make a mistake I often.",
               "I mistake make when I try again."
             ],
             "answer": 0,
@@ -3063,14 +3063,16 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 접속사를 쓰세요. (한 단어)\nI wear a coat ___ it is cold. (추울 때)",
             "answers": [
-              "when"
+              "when",
+              "When"
             ],
             "explain": "'~할 때'라는 뜻의 접속사 when이 알맞습니다."
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요. 문장 맨 앞이므로 대문자로 시작하세요. (한 단어)\n___ it rains, I stay home. (비가 올 때)",
             "answers": [
-              "When"
+              "When",
+              "when"
             ],
             "explain": "문장 맨 앞에 오는 접속사이므로 첫 글자를 대문자로 써서 When이 됩니다."
           },
@@ -3106,7 +3108,8 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 접속사를 쓰세요. (한 단어)\nEveryone becomes quiet ___ she sings.",
             "answers": [
-              "when"
+              "when",
+              "When"
             ],
             "explain": "'그녀가 노래할 때'라는 뜻이므로 접속사 when이 알맞습니다."
           },
@@ -3120,7 +3123,8 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 말을 쓰세요. 문장 맨 앞이므로 대문자로 시작하세요. (한 단어)\n___ vacation starts, we go on a trip. (방학이 시작될 때)",
             "answers": [
-              "When"
+              "When",
+              "when"
             ],
             "explain": "문장 맨 앞에 오는 접속사이므로 대문자 When으로 씁니다."
           },
@@ -3611,7 +3615,7 @@ export const courses = [
             "explain": "make는 3형식에서 for를 써요."
           },
           {
-            "q": "다음 3형식 문장을 4형식으로 바꿀 때 밑줄에 들어갈 두 단어를 순서대로 쓰세요.\nHe gave a book to me. → He gave ______ a book.",
+            "q": "다음 3형식 문장을 4형식으로 바꿀 때 밑줄에 알맞은 한 단어를 쓰세요.\nHe gave a book to me. → He gave ______ a book.",
             "answers": [
               "me"
             ],
@@ -3674,7 +3678,7 @@ export const courses = [
             "explain": "동사 think 뒤에서 '~라는 것을/~라고'로 해석되는 명사절을 이끄는 접속사는 that이다."
           },
           {
-            "q": "다음 중 빈칸에 that을 넣을 수 없는 것은?",
+            "q": "다음 중 빈칸에 들어갈 that이 명사절 접속사가 아닌 것은?",
             "options": [
               "I know ___ you like music.",
               "She believes ___ he tells the truth.",
@@ -3682,7 +3686,7 @@ export const courses = [
               "We hope ___ you have a great trip."
             ],
             "answer": 2,
-            "explain": "'Look at that big tree'의 that은 '저 ~'라는 뜻의 지시형용사이며, 나머지는 명사절 접속사 that이 들어간다. (지시형용사 자리에 다른 접속사는 못 오지만 문제는 '명사절 접속사 that'을 고르는 것)"
+            "explain": "'Look at that big tree'의 that은 '저 ~'라는 뜻의 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
           },
           {
             "q": "'나는 그가 정직하다고 믿는다.'를 영어로 바르게 옮긴 것은?",
@@ -3784,15 +3788,15 @@ export const courses = [
             "explain": "'~라는 것을 안다'는 know that ~으로 표현한다."
           },
           {
-            "q": "다음 중 that이 반드시 필요한(생략할 수 없는) 문장은?",
+            "q": "다음 중 that을 생략할 수 없는 문장은?",
             "options": [
               "I want that book.",
               "I think that she is nice.",
-              "She said that.",
-              "That is my dog."
+              "She hopes that we win.",
+              "He knows that I am busy."
             ],
             "answer": 0,
-            "explain": "'I want that book'의 that은 명사 book을 꾸미는 지시형용사라 생략할 수 없다. 나머지 중 명사절 접속사 that만 생략 가능하다."
+            "explain": "'I want that book'의 that은 명사 book을 꾸미는 지시형용사라 생략할 수 없다. 나머지는 모두 목적어절을 이끄는 명사절 접속사 that이라 생략할 수 있다."
           },
           {
             "q": "'그들은 그 계획이 좋다고 생각한다.'를 바르게 옮긴 것은?",
@@ -3872,7 +3876,7 @@ export const courses = [
             "explain": "say + that + 주어(he) + 동사(saw) 순서이다."
           },
           {
-            "q": "빈칸에 that을 넣기에 자연스럽지 않은 것은?",
+            "q": "다음 중 빈칸에 들어갈 that이 명사절 접속사가 아닌 것은?",
             "options": [
               "I feel ___ something is wrong.",
               "We think ___ the news is true.",
@@ -3880,7 +3884,7 @@ export const courses = [
               "They believe ___ he is kind."
             ],
             "answer": 2,
-            "explain": "③은 'that song(저 노래)'처럼 명사를 꾸미는 지시형용사가 어울리며 명사절 접속사가 아니다. 나머지는 동사 뒤 명사절 that이 자연스럽다."
+            "explain": "'She likes that song'의 that은 명사 song을 꾸미는 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
           },
           {
             "q": "다음 중 밑줄 친 that이 지시대명사(저것)인 것은?",
@@ -4784,10 +4788,10 @@ export const courses = [
               "quick",
               "quicker",
               "quickest",
-              "more quickly"
+              "most quickly"
             ],
             "answer": 1,
-            "explain": "quick의 비교급 quicker가 정답이다. 1음절 단어이므로 -er을 붙인다."
+            "explain": "quick의 비교급 quicker가 정답이다. 1음절 단어이므로 -er을 붙인다. 최상급 most quickly는 쓸 수 없다."
           },
           {
             "q": "The more books you read, the ___ you know. (책을 많이 읽을수록 더 많이 안다)",
@@ -4856,15 +4860,15 @@ export const courses = [
             "explain": "동사 learn을 수식하며 '더 많이'를 뜻하는 much의 비교급 more가 알맞다."
           },
           {
-            "q": "밑줄 친 부분이 틀린 것은? The higher you fly, the ___ you see.",
+            "q": "The higher you fly, the ___ you see. (높이 날수록 더 멀리 본다)",
             "options": [
               "farther",
-              "further",
+              "farthest",
               "far",
               "more far"
             ],
-            "answer": 2,
-            "explain": "far의 비교급은 farther/further이다. 원급 far는 이 구문에 쓸 수 없다."
+            "answer": 0,
+            "explain": "far의 비교급 farther가 정답이다. 원급 far, 잘못된 형태 more far, 최상급 farthest는 이 구문에 쓸 수 없다."
           },
           {
             "q": "The more time you spend, the ___ result you get. (시간을 많이 쓸수록 더 좋은 결과)",
@@ -5037,10 +5041,10 @@ export const courses = [
               "narrow",
               "narrower",
               "narrowest",
-              "more narrow"
+              "narrowly"
             ],
             "answer": 1,
-            "explain": "narrow는 -er을 붙여 narrower로 비교급을 만든다."
+            "explain": "narrow는 -er을 붙여 narrower로 비교급을 만든다. 원급 narrow, 최상급 narrowest, 부사 narrowly는 쓸 수 없다."
           },
           {
             "q": "빈칸에 공통으로 들어갈 말은? The ___ you give, the ___ you receive. (많이 줄수록 많이 받는다)",
@@ -5204,7 +5208,8 @@ export const courses = [
           {
             "q": "빈칸을 채우세요: ___ harder you try, the stronger you become. (앞 절 시작 부분)",
             "answers": [
-              "the"
+              "the",
+              "The"
             ],
             "explain": "「the 비교급, the 비교급」 구문은 앞 절도 The로 시작한다."
           },
@@ -5301,7 +5306,7 @@ export const courses = [
               "boil",
               "are boiling",
               "boils",
-              "boiled"
+              "have boiled"
             ],
             "answer": 2,
             "explain": "물질명사 Water는 단수 취급, 현재의 일반적 사실 → boils."
@@ -7494,7 +7499,7 @@ export const courses = [
               "who to",
               "why to",
               "what to",
-              "when to"
+              "how should"
             ],
             "answer": 0,
             "explain": "'누구에게 도움을 청할지'는 who(m) to ask입니다."
@@ -8197,15 +8202,15 @@ export const courses = [
             "explain": "부사 slowly 앞에는 so를 쓴다."
           },
           {
-            "q": "다음 문장의 빈칸에 알맞지 않은 것은?  The room was ___ that we felt cold.",
+            "q": "다음 문장의 빈칸에 알맞은 것은?  The room was ___ that we felt cold.",
             "options": [
               "so cold",
               "very cold",
               "such cold",
               "cold"
             ],
-            "answer": 2,
-            "explain": "such는 명사 없이 형용사만 앞에서 꾸밀 수 없다. 'such cold'는 틀리고 'so cold'가 맞다."
+            "answer": 0,
+            "explain": "결과의 that절을 이끌 수 있는 것은 so이다. 'so cold that ~'가 맞다. very·such·형용사 단독은 that 결과절과 함께 쓸 수 없다."
           },
           {
             "q": "Which is correct?  '그 문제는 너무 어려워서 아무도 풀 수 없었다.'",
