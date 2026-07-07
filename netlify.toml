@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# SPA fallback (함수 경로 /api 는 함수가 먼저 처리하므로 영향 없음)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
