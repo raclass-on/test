@@ -1,16 +1,32 @@
-# React + Vite
+# 📝 문법 연습소 (여름방학 예습·복습)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+중학생이 여름방학 동안 영문법을 **문제풀이 중심**으로 예습·복습할 수 있는 웹앱입니다.
+접속하는 학생에 따라 학습 범위(단원)가 다르게 열립니다.
 
-Currently, two official plugins are available:
+## 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **학생 선택**: 첫 화면에서 본인의 반(또는 이름)을 고르면 배정된 문법 범위만 열립니다.
+- **문제풀이**: 단원별로 핵심 정리 → 객관식/빈칸 문제 → 즉시 채점과 해설을 제공합니다.
+- **내 진도**: 학생별로 단원 성취도와 최고 점수를 저장·표시합니다. (localStorage 사용)
 
-## React Compiler
+## 선생님 설정 방법
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`src/grammar.js` 파일 하나만 편집하면 됩니다.
 
-## Expanding the Oxlint configuration
+- **문법 단원 추가/수정**: `units` 배열에서 단원과 문제(객관식 `choice`, 빈칸 `blank`)를 편집합니다.
+- **학생별 범위 지정**: `students` 배열에서 학생 이름과 `units`(단원 id 목록 또는 `'all'`)를 지정합니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```js
+{ id: 'grade7-a', name: '7학년 A반', units: ['be-verb', 'general-verb', 'past-simple'] }
+```
+
+## 개발
+
+```bash
+npm install
+npm run dev      # 개발 서버
+npm run build    # 프로덕션 빌드
+npm run preview  # 빌드 결과 미리보기
+```
+
+React + Vite로 만들어졌습니다.
