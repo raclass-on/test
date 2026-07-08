@@ -9,7 +9,7 @@ import { siteInfo } from './config'
 import { api } from './api'
 import './App.css'
 
-const TABS = ['문제풀이', '학부모 안내']
+const TABS = ['문제풀이', '나의 성취도']
 
 export default function App() {
   const [student, setStudent] = useState(() => {

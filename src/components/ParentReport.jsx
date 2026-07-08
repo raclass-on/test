@@ -23,7 +23,7 @@ export default function ParentReport({ course, studentName, records }) {
       <div className="report-card">
         <div className="report-header">
           <div>
-            <div className="report-title">학부모 안내문</div>
+            <div className="report-title">나의 학습 성취도</div>
             <div className="report-sub">{course.name} · {studentName} 학생</div>
           </div>
         </div>

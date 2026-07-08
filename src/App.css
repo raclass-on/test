@@ -142,7 +142,7 @@ body {
 .unit-no { font-size: 0.75rem; font-weight: 700; color: var(--primary); background: #eef2ff; padding: 3px 10px; border-radius: 20px; }
 .unit-title { font-size: 1.02rem; font-weight: 700; color: var(--text); line-height: 1.35; }
 .unit-concept { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; flex: 1; }
-.unit-best { font-size: 0.78rem; color: var(--success); font-weight: 600; }
+.unit-best { font-size: 0.92rem; color: var(--success); font-weight: 700; }
 .unit-best.muted { color: var(--text-muted); font-weight: 500; }
 
 /* ---------- Stars ---------- */
@@ -237,7 +237,7 @@ body {
   padding: 12px 14px; background: var(--bg); border-radius: 10px; flex-wrap: wrap;
 }
 .report-unit { font-weight: 700; font-size: 0.92rem; }
-.report-scores { display: flex; align-items: center; gap: 12px; font-size: 0.82rem; color: var(--text-muted); flex-wrap: wrap; }
+.report-scores { display: flex; align-items: center; gap: 12px; font-size: 1rem; font-weight: 600; color: var(--text); flex-wrap: wrap; }
 .report-summary {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   margin-top: 18px; padding-top: 16px; border-top: 2px dashed var(--border);
