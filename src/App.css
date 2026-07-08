@@ -283,6 +283,23 @@ body {
 
 /* ---------- Admin ---------- */
 .admin-loading { text-align: center; color: var(--text-muted); padding: 30px; }
+
+/* 성취도 모음 표 */
+.matrix-block { margin-bottom: 8px; }
+.matrix-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: 12px; }
+.matrix-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+.matrix-table th, .matrix-table td { padding: 8px 10px; text-align: center; white-space: nowrap; border-bottom: 1px solid var(--border); }
+.matrix-table tbody tr:last-child td { border-bottom: none; }
+.matrix-table th { font-weight: 700; color: var(--text-muted); background: #f8fafc; }
+.matrix-name { text-align: left !important; position: sticky; left: 0; background: var(--card-bg); z-index: 1; }
+.matrix-table th.matrix-name { background: #f8fafc; }
+.matrix-name-btn { background: none; border: none; padding: 0; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: var(--primary); cursor: pointer; text-decoration: underline; }
+.cell-star { font-weight: 700; }
+.cell-star.s5 { color: #15803d; }
+.cell-star.s4 { color: #16a34a; }
+.cell-star.s3 { color: #ca8a04; }
+.cell-star.s2, .cell-star.s1 { color: #ea580c; }
+.cell-none { color: #cbd5e1; }
 .admin-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 .filter-btn {
   padding: 7px 16px; border-radius: 20px; border: 2px solid var(--border); background: var(--card-bg);

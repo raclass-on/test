@@ -63,7 +63,7 @@ export default function AdminDashboard({ adminToken }) {
   return (
     <div>
       <div className="admin-tabs">
-        {['승인 관리', '학생 진도'].map((t) => (
+        {['승인 관리', '학생 진도', '성취도 모음'].map((t) => (
           <button key={t} className={`filter-btn ${tab === t ? 'active' : ''}`} onClick={() => { setTab(t); setSelectedKey(null) }}>{t}</button>
         ))}
         <button className="filter-btn" onClick={refresh}>새로고침 ⟳</button>
@@ -127,6 +127,11 @@ export default function AdminDashboard({ adminToken }) {
             </>
           )}
         </div>
+      ) : tab === '성취도 모음' ? (
+        <AchievementMatrix
+          rows={filteredRows}
+          onOpenStudent={(key) => { setSelectedKey(key); setTab('학생 진도') }}
+        />
       ) : (
         <StudentProgress
           rows={filteredRows}
@@ -134,6 +139,70 @@ export default function AdminDashboard({ adminToken }) {
           onSelect={setSelectedKey}
         />
       )}
+    </div>
+  )
+}
+
+// 전체 학생 성취도 한눈에 보기 (반별 학생 × 유닛 별점 표)
+function AchievementMatrix({ rows, onOpenStudent }) {
+  if (rows.length === 0) return <p className="admin-empty">승인된 학생이 아직 없어요.</p>
+
+  const groups = courses
+    .map((c) => ({ course: c, students: rows.filter((r) => r.course === c.id) }))
+    .filter((g) => g.students.length > 0)
+
+  return (
+    <div className="admin-section">
+      <p className="admin-empty" style={{ marginBottom: 4 }}>
+        각 칸은 유닛별 <b>최고 별점(0~5)</b>이에요. 이름을 누르면 상세 진도를 볼 수 있어요.
+      </p>
+      {groups.map(({ course, students }) => {
+        const units = course.units
+        return (
+          <div key={course.id} className="matrix-block">
+            <h3 className="admin-h" style={{ marginTop: 14 }}>{course.name} <span className="pill green">{students.length}</span></h3>
+            <div className="matrix-wrap">
+              <table className="matrix-table">
+                <thead>
+                  <tr>
+                    <th className="matrix-name">학생</th>
+                    {units.map((u) => (
+                      <th key={u.id} title={u.title}>U{u.unit}</th>
+                    ))}
+                    <th>평균</th>
+                    <th>완료</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {students.map((r) => {
+                    const done = units.filter((u) => r.scores[u.id]?.best)
+                    const avg = done.length ? Math.round(done.reduce((s, u) => s + r.scores[u.id].best.stars, 0) / done.length) : 0
+                    return (
+                      <tr key={r.course + r.name}>
+                        <td className="matrix-name">
+                          <button className="matrix-name-btn" onClick={() => onOpenStudent(r.course + '::' + r.name)}>{r.name}</button>
+                        </td>
+                        {units.map((u) => {
+                          const best = r.scores[u.id]?.best
+                          return (
+                            <td key={u.id}>
+                              {best
+                                ? <span className={`cell-star s${best.stars}`}>{best.stars}★</span>
+                                : <span className="cell-none">·</span>}
+                            </td>
+                          )
+                        })}
+                        <td><b>{avg}★</b></td>
+                        <td className="muted">{done.length}/{units.length}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }
