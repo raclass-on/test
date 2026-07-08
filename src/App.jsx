@@ -27,6 +27,26 @@ export default function App() {
     api.myScores(student.token).then((r) => r.scores && setRecords(r.scores)).catch(() => {})
   }, [student?.token])
 
+  // 세션(문제풀이) 중 뒤로가기 처리 — 앱을 벗어나지 않고 유닛 목록으로 복귀시킨다.
+  // (라우터가 없어 히스토리 항목이 하나뿐이라, 세션 중 폰 뒤로가기를 누르면
+  //  사이트 자체를 벗어나 인앱 브라우저에서 흰 화면/먹통이 되던 문제 해결)
+  useEffect(() => {
+    if (!activeUnitId) return
+    // 세션 진입 시 히스토리 항목을 하나 쌓는다 → 뒤로가기가 이 항목을 소비하며 세션만 닫힘
+    window.history.pushState({ raclassSession: true }, '')
+    let closedByBack = false
+    const onPop = () => {
+      closedByBack = true
+      setActiveUnitId(null)
+    }
+    window.addEventListener('popstate', onPop)
+    return () => {
+      window.removeEventListener('popstate', onPop)
+      // 인앱 '나가기'·'유닛 목록으로' 버튼 등으로 닫힌 경우, 쌓아둔 히스토리 항목을 되돌려 정리
+      if (!closedByBack) window.history.back()
+    }
+  }, [activeUnitId])
+
   const loginStudent = (u) => {
     setStudent(u)
     setRecords(u.scores || {})
