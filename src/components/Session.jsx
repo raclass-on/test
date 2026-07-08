@@ -6,7 +6,7 @@ function normalize(str) {
   return String(str).trim().toLowerCase().replace(/\s+/g, ' ').replace(/[’‘]/g, "'")
 }
 
-export default function Session({ unit, onDone, onExit }) {
+export default function Session({ unit, onDone, onExit, progressKey }) {
   // 40 객관식 → 10 주관식 순서
   const questions = useMemo(
     () => [
@@ -18,16 +18,44 @@ export default function Session({ unit, onDone, onExit }) {
   const mcTotal = unit.mc.length
   const saTotal = unit.sa.length
 
-  const [idx, setIdx] = useState(0)
+  // 이전에 풀다 나간 진행 상태 복원 (이어풀기)
+  const saved = useMemo(() => {
+    try {
+      const s = JSON.parse(localStorage.getItem(progressKey) || 'null')
+      if (s && typeof s.idx === 'number' && s.idx > 0 && s.idx < questions.length) return s
+    } catch { /* ignore */ }
+    return null
+  }, [progressKey, questions.length])
+
+  const [idx, setIdx] = useState(saved ? saved.idx : 0)
   const [selected, setSelected] = useState(null)
   const [input, setInput] = useState('')
   const [checked, setChecked] = useState(false)
   const [correct, setCorrect] = useState(false)
-  const [mcScore, setMcScore] = useState(0)
-  const [saScore, setSaScore] = useState(0)
-  const [mcAnswered, setMcAnswered] = useState(0)
-  const [saAnswered, setSaAnswered] = useState(0)
+  const [mcScore, setMcScore] = useState(saved?.mcScore ?? 0)
+  const [saScore, setSaScore] = useState(saved?.saScore ?? 0)
+  const [mcAnswered, setMcAnswered] = useState(saved?.mcAnswered ?? 0)
+  const [saAnswered, setSaAnswered] = useState(saved?.saAnswered ?? 0)
   const [finished, setFinished] = useState(false)
+  const [resumeHint, setResumeHint] = useState(!!saved)
+
+  const saveProgress = (nextIdx) => {
+    try {
+      localStorage.setItem(
+        progressKey,
+        JSON.stringify({ idx: nextIdx, mcScore, saScore, mcAnswered, saAnswered })
+      )
+    } catch { /* ignore */ }
+  }
+  const clearProgress = () => {
+    try { localStorage.removeItem(progressKey) } catch { /* ignore */ }
+  }
+  const restart = () => {
+    setIdx(0); setSelected(null); setInput(''); setChecked(false); setCorrect(false)
+    setMcScore(0); setSaScore(0); setMcAnswered(0); setSaAnswered(0)
+    setResumeHint(false)
+    clearProgress()
+  }
 
   const q = questions[idx]
   const isMc = q.type === 'mc'
@@ -55,13 +83,17 @@ export default function Session({ unit, onDone, onExit }) {
   const next = () => {
     if (idx + 1 >= questions.length) {
       setFinished(true)
+      clearProgress()
       onDone({ mc: mcScore, sa: saScore, mcTotal, saTotal })
     } else {
-      setIdx((i) => i + 1)
+      const nextIdx = idx + 1
+      setIdx(nextIdx)
       setSelected(null)
       setInput('')
       setChecked(false)
       setCorrect(false)
+      setResumeHint(false)
+      saveProgress(nextIdx)
     }
   }
 
@@ -131,6 +163,13 @@ export default function Session({ unit, onDone, onExit }) {
       <div className="quiz-progress-bar">
         <div className="quiz-progress-fill" style={{ width: `${(idx / questions.length) * 100}%` }} />
       </div>
+
+      {resumeHint && (
+        <div className="resume-hint">
+          <span>↩️ 이어서 풀고 있어요 ({idx + 1}번 문제부터)</span>
+          <button className="link-btn" onClick={restart}>처음부터</button>
+        </div>
+      )}
 
       <div className="q-card">
         <div className="q-type-badge">{isMc ? '객관식' : '주관식'}</div>

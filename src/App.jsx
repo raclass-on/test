@@ -20,6 +20,7 @@ export default function App() {
   const [tab, setTab] = useState('문제풀이')
   const [activeUnitId, setActiveUnitId] = useState(null)
   const [banner, setBanner] = useState('')
+  const [autoLoggedOut, setAutoLoggedOut] = useState(false)
 
   // 로그인 상태면 최신 점수 동기화
   useEffect(() => {
@@ -51,16 +52,38 @@ export default function App() {
     setStudent(u)
     setRecords(u.scores || {})
     sessionStorage.setItem('student', JSON.stringify(u))
-    setTab('문제풀이'); setActiveUnitId(null)
+    setTab('문제풀이'); setActiveUnitId(null); setAutoLoggedOut(false)
   }
   const loginAdmin = (t) => {
     setAdminToken(t)
     sessionStorage.setItem('adminToken', t)
+    setAutoLoggedOut(false)
   }
   const logout = () => {
     setStudent(null); setAdminToken(null); setActiveUnitId(null)
     sessionStorage.removeItem('student'); sessionStorage.removeItem('adminToken')
   }
+
+  // 5분간 아무 입력(탭/키/스크롤)이 없으면 자동 로그아웃
+  useEffect(() => {
+    if (!student && !adminToken) return
+    let timer
+    const reset = () => {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        setAutoLoggedOut(true)
+        setStudent(null); setAdminToken(null); setActiveUnitId(null)
+        sessionStorage.removeItem('student'); sessionStorage.removeItem('adminToken')
+      }, 5 * 60 * 1000)
+    }
+    const events = ['mousedown', 'keydown', 'touchstart', 'touchmove', 'scroll', 'click']
+    events.forEach((e) => window.addEventListener(e, reset, { passive: true }))
+    reset()
+    return () => {
+      clearTimeout(timer)
+      events.forEach((e) => window.removeEventListener(e, reset))
+    }
+  }, [student, adminToken])
 
   // ── 어드민 화면 ──
   if (adminToken) {
@@ -93,6 +116,11 @@ export default function App() {
           </div>
         </header>
         <main className="main">
+          {autoLoggedOut && (
+            <div className="banner-warn" style={{ marginBottom: 12 }}>
+              ⏰ 5분간 활동이 없어 자동 로그아웃되었어요. 다시 로그인해 주세요.
+            </div>
+          )}
           <Login onLogin={loginStudent} onAdmin={loginAdmin} />
         </main>
       </div>
@@ -130,7 +158,7 @@ export default function App() {
         <div className="header-inner header-row">
           <div>
             <h1 className="logo">📝 {siteInfo.academy}</h1>
-            <p className="subtitle">{siteInfo.title}</p>
+            <p className="subtitle">👋 {student.name}님, 반가워요!</p>
           </div>
           <button className="logout-btn" onClick={logout}>로그아웃</button>
         </div>
@@ -151,7 +179,13 @@ export default function App() {
       <main className="main">
         {banner && <div className="banner-warn">{banner}</div>}
         {activeUnit ? (
-          <Session key={activeUnit.id} unit={activeUnit} onDone={onSessionDone} onExit={() => setActiveUnitId(null)} />
+          <Session
+            key={activeUnit.id}
+            unit={activeUnit}
+            onDone={onSessionDone}
+            onExit={() => setActiveUnitId(null)}
+            progressKey={`raclass-progress:${student.courseId}:${student.name}:${activeUnit.id}`}
+          />
         ) : tab === '문제풀이' ? (
           <UnitBoard course={course} records={records} onStart={setActiveUnitId} />
         ) : (
