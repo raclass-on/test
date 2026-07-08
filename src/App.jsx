@@ -104,20 +104,23 @@ export default function App() {
   const activeUnit = course.units.find((u) => u.id === activeUnitId)
 
   const onSessionDone = async (result) => {
-    // 낙관적 반영
-    setRecords((prev) => {
-      const prevU = prev[activeUnitId] || { best: null, attempts: [] }
-      const percent = Math.round(((result.mc + result.sa) / (result.mcTotal + result.saTotal)) * 100)
-      const isBetter = !prevU.best || result.mc + result.sa > prevU.best.mc + prevU.best.sa
-      const stars = percent >= 90 ? 5 : percent >= 75 ? 4 : percent >= 60 ? 3 : percent >= 40 ? 2 : 1
-      return { ...prev, [activeUnitId]: { ...prevU, best: isBetter ? { ...result, percent, stars } : prevU.best } }
-    })
+    // 낙관적 반영 (중도 기록은 최고기록·별점을 갱신하지 않고 이력에만 남긴다)
+    if (!result.partial) {
+      setRecords((prev) => {
+        const prevU = prev[activeUnitId] || { best: null, attempts: [] }
+        const percent = Math.round(((result.mc + result.sa) / (result.mcTotal + result.saTotal)) * 100)
+        const isBetter = !prevU.best || result.mc + result.sa > prevU.best.mc + prevU.best.sa
+        const stars = percent >= 90 ? 5 : percent >= 75 ? 4 : percent >= 60 ? 3 : percent >= 40 ? 2 : 1
+        return { ...prev, [activeUnitId]: { ...prevU, best: isBetter ? { ...result, percent, stars } : prevU.best } }
+      })
+    }
     try {
       const r = await api.score(student.token, { unitId: activeUnitId, ...result })
       setRecords((prev) => ({ ...prev, [activeUnitId]: r.unit }))
-      setBanner('')
+      if (!result.partial) setBanner('')
     } catch {
-      setBanner('⚠️ 점수를 서버에 저장하지 못했어요. 인터넷 연결을 확인해 주세요.')
+      // 중도 저장 실패는 이탈 중이므로 경고를 띄우지 않는다.
+      if (!result.partial) setBanner('⚠️ 점수를 서버에 저장하지 못했어요. 인터넷 연결을 확인해 주세요.')
     }
   }
 

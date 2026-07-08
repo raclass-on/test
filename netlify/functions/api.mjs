@@ -127,8 +127,8 @@ export default async (req) => {
       case 'score': {
         const auth = verifyToken(body.token)
         if (!auth) return json({ error: 'auth' }, 401)
-        const { unitId, mc, sa, mcTotal, saTotal } = body
-        if (!unitId || [mc, sa, mcTotal, saTotal].some((n) => typeof n !== 'number'))
+        const { unitId, mc, sa, mcTotal, saTotal, partial } = body
+        if (!unitId || [mc, sa, mcTotal, saTotal].some((n) => typeof n !== 'number') || mcTotal + saTotal <= 0)
           return json({ error: 'bad score' }, 400)
         const key = scKey(auth.course, auth.name)
         const scores = (await db.get(key, { type: 'json' })) || {}
@@ -136,8 +136,9 @@ export default async (req) => {
         const percent = Math.round(((mc + sa) / (mcTotal + saTotal)) * 100)
         const stars = starsFor(percent)
         const date = todayStr()
-        const attempt = { date, mc, sa, mcTotal, saTotal }
-        const isBetter = !prev.best || mc + sa > prev.best.mc + prev.best.sa
+        const attempt = { date, mc, sa, mcTotal, saTotal, ...(partial ? { partial: true } : {}) }
+        // 중도(미완료) 기록은 최고 기록·별점을 갱신하지 않고 이력만 남긴다.
+        const isBetter = !partial && (!prev.best || mc + sa > prev.best.mc + prev.best.sa)
         scores[unitId] = {
           best: isBetter ? { mc, sa, mcTotal, saTotal, percent, stars, date } : prev.best,
           attempts: [...prev.attempts, attempt].slice(-50),

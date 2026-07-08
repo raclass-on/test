@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 import Stars from './Stars'
 import { starsFor } from '../config'
 
@@ -25,6 +25,8 @@ export default function Session({ unit, onDone, onExit }) {
   const [correct, setCorrect] = useState(false)
   const [mcScore, setMcScore] = useState(0)
   const [saScore, setSaScore] = useState(0)
+  const [mcAnswered, setMcAnswered] = useState(0)
+  const [saAnswered, setSaAnswered] = useState(0)
   const [finished, setFinished] = useState(false)
 
   const q = questions[idx]
@@ -42,6 +44,8 @@ export default function Session({ unit, onDone, onExit }) {
     }
     setCorrect(ok)
     setChecked(true)
+    if (isMc) setMcAnswered((a) => a + 1)
+    else setSaAnswered((a) => a + 1)
     if (ok) {
       if (isMc) setMcScore((s) => s + 1)
       else setSaScore((s) => s + 1)
@@ -60,6 +64,25 @@ export default function Session({ unit, onDone, onExit }) {
       setCorrect(false)
     }
   }
+
+  // 완료하지 않고 중도에 나가도 '푼 것까지' 서버에 기록한다 (언마운트 시 1회).
+  // 뒤로가기·'나가기' 버튼 어느 쪽으로 빠져나가도 동일하게 동작.
+  const onDoneRef = useRef(onDone)
+  onDoneRef.current = onDone
+  const progressRef = useRef(null)
+  progressRef.current = { mcScore, saScore, mcAnswered, saAnswered, finished }
+  const savedPartialRef = useRef(false)
+  useEffect(() => {
+    return () => {
+      const p = progressRef.current
+      if (p.finished || savedPartialRef.current) return
+      if (p.mcAnswered + p.saAnswered === 0) return
+      savedPartialRef.current = true
+      onDoneRef.current({
+        mc: p.mcScore, sa: p.saScore, mcTotal: p.mcAnswered, saTotal: p.saAnswered, partial: true,
+      })
+    }
+  }, [])
 
   if (finished) {
     const total = mcTotal + saTotal
@@ -113,6 +136,17 @@ export default function Session({ unit, onDone, onExit }) {
         <div className="q-type-badge">{isMc ? '객관식' : '주관식'}</div>
         <div className="q-text">{q.q}</div>
 
+        {checked && (
+          <div className={`q-feedback ${correct ? 'correct' : 'wrong'}`}>
+            <div className="fb-head">
+              {correct
+                ? '🎉 정답이에요!'
+                : `❌ 정답: ${isMc ? q.options[q.answer] : q.answers.join(' / ')}`}
+            </div>
+            <div className="fb-explain">💬 {q.explain}</div>
+          </div>
+        )}
+
         {isMc ? (
           <div className="q-options">
             {q.options.map((opt, i) => {
@@ -141,17 +175,6 @@ export default function Session({ unit, onDone, onExit }) {
           />
         )}
       </div>
-
-      {checked && (
-        <div className={`q-feedback ${correct ? 'correct' : 'wrong'}`}>
-          <div className="fb-head">
-            {correct
-              ? '🎉 정답이에요!'
-              : `❌ 정답: ${isMc ? q.options[q.answer] : q.answers.join(' / ')}`}
-          </div>
-          <div className="fb-explain">💬 {q.explain}</div>
-        </div>
-      )}
 
       <div className="session-actions">
         {!checked ? (
