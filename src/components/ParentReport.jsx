@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import Stars from './Stars'
 
 export default function ParentReport({ course, studentName, records }) {
+  const [shareMsg, setShareMsg] = useState('')
+
   // 진도 나간(한 번이라도 푼) 유닛만
   const doneUnits = course.units
     .map((u) => ({ unit: u, best: records[u.id]?.best }))
@@ -9,6 +12,36 @@ export default function ParentReport({ course, studentName, records }) {
   const avgStars = doneUnits.length
     ? Math.round(doneUnits.reduce((s, x) => s + x.best.stars, 0) / doneUnits.length)
     : 0
+
+  const buildText = () =>
+    [
+      `[${course.name}] ${studentName} 학생 문법 성취도`,
+      '',
+      ...doneUnits.map(
+        (x) =>
+          `· ${x.unit.title}: 객관식 ${x.best.mc}/${x.best.mcTotal}, 주관식 ${x.best.sa}/${x.best.saTotal} (${'★'.repeat(x.best.stars)}${'☆'.repeat(5 - x.best.stars)})`
+      ),
+      '',
+      `종합 성취도: ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)} (${avgStars}/5)`,
+      `학습한 유닛: ${doneUnits.length} / ${course.units.length}`,
+      '',
+      'https://raclass.netlify.app',
+    ].join('\n')
+
+  const share = async () => {
+    const text = buildText()
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: `${studentName} 학생 성취도`, text })
+      } else {
+        await navigator.clipboard.writeText(text)
+        setShareMsg('내용을 복사했어요. 카톡에 붙여넣어 보내세요! 💬')
+        setTimeout(() => setShareMsg(''), 3000)
+      }
+    } catch {
+      /* 사용자가 공유를 취소한 경우 등은 무시 */
+    }
+  }
 
   if (doneUnits.length === 0) {
     return (
@@ -26,7 +59,9 @@ export default function ParentReport({ course, studentName, records }) {
             <div className="report-title">나의 학습 성취도</div>
             <div className="report-sub">{course.name} · {studentName} 학생</div>
           </div>
+          <button className="btn btn-primary small" onClick={share}>💬 카톡으로 공유</button>
         </div>
+        {shareMsg && <div className="login-notice" style={{ marginTop: 4 }}>{shareMsg}</div>}
 
         <div className="report-rows">
           {doneUnits.map((x) => (
