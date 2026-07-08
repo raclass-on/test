@@ -11,6 +11,7 @@ export default function AdminDashboard({ adminToken }) {
   const [students, setStudents] = useState([])
   const [rows, setRows] = useState([])
   const [selectedKey, setSelectedKey] = useState(null)
+  const [courseFilter, setCourseFilter] = useState('all')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -50,9 +51,11 @@ export default function AdminDashboard({ adminToken }) {
     }
   }
 
-  const pending = students.filter((s) => s.status === 'pending')
-  const approved = students.filter((s) => s.status === 'approved')
-  const rejected = students.filter((s) => s.status === 'rejected')
+  const inFilter = (s) => courseFilter === 'all' || s.course === courseFilter
+  const pending = students.filter((s) => s.status === 'pending' && inFilter(s))
+  const approved = students.filter((s) => s.status === 'approved' && inFilter(s))
+  const rejected = students.filter((s) => s.status === 'rejected' && inFilter(s))
+  const filteredRows = rows.filter((r) => r.status === 'approved' && inFilter(r))
 
   if (loading) return <div className="admin-loading">불러오는 중…</div>
   if (error) return <div className="login-error" style={{ marginTop: 12 }}>{error} <button className="link-btn" onClick={refresh}>다시 시도</button></div>
@@ -64,6 +67,14 @@ export default function AdminDashboard({ adminToken }) {
           <button key={t} className={`filter-btn ${tab === t ? 'active' : ''}`} onClick={() => { setTab(t); setSelectedKey(null) }}>{t}</button>
         ))}
         <button className="filter-btn" onClick={refresh}>새로고침 ⟳</button>
+      </div>
+
+      <div className="admin-tabs" style={{ marginTop: -6 }}>
+        <span className="course-filter-label">반</span>
+        <button className={`chip ${courseFilter === 'all' ? 'active' : ''}`} onClick={() => { setCourseFilter('all'); setSelectedKey(null) }}>전체</button>
+        {courses.map((c) => (
+          <button key={c.id} className={`chip ${courseFilter === c.id ? 'active' : ''}`} onClick={() => { setCourseFilter(c.id); setSelectedKey(null) }}>{c.name}</button>
+        ))}
       </div>
 
       {tab === '승인 관리' ? (
@@ -118,7 +129,7 @@ export default function AdminDashboard({ adminToken }) {
         </div>
       ) : (
         <StudentProgress
-          rows={rows.filter((r) => r.status === 'approved')}
+          rows={filteredRows}
           selectedKey={selectedKey}
           onSelect={setSelectedKey}
         />

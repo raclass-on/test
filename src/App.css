@@ -299,6 +299,14 @@ body {
 .score-unit-title { font-weight: 600; }
 .score-unit-nums { color: var(--text-muted); white-space: nowrap; }
 
+/* ---------- Admin class filter ---------- */
+.course-filter-label { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 2px; }
+.chip {
+  padding: 6px 14px; border-radius: 20px; border: 2px solid var(--border); background: var(--card-bg);
+  cursor: pointer; font-size: 0.82rem; font-weight: 600; color: var(--text-muted); font-family: inherit; transition: all 0.15s;
+}
+.chip:hover, .chip.active { border-color: var(--primary); color: var(--primary); background: #eef2ff; }
+
 /* ---------- Admin student progress ---------- */
 .student-prog-row {
   display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%;
