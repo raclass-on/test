@@ -1,9 +1,8 @@
 // ============================================================================
-//  문법 문제 데이터 (자동 생성 + 문법 검수 완료 · 워크북 20% 활용 + 80% 신규)
+//  문법 문제 데이터 (TOEIC Part 5 스타일 · 문법검수 완료 · 정답위치 균형)
 //  courses: 반(1-B / 2-B)별 8유닛, 각 유닛 = 객관식(mc) 40 + 주관식(sa) 10
 //    mc: { q, options[4], answer(정답 인덱스 0-3), explain }
 //    sa: { q, answers[](정답 후보), explain }
-//  ※ 문제 수정 시 이 파일의 해당 항목만 고치세요.
 // ============================================================================
 
 export const courses = [
@@ -18,444 +17,444 @@ export const courses = [
         "concept": "want·hope·decide·need·plan 등의 동사 뒤에 「to+동사원형」이 와서 '~하기를/~하는 것을'로 해석한다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  I want ___ comics.",
-            "options": [
-              "read",
-              "to read",
-              "reading",
-              "reads"
-            ],
-            "answer": 1,
-            "explain": "want 뒤에는 「to+동사원형」이 오므로 to read가 정답이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  She hopes ___ her cousin.",
-            "options": [
-              "to meet",
-              "meet",
-              "meeting",
-              "met"
-            ],
-            "answer": 0,
-            "explain": "hope 뒤에는 to부정사가 오므로 to meet이 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  We decided ___ the classroom.",
-            "options": [
-              "clean",
-              "cleaned",
-              "to clean",
-              "cleans"
-            ],
-            "answer": 2,
-            "explain": "decide 뒤에는 to부정사가 오므로 to clean이 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  He needs ___ his bike.",
-            "options": [
-              "to fix",
-              "fix",
-              "fixing",
-              "fixed"
-            ],
-            "answer": 0,
-            "explain": "need 뒤에는 「to+동사원형」이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  They plan ___ a bakery.",
-            "options": [
-              "opens",
-              "to open",
-              "opening",
-              "open"
-            ],
-            "answer": 1,
-            "explain": "plan 뒤에는 to부정사가 오므로 to open이 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I want ___ a cook.",
+            "q": "빈칸에 알맞은 것을 고르세요.  My older sister wants ___ a doctor, so she studies biology every night.",
             "options": [
               "become",
               "becoming",
-              "to become",
-              "becomes"
-            ],
-            "answer": 2,
-            "explain": "want 뒤에는 to부정사가 오고 to 뒤에는 동사원형 become이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  My sister hopes ___ the contest.",
-            "options": [
-              "to win",
-              "win",
-              "winning",
-              "won"
-            ],
-            "answer": 0,
-            "explain": "hope 뒤에는 to부정사가 오므로 to win이 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I decided ___ my grandmother next month.",
-            "options": [
-              "visit",
-              "visiting",
-              "visited",
-              "to visit"
+              "becomes",
+              "to become"
             ],
             "answer": 3,
-            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to visit이 맞다."
+            "explain": "want는 to부정사를 목적어로 취하므로 to become이 맞다. becoming(동명사)·become(원형)·becomes는 want 뒤에 올 수 없다."
           },
           {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '나는 새 자전거를 사고 싶다.'",
+            "q": "빈칸에 알맞은 것을 고르세요.  After a long week at school, I really enjoy ___ movies with my family on Saturday.",
             "options": [
-              "I want buy a new bike.",
-              "I want to buy a new bike.",
-              "I want buying a new bike.",
-              "I want to buying a new bike."
-            ],
-            "answer": 1,
-            "explain": "want to buy가 '사고 싶다'의 올바른 표현이다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '내 남동생은 축구 선수가 되기를 바란다.'",
-            "options": [
-              "My brother hopes be a soccer player.",
-              "My brother hopes being a soccer player.",
-              "My brother hopes to be a soccer player.",
-              "My brother hope to be a soccer player."
-            ],
-            "answer": 2,
-            "explain": "hope to be가 '되기를 바란다'의 올바른 표현이다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '우리는 도서관에서 공부하기로 결정했다.'",
-            "options": [
-              "We decided to study at the library.",
-              "We decided study at the library.",
-              "We decided studying at the library.",
-              "We decide to studying at the library."
-            ],
-            "answer": 0,
-            "explain": "decided to study가 '공부하기로 결정했다'의 올바른 표현이다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '너는 지금 좀 자는 것이 필요하다.'",
-            "options": [
-              "You need sleep now.",
-              "You need sleeping now.",
-              "You need to sleep now.",
-              "You need to sleeping now."
-            ],
-            "answer": 2,
-            "explain": "need to sleep가 '자는 것이 필요하다'의 올바른 표현이다."
-          },
-          {
-            "q": "어법상 옳은 문장을 고르세요.",
-            "options": [
-              "They plan to go camping this weekend.",
-              "They plan go camping this weekend.",
-              "They plan going camping this weekend.",
-              "They plans to go camping this weekend."
-            ],
-            "answer": 0,
-            "explain": "plan 뒤에 to go가 오고 주어 They에 맞는 동사 plan을 써야 한다."
-          },
-          {
-            "q": "어법상 옳은 문장을 고르세요.",
-            "options": [
-              "She wants learn the song.",
-              "She wants to learn the song.",
-              "She wants learning the song.",
-              "She want to learn the song."
-            ],
-            "answer": 1,
-            "explain": "wants 뒤에는 to learn이 와야 한다."
-          },
-          {
-            "q": "어법상 틀린 문장을 고르세요.",
-            "options": [
-              "I want to become a vet.",
-              "We decided to visit Jeju.",
-              "He need to drink water.",
-              "I hope to do well."
-            ],
-            "answer": 2,
-            "explain": "주어 He에는 needs를 써야 하므로 'He need'는 틀렸다."
-          },
-          {
-            "q": "어법상 틀린 문장을 고르세요.",
-            "options": [
-              "They plan to make an app.",
-              "She wants to learn to play the piano.",
-              "I decided to clean my room.",
-              "We want buy the tickets."
+              "watched",
+              "watch",
+              "to watch",
+              "watching"
             ],
             "answer": 3,
-            "explain": "want 뒤에는 to buy가 와야 하므로 'want buy'는 틀렸다."
+            "explain": "enjoy는 동명사만 목적어로 취하므로 watching이 맞다. enjoy 뒤에 to부정사(to watch)는 쓸 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  I want ___ English fluently.",
+            "q": "빈칸에 알맞은 것을 고르세요.  Because it started raining hard, we finally decided ___ the picnic and go home.",
             "options": [
-              "speak",
-              "to speak",
-              "speaking",
-              "spoke"
-            ],
-            "answer": 1,
-            "explain": "want 뒤에는 「to+동사원형」이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  She decided ___ an artist.",
-            "options": [
-              "to be",
-              "be",
-              "being",
-              "is"
+              "to cancel",
+              "canceled",
+              "cancel",
+              "canceling"
             ],
             "answer": 0,
-            "explain": "decide 뒤에는 to be가 오며 to 뒤에는 동사원형 be가 온다."
+            "explain": "decide는 to부정사를 취하므로 to cancel이 맞다. canceling(동명사)은 decide의 목적어가 될 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  We hope ___ the mountain.",
-            "options": [
-              "climbs",
-              "climbing",
-              "to climb",
-              "climbed"
-            ],
-            "answer": 2,
-            "explain": "hope 뒤에는 to climb이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  He needs ___ his hands now.",
-            "options": [
-              "wash",
-              "to wash",
-              "washing",
-              "washes"
-            ],
-            "answer": 1,
-            "explain": "need 뒤에는 「to+동사원형」이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  They plan ___ a club.",
-            "options": [
-              "start",
-              "starting",
-              "to start",
-              "started"
-            ],
-            "answer": 2,
-            "explain": "plan 뒤에는 to start가 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I want ___ a new language.",
-            "options": [
-              "to learn",
-              "learn",
-              "learning",
-              "learns"
-            ],
-            "answer": 0,
-            "explain": "want 뒤에는 to learn이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  We decided ___ on a picnic.",
-            "options": [
-              "go",
-              "goes",
-              "going",
-              "to go"
-            ],
-            "answer": 3,
-            "explain": "decide 뒤에는 「to+동사원형」이 온다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( to / I / want / be / a pilot )",
-            "options": [
-              "I want be to a pilot.",
-              "I want to be a pilot.",
-              "I to want be a pilot.",
-              "I be want to a pilot."
-            ],
-            "answer": 1,
-            "explain": "want + to be의 어순으로 'I want to be a pilot.'이 맞다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( decided / she / to / study / harder )",
-            "options": [
-              "She to decided study harder.",
-              "She decided study to harder.",
-              "She decided to study harder.",
-              "She study decided to harder."
-            ],
-            "answer": 2,
-            "explain": "decided + to study의 어순으로 'She decided to study harder.'가 맞다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( we / to / hope / see / you / soon )",
-            "options": [
-              "We hope to see you soon.",
-              "We to hope see you soon.",
-              "We hope see to you soon.",
-              "We see hope to you soon."
-            ],
-            "answer": 0,
-            "explain": "hope + to see의 어순으로 'We hope to see you soon.'이 맞다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( he / to / needs / finish / his homework )",
-            "options": [
-              "He needs finish to his homework.",
-              "He to needs finish his homework.",
-              "He needs to finish his homework.",
-              "He finish needs to his homework."
-            ],
-            "answer": 2,
-            "explain": "needs + to finish의 어순으로 'He needs to finish his homework.'가 맞다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( they / to / plan / build / a treehouse )",
-            "options": [
-              "They plan to build a treehouse.",
-              "They to plan build a treehouse.",
-              "They plan build to a treehouse.",
-              "They build plan to a treehouse."
-            ],
-            "answer": 0,
-            "explain": "plan + to build의 어순으로 'They plan to build a treehouse.'가 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  A: What do you want to be? B: I want ___ a movie director.",
-            "options": [
-              "become",
-              "to become",
-              "becoming",
-              "became"
-            ],
-            "answer": 1,
-            "explain": "want 뒤에는 to become이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I hope ___ great films someday.",
-            "options": [
-              "make",
-              "makes",
-              "to make",
-              "making"
-            ],
-            "answer": 2,
-            "explain": "hope 뒤에는 to make가 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  This summer, I plan ___ to Europe.",
-            "options": [
-              "to travel",
-              "travel",
-              "traveling",
-              "traveled"
-            ],
-            "answer": 0,
-            "explain": "plan 뒤에는 to travel이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  Next year, I decided ___ the film club.",
-            "options": [
-              "join",
-              "joins",
-              "joining",
-              "to join"
-            ],
-            "answer": 3,
-            "explain": "decide 뒤에는 「to+동사원형」이 온다."
-          },
-          {
-            "q": "어법상 옳은 문장을 고르세요.",
-            "options": [
-              "I want to eat pizza for lunch.",
-              "I want eat pizza for lunch.",
-              "I want ate pizza for lunch.",
-              "I want eating pizza for lunch."
-            ],
-            "answer": 0,
-            "explain": "want 뒤에는 to eat이 와야 한다."
-          },
-          {
-            "q": "어법상 틀린 문장을 고르세요.",
-            "options": [
-              "We hope to win the game.",
-              "She plans to read the book.",
-              "I decided to go home.",
-              "He wants to plays soccer."
-            ],
-            "answer": 3,
-            "explain": "to 뒤에는 동사원형 play가 와야 하므로 'to plays'는 틀렸다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  She wants ___ to play the piano.",
-            "options": [
-              "learn",
-              "to learn",
-              "learning",
-              "learns"
-            ],
-            "answer": 1,
-            "explain": "want 뒤에는 to learn이 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I decided ___ my room.",
+            "q": "빈칸에 알맞은 것을 고르세요.  The students didn't leave until they finished ___ the classroom after the party.",
             "options": [
               "clean",
               "cleaning",
               "to clean",
               "cleaned"
             ],
-            "answer": 2,
-            "explain": "decide 뒤에는 to clean이 온다."
+            "answer": 1,
+            "explain": "finish는 동명사만 취하므로 cleaning이 맞다. finish 뒤에 to부정사(to clean)는 올 수 없다."
           },
           {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '그는 매일 물을 많이 마실 필요가 있다.'",
+            "q": "빈칸에 알맞은 것을 고르세요.  I hope ___ you again next summer when I visit my grandparents' town.",
             "options": [
-              "He needs drink a lot of water.",
-              "He need to drink a lot of water.",
-              "He needs to drink a lot of water.",
-              "He needs to drinking a lot of water."
-            ],
-            "answer": 2,
-            "explain": "needs to drink가 올바른 표현이다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어를 고르세요.  '나는 이번 시험을 잘 보기를 바란다.'",
-            "options": [
-              "I hope to do well on this test.",
-              "I hope do well on this test.",
-              "I hope doing well on this test.",
-              "I hope to doing well on this test."
+              "to see",
+              "saw",
+              "see",
+              "seeing"
             ],
             "answer": 0,
-            "explain": "hope to do가 '~하기를 바란다'의 올바른 표현이다."
+            "explain": "hope는 to부정사를 취하므로 to see가 맞다. seeing(동명사)·saw(과거)·see(원형)는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  We want ___ the concert tickets.",
+            "q": "빈칸에 알맞은 것을 고르세요.  To stay healthy, my coach told us to avoid ___ too much fast food.",
             "options": [
-              "buy",
-              "to buy",
-              "buying",
-              "buys"
+              "eat",
+              "eats",
+              "eating",
+              "to eat"
+            ],
+            "answer": 2,
+            "explain": "avoid는 동명사만 취하므로 eating이 맞다. avoid 뒤에 to eat은 쓸 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The club members plan ___ a small concert at the end of the semester.",
+            "options": [
+              "to hold",
+              "holding",
+              "hold",
+              "held"
+            ],
+            "answer": 0,
+            "explain": "plan은 to부정사를 취하므로 to hold가 맞다. holding(동명사)·hold(원형)는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Would you mind ___ the window? It's a little cold in here.",
+            "options": [
+              "closing",
+              "closed",
+              "to close",
+              "close"
+            ],
+            "answer": 0,
+            "explain": "mind는 동명사만 취하므로 closing이 맞다. 'Would you mind to close'는 틀린 표현이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  My brother promised ___ me with my math homework after dinner tonight.",
+            "options": [
+              "help",
+              "helping",
+              "to help",
+              "helped"
+            ],
+            "answer": 2,
+            "explain": "promise는 to부정사를 취하므로 to help가 맞다. helping·help·helped는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Even though she was tired, she kept ___ until she reached the finish line.",
+            "options": [
+              "running",
+              "ran",
+              "to run",
+              "run"
+            ],
+            "answer": 0,
+            "explain": "keep은 동명사를 취해 '계속 ~하다'가 되므로 running이 맞다. keep 뒤에 to run은 쓸 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The little boy refused ___ his vegetables, so his mom was upset.",
+            "options": [
+              "eat",
+              "to eat",
+              "ate",
+              "eating"
             ],
             "answer": 1,
-            "explain": "want 뒤에는 to buy가 온다."
+            "explain": "refuse는 to부정사를 취하므로 to eat이 맞다. eating(동명사)은 refuse의 목적어가 될 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  After a long talk, both teams agreed ___ the rules of the new game.",
+            "options": [
+              "followed",
+              "follow",
+              "to follow",
+              "following"
+            ],
+            "answer": 2,
+            "explain": "agree는 to부정사를 취하므로 to follow가 맞다. following·follow·followed는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  We expect ___ at the airport around noon, so please wait for us there.",
+            "options": [
+              "arrived",
+              "arrive",
+              "arriving",
+              "to arrive"
+            ],
+            "answer": 3,
+            "explain": "expect는 to부정사를 취하므로 to arrive가 맞다. arriving·arrive·arrived는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  You look really pale; I think you need ___ some rest right now.",
+            "options": [
+              "get",
+              "got",
+              "to get",
+              "getting"
+            ],
+            "answer": 2,
+            "explain": "need는 to부정사를 취하므로 to get이 맞다. getting·get·got는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The customer wished ___ to the manager about the broken product.",
+            "options": [
+              "speaking",
+              "to speak",
+              "spoke",
+              "speak"
+            ],
+            "answer": 1,
+            "explain": "wish는 to부정사를 취하므로 to speak이 맞다. speaking·speak·spoke는 올 수 없다."
           },
           {
             "q": "어법상 옳은 문장을 고르세요.",
             "options": [
-              "She hope to travel abroad.",
-              "She hopes to travel abroad.",
-              "She hopes travel abroad.",
-              "She hopes to traveling abroad."
+              "My friend wants join the drama club.",
+              "My friend want to join the drama club.",
+              "My friend wants joining the drama club.",
+              "My friend wants to join the drama club."
+            ],
+            "answer": 3,
+            "explain": "주어 My friend에 맞춰 wants를 쓰고, want는 to부정사를 취하므로 'wants to join'이 옳다."
+          },
+          {
+            "q": "어법상 틀린 문장을 고르세요.",
+            "options": [
+              "They decided to save more money.",
+              "We planned to meet at the library.",
+              "He enjoys to play basketball after school.",
+              "She hopes to travel around the world."
+            ],
+            "answer": 2,
+            "explain": "enjoy는 동명사만 취하므로 'enjoys to play'는 틀렸다. 'enjoys playing'이 되어야 한다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The children want ___ to the amusement park this weekend.",
+            "options": [
+              "to go",
+              "go",
+              "to going",
+              "going"
+            ],
+            "answer": 0,
+            "explain": "want 뒤에는 to부정사가 오고 to 다음에는 동사원형이 오므로 to go가 맞다. 'to going'은 틀린 형태이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Our teacher decided ___ the test until next Monday.",
+            "options": [
+              "postponed",
+              "postpone",
+              "to postpone",
+              "postponing"
+            ],
+            "answer": 2,
+            "explain": "decide는 to부정사를 취하므로 to postpone이 맞다. postponing(동명사)은 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  My grandfather enjoys ___ in the garden every morning before breakfast.",
+            "options": [
+              "to work",
+              "working",
+              "work",
+              "works"
             ],
             "answer": 1,
-            "explain": "주어 She에는 hopes를 쓰고 뒤에 to travel이 온다."
+            "explain": "enjoy는 동명사만 취하므로 working이 맞다. 'enjoys to work'는 틀린 표현이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Don't worry, you don't need ___ so early tomorrow; the trip starts at noon.",
+            "options": [
+              "to wake up",
+              "wake up",
+              "woke up",
+              "waking up"
+            ],
+            "answer": 0,
+            "explain": "need는 to부정사를 취하므로 to wake up이 맞다. waking up·wake up·woke up은 올 수 없다."
+          },
+          {
+            "q": "단어를 바르게 배열한 것을 고르세요.  ( to / we / hope / visit / the museum )",
+            "options": [
+              "We hope to visit the museum.",
+              "We visit hope to the museum.",
+              "We hope visit to the museum.",
+              "We to hope visit the museum."
+            ],
+            "answer": 0,
+            "explain": "hope + to visit의 어순으로 'We hope to visit the museum.'이 맞다."
+          },
+          {
+            "q": "단어를 바르게 배열한 것을 고르세요.  ( refused / he / to / answer / the question )",
+            "options": [
+              "He refused to answer the question.",
+              "He answer refused to the question.",
+              "He to refused answer the question.",
+              "He refused answer to the question."
+            ],
+            "answer": 0,
+            "explain": "refuse + to answer의 어순으로 'He refused to answer the question.'이 맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  She promised to ___ on time from now on.",
+            "options": [
+              "arrives",
+              "arrived",
+              "arriving",
+              "arrive"
+            ],
+            "answer": 3,
+            "explain": "to 뒤에는 동사원형이 오므로 arrive가 맞다. arriving·arrives·arrived는 to부정사 형태로 쓸 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  A: What are you going to do this vacation? B: I plan ___ swimming every day.",
+            "options": [
+              "go",
+              "to go",
+              "going",
+              "went"
+            ],
+            "answer": 1,
+            "explain": "plan은 to부정사를 취하므로 to go가 맞다('go swimming'은 '수영하러 가다'). going·go·went는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The weather report says we can expect ___ some snow tonight.",
+            "options": [
+              "to see",
+              "saw",
+              "seeing",
+              "see"
+            ],
+            "answer": 0,
+            "explain": "expect는 to부정사를 취하므로 to see가 맞다. seeing·see·saw는 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  I want to ___ a foreign language, so I signed up for a Spanish class.",
+            "options": [
+              "drink",
+              "watch",
+              "listen",
+              "learn"
+            ],
+            "answer": 3,
+            "explain": "언어는 '배우다(learn)'가 자연스럽다. listen/watch/drink는 language와 의미상 어울리지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  She hopes to ___ the first prize in the science contest this year.",
+            "options": [
+              "lose",
+              "sell",
+              "win",
+              "buy"
+            ],
+            "answer": 2,
+            "explain": "대회에서 상은 '타다(win)'가 맞다. lose/buy/sell은 prize와 의미상 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  We decided to ___ money every month to buy a new computer.",
+            "options": [
+              "borrow",
+              "save",
+              "waste",
+              "spend"
+            ],
+            "answer": 1,
+            "explain": "컴퓨터를 사려면 매달 돈을 '모으다(save)'가 자연스럽다. waste/spend/borrow는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The firefighters refused to ___ until everyone was safely out of the building.",
+            "options": [
+              "leave",
+              "stay",
+              "arrive",
+              "sleep"
+            ],
+            "answer": 0,
+            "explain": "모두 나올 때까지 '떠나기(leave)'를 거부한 것이 자연스럽다. stay/arrive/sleep은 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  My parents promised to ___ me a puppy if I get good grades.",
+            "options": [
+              "throw",
+              "buy",
+              "lend",
+              "sell"
+            ],
+            "answer": 1,
+            "explain": "좋은 성적의 보상으로 강아지를 '사 주다(buy)'가 자연스럽다. sell/throw/lend는 의미상 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  You need to ___ your teeth twice a day to keep them healthy.",
+            "options": [
+              "brush",
+              "paint",
+              "break",
+              "cut"
+            ],
+            "answer": 0,
+            "explain": "이는 '닦다(brush)'가 올바른 표현이다. cut/break/paint는 teeth와 어울리지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The movie was so ___ that many people fell asleep in the theater.",
+            "options": [
+              "boring",
+              "exciting",
+              "funny",
+              "scary"
+            ],
+            "answer": 0,
+            "explain": "사람들이 잠들었다는 문맥에는 '지루한(boring)'이 맞다. exciting/funny/scary는 반대 의미이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Please listen ___ because I will explain the rules only once.",
+            "options": [
+              "quickly",
+              "slowly",
+              "carefully",
+              "quietly"
+            ],
+            "answer": 2,
+            "explain": "한 번만 설명하니 '주의 깊게(carefully)' 들으라는 뜻이 자연스럽다. quickly/quietly/slowly는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  I hope to become a ___ so that I can help sick animals.",
+            "options": [
+              "vet",
+              "chef",
+              "pilot",
+              "singer"
+            ],
+            "answer": 0,
+            "explain": "아픈 동물을 돕는 직업은 '수의사(vet)'이다. pilot/chef/singer는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  It was raining, so we decided to ___ the game until next week.",
+            "options": [
+              "watch",
+              "delay",
+              "win",
+              "start"
+            ],
+            "answer": 1,
+            "explain": "비 때문에 경기를 '미루다(delay)'가 자연스럽다. start/watch/win은 until next week와 어울리지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  He expects to ___ the report before the meeting starts.",
+            "options": [
+              "forget",
+              "finish",
+              "lose",
+              "drop"
+            ],
+            "answer": 1,
+            "explain": "회의 전에 보고서를 '끝내다(finish)'가 자연스럽다. forget/lose/drop은 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Her explanation was very ___, so everyone understood the lesson easily.",
+            "options": [
+              "clear",
+              "clearness",
+              "clearly",
+              "clearing"
+            ],
+            "answer": 0,
+            "explain": "be동사 뒤 보어 자리에는 형용사가 오므로 clear가 맞다. clearly(부사)·clearness(명사)·clearing은 올 수 없다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  The team worked ___ to finish the project on time.",
+            "options": [
+              "hardly",
+              "hard",
+              "hardness",
+              "harder"
+            ],
+            "answer": 1,
+            "explain": "'열심히'라는 뜻의 부사는 hard이다. hardly는 '거의 ~않다'라는 다른 뜻이고, harder(비교급)·hardness(명사)는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.  Getting enough ___ is important if you want to stay healthy.",
+            "options": [
+              "asleep",
+              "sleepy",
+              "sleeps",
+              "sleep"
+            ],
+            "answer": 3,
+            "explain": "enough 뒤에는 명사가 오므로 sleep이 맞다. sleepy(형용사)·asleep(형용사)·sleeps는 올 수 없다."
           }
         ],
         "sa": [
@@ -538,444 +537,444 @@ export const courses = [
         "concept": "날씨·시간·요일·날짜·계절·거리·명암을 말할 때 문장의 주어로 It을 쓰며, 이 It은 '그것은'으로 해석하지 않는다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is sunny today.",
+            "q": "Look outside! ___ is snowing very hard, so take your warm coat with you.",
             "options": [
-              "It",
-              "This",
-              "That",
-              "They"
-            ],
-            "answer": 0,
-            "explain": "날씨를 나타낼 때는 비인칭 주어 It을 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is 9 o'clock now.",
-            "options": [
-              "He",
+              "They",
               "It",
               "There",
               "This"
             ],
             "answer": 1,
-            "explain": "시간을 나타낼 때는 비인칭 주어 It을 쓴다."
+            "explain": "눈이 오는 날씨를 나타낼 때 비인칭 주어 It을 쓴다. There/This/They는 날씨 표현의 주어가 될 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is Wednesday today.",
+            "q": "Hurry up, everyone! ___ is already seven o'clock and the bus leaves soon.",
             "options": [
-              "That",
-              "This",
+              "There",
               "It",
-              "One"
+              "He",
+              "This"
             ],
-            "answer": 2,
-            "explain": "요일을 나타낼 때는 비인칭 주어 It을 쓴다."
+            "answer": 1,
+            "explain": "시각을 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is March 3rd today.",
+            "q": "The library is crowded today because ___ are many students studying for the exam.",
+            "options": [
+              "they",
+              "there",
+              "this",
+              "it"
+            ],
+            "answer": 1,
+            "explain": "'~가 있다'는 존재를 나타낼 때는 There is/are를 쓴다. 복수 명사(many students)이므로 There are가 맞다. 비인칭 It과 혼동하지 않도록 주의."
+          },
+          {
+            "q": "Don't make plans for tomorrow because ___ is Sunday and the shop will be closed.",
             "options": [
               "It",
+              "That",
               "They",
-              "Its",
               "There"
             ],
             "answer": 0,
-            "explain": "날짜를 나타낼 때는 비인칭 주어 It을 쓴다."
+            "explain": "요일을 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is spring now.",
+            "q": "My aunt lives in Busan, and ___ is about 300 kilometers from Seoul to her home.",
             "options": [
               "This",
               "It",
-              "He",
-              "That"
+              "They",
+              "There"
             ],
             "answer": 1,
-            "explain": "계절을 나타낼 때는 비인칭 주어 It을 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is 1 km to the park.",
-            "options": [
-              "There",
-              "This",
-              "It",
-              "They"
-            ],
-            "answer": 2,
             "explain": "거리를 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is very dark outside.",
+            "q": "Let's find a place to study; ___ is a nice coffee shop right next to the bookstore.",
             "options": [
-              "It",
-              "That",
               "This",
-              "Those"
+              "It",
+              "Here",
+              "There"
             ],
-            "answer": 0,
-            "explain": "명암(밝고 어두움)을 나타낼 때는 비인칭 주어 It을 쓴다."
+            "answer": 3,
+            "explain": "새로운 대상의 존재를 처음 소개할 때는 There is를 쓴다. 'There is a nice coffee shop'가 자연스럽다. 비인칭 It과 구별해야 한다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ is cloudy today.",
+            "q": "The leaves are turning red and falling down, so you can tell ___ is autumn now.",
+            "options": [
+              "It",
+              "There",
+              "He",
+              "This"
+            ],
+            "answer": 0,
+            "explain": "계절을 나타낼 때는 비인칭 주어 It을 쓴다."
+          },
+          {
+            "q": "Please turn on the lamp because ___ is too dark to read my book here.",
+            "options": [
+              "This",
+              "It",
+              "There",
+              "That"
+            ],
+            "answer": 1,
+            "explain": "명암(어두움)을 나타낼 때는 비인칭 주어 It을 쓴다."
+          },
+          {
+            "q": "Everyone is wearing thick coats this week because ___ is very cold outside.",
             "options": [
               "They",
               "It",
+              "There",
+              "This"
+            ],
+            "answer": 1,
+            "explain": "온도(추움)를 나타낼 때는 비인칭 주어 It을 쓴다."
+          },
+          {
+            "q": "밑줄 친 It의 쓰임이 나머지 셋과 다른 것을 고르세요.",
+            "options": [
+              "It is snowing outside.",
+              "It is my little brother's toy.",
+              "It is almost midnight now.",
+              "It is very windy today."
+            ],
+            "answer": 1,
+            "explain": "2번의 It은 '그것'을 뜻하는 대명사이고, 나머지는 날씨·시간을 나타내는 비인칭 It이다."
+          },
+          {
+            "q": "A: Why did you bring an umbrella today?  B: Because ___ raining outside right now.",
+            "options": [
+              "there's",
+              "this is",
+              "he's",
+              "it's"
+            ],
+            "answer": 3,
+            "explain": "날씨를 말할 때는 It's를 쓴다. 'It's raining.'이 자연스럽다."
+          },
+          {
+            "q": "___ was so foggy this morning that the drivers could not see the road well.",
+            "options": [
+              "Those",
+              "They",
+              "There",
+              "It"
+            ],
+            "answer": 3,
+            "explain": "안개 낀 날씨를 나타낼 때는 비인칭 주어 It을 쓴다. 과거이므로 It was를 쓴다."
+          },
+          {
+            "q": "I looked everywhere, but ___ is nothing to eat in the refrigerator.",
+            "options": [
+              "there",
+              "that",
+              "this",
+              "it"
+            ],
+            "answer": 0,
+            "explain": "'아무것도 없다'는 존재를 나타내므로 There is nothing이 맞다. 비인칭 It과 구별해야 한다."
+          },
+          {
+            "q": "Happy birthday! ___ is May 5th today, and you are finally a teenager.",
+            "options": [
               "This",
-              "He"
-            ],
-            "answer": 1,
-            "explain": "날씨를 나타낼 때는 비인칭 주어 It을 쓴다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n오늘은 비가 온다.",
-            "options": [
-              "It's rainy today.",
-              "This is rainy today.",
-              "There is rainy today.",
-              "It rainy today."
-            ],
-            "answer": 0,
-            "explain": "날씨는 It's + 형용사로 나타낸다. 'It's rainy today.'가 올바르다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n지금은 5시다.",
-            "options": [
-              "This is 5 o'clock now.",
-              "It's 5 o'clock now.",
-              "There is 5 o'clock.",
-              "It 5 o'clock now."
-            ],
-            "answer": 1,
-            "explain": "시간은 It's + 시각으로 나타낸다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n오늘은 토요일이다.",
-            "options": [
-              "Today is a Saturday it.",
-              "It Saturday today.",
-              "It's Saturday today.",
-              "That's Saturday today."
+              "They",
+              "It",
+              "That"
             ],
             "answer": 2,
-            "explain": "요일은 It's + 요일로 나타낸다."
+            "explain": "날짜를 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n지금은 겨울이다.",
+            "q": "다음 중 어법상 옳은 문장을 고르세요.",
             "options": [
-              "It's winter now.",
-              "This winter now.",
-              "It winter is now.",
-              "There's winter now."
+              "This is windy and cold today.",
+              "There windy and cold today.",
+              "They are windy today.",
+              "It's windy and cold today."
             ],
-            "answer": 0,
-            "explain": "계절은 It's + 계절로 나타낸다."
+            "answer": 3,
+            "explain": "날씨는 It's + 형용사로 나타낸다. 'It's windy and cold today.'가 옳다."
           },
           {
-            "q": "다음 중 문장이 옳은 것을 고르세요.",
+            "q": "다음 중 어법상 틀린 문장을 고르세요.",
             "options": [
-              "This is far from here to the station.",
-              "It's far from here to the station.",
-              "There far from here.",
-              "It far from here to the station."
-            ],
-            "answer": 1,
-            "explain": "거리는 It's far/near로 나타낸다."
-          },
-          {
-            "q": "다음 중 문장이 옳은 것을 고르세요.",
-            "options": [
-              "It's bright in the room.",
-              "That's bright in the room.",
-              "It bright in the room.",
-              "This bright in the room."
-            ],
-            "answer": 0,
-            "explain": "명암은 It's bright/dark로 나타낸다."
-          },
-          {
-            "q": "다음 중 문장이 틀린 것을 고르세요.",
-            "options": [
-              "It's sunny today.",
+              "It's summer in Korea.",
               "It's Monday today.",
-              "They is 3 o'clock now.",
-              "It's summer now."
+              "There is 8 o'clock now.",
+              "It's snowy outside."
             ],
             "answer": 2,
-            "explain": "시간을 나타낼 때 주어는 It이어야 한다. 'They is'는 틀렸고, 'It's 3 o'clock now.'가 옳다."
+            "explain": "시각을 나타낼 때 주어는 It이어야 한다. 'There is 8 o'clock'은 틀리고 'It's 8 o'clock now.'가 옳다."
           },
           {
-            "q": "다음 중 문장이 틀린 것을 고르세요.",
+            "q": "In the middle of summer, ___ is so hot in this city that we go swimming every day.",
             "options": [
-              "It's winter now.",
-              "It's dark outside.",
-              "This is Friday today.",
-              "It's April 9th today."
-            ],
-            "answer": 2,
-            "explain": "요일을 나타낼 때 주어는 It. 'This is Friday'가 아니라 'It's Friday today.'가 옳다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: What's the weather like today?  B: ___ windy.",
-            "options": [
-              "This is",
-              "There's",
-              "It's",
-              "He's"
-            ],
-            "answer": 2,
-            "explain": "날씨를 답할 때 It's를 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: What time is it now?  B: ___ 8:30.",
-            "options": [
-              "It's",
-              "This is",
-              "That's",
-              "They're"
+              "It",
+              "They",
+              "There",
+              "This"
             ],
             "answer": 0,
-            "explain": "시간을 답할 때 It's를 쓴다."
+            "explain": "온도(더움)를 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: What day is it today?  B: ___ Thursday.",
-            "options": [
-              "There's",
-              "It's",
-              "This is",
-              "He's"
-            ],
-            "answer": 1,
-            "explain": "요일을 답할 때 It's를 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: What's the date today?  B: ___ January 1st.",
-            "options": [
-              "This is",
-              "That's",
-              "It's",
-              "They're"
-            ],
-            "answer": 2,
-            "explain": "날짜를 답할 때 It's를 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: What season is it now?  B: ___ fall.",
-            "options": [
-              "It's",
-              "There's",
-              "This is",
-              "He's"
-            ],
-            "answer": 0,
-            "explain": "계절을 답할 때 It's를 쓴다."
-          },
-          {
-            "q": "밑줄 친 It의 쓰임이 나머지와 다른 것을 고르세요.",
-            "options": [
-              "It's sunny today.",
-              "It's my new phone.",
-              "It's Monday today.",
-              "It's 10 o'clock now."
-            ],
-            "answer": 1,
-            "explain": "2번의 It은 '그것'을 뜻하는 대명사이고, 나머지는 날씨·요일·시간을 나타내는 비인칭 It이다."
-          },
-          {
-            "q": "밑줄 친 It의 쓰임이 나머지와 다른 것을 고르세요.",
-            "options": [
-              "It's a nice bag.",
-              "It's winter now.",
-              "It's dark outside.",
-              "It's far from here."
-            ],
-            "answer": 0,
-            "explain": "1번의 It은 '그것'을 뜻하는 대명사이고, 나머지는 계절·명암·거리를 나타내는 비인칭 It이다."
-          },
-          {
-            "q": "밑줄 친 It이 '그것'으로 해석되는 문장을 고르세요.",
-            "options": [
-              "It's spring now.",
-              "It's cloudy today.",
-              "It's a cute cat.",
-              "It's 2 km to the park."
-            ],
-            "answer": 2,
-            "explain": "'It's a cute cat.'의 It만 '그것'을 뜻하는 대명사이고, 나머지는 비인칭 It이다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n지금은 2시다.",
-            "options": [
-              "It's 2 o'clock now.",
-              "This is 2 o'clock.",
-              "It 2 o'clock now.",
-              "There's 2 o'clock now."
-            ],
-            "answer": 0,
-            "explain": "시간은 It's + 시각으로 나타낸다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n오늘은 12월 25일이다.",
-            "options": [
-              "This December 25th today.",
-              "It's December 25th today.",
-              "It December 25th today.",
-              "That's December 25th."
-            ],
-            "answer": 1,
-            "explain": "날짜는 It's + 날짜로 나타낸다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n지금 밖이 어둡다.",
-            "options": [
-              "This is dark outside.",
-              "There's dark outside.",
-              "It's dark outside.",
-              "It dark outside now."
-            ],
-            "answer": 2,
-            "explain": "명암은 It's dark로 나타낸다."
-          },
-          {
-            "q": "우리말 뜻에 맞는 영어 문장을 고르세요.\n오늘 눈이 온다.",
-            "options": [
-              "It's snowy today.",
-              "This snowy today.",
-              "It snowy is today.",
-              "There is snowy today."
-            ],
-            "answer": 0,
-            "explain": "날씨는 It's + 형용사로 나타낸다."
-          },
-          {
-            "q": "단어를 바르게 배열한 문장을 고르세요.\n( it's / o'clock / ten )",
-            "options": [
-              "Ten it's o'clock.",
-              "It's ten o'clock.",
-              "O'clock ten it's.",
-              "It's o'clock ten."
-            ],
-            "answer": 1,
-            "explain": "'It's ten o'clock.'이 올바른 어순이다."
-          },
-          {
-            "q": "단어를 바르게 배열한 문장을 고르세요.\n( it's / Thursday / today )",
-            "options": [
-              "It's today Thursday.",
-              "Today Thursday it's.",
-              "It's Thursday today.",
-              "Thursday it's today."
-            ],
-            "answer": 2,
-            "explain": "'It's Thursday today.'가 올바른 어순이다."
-          },
-          {
-            "q": "단어를 바르게 배열한 문장을 고르세요.\n( summer / it's / now )",
-            "options": [
-              "It's summer now.",
-              "Summer it's now.",
-              "Now summer it's.",
-              "It's now summer."
-            ],
-            "answer": 0,
-            "explain": "'It's summer now.'가 올바른 어순이다."
-          },
-          {
-            "q": "단어를 바르게 배열한 문장을 고르세요.\n( to / it's / far / the museum )",
-            "options": [
-              "It's the museum to far.",
-              "Far it's to the museum.",
-              "It's far to the museum.",
-              "To the museum it's far."
-            ],
-            "answer": 2,
-            "explain": "'It's far to the museum.'이 올바른 어순이다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: Is it far from here to school?  B: Yes, ___ far.",
+            "q": "A: Is the airport close to here?  B: No, ___ quite far from the city center.",
             "options": [
               "it's",
-              "this is",
               "there's",
-              "he's"
+              "this is",
+              "they're"
             ],
             "answer": 0,
-            "explain": "거리를 답할 때 it's를 쓴다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nA: Is it dark outside now?  B: Yes, ___ dark.",
-            "options": [
-              "there's",
-              "it's",
-              "this is",
-              "that's"
-            ],
-            "answer": 1,
-            "explain": "명암을 답할 때 it's를 쓴다."
+            "explain": "거리를 말할 때는 It's를 쓴다. 'It's far.'가 맞다."
           },
           {
             "q": "다음 중 밑줄 친 It이 비인칭 주어인 문장을 고르세요.",
             "options": [
-              "It is my book.",
-              "It is on the desk.",
-              "It is 3 o'clock now.",
-              "I like it very much."
-            ],
-            "answer": 2,
-            "explain": "'It is 3 o'clock now.'의 It만 시간을 나타내는 비인칭 It이고, 나머지는 '그것'을 가리키는 대명사이다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n오늘은 화요일이다.  ___ Tuesday today.",
-            "options": [
-              "It's",
-              "This is",
-              "There's",
-              "They're"
-            ],
-            "answer": 0,
-            "explain": "요일은 It's + 요일로 나타낸다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n여기서 우체국까지 가깝다.  It's ___ to the post office.",
-            "options": [
-              "far",
-              "near",
-              "long",
-              "dark"
+              "It is on the top shelf.",
+              "It is getting dark outside.",
+              "I found it under the bed.",
+              "It is a birthday present for you."
             ],
             "answer": 1,
-            "explain": "'가깝다'는 near로 나타낸다. It's near to the post office."
+            "explain": "'It is getting dark outside.'의 It만 명암을 나타내는 비인칭 It이고, 나머지는 '그것'을 가리키는 대명사이다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n방 안이 밝다.  It's ___ in the room.",
+            "q": "밑줄 친 It이 '그것'으로 해석되는 문장을 고르세요.",
             "options": [
-              "bright",
-              "dark",
-              "far",
-              "rainy"
+              "It's nearly noon now.",
+              "It's very cold in winter.",
+              "It's a present from my mom.",
+              "It's cloudy and grey today."
             ],
-            "answer": 0,
-            "explain": "'밝다'는 bright로 나타낸다."
+            "answer": 2,
+            "explain": "'It's a present from my mom.'의 It만 '그것'을 뜻하는 대명사이고, 나머지는 날씨·시간·계절을 나타내는 비인칭 It이다."
           },
           {
-            "q": "다음 중 문장이 옳은 것을 고르세요.",
+            "q": "A: What time is it right now?  B: ___ a quarter past six, so dinner is almost ready.",
             "options": [
-              "It's windy now.",
-              "Windy it's now.",
-              "It windy now.",
-              "This windy now."
+              "That's",
+              "There's",
+              "This is",
+              "It's"
             ],
-            "answer": 0,
-            "explain": "날씨는 It's + 형용사. 'It's windy now.'가 옳다."
+            "answer": 3,
+            "explain": "시각을 말할 때는 It's를 쓴다. 'It's a quarter past six.'는 6시 15분을 뜻한다."
           },
           {
-            "q": "다음 빈칸에 공통으로 들어갈 말을 고르세요.\n___ is snowy today.  ___ is winter now.",
+            "q": "두 문장의 빈칸에 공통으로 들어갈 말을 고르세요.\n___ is very cloudy today.\n___ is a long way to the mountain top.",
             "options": [
-              "This",
               "There",
+              "It",
+              "They",
+              "This"
+            ],
+            "answer": 1,
+            "explain": "날씨와 거리를 나타낼 때 모두 비인칭 주어 It을 쓴다."
+          },
+          {
+            "q": "다음 중 어법상 옳은 문장을 고르세요.",
+            "options": [
+              "This is spring, and it are flowers.",
+              "It's spring, and there are flowers everywhere.",
+              "It are two apples on the table.",
+              "There is very sunny today."
+            ],
+            "answer": 1,
+            "explain": "계절은 It's로, 사물의 존재는 There are로 나타낸다. 'It's spring, and there are flowers everywhere.'가 옳다."
+          },
+          {
+            "q": "단어를 바르게 배열한 문장을 고르세요.\n( getting / it's / dark / outside )",
+            "options": [
+              "It's getting dark outside.",
+              "It's dark getting outside.",
+              "Dark it's getting outside.",
+              "Outside it's dark getting."
+            ],
+            "answer": 0,
+            "explain": "'It's getting dark outside.'가 올바른 어순이다."
+          },
+          {
+            "q": "___ isn't sunny today; instead, it is cloudy and a little cool.",
+            "options": [
+              "There",
+              "This",
               "It",
               "They"
             ],
             "answer": 2,
-            "explain": "날씨와 계절을 나타낼 때 모두 비인칭 주어 It을 쓴다."
+            "explain": "날씨를 나타내는 문장의 주어는 비인칭 It이다. 'It isn't sunny today.'가 맞다."
+          },
+          {
+            "q": "Be careful when you walk today because ___ is a lot of ice on the road.",
+            "options": [
+              "There",
+              "It",
+              "He",
+              "This"
+            ],
+            "answer": 0,
+            "explain": "'얼음이 많이 있다'는 존재를 나타내므로 There is a lot of ice가 맞다. 비인칭 It과 구별해야 한다."
+          },
+          {
+            "q": "You should wear your sunglasses today because it's very ___ and the sun is really strong.",
+            "options": [
+              "snowy",
+              "rainy",
+              "cloudy",
+              "sunny"
+            ],
+            "answer": 3,
+            "explain": "해가 강한 날씨는 sunny(맑은, 화창한)이다. 나머지는 문맥과 맞지 않는다."
+          },
+          {
+            "q": "The drivers turned on their lights because it was ___ and they could not see far ahead.",
+            "options": [
+              "foggy",
+              "bright",
+              "sunny",
+              "warm"
+            ],
+            "answer": 0,
+            "explain": "앞이 잘 안 보이는 날씨는 foggy(안개 낀)이다."
+          },
+          {
+            "q": "My house is right beside the school, so it's very ___ and I can walk there in a minute.",
+            "options": [
+              "high",
+              "near",
+              "long",
+              "far"
+            ],
+            "answer": 1,
+            "explain": "'가깝다'는 near이다. 학교 바로 옆이므로 near가 맞다. far(먼)와 혼동하지 않도록 주의."
+          },
+          {
+            "q": "Hold onto your hat! It's so ___ today that the leaves are flying everywhere.",
+            "options": [
+              "rainy",
+              "windy",
+              "sunny",
+              "quiet"
+            ],
+            "answer": 1,
+            "explain": "바람이 부는 날씨는 windy이다."
+          },
+          {
+            "q": "It's ___ now, so the flowers are blooming and the weather is getting warm.",
+            "options": [
+              "autumn",
+              "winter",
+              "night",
+              "spring"
+            ],
+            "answer": 3,
+            "explain": "꽃이 피고 따뜻해지는 계절은 spring(봄)이다."
+          },
+          {
+            "q": "Please shut the door. It's freezing ___ outside because of all the snow.",
+            "options": [
+              "cold",
+              "warm",
+              "bright",
+              "hot"
+            ],
+            "answer": 0,
+            "explain": "눈이 오고 얼 정도의 날씨는 cold(추운)이다."
+          },
+          {
+            "q": "A: What time is it?  B: It's a ___ to nine, so we still have fifteen minutes.",
+            "options": [
+              "half",
+              "minute",
+              "quarter",
+              "hour"
+            ],
+            "answer": 2,
+            "explain": "15분을 뜻하는 시간 표현은 quarter이다. 'a quarter to nine'은 9시 15분 전을 뜻한다."
+          },
+          {
+            "q": "It gets ___ very early in winter, so the sky is already black by six o'clock.",
+            "options": [
+              "clear",
+              "dark",
+              "bright",
+              "sunny"
+            ],
+            "answer": 1,
+            "explain": "하늘이 검어지는 것은 dark(어두운)이다."
+          },
+          {
+            "q": "Open the curtains, please! It's such a ___ and beautiful morning outside.",
+            "options": [
+              "bright",
+              "dark",
+              "rainy",
+              "cloudy"
+            ],
+            "answer": 0,
+            "explain": "밝고 아름다운 아침은 bright(밝은)이다."
+          },
+          {
+            "q": "Take your umbrella with you because it's very ___ and the streets are already wet.",
+            "options": [
+              "rainy",
+              "sunny",
+              "dry",
+              "clear"
+            ],
+            "answer": 0,
+            "explain": "비가 와서 거리가 젖는 날씨는 rainy이다."
+          },
+          {
+            "q": "It's ___ now, and the leaves on the trees are turning red, yellow, and orange.",
+            "options": [
+              "autumn",
+              "winter",
+              "summer",
+              "spring"
+            ],
+            "answer": 0,
+            "explain": "잎이 붉고 노랗게 물드는 계절은 autumn(가을)이다."
+          },
+          {
+            "q": "Everyone is going to the beach because it's really ___ today, over thirty degrees.",
+            "options": [
+              "cool",
+              "windy",
+              "hot",
+              "cold"
+            ],
+            "answer": 2,
+            "explain": "30도가 넘는 날씨는 hot(더운)이다."
+          },
+          {
+            "q": "The mountain looks close, but actually it's very ___ from our small town.",
+            "options": [
+              "short",
+              "low",
+              "far",
+              "near"
+            ],
+            "answer": 2,
+            "explain": "실제로 멀리 있는 것은 far(먼)이다. near(가까운)와 반대이다."
+          },
+          {
+            "q": "There is no sun in the sky; it's grey and ___ today, and it may rain soon.",
+            "options": [
+              "sunny",
+              "cloudy",
+              "clear",
+              "bright"
+            ],
+            "answer": 1,
+            "explain": "해가 없고 회색빛인 날씨는 cloudy(흐린)이다."
           }
         ],
         "sa": [
@@ -1058,444 +1057,444 @@ export const courses = [
         "concept": "감각동사(look, sound, smell, taste, feel) 뒤에는 부사(-ly)가 아니라 형용사가 온다. (look like 뒤에는 명사)",
         "mc": [
           {
-            "q": "The flowers smell ___.",
+            "q": "After running all morning at the sports festival, the twins looked completely ___ when they got home.",
             "options": [
-              "sweet",
-              "sweetly",
-              "sweetness",
-              "to sweet"
-            ],
-            "answer": 0,
-            "explain": "감각동사 smell 뒤에는 형용사가 와요. 부사 sweetly가 아니라 형용사 sweet가 정답이에요."
-          },
-          {
-            "q": "Your idea sounds ___.",
-            "options": [
-              "greatly",
-              "great",
-              "greatness",
-              "greating"
+              "exhaustion",
+              "exhausted",
+              "to exhaust",
+              "exhaustedly"
             ],
             "answer": 1,
-            "explain": "sound 뒤에는 형용사가 와요. 부사 greatly가 아니라 형용사 great가 맞아요."
+            "explain": "감각동사 look 뒤에는 형용사가 와요. 부사 exhaustedly나 명사 exhaustion이 아니라 형용사 exhausted가 정답이에요."
           },
           {
-            "q": "This cake tastes ___.",
+            "q": "During the science class, the students listened ___ to the teacher's interesting story.",
             "options": [
-              "deliciously",
-              "delicious",
-              "deliciousness",
-              "more deliciously"
+              "quietness",
+              "quiet",
+              "quieter",
+              "quietly"
             ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 부사 deliciously는 쓸 수 없고 형용사 delicious가 정답이에요."
+            "answer": 3,
+            "explain": "listen은 일반동사라서 뒤에 부사가 와요. 감각동사가 아니므로 형용사 quiet가 아니라 부사 quietly가 맞아요."
           },
           {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "The music sounds loudly.",
-              "The music sounds loud.",
-              "The music sounds a loud.",
-              "The music sound loud."
-            ],
-            "answer": 1,
-            "explain": "감각동사 sound 뒤에는 형용사 loud가 와요. 부사 loudly는 틀리고, 3인칭 단수 주어라 sounds가 맞아요."
-          },
-          {
-            "q": "This blanket feels ___.",
-            "options": [
-              "softly",
-              "soft",
-              "softness",
-              "to soft"
-            ],
-            "answer": 1,
-            "explain": "feel 뒤에는 형용사가 와요. 부사 softly가 아니라 형용사 soft가 정답이에요."
-          },
-          {
-            "q": "You look ___ today.",
-            "options": [
-              "happily",
-              "happiness",
-              "happy",
-              "to happy"
-            ],
-            "answer": 2,
-            "explain": "look 뒤에는 형용사가 와요. 부사 happily가 아니라 형용사 happy가 맞아요."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 틀린 문장은?",
-            "options": [
-              "The soup tastes salty.",
-              "The soup tastes saltily.",
-              "The soup tastes good.",
-              "The soup tastes hot."
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와야 하므로 부사 saltily는 틀려요. 형용사 salty가 맞아요."
-          },
-          {
-            "q": "The baby looks ___.",
-            "options": [
-              "cutely",
-              "cute",
-              "cuteness",
-              "cuting"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 cutely가 아니라 형용사 cute가 정답이에요."
-          },
-          {
-            "q": "A: How does the pizza taste?  B: It tastes ___.",
-            "options": [
-              "nicely",
-              "nice",
-              "niceness",
-              "to nice"
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 부사 nicely가 아니라 형용사 nice가 맞아요."
-          },
-          {
-            "q": "빈칸에 들어갈 수 없는 것은?  The bread smells ___.",
-            "options": [
-              "fresh",
-              "good",
-              "freshly",
-              "delicious"
-            ],
-            "answer": 2,
-            "explain": "smell 뒤에는 형용사만 올 수 있어요. freshly는 부사라서 들어갈 수 없어요."
-          },
-          {
-            "q": "That plan sounds ___.",
-            "options": [
-              "dangerously",
-              "danger",
-              "dangerous",
-              "to dangerous"
-            ],
-            "answer": 2,
-            "explain": "sound 뒤에는 형용사가 와요. 부사 dangerously가 아니라 형용사 dangerous가 정답이에요."
-          },
-          {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "She looks beautifully.",
-              "She looks beauty.",
-              "She looks beautiful.",
-              "She look beautiful."
-            ],
-            "answer": 2,
-            "explain": "look 뒤에는 형용사 beautiful이 와요. 부사 beautifully는 틀리고, 주어가 She라 looks가 맞아요."
-          },
-          {
-            "q": "This lemon tastes ___.",
-            "options": [
-              "sour",
-              "sourly",
-              "sourness",
-              "to sour"
-            ],
-            "answer": 0,
-            "explain": "taste 뒤에는 형용사가 와요. 부사 sourly가 아니라 형용사 sour가 맞아요."
-          },
-          {
-            "q": "The towel feels ___.",
-            "options": [
-              "warmly",
-              "warmth",
-              "warm",
-              "to warm"
-            ],
-            "answer": 2,
-            "explain": "feel 뒤에는 형용사가 와요. 부사 warmly가 아니라 형용사 warm이 정답이에요."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 틀린 문장은?",
-            "options": [
-              "He looks tired.",
-              "He looks sleepy.",
-              "He looks nicely.",
-              "He looks cool."
-            ],
-            "answer": 2,
-            "explain": "look 뒤에는 형용사가 와야 하므로 부사 nicely는 틀려요. nice로 고쳐야 해요."
-          },
-          {
-            "q": "The news sounds ___.",
-            "options": [
-              "surprisingly",
-              "surprise",
-              "surprising",
-              "to surprising"
-            ],
-            "answer": 2,
-            "explain": "sound 뒤에는 형용사가 와요. 부사 surprisingly가 아니라 형용사 surprising이 맞아요."
-          },
-          {
-            "q": "This ice cream tastes ___.",
-            "options": [
-              "creamily",
-              "creamy",
-              "creaminess",
-              "cream"
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 형용사 creamy가 정답이에요. (creamily는 부사)"
-          },
-          {
-            "q": "You look ___ your father.  (너는 너의 아빠처럼 보인다.)",
-            "options": [
-              "look",
-              "look like",
-              "like",
-              "as"
-            ],
-            "answer": 2,
-            "explain": "'~처럼 보이다'는 look like + 명사예요. 'You look ___ your father'에서 이미 look이 있으니 빈칸에는 like가 와요."
-          },
-          {
-            "q": "다음 중 올바른 것은?  (그는 배우처럼 보인다.)",
-            "options": [
-              "He looks an actor.",
-              "He looks like an actor.",
-              "He looks likely an actor.",
-              "He look like an actor."
-            ],
-            "answer": 1,
-            "explain": "뒤에 명사(an actor)가 오면 look like를 써요. look 뒤에 바로 명사는 올 수 없어요."
-          },
-          {
-            "q": "The soup looks ___.  (그 국은 뜨거워 보인다.)",
-            "options": [
-              "hotly",
-              "hot",
-              "hotness",
-              "to hot"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 hotly가 아니라 형용사 hot이 정답이에요."
-          },
-          {
-            "q": "The movie looks ___.",
-            "options": [
-              "interestingly",
-              "interesting",
-              "interest",
-              "to interesting"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 interestingly가 아니라 형용사 interesting이 맞아요."
-          },
-          {
-            "q": "빈칸에 알맞은 것은?  This juice tastes ___.  (이 주스는 단맛이 난다.)",
-            "options": [
-              "sweetly",
-              "sweet",
-              "sweetness",
-              "to sweet"
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 형용사 sweet가 정답이에요."
-          },
-          {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "The pillow feels softly.",
-              "The pillow feels soft.",
-              "The pillow feel soft.",
-              "The pillow feels a soft."
-            ],
-            "answer": 1,
-            "explain": "feel 뒤에는 형용사 soft가 와요. 부사 softly는 틀리고, 주어가 단수라 feels가 맞아요."
-          },
-          {
-            "q": "Your voice sounds ___.",
-            "options": [
-              "greatly",
-              "great",
-              "greatness",
-              "to great"
-            ],
-            "answer": 1,
-            "explain": "sound 뒤에는 형용사가 와요. 부사 greatly가 아니라 형용사 great가 맞아요."
-          },
-          {
-            "q": "The fish smells ___.",
-            "options": [
-              "badly",
-              "bad",
-              "badness",
-              "to bad"
-            ],
-            "answer": 1,
-            "explain": "smell 뒤에는 형용사가 와요. 부사 badly가 아니라 형용사 bad가 정답이에요."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 틀린 문장은?",
-            "options": [
-              "This candy tastes sweet.",
-              "This candy tastes sweetly.",
-              "This candy tastes good.",
-              "This candy tastes fresh."
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와야 하므로 부사 sweetly는 틀려요. sweet가 맞아요."
-          },
-          {
-            "q": "The shoes look ___.  (그 신발이 편안해 보인다.)",
-            "options": [
-              "comfortably",
-              "comfortable",
-              "comfort",
-              "to comfortable"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 comfortably가 아니라 형용사 comfortable이 맞아요."
-          },
-          {
-            "q": "A: How do you feel now?  B: I feel ___.",
-            "options": [
-              "greatly",
-              "great",
-              "greatness",
-              "to great"
-            ],
-            "answer": 1,
-            "explain": "feel 뒤에는 형용사가 와요. 부사 greatly가 아니라 형용사 great가 맞아요."
-          },
-          {
-            "q": "빈칸에 들어갈 수 없는 것은?  The song sounds ___.",
-            "options": [
-              "nice",
-              "beautiful",
-              "quietly",
-              "sad"
-            ],
-            "answer": 2,
-            "explain": "sound 뒤에는 형용사만 올 수 있어요. quietly는 부사라서 들어갈 수 없어요. (quiet로 써야 함)"
-          },
-          {
-            "q": "The strawberries taste ___.",
-            "options": [
-              "freshly",
-              "fresh",
-              "freshness",
-              "to fresh"
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 부사 freshly가 아니라 형용사 fresh가 정답이에요."
-          },
-          {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "The teacher looks kindly.",
-              "The teacher looks kindness.",
-              "The teacher looks kind.",
-              "The teacher look kind."
-            ],
-            "answer": 2,
-            "explain": "look 뒤에는 형용사 kind가 와요. 부사 kindly는 틀리고, 주어가 단수라 looks가 맞아요."
-          },
-          {
-            "q": "This blanket feels ___.  (이 담요는 부드럽게 느껴진다.)",
-            "options": [
-              "softly",
-              "soft",
-              "softness",
-              "to soft"
-            ],
-            "answer": 1,
-            "explain": "feel 뒤에는 형용사가 와요. '부드럽게 느껴진다'지만 부사가 아니라 형용사 soft를 써요."
-          },
-          {
-            "q": "The fireworks looked ___ in the night sky.",
-            "options": [
-              "amazingly",
-              "amazing",
-              "amazement",
-              "to amazing"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 amazingly가 아니라 형용사 amazing이 맞아요."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 틀린 문장은?",
-            "options": [
-              "The water feels cold.",
-              "The water feels cool.",
-              "The water feels warmly.",
-              "The water feels nice."
-            ],
-            "answer": 2,
-            "explain": "feel 뒤에는 형용사가 와야 하므로 부사 warmly는 틀려요. warm이 맞아요."
-          },
-          {
-            "q": "Your room looks ___.  (네 방이 깨끗해 보인다.)",
-            "options": [
-              "cleanly",
-              "clean",
-              "cleanness",
-              "to clean"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 cleanly가 아니라 형용사 clean이 정답이에요."
-          },
-          {
-            "q": "The cheese tastes ___.",
-            "options": [
-              "strongly",
-              "strong",
-              "strength",
-              "to strong"
-            ],
-            "answer": 1,
-            "explain": "taste 뒤에는 형용사가 와요. 부사 strongly가 아니라 형용사 strong이 맞아요."
-          },
-          {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "This soup tastes hotly.",
-              "This soup taste hot.",
-              "This soup tastes hot.",
-              "This soup tastes a hot."
-            ],
-            "answer": 2,
-            "explain": "taste 뒤에는 형용사 hot이 와요. 부사 hotly는 틀리고, 주어가 단수라 tastes가 맞아요."
-          },
-          {
-            "q": "The boy looks ___.  (그 남자아이는 졸려 보인다.)",
-            "options": [
-              "sleepily",
-              "sleepy",
-              "sleepiness",
-              "to sleepy"
-            ],
-            "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 sleepily가 아니라 형용사 sleepy가 정답이에요."
-          },
-          {
-            "q": "빈칸에 알맞은 것은?  He looks ___ his brother.  (그는 그의 형처럼 보인다.)",
-            "options": [
-              "like",
-              "likely",
-              "very",
-              "so"
-            ],
-            "answer": 0,
-            "explain": "뒤에 명사(his brother)가 오므로 look like를 써요. 빈칸에는 like가 정답이에요."
-          },
-          {
-            "q": "The flowers around the stage looked ___.",
+            "q": "The fresh cookies from the bakery smelled so ___ that everyone wanted one.",
             "options": [
               "wonderfully",
               "wonderful",
-              "wonder",
+              "wonderfulness",
               "to wonderful"
             ],
             "answer": 1,
-            "explain": "look 뒤에는 형용사가 와요. 부사 wonderfully가 아니라 형용사 wonderful이 맞아요."
+            "explain": "감각동사 smell 뒤에는 형용사가 와요. 부사 wonderfully가 아니라 형용사 wonderful이 정답이에요."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "The stew tastes deliciously.",
+              "The stew tastes delicious.",
+              "The stew taste delicious.",
+              "The stew tastes a delicious."
+            ],
+            "answer": 1,
+            "explain": "감각동사 taste 뒤에는 형용사 delicious가 와요. 부사 deliciously는 틀리고, 주어가 단수라 tastes가 맞아요."
+          },
+          {
+            "q": "With that black cap on, my little brother looks ___ a real baseball player.",
+            "options": [
+              "as",
+              "very",
+              "likely",
+              "like"
+            ],
+            "answer": 3,
+            "explain": "뒤에 명사(a real baseball player)가 오므로 'look like + 명사'를 써요. 빈칸에는 like가 정답이에요."
+          },
+          {
+            "q": "When I touched the sleeping cat, its fur felt very ___ and warm.",
+            "options": [
+              "to smooth",
+              "smooth",
+              "smoothly",
+              "smoothness"
+            ],
+            "answer": 1,
+            "explain": "감각동사 feel 뒤에는 형용사가 와요. 부사 smoothly가 아니라 형용사 smooth가 맞아요."
+          },
+          {
+            "q": "My sister sang the song so ___ that the whole audience clapped for a long time.",
+            "options": [
+              "beauty",
+              "beautifully",
+              "beautiful",
+              "to beautiful"
+            ],
+            "answer": 1,
+            "explain": "sing은 일반동사라서 뒤에 부사가 와요. 감각동사가 아니므로 형용사 beautiful이 아니라 부사 beautifully가 맞아요."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "The apples on the table looks fresh.",
+              "The apples on the table look fresh.",
+              "The apples on the table look freshly.",
+              "The apples on the table looking fresh."
+            ],
+            "answer": 1,
+            "explain": "감각동사 look 뒤에는 형용사 fresh가 와요. 주어가 복수(apples)라 look이 맞고, 부사 freshly는 틀려요."
+          },
+          {
+            "q": "Your plan to help the old man cross the road sounds really ___.",
+            "options": [
+              "kindness",
+              "to kind",
+              "kind",
+              "kindly"
+            ],
+            "answer": 2,
+            "explain": "감각동사 sound 뒤에는 형용사가 와요. 부사 kindly가 아니라 형용사 kind가 정답이에요."
+          },
+          {
+            "q": "빈칸에 들어갈 수 없는 것은?  The milk in the fridge smells ___.",
+            "options": [
+              "strangely",
+              "fresh",
+              "sour",
+              "bad"
+            ],
+            "answer": 0,
+            "explain": "감각동사 smell 뒤에는 형용사만 올 수 있어요. strangely는 부사라서 들어갈 수 없어요. (strange로 써야 함)"
+          },
+          {
+            "q": "The old wooden bridge looked ___, so we decided not to walk across it.",
+            "options": [
+              "danger",
+              "dangerous",
+              "to dangerous",
+              "dangerously"
+            ],
+            "answer": 1,
+            "explain": "감각동사 look 뒤에는 형용사가 와요. 부사 dangerously나 명사 danger가 아니라 형용사 dangerous가 맞아요."
+          },
+          {
+            "q": "He opened the door ___ so that he would not wake the sleeping baby.",
+            "options": [
+              "quieter",
+              "quiet",
+              "quietness",
+              "quietly"
+            ],
+            "answer": 3,
+            "explain": "open은 일반동사라서 동작을 꾸미는 부사가 와요. 형용사 quiet가 아니라 부사 quietly가 맞아요."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "She looks like a movie star.",
+              "She look like a movie star.",
+              "She looks likely a movie star.",
+              "She looks a movie star."
+            ],
+            "answer": 0,
+            "explain": "뒤에 명사(a movie star)가 오면 look like를 써요. look 뒤에 바로 명사는 올 수 없고, 주어가 She라 looks가 맞아요."
+          },
+          {
+            "q": "The homemade lemonade tasted a little ___, so I added some sugar.",
+            "options": [
+              "to sour",
+              "sourly",
+              "sour",
+              "sourness"
+            ],
+            "answer": 2,
+            "explain": "감각동사 taste 뒤에는 형용사가 와요. 부사 sourly가 아니라 형용사 sour가 정답이에요."
+          },
+          {
+            "q": "After cleaning her whole room all afternoon, Mina felt ___ but happy.",
+            "options": [
+              "tiredly",
+              "tiredness",
+              "to tired",
+              "tired"
+            ],
+            "answer": 3,
+            "explain": "감각동사 feel 뒤에는 형용사가 와요. 부사 tiredly가 아니라 형용사 tired가 맞아요."
+          },
+          {
+            "q": "다음 중 밑줄 친 부분이 틀린 문장은?",
+            "options": [
+              "The baby's skin feels soft.",
+              "The baby's skin feels nice.",
+              "The baby's skin feels smoothly.",
+              "The baby's skin feels warm."
+            ],
+            "answer": 2,
+            "explain": "감각동사 feel 뒤에는 형용사가 와야 하므로 부사 smoothly는 틀려요. 형용사 smooth로 고쳐야 해요."
+          },
+          {
+            "q": "The thunder last night sounded so ___ that my dog hid under the bed.",
+            "options": [
+              "loudness",
+              "loud",
+              "loudly",
+              "to loud"
+            ],
+            "answer": 1,
+            "explain": "감각동사 sound 뒤에는 형용사가 와요. 부사 loudly가 아니라 형용사 loud가 정답이에요."
+          },
+          {
+            "q": "The whole team worked ___ to finish the class project before the deadline.",
+            "options": [
+              "harder",
+              "hardness",
+              "hard",
+              "hardly"
+            ],
+            "answer": 2,
+            "explain": "work를 꾸며 '열심히'라는 뜻일 때는 hard가 부사예요. hardly는 '거의 ~않다'라는 다른 뜻이라 문맥에 안 맞아요."
+          },
+          {
+            "q": "This soup looks a bit ___, but it actually tastes very good.",
+            "options": [
+              "strangeness",
+              "to strange",
+              "strange",
+              "strangely"
+            ],
+            "answer": 2,
+            "explain": "감각동사 look 뒤에는 형용사가 와요. 부사 strangely가 아니라 형용사 strange가 맞아요."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "The flowers smell sweet.",
+              "The flowers smells sweet.",
+              "The flowers smell sweetly.",
+              "The flowers smell a sweet."
+            ],
+            "answer": 0,
+            "explain": "감각동사 smell 뒤에는 형용사 sweet가 와요. 주어가 복수(flowers)라 smell이 맞고, 부사 sweetly는 틀려요."
+          },
+          {
+            "q": "Everyone at the school festival looked ___ in their colorful costumes.",
+            "options": [
+              "greatness",
+              "great",
+              "to great",
+              "greatly"
+            ],
+            "answer": 1,
+            "explain": "감각동사 look 뒤에는 형용사가 와요. 부사 greatly가 아니라 형용사 great가 정답이에요."
+          },
+          {
+            "q": "The singer's new song sounds ___, so I listen to it every single day.",
+            "options": [
+              "to amazing",
+              "amazement",
+              "amazingly",
+              "amazing"
+            ],
+            "answer": 3,
+            "explain": "감각동사 sound 뒤에는 형용사가 와요. 부사 amazingly가 아니라 형용사 amazing이 맞아요."
+          },
+          {
+            "q": "The fast runner moved ___ across the finish line and won the race.",
+            "options": [
+              "quickness",
+              "quick",
+              "quickly",
+              "to quick"
+            ],
+            "answer": 2,
+            "explain": "move는 일반동사라서 동작을 꾸미는 부사가 와요. 감각동사가 아니므로 형용사 quick이 아니라 부사 quickly가 맞아요."
+          },
+          {
+            "q": "That big white cloud in the sky looks ___ a fluffy rabbit.",
+            "options": [
+              "likely",
+              "like",
+              "to",
+              "as"
+            ],
+            "answer": 1,
+            "explain": "뒤에 명사(a fluffy rabbit)가 오므로 look like를 써요. 빈칸에는 like가 정답이에요."
+          },
+          {
+            "q": "The medicine tasted so ___ that the little child did not want to take it.",
+            "options": [
+              "bitter",
+              "bitterly",
+              "to bitter",
+              "bitterness"
+            ],
+            "answer": 0,
+            "explain": "감각동사 taste 뒤에는 형용사가 와요. 부사 bitterly가 아니라 형용사 bitter가 정답이에요."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "My grandfather look healthy.",
+              "My grandfather looks healthy.",
+              "My grandfather looks a healthy.",
+              "My grandfather looks healthily."
+            ],
+            "answer": 1,
+            "explain": "감각동사 look 뒤에는 형용사 healthy가 와요. 부사 healthily는 틀리고, 주어가 단수라 looks가 맞아요."
+          },
+          {
+            "q": "The ice cream just came out of the freezer, so it felt very ___ in my hand.",
+            "options": [
+              "bright",
+              "cold",
+              "loud",
+              "sour"
+            ],
+            "answer": 1,
+            "explain": "감각동사 feel 뒤 형용사 중 문맥(냉동실에서 막 꺼낸 아이스크림)에 맞는 건 '차가운' cold예요. 나머지는 촉감과 안 맞아요."
+          },
+          {
+            "q": "Be careful! The stove was just on, so the metal pan feels really ___.",
+            "options": [
+              "dark",
+              "hot",
+              "quiet",
+              "sweet"
+            ],
+            "answer": 1,
+            "explain": "방금 켰던 가스레인지의 팬이므로 촉감은 '뜨거운' hot이 맞아요. quiet, sweet, dark는 의미상 어울리지 않아요."
+          },
+          {
+            "q": "I forgot to add any sugar, so my coffee tasted really ___ this morning.",
+            "options": [
+              "bright",
+              "soft",
+              "loud",
+              "bitter"
+            ],
+            "answer": 3,
+            "explain": "설탕을 안 넣은 커피 맛은 '쓴' bitter가 자연스러워요. soft, loud, bright는 맛을 나타내지 못해요."
+          },
+          {
+            "q": "The garbage had been outside for days, so it smelled absolutely ___.",
+            "options": [
+              "fresh",
+              "sweet",
+              "soft",
+              "terrible"
+            ],
+            "answer": 3,
+            "explain": "며칠 밖에 둔 쓰레기 냄새는 '지독한' terrible이 맞아요. sweet, fresh는 반대 의미라 문맥에 안 맞아요."
+          },
+          {
+            "q": "After the rain finally stopped, the air smelled so ___ and clean.",
+            "options": [
+              "fresh",
+              "heavy",
+              "loud",
+              "sour"
+            ],
+            "answer": 0,
+            "explain": "비 온 뒤 깨끗한 공기 냄새는 '상쾌한' fresh가 자연스러워요. loud는 소리, sour는 신맛이라 어울리지 않아요."
+          },
+          {
+            "q": "She was telling a secret, so her voice sounded very ___.",
+            "options": [
+              "rough",
+              "sweet",
+              "bright",
+              "quiet"
+            ],
+            "answer": 3,
+            "explain": "비밀을 말할 때 목소리는 '조용한' quiet가 문맥에 맞아요. sound 뒤 형용사 중 의미상 quiet가 정답이에요."
+          },
+          {
+            "q": "The climbing wall felt ___ and rough against my bare hands.",
+            "options": [
+              "hard",
+              "sour",
+              "loud",
+              "sweet"
+            ],
+            "answer": 0,
+            "explain": "암벽 벽의 촉감은 '딱딱한' hard가 맞아요. sweet, loud, sour는 촉감을 나타내지 못해요."
+          },
+          {
+            "q": "The lemon candy tasted so ___ that it made my mouth pucker up.",
+            "options": [
+              "sour",
+              "soft",
+              "warm",
+              "quiet"
+            ],
+            "answer": 0,
+            "explain": "레몬 사탕 맛은 '신' sour가 자연스러워요. 입이 오므라들 정도라는 문맥과도 맞아요."
+          },
+          {
+            "q": "In the horror movie, the ghost looked so ___ that everyone in the theater screamed.",
+            "options": [
+              "sweet",
+              "scary",
+              "fresh",
+              "delicious"
+            ],
+            "answer": 1,
+            "explain": "공포 영화 속 유령의 모습은 '무서운' scary가 맞아요. delicious, sweet, fresh는 의미상 어울리지 않아요."
+          },
+          {
+            "q": "The baby's new blanket felt ___, just like a soft little cloud.",
+            "options": [
+              "bright",
+              "fluffy",
+              "sour",
+              "loud"
+            ],
+            "answer": 1,
+            "explain": "부드러운 담요의 촉감은 '푹신한' fluffy가 자연스러워요. loud, sour, bright는 촉감과 안 맞아요."
+          },
+          {
+            "q": "The drums at the concert sounded so ___ that I had to cover my ears.",
+            "options": [
+              "loud",
+              "soft",
+              "sweet",
+              "fresh"
+            ],
+            "answer": 0,
+            "explain": "귀를 막을 정도의 드럼 소리는 '시끄러운' loud가 맞아요. soft는 반대 의미라 문맥에 안 맞아요."
+          },
+          {
+            "q": "The honey on my morning toast tasted wonderfully ___.",
+            "options": [
+              "sour",
+              "salty",
+              "bitter",
+              "sweet"
+            ],
+            "answer": 3,
+            "explain": "꿀의 맛은 '단' sweet가 자연스러워요. salty, bitter, sour는 꿀의 맛과 어울리지 않아요."
+          },
+          {
+            "q": "The chips were covered in too much salt, so they tasted way too ___.",
+            "options": [
+              "fresh",
+              "salty",
+              "sweet",
+              "soft"
+            ],
+            "answer": 1,
+            "explain": "소금이 많이 묻은 감자칩은 '짠' salty가 맞아요. sweet, fresh는 반대이거나 어울리지 않는 맛이에요."
+          },
+          {
+            "q": "After the long workout, the water from the fountain felt so ___ and refreshing.",
+            "options": [
+              "sweet",
+              "bright",
+              "loud",
+              "cool"
+            ],
+            "answer": 3,
+            "explain": "운동 후 마시는 물의 촉감은 '시원한' cool이 자연스러워요. refreshing(상쾌한)이라는 문맥과도 맞아요."
           }
         ],
         "sa": [
@@ -1579,227 +1578,128 @@ export const courses = [
         "concept": "동사원형+ing인 동명사는 '~하기/~하는 것'으로 해석하며 주어·목적어·보어·전치사의 목적어 자리에 쓰고 enjoy/finish/mind/keep/practice/avoid/give up 뒤에 온다.",
         "mc": [
           {
-            "q": "I enjoy ___ games with my friends.",
+            "q": "My little brother really enjoys ___ cartoons on Saturday mornings.",
             "options": [
-              "play",
-              "plays",
-              "playing",
-              "to play"
+              "to watch",
+              "watches",
+              "watching",
+              "watch"
             ],
             "answer": 2,
-            "explain": "enjoy 뒤에는 동명사(-ing)를 쓴다. 따라서 playing이 정답이다."
+            "explain": "enjoy 뒤에는 동명사를 쓰므로 watching이 정답이고, 동사원형·현재형·to부정사는 올 수 없다."
           },
           {
-            "q": "He finished ___ his room an hour ago.",
+            "q": "I want ___ a new smartphone, but it is much too expensive for me now.",
             "options": [
-              "clean",
-              "cleaning",
-              "to clean",
-              "cleans"
-            ],
-            "answer": 1,
-            "explain": "finish 뒤에는 동명사를 쓰므로 cleaning이 정답이다."
-          },
-          {
-            "q": "동명사를 만들 때 철자가 바르게 된 것은?",
-            "options": [
-              "makeing",
-              "makking",
-              "making",
-              "maiking"
+              "buys",
+              "buy",
+              "to buy",
+              "buying"
             ],
             "answer": 2,
-            "explain": "make처럼 -e로 끝나는 동사는 e를 빼고 -ing를 붙인다. make → making."
+            "explain": "want는 목적어로 to부정사를 쓰는 동사이므로 to buy가 정답이다. 동명사 buying을 쓰지 않는 점을 구분해야 한다."
           },
           {
-            "q": "run의 올바른 동명사 형태는?",
+            "q": "She finished ___ her science project late last night.",
             "options": [
-              "runing",
-              "running",
-              "runnning",
-              "runeing"
-            ],
-            "answer": 1,
-            "explain": "run은 '단모음+단자음'으로 끝나므로 마지막 자음 n을 하나 더 쓰고 -ing를 붙인다. run → running."
-          },
-          {
-            "q": "She is good at ___ pictures.",
-            "options": [
-              "draw",
-              "draws",
-              "drawing",
-              "to draw"
-            ],
-            "answer": 2,
-            "explain": "전치사 at 뒤에는 동명사를 쓴다. 따라서 drawing이 정답이다."
-          },
-          {
-            "q": "Do you mind ___ the window?",
-            "options": [
-              "open",
-              "opening",
-              "to open",
-              "opens"
-            ],
-            "answer": 1,
-            "explain": "mind 뒤에는 동명사를 쓰므로 opening이 정답이다."
-          },
-          {
-            "q": "My hobby is ___ stamps.",
-            "options": [
-              "collect",
-              "collects",
-              "collecting",
-              "collected"
-            ],
-            "answer": 2,
-            "explain": "be동사 뒤 보어 자리에 동명사가 올 수 있다. collecting이 정답이다."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 어법상 틀린 것은?",
-            "options": [
-              "I enjoy swimming.",
-              "He finished eating.",
-              "She avoids to run.",
-              "They keep talking."
-            ],
-            "answer": 2,
-            "explain": "avoid 뒤에는 동명사를 써야 한다. to run이 아니라 running이 되어야 하므로 3번이 틀렸다."
-          },
-          {
-            "q": "We practice ___ soccer every weekend.",
-            "options": [
-              "play",
-              "playing",
-              "to play",
-              "played"
-            ],
-            "answer": 1,
-            "explain": "practice 뒤에는 동명사를 쓰므로 playing이 정답이다."
-          },
-          {
-            "q": "swim의 올바른 동명사 형태는?",
-            "options": [
-              "swiming",
-              "swimming",
-              "swimeing",
-              "swimmming"
-            ],
-            "answer": 1,
-            "explain": "swim은 '단모음+단자음'으로 끝나므로 m을 하나 더 쓰고 -ing를 붙인다. swim → swimming."
-          },
-          {
-            "q": "___ books is my favorite activity. (독서가 내가 가장 좋아하는 활동이다.)",
-            "options": [
-              "Read",
-              "Reads",
-              "Reading",
-              "To reads"
-            ],
-            "answer": 2,
-            "explain": "문장의 주어 자리에 동명사가 올 수 있다. Reading이 정답이다."
-          },
-          {
-            "q": "Thank you for ___ me.",
-            "options": [
-              "help",
-              "helps",
-              "helping",
-              "to help"
-            ],
-            "answer": 2,
-            "explain": "전치사 for 뒤에는 동명사를 쓴다. 따라서 helping이 정답이다."
-          },
-          {
-            "q": "He gave up ___ soda last month.",
-            "options": [
-              "drink",
-              "drinking",
-              "to drink",
-              "drinks"
-            ],
-            "answer": 1,
-            "explain": "give up 뒤에는 동명사를 쓰므로 drinking이 정답이다."
-          },
-          {
-            "q": "밑줄 친 -ing의 철자가 바르지 않은 것은?",
-            "options": [
-              "sitting",
-              "coming",
-              "writing",
-              "geting"
+              "write",
+              "wrote",
+              "to write",
+              "writing"
             ],
             "answer": 3,
-            "explain": "get은 '단모음+단자음'이므로 t를 하나 더 써서 getting이 되어야 한다. geting은 틀린 철자이다."
+            "explain": "finish 뒤에는 동명사를 쓰고 write는 e를 빼고 writing이 되므로 정답은 writing이다."
           },
           {
-            "q": "She keeps ___ questions in class.",
+            "q": "You should always turn off the lights before ___ the classroom.",
             "options": [
-              "ask",
-              "asks",
-              "asking",
-              "to ask"
+              "leaves",
+              "leave",
+              "to leave",
+              "leaving"
+            ],
+            "answer": 3,
+            "explain": "전치사 before 뒤에는 동명사가 오므로 leaving이 정답이다. 전치사 뒤에는 to부정사를 쓸 수 없다."
+          },
+          {
+            "q": "We decided ___ a surprise party for our homeroom teacher.",
+            "options": [
+              "having",
+              "has",
+              "to have",
+              "have"
             ],
             "answer": 2,
-            "explain": "keep 뒤에는 동명사를 쓰므로 asking이 정답이다."
+            "explain": "decide는 to부정사를 목적어로 취하는 동사이므로 to have가 정답이다. 동명사 having과 혼동하지 않아야 한다."
           },
           {
-            "q": "Are you interested in ___ the guitar?",
+            "q": "Would you mind ___ me the salt, please?",
             "options": [
-              "play",
-              "playing",
-              "to play",
-              "plays"
+              "to pass",
+              "passing",
+              "pass",
+              "passes"
             ],
             "answer": 1,
-            "explain": "전치사 in 뒤에는 동명사를 쓴다. 따라서 playing이 정답이다."
+            "explain": "mind 뒤에는 동명사를 쓰므로 passing이 정답이고 to부정사나 동사원형은 올 수 없다."
           },
           {
-            "q": "I finished ___ my homework, so now I can rest.",
+            "q": "The doctor told him to avoid ___ too much salty food.",
             "options": [
-              "do",
-              "doing",
-              "to do",
-              "does"
+              "eating",
+              "to eat",
+              "eat",
+              "ate"
+            ],
+            "answer": 0,
+            "explain": "avoid 뒤에는 동명사를 쓰므로 eating이 정답이다. to eat은 avoid의 목적어가 될 수 없다."
+          },
+          {
+            "q": "My parents hope ___ Jeju Island together next summer.",
+            "options": [
+              "visits",
+              "visit",
+              "visiting",
+              "to visit"
+            ],
+            "answer": 3,
+            "explain": "hope는 to부정사를 목적어로 쓰는 동사이므로 to visit이 정답이다. 동명사 visiting을 쓰지 않는다."
+          },
+          {
+            "q": "___ books in bed is my favorite way to relax after school. (침대에서 책 읽기)",
+            "options": [
+              "To reads",
+              "Reads",
+              "Read",
+              "Reading"
+            ],
+            "answer": 3,
+            "explain": "문장의 주어 자리에는 동명사가 올 수 있으므로 Reading이 정답이다. To reads는 어법상 틀린 형태이다."
+          },
+          {
+            "q": "Even after the rain started, the players kept ___ on the field.",
+            "options": [
+              "run",
+              "running",
+              "ran",
+              "to run"
             ],
             "answer": 1,
-            "explain": "finish 뒤에는 동명사를 쓰므로 doing이 정답이다."
+            "explain": "keep 뒤에는 동명사를 쓰고 run은 n을 하나 더 써서 running이 되므로 정답은 running이다."
           },
           {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '나는 만화 그리는 것을 즐긴다.'",
+            "q": "He gave up ___ the guitar because he had no free time.",
             "options": [
-              "I enjoy to draw cartoons.",
-              "I enjoy drawing cartoons.",
-              "I enjoy draw cartoons.",
-              "I enjoy drew cartoons."
+              "to learn",
+              "learns",
+              "learn",
+              "learning"
             ],
-            "answer": 1,
-            "explain": "enjoy 뒤에는 동명사를 쓴다. drawing cartoons가 알맞다."
+            "answer": 3,
+            "explain": "give up 뒤에는 동명사를 쓰므로 learning이 정답이고 to learn은 쓸 수 없다."
           },
           {
-            "q": "write의 올바른 동명사 형태는?",
-            "options": [
-              "writeing",
-              "writting",
-              "writing",
-              "writeng"
-            ],
-            "answer": 2,
-            "explain": "write는 -e로 끝나므로 e를 빼고 -ing를 붙인다. write → writing."
-          },
-          {
-            "q": "My sister enjoys ___ photos of flowers.",
-            "options": [
-              "take",
-              "takes",
-              "taking",
-              "to take"
-            ],
-            "answer": 2,
-            "explain": "enjoy 뒤에는 동명사를 쓴다. take는 -e로 끝나므로 taking이 정답이다."
-          },
-          {
-            "q": "How about ___ a movie tonight?",
+            "q": "How about ___ a movie together this weekend?",
             "options": [
               "watch",
               "watching",
@@ -1807,216 +1707,315 @@ export const courses = [
               "watches"
             ],
             "answer": 1,
-            "explain": "전치사 about 뒤에는 동명사를 쓴다. 따라서 watching이 정답이다."
+            "explain": "How about은 전치사 about을 포함하므로 뒤에 동명사 watching이 온다. to부정사는 올 수 없다."
           },
           {
-            "q": "다음 중 어법상 올바른 문장은?",
+            "q": "Our team practices ___ soccer on the playground every day.",
             "options": [
-              "I enjoy to read comics.",
-              "She finished to cook dinner.",
-              "They avoid eating late.",
-              "He keeps to run."
-            ],
-            "answer": 2,
-            "explain": "enjoy, finish, avoid, keep 뒤에는 모두 동명사를 쓴다. avoid eating이 유일하게 바른 문장이다."
-          },
-          {
-            "q": "We avoid ___ late at night.",
-            "options": [
-              "eat",
-              "eating",
-              "to eat",
-              "eats"
-            ],
-            "answer": 1,
-            "explain": "avoid 뒤에는 동명사를 쓰므로 eating이 정답이다."
-          },
-          {
-            "q": "___ every morning is good for your health. (매일 아침 달리기는 건강에 좋다.)",
-            "options": [
-              "Run",
-              "Runs",
-              "Running",
-              "To running"
-            ],
-            "answer": 2,
-            "explain": "주어 자리에 동명사가 온다. run은 자음을 하나 더 쓰므로 Running이 정답이다."
-          },
-          {
-            "q": "He is afraid of ___ in the dark.",
-            "options": [
-              "walk",
-              "walks",
-              "walking",
-              "to walk"
-            ],
-            "answer": 2,
-            "explain": "전치사 of 뒤에는 동명사를 쓴다. 따라서 walking이 정답이다."
-          },
-          {
-            "q": "빈칸에 들어갈 말이 나머지와 다른 것은?",
-            "options": [
-              "I enjoy ___ music.",
-              "He finished ___ lunch.",
-              "I want ___ some water.",
-              "They keep ___ loudly."
-            ],
-            "answer": 2,
-            "explain": "enjoy, finish, keep 뒤에는 동명사(-ing)를 쓰지만 want 뒤에는 to부정사를 쓴다. 3번만 to부정사가 필요하다."
-          },
-          {
-            "q": "Do you enjoy ___ to school by bike?",
-            "options": [
-              "go",
-              "going",
-              "to go",
-              "goes"
-            ],
-            "answer": 1,
-            "explain": "enjoy 뒤에는 동명사를 쓰므로 going이 정답이다."
-          },
-          {
-            "q": "sit의 올바른 동명사 형태는?",
-            "options": [
-              "siting",
-              "sitting",
-              "siteing",
-              "sittting"
-            ],
-            "answer": 1,
-            "explain": "sit은 '단모음+단자음'으로 끝나므로 t를 하나 더 쓰고 -ing를 붙인다. sit → sitting."
-          },
-          {
-            "q": "She practices ___ the violin every day.",
-            "options": [
-              "play",
-              "plays",
               "playing",
-              "to play"
+              "plays",
+              "to play",
+              "play"
             ],
-            "answer": 2,
+            "answer": 0,
             "explain": "practice 뒤에는 동명사를 쓰므로 playing이 정답이다."
           },
           {
-            "q": "다음 중 -ing 철자가 모두 바른 것은?",
+            "q": "My sister planned ___ her friends at the shopping mall.",
             "options": [
-              "makeing, runing",
-              "making, running",
-              "makking, runnning",
-              "making, runing"
+              "meet",
+              "to meet",
+              "meets",
+              "meeting"
             ],
             "answer": 1,
-            "explain": "make는 e를 빼고 making, run은 n을 하나 더 써서 running이 된다. 2번이 모두 바르다."
+            "explain": "plan은 to부정사를 목적어로 쓰는 동사이므로 to meet이 정답이다. 동명사 meeting과 구분해야 한다."
           },
           {
-            "q": "My dream is ___ around the world.",
+            "q": "My cousin is really good at ___ delicious cookies for us.",
             "options": [
-              "travel",
-              "traveling",
-              "travels",
-              "to traveling"
+              "baking",
+              "bakes",
+              "to bake",
+              "bake"
             ],
-            "answer": 1,
-            "explain": "be동사 뒤 보어 자리에 동명사가 올 수 있다. traveling이 정답이다."
+            "answer": 0,
+            "explain": "전치사 at 뒤에는 동명사를 쓰고 bake는 e를 빼고 baking이 되므로 정답은 baking이다."
           },
           {
-            "q": "They kept ___ even when it started to rain.",
+            "q": "Thank you so much for ___ my birthday party this special.",
             "options": [
-              "walk",
-              "walked",
-              "walking",
-              "to walk"
+              "making",
+              "make",
+              "to make",
+              "makes"
+            ],
+            "answer": 0,
+            "explain": "전치사 for 뒤에는 동명사를 쓰고 make는 e를 빼고 making이 되므로 정답은 making이다."
+          },
+          {
+            "q": "My shy friend is afraid of ___ in front of many people.",
+            "options": [
+              "speaks",
+              "speak",
+              "speaking",
+              "to speak"
             ],
             "answer": 2,
-            "explain": "keep 뒤에는 동명사를 쓰므로 walking이 정답이다."
+            "explain": "전치사 of 뒤에는 동명사를 쓰므로 speaking이 정답이다. to부정사는 전치사 뒤에 올 수 없다."
           },
           {
-            "q": "I'm sorry for ___ late.",
+            "q": "He is very proud of ___ first prize in the singing contest.",
             "options": [
-              "be",
-              "being",
-              "to be",
-              "am"
-            ],
-            "answer": 1,
-            "explain": "전치사 for 뒤에는 동명사를 쓴다. be의 동명사는 being이다."
-          },
-          {
-            "q": "Would you mind ___ the door, please?",
-            "options": [
-              "close",
-              "closing",
-              "to close",
-              "closes"
-            ],
-            "answer": 1,
-            "explain": "mind 뒤에는 동명사를 쓰고 close는 e를 빼고 closing이 된다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '그는 설거지하는 것을 끝냈다.'",
-            "options": [
-              "He finished to wash the dishes.",
-              "He finished washing the dishes.",
-              "He finished wash the dishes.",
-              "He finish washing the dishes."
-            ],
-            "answer": 1,
-            "explain": "finish 뒤에는 동명사를 쓰고 주어가 He이며 과거이므로 finished washing the dishes가 알맞다."
-          },
-          {
-            "q": "___ is fun, but I am not good at it. (수영은 재미있지만 나는 잘 못한다.)",
-            "options": [
-              "Swim",
-              "Swiming",
-              "Swimming",
-              "To swimming"
-            ],
-            "answer": 2,
-            "explain": "주어 자리에 동명사가 오며 swim은 m을 하나 더 써서 Swimming이 된다."
-          },
-          {
-            "q": "He is proud of ___ first prize.",
-            "options": [
-              "win",
               "wins",
+              "win",
               "winning",
               "to win"
             ],
             "answer": 2,
-            "explain": "전치사 of 뒤에는 동명사를 쓰고 win은 n을 하나 더 써서 winning이 된다."
+            "explain": "전치사 of 뒤에는 동명사를 쓰고 win은 n을 하나 더 써서 winning이 되므로 정답은 winning이다."
           },
           {
-            "q": "We enjoyed ___ on the beach yesterday.",
+            "q": "My biggest dream is ___ around the whole world someday.",
             "options": [
-              "run",
-              "ran",
-              "running",
-              "to run"
+              "to traveling",
+              "travel",
+              "traveling",
+              "travels"
             ],
             "answer": 2,
-            "explain": "enjoy 뒤에는 동명사를 쓰고 run은 running이 된다. enjoyed(과거)여도 뒤에는 동명사이다."
+            "explain": "be동사 뒤 보어 자리에 동명사가 올 수 있으므로 traveling이 정답이다. to traveling은 어법상 틀린 형태이다."
           },
           {
-            "q": "다음 중 빈칸에 to부정사가 아닌 동명사가 들어가는 것은?",
+            "q": "다음 중 밑줄 친 부분이 어법상 틀린 것은?",
             "options": [
-              "I hope ___ you soon.",
-              "She wants ___ a doctor.",
-              "They finished ___ dinner.",
-              "He decided ___ home."
+              "I enjoy playing tennis.",
+              "She wants to go home.",
+              "He finished to read the book.",
+              "They keep smiling."
             ],
             "answer": 2,
-            "explain": "hope, want, decide 뒤에는 to부정사를, finish 뒤에는 동명사를 쓴다. 따라서 3번만 동명사(eating/cooking 등)가 들어간다."
+            "explain": "finish 뒤에는 동명사를 써야 하므로 to read가 아니라 reading이 되어야 한다. 따라서 3번이 틀렸다."
           },
           {
-            "q": "Lisa gave up ___ the piano because she was too busy.",
+            "q": "다음 중 어법상 올바른 문장은?",
             "options": [
-              "learn",
-              "learns",
+              "She avoided answer the question.",
+              "They finished to eat lunch.",
+              "He is good at drawing.",
+              "I enjoy to swim in summer."
+            ],
+            "answer": 2,
+            "explain": "전치사 at 뒤에는 동명사가 오므로 He is good at drawing이 올바르다. 나머지는 enjoy·avoid·finish 뒤에 동명사를 써야 한다."
+          },
+          {
+            "q": "다음 중 빈칸에 동명사(-ing)가 들어가는 것은?",
+            "options": [
+              "I hope ___ you again soon.",
+              "We decided ___ early today.",
+              "She enjoys ___ comic books.",
+              "He wants ___ some cold juice."
+            ],
+            "answer": 2,
+            "explain": "hope·decide·want 뒤에는 to부정사를, enjoy 뒤에는 동명사를 쓴다. 따라서 동명사가 들어가는 것은 3번이다."
+          },
+          {
+            "q": "Please wash your hands well before ___ lunch in the cafeteria.",
+            "options": [
+              "eats",
+              "eat",
+              "eating",
+              "to eat"
+            ],
+            "answer": 2,
+            "explain": "전치사 before 뒤에는 동명사가 오므로 eating이 정답이다."
+          },
+          {
+            "q": "I am not good at ___ pictures, but I really like art class.",
+            "options": [
+              "draw",
+              "draws",
+              "to draw",
+              "drawing"
+            ],
+            "answer": 3,
+            "explain": "전치사 at 뒤에는 동명사를 쓰므로 drawing이 정답이다."
+          },
+          {
+            "q": "Our whole class hopes ___ the soccer match this Sunday.",
+            "options": [
+              "wins",
+              "winning",
+              "to win",
+              "win"
+            ],
+            "answer": 2,
+            "explain": "hope는 to부정사를 목적어로 쓰는 동사이므로 to win이 정답이다. 동명사 winning과 구분해야 한다."
+          },
+          {
+            "q": "___ hard every single day helped me become a better dancer. (매일 열심히 연습하기)",
+            "options": [
+              "Practice",
+              "Practices",
+              "To practices",
+              "Practicing"
+            ],
+            "answer": 3,
+            "explain": "주어 자리에는 동명사가 올 수 있으므로 Practicing이 정답이다. To practices는 어법상 틀린 형태이다."
+          },
+          {
+            "q": "My grandmother enjoys ___ beautiful flowers in her garden every spring.",
+            "options": [
+              "growing",
+              "singing",
+              "cooking",
+              "driving"
+            ],
+            "answer": 0,
+            "explain": "정원에서 꽃을 '기르다'라는 의미이므로 growing이 알맞다. cooking·driving·singing은 문맥상 어색하다."
+          },
+          {
+            "q": "Before ___ the test, please read all of the questions carefully.",
+            "options": [
+              "eating",
+              "sleeping",
+              "cleaning",
+              "starting"
+            ],
+            "answer": 3,
+            "explain": "시험을 '시작하기' 전에 문제를 읽으라는 뜻이므로 starting이 알맞다. 나머지는 의미가 맞지 않는다."
+          },
+          {
+            "q": "He is very good at ___ difficult problems in math class.",
+            "options": [
+              "solving",
+              "washing",
+              "dancing",
+              "cooking"
+            ],
+            "answer": 0,
+            "explain": "문제를 '풀다'라는 의미이므로 solving이 알맞다. washing·dancing·cooking은 문맥에 맞지 않는다."
+          },
+          {
+            "q": "We should avoid ___ too much junk food to stay healthy.",
+            "options": [
+              "singing",
+              "reading",
+              "writing",
+              "eating"
+            ],
+            "answer": 3,
+            "explain": "정크푸드를 '먹는 것'을 피해야 한다는 의미이므로 eating이 알맞다. 나머지는 의미상 맞지 않는다."
+          },
+          {
+            "q": "She keeps ___ the same song again and again because she loves it.",
+            "options": [
+              "cutting",
+              "closing",
+              "buying",
+              "playing"
+            ],
+            "answer": 3,
+            "explain": "같은 노래를 계속 '틀다/연주하다'라는 의미이므로 playing이 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "Thank you for ___ me with these heavy bags today.",
+            "options": [
+              "meeting",
+              "missing",
+              "helping",
+              "losing"
+            ],
+            "answer": 2,
+            "explain": "무거운 가방 드는 것을 '도와주다'라는 의미이므로 helping이 알맞다. 나머지는 의미가 맞지 않는다."
+          },
+          {
+            "q": "The children enjoy ___ big snowmen in the park in winter.",
+            "options": [
+              "building",
+              "borrowing",
+              "boiling",
+              "brushing"
+            ],
+            "answer": 0,
+            "explain": "눈사람을 '만들다'라는 의미이므로 building이 알맞다. 나머지는 문맥상 어색하다."
+          },
+          {
+            "q": "I finished ___ all my books into the box before the move.",
+            "options": [
+              "packing",
+              "pushing",
+              "printing",
+              "painting"
+            ],
+            "answer": 0,
+            "explain": "책을 상자에 '싸다/담다'라는 의미이므로 packing이 알맞다. 나머지는 의미상 맞지 않는다."
+          },
+          {
+            "q": "He gave up ___ soda every day so that he could become healthier.",
+            "options": [
+              "diving",
+              "drawing",
+              "drinking",
+              "driving"
+            ],
+            "answer": 2,
+            "explain": "탄산음료를 '마시는 것'을 포기했다는 의미이므로 drinking이 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "Do you mind ___ the volume a little? The music is too loud.",
+            "options": [
+              "raising",
+              "lowering",
+              "closing",
+              "opening"
+            ],
+            "answer": 1,
+            "explain": "소리가 너무 크므로 볼륨을 '낮추다'라는 의미의 lowering이 알맞다. raising은 반대 의미이다."
+          },
+          {
+            "q": "My older brother is interested in ___ foreign languages like French.",
+            "options": [
+              "cooking",
               "learning",
-              "to learn"
+              "cutting",
+              "cleaning"
             ],
-            "answer": 2,
-            "explain": "give up 뒤에는 동명사를 쓰므로 learning이 정답이다."
+            "answer": 1,
+            "explain": "외국어를 '배우다'라는 의미이므로 learning이 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "The soccer players practice ___ the ball into the goal every afternoon.",
+            "options": [
+              "kneeling",
+              "knocking",
+              "kissing",
+              "kicking"
+            ],
+            "answer": 3,
+            "explain": "공을 '차다'라는 의미이므로 kicking이 알맞다. 나머지는 의미상 맞지 않는다."
+          },
+          {
+            "q": "I'm seriously thinking about ___ a new bike for my birthday.",
+            "options": [
+              "selling",
+              "throwing",
+              "breaking",
+              "buying"
+            ],
+            "answer": 3,
+            "explain": "생일 선물로 자전거를 '사다'라는 의미이므로 buying이 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "After ___ dinner, we all washed the dishes together in the kitchen.",
+            "options": [
+              "eating",
+              "driving",
+              "sleeping",
+              "running"
+            ],
+            "answer": 0,
+            "explain": "저녁을 '먹은' 후 설거지를 했다는 의미이므로 eating이 알맞다. 나머지는 문맥에 맞지 않는다."
           }
         ],
         "sa": [
@@ -2099,238 +2098,150 @@ export const courses = [
         "concept": "짧은 단어는 -er, 긴 단어는 more를 붙이고 그 뒤에 than을 써서 'A는 B보다 더 ~하다'를 나타낸다.",
         "mc": [
           {
-            "q": "This tree is ______ than that tree. (빈칸에 알맞은 것은?)",
+            "q": "My new bike is much ______ than my old one, so I can get to school quickly.",
             "options": [
-              "tall",
-              "taller",
-              "tallest",
-              "more tall"
-            ],
-            "answer": 1,
-            "explain": "짧은 단어 tall은 -er을 붙여 taller로 만들고 than 앞에 씁니다."
-          },
-          {
-            "q": "This shirt is ______ than that one. (이 셔츠가 저것보다 더 싸다.)",
-            "options": [
-              "cheap",
-              "cheapest",
-              "cheaper",
-              "more cheap"
+              "fast",
+              "fastest",
+              "faster",
+              "more fast"
             ],
             "answer": 2,
-            "explain": "cheap은 짧은 단어이므로 cheaper로 만듭니다."
+            "explain": "much는 비교급을 강조하며, 짧은 단어 fast의 비교급은 faster입니다. fastest는 최상급이라 than과 함께 쓸 수 없습니다."
           },
           {
-            "q": "This test is ______ than the last one. (이번 시험이 더 어렵다.)",
+            "q": "The math test was much harder ______ the science test, so my score was low.",
             "options": [
-              "difficulter",
-              "more difficult",
-              "difficultest",
-              "most difficult"
-            ],
-            "answer": 1,
-            "explain": "difficult은 긴 단어이므로 앞에 more를 붙여 more difficult로 씁니다."
-          },
-          {
-            "q": "Today's weather is ______ than yesterday's. (오늘 날씨가 더 나쁘다.)",
-            "options": [
-              "badder",
-              "more bad",
-              "worse",
-              "worst"
+              "then",
+              "that",
+              "than",
+              "as"
             ],
             "answer": 2,
-            "explain": "bad의 비교급은 불규칙 형태인 worse입니다."
+            "explain": "비교급 뒤에서 '~보다'는 then(그때)이 아니라 than입니다. 철자를 혼동하지 않도록 주의합니다."
           },
           {
-            "q": "I have ______ books than you. (나는 너보다 더 많은 책을 가지고 있다.)",
+            "q": "This tower is ______ taller than the building next to it, so you can see it from far away.",
             "options": [
-              "many",
-              "manyer",
-              "more",
+              "too",
+              "so",
+              "very",
               "much"
             ],
-            "answer": 2,
-            "explain": "many의 비교급은 불규칙 형태인 more입니다."
+            "answer": 3,
+            "explain": "비교급 taller를 강조할 때는 much/far/a lot을 씁니다. very는 원급만 강조하고 비교급은 강조하지 못합니다."
           },
           {
-            "q": "Her English is ______ than my English. (그녀의 영어가 더 잘한다/좋다.)",
+            "q": "My backpack is as ______ as yours; they weigh exactly the same.",
             "options": [
-              "gooder",
-              "more good",
-              "better",
-              "best"
-            ],
-            "answer": 2,
-            "explain": "good의 비교급은 불규칙 형태인 better입니다."
-          },
-          {
-            "q": "This flower is ______ than that one. (이 꽃이 더 예쁘다.)",
-            "options": [
-              "prettier",
-              "prettyer",
-              "more pretty",
-              "prettiest"
+              "heavy",
+              "more heavy",
+              "heaviest",
+              "heavier"
             ],
             "answer": 0,
-            "explain": "「자음+y」로 끝나는 pretty는 y를 i로 바꾸고 -er을 붙여 prettier가 됩니다."
+            "explain": "'as ~ as(같은 정도)' 사이에는 비교급이 아니라 원급 heavy를 씁니다."
           },
           {
-            "q": "My bag is ______ than your bag. (내 가방이 더 크다.)",
+            "q": "In summer, Daegu is usually ______ than Seoul, so people say it feels like an oven.",
             "options": [
-              "biger",
-              "bigger",
-              "more big",
-              "biggest"
-            ],
-            "answer": 1,
-            "explain": "big은 「단모음+단자음」이므로 g를 한 번 더 쓰고 -er을 붙여 bigger가 됩니다."
-          },
-          {
-            "q": "This puzzle is ______ than that puzzle. (이 퍼즐이 더 어렵다/딱딱하다.)",
-            "options": [
-              "hardest",
-              "more hard",
-              "harder",
-              "hardder"
+              "hottest",
+              "more hot",
+              "hotter",
+              "hot"
             ],
             "answer": 2,
-            "explain": "hard는 짧은 단어이므로 harder로 만듭니다."
+            "explain": "hot은 「단모음+단자음」이라 t를 겹쳐 hotter가 되고, than과 함께 쓰는 비교급입니다. hottest는 최상급입니다."
           },
           {
-            "q": "다음 중 비교급이 바르게 만들어진 것은?",
+            "q": "This movie is ______ than the book, so I really enjoyed watching it in the theater.",
             "options": [
-              "more tall",
-              "expensiver",
-              "faster",
+              "more interesting",
+              "interesting",
+              "most interesting",
+              "interestinger"
+            ],
+            "answer": 0,
+            "explain": "interesting은 긴 단어라 more interesting으로 비교급을 만듭니다. most interesting은 최상급입니다."
+          },
+          {
+            "q": "Your plan is ______ than mine, so let's follow yours for the school festival.",
+            "options": [
+              "better",
+              "best",
+              "more good",
               "gooder"
             ],
-            "answer": 2,
-            "explain": "fast는 짧은 단어라 faster가 맞습니다. tall→taller, expensive→more expensive, good→better."
+            "answer": 0,
+            "explain": "good의 비교급은 불규칙 형태 better입니다. best는 최상급이라 than과 쓸 수 없습니다."
           },
           {
-            "q": "다음 중 비교급 형태가 틀린 것은?",
+            "q": "Traffic this morning was ______ than usual, so the bus arrived twenty minutes late.",
             "options": [
-              "easier",
-              "happier",
-              "bigger",
-              "beautifuler"
-            ],
-            "answer": 3,
-            "explain": "beautiful은 긴 단어이므로 more beautiful로 써야 합니다."
-          },
-          {
-            "q": "The blue whale is ______ than the elephant. (파란고래가 더 무겁다.)",
-            "options": [
-              "heavier",
-              "heavyer",
-              "more heavy",
-              "heaviest"
+              "worse",
+              "worst",
+              "badder",
+              "more bad"
             ],
             "answer": 0,
-            "explain": "「자음+y」로 끝나는 heavy는 y를 i로 바꿔 heavier가 됩니다."
+            "explain": "bad의 비교급은 불규칙 형태 worse입니다. worst는 최상급입니다."
           },
           {
-            "q": "This lake is ______ than that pond. (이 호수가 더 깊다.)",
+            "q": "The sky is much ______ today than yesterday, so we may not see the stars tonight.",
             "options": [
-              "deepest",
-              "deeper",
-              "more deep",
-              "deepper"
-            ],
-            "answer": 1,
-            "explain": "deep은 짧은 단어이므로 deeper로 만듭니다."
-          },
-          {
-            "q": "Jane is ______ today than yesterday. (제인은 오늘 더 바쁘다.)",
-            "options": [
-              "busyer",
-              "more busy",
-              "busier",
-              "busiest"
+              "cloudyer",
+              "more cloudy",
+              "cloudier",
+              "cloudiest"
             ],
             "answer": 2,
-            "explain": "「자음+y」로 끝나는 busy는 y를 i로 바꿔 busier가 됩니다."
+            "explain": "「자음+y」로 끝나는 cloudy는 y를 i로 바꿔 cloudier가 됩니다."
           },
           {
-            "q": "than은 문장에서 어디에 오나요? (비교급의 어순)",
+            "q": "Be careful! This river is ______ deeper than the pool at school.",
             "options": [
-              "비교급 앞에",
-              "비교급 바로 뒤에",
-              "주어 앞에",
-              "문장 맨 앞에"
+              "many",
+              "a lot",
+              "very",
+              "too"
             ],
             "answer": 1,
-            "explain": "'비교급 + than + 비교 대상'의 순서로, than은 비교급 바로 뒤에 옵니다."
+            "explain": "비교급 deeper를 강조하는 말은 a lot(=much/far)입니다. very는 비교급을 강조하지 못합니다."
           },
           {
-            "q": "빈칸에 알맞은 말은? He runs ______ ______ me. (그는 나보다 더 빨리 달린다.)",
+            "q": "There are two roads to the park. This one is ______, so let's take it to save time.",
             "options": [
-              "fast / than",
-              "faster / than",
-              "than / faster",
-              "more fast / than"
-            ],
-            "answer": 1,
-            "explain": "짧은 단어 fast는 faster로 만들고 그 뒤에 than을 씁니다."
-          },
-          {
-            "q": "다음 문장에서 틀린 부분은? This book is more easy than that one.",
-            "options": [
-              "This book",
-              "more easy",
-              "than",
-              "that one"
-            ],
-            "answer": 1,
-            "explain": "easy는 「자음+y」이므로 more easy가 아니라 easier로 써야 합니다."
-          },
-          {
-            "q": "다음 문장에서 틀린 부분은? My car is expensiver than his car.",
-            "options": [
-              "My car",
-              "expensiver",
-              "than",
-              "his car"
-            ],
-            "answer": 1,
-            "explain": "expensive는 긴 단어이므로 expensiver가 아니라 more expensive로 써야 합니다."
-          },
-          {
-            "q": "Which is ______, the Han River or this street? (어느 것이 더 긴가요?)",
-            "options": [
-              "long",
-              "longer",
-              "longest",
-              "more long"
-            ],
-            "answer": 1,
-            "explain": "long은 짧은 단어이므로 longer로 만듭니다."
-          },
-          {
-            "q": "My cousin is ______ than me. (내 사촌이 나보다 나이가 더 많다.)",
-            "options": [
-              "old",
-              "more old",
-              "older",
-              "oldest"
+              "shortest",
+              "short",
+              "shorter",
+              "the shortest"
             ],
             "answer": 2,
-            "explain": "old는 짧은 단어이므로 older로 만듭니다."
+            "explain": "둘 중 하나를 비교할 때는 비교급 shorter를 씁니다. 셋 이상에서 '가장 ~한'일 때만 최상급을 씁니다."
           },
           {
-            "q": "I think a phone is ______ than a watch. (전화기가 더 유용하다.)",
+            "q": "For me, science is ______ interesting than history, so I study it every night.",
             "options": [
-              "usefuler",
-              "more useful",
-              "usefuller",
-              "most useful"
+              "much more",
+              "more much",
+              "much most",
+              "very more"
+            ],
+            "answer": 0,
+            "explain": "긴 단어 비교급 more interesting을 강조할 때는 앞에 much를 붙여 much more interesting으로 씁니다."
+          },
+          {
+            "q": "I read ______ books this month than last month because I had more free time.",
+            "options": [
+              "much",
+              "more",
+              "most",
+              "many"
             ],
             "answer": 1,
-            "explain": "useful은 긴 단어이므로 more useful로 씁니다."
+            "explain": "셀 수 있는 명사 books 앞에서 '더 많은'은 many의 비교급 more입니다."
           },
           {
-            "q": "This box is ______ than that box. (이 상자가 더 가볍다.)",
+            "q": "This box is ______ than that one, so I can carry it with one hand.",
             "options": [
               "light",
               "lighter",
@@ -2338,205 +2249,293 @@ export const courses = [
               "lightest"
             ],
             "answer": 1,
-            "explain": "light는 짧은 단어이므로 lighter로 만듭니다."
+            "explain": "light는 짧은 단어라 -er을 붙여 lighter가 됩니다."
           },
           {
-            "q": "My mom cooks ______ than me. (엄마가 나보다 요리를 더 잘하신다.)",
+            "q": "The City Zoo is ______ than the Green Zoo, so it keeps many more animals.",
             "options": [
-              "gooder",
-              "weller",
-              "better",
-              "more good"
-            ],
-            "answer": 2,
-            "explain": "부사 well의 비교급도 불규칙 형태인 better입니다."
-          },
-          {
-            "q": "Seoul is ______ than my town. (서울이 우리 동네보다 더 크다.)",
-            "options": [
-              "biger",
-              "more big",
-              "bigger",
-              "biggest"
-            ],
-            "answer": 2,
-            "explain": "big은 마지막 자음을 한 번 더 쓰고 -er을 붙여 bigger가 됩니다."
-          },
-          {
-            "q": "Yuna is 160cm, Sora is 158cm. → Yuna is ______ than Sora.",
-            "options": [
-              "tall",
-              "taller",
-              "tallest",
-              "more tall"
-            ],
-            "answer": 1,
-            "explain": "키가 더 큰 것을 나타내려면 tall의 비교급 taller를 씁니다."
-          },
-          {
-            "q": "Today is 30°C, yesterday was 25°C. → Today is ______ than yesterday.",
-            "options": [
-              "hoter",
-              "hotter",
-              "more hot",
-              "hottest"
-            ],
-            "answer": 1,
-            "explain": "hot은 「단모음+단자음」이므로 t를 한 번 더 쓰고 -er을 붙여 hotter가 됩니다."
-          },
-          {
-            "q": "My dog is 3, your dog is 5. → My dog is ______ than your dog.",
-            "options": [
-              "young",
-              "more young",
-              "younger",
-              "youngest"
-            ],
-            "answer": 2,
-            "explain": "young은 짧은 단어이므로 younger로 만듭니다."
-          },
-          {
-            "q": "This story is ______ than that story. (이 이야기가 더 재미있다.)",
-            "options": [
-              "interestinger",
-              "more interesting",
-              "interesting",
-              "most interesting"
-            ],
-            "answer": 1,
-            "explain": "interesting은 긴 단어이므로 more interesting으로 씁니다."
-          },
-          {
-            "q": "Winter in Seoul is ______ than winter in Busan. (서울의 겨울이 더 춥다.)",
-            "options": [
-              "cold",
-              "colder",
-              "more cold",
-              "coldest"
-            ],
-            "answer": 1,
-            "explain": "cold는 짧은 단어이므로 colder로 만듭니다."
-          },
-          {
-            "q": "다음 중 more를 사용해 비교급을 만드는 단어는?",
-            "options": [
-              "fast",
-              "tall",
-              "famous",
-              "big"
-            ],
-            "answer": 2,
-            "explain": "famous는 긴 단어이므로 more famous로 만듭니다. 나머지는 -er을 붙입니다."
-          },
-          {
-            "q": "다음 중 -er을 붙여 비교급을 만드는 단어는?",
-            "options": [
-              "difficult",
-              "beautiful",
-              "cheap",
-              "useful"
-            ],
-            "answer": 2,
-            "explain": "cheap은 짧은 단어라 cheaper가 됩니다. 나머지는 긴 단어라 more를 씁니다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것은? ( than / faster / he / runs / me )",
-            "options": [
-              "He runs than faster me.",
-              "He faster runs than me.",
-              "He runs faster than me.",
-              "Faster he runs than me."
-            ],
-            "answer": 2,
-            "explain": "'주어+동사+비교급+than+비교 대상' 순서로 He runs faster than me."
-          },
-          {
-            "q": "단어를 바르게 배열한 것은? ( is / than / this / bigger / bag / that / one )",
-            "options": [
-              "This bag bigger is than that one.",
-              "This bag is bigger than that one.",
-              "This bag is than bigger that one.",
-              "Bigger this bag is than that one."
-            ],
-            "answer": 1,
-            "explain": "'This bag is bigger than that one.'이 올바른 어순입니다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것은? ( more / this / is / difficult / book / that / than / one )",
-            "options": [
-              "This book is more difficult than that one.",
-              "This book more is difficult than that one.",
-              "This book is difficult more than that one.",
-              "This book is more than difficult that one."
-            ],
-            "answer": 0,
-            "explain": "긴 단어는 'is more difficult than' 순서로 씁니다."
-          },
-          {
-            "q": "City Zoo is ______ than Green Zoo, so it has more animals. (더 크다: large)",
-            "options": [
-              "larger",
               "largeer",
-              "more large",
-              "largest"
+              "larger",
+              "largest",
+              "more large"
             ],
-            "answer": 0,
+            "answer": 1,
             "explain": "-e로 끝나는 large는 -r만 붙여 larger가 됩니다."
           },
           {
-            "q": "The cheetah runs ______ than any other animal. (더 빠르게)",
+            "q": "Seoul is far ______ than my small hometown, so it has many tall buildings.",
             "options": [
-              "fast",
-              "more fast",
-              "faster",
-              "fastest"
+              "bigger",
+              "biger",
+              "biggest",
+              "more big"
             ],
-            "answer": 2,
-            "explain": "fast는 짧은 단어이므로 faster로 만듭니다."
+            "answer": 0,
+            "explain": "big은 「단모음+단자음」이라 g를 겹쳐 bigger가 됩니다. far는 비교급을 강조하는 말입니다."
           },
           {
-            "q": "다음 중 문장이 어법상 옳은 것은?",
+            "q": "My little sister sings ______ than I do, so she always joins the school choir.",
             "options": [
-              "My room is more small than yours.",
+              "more well",
+              "better",
+              "gooder",
+              "weller"
+            ],
+            "answer": 1,
+            "explain": "부사 well의 비교급도 불규칙 형태 better입니다. weller나 more well은 틀린 형태입니다."
+          },
+          {
+            "q": "비교급 문장에서 than은 어디에 오나요? (어순)",
+            "options": [
+              "비교급 바로 앞에",
+              "비교급 바로 뒤에",
+              "주어 앞에",
+              "문장 맨 끝에만"
+            ],
+            "answer": 1,
+            "explain": "'비교급 + than + 비교 대상'의 순서로, than은 비교급 바로 뒤에 옵니다."
+          },
+          {
+            "q": "다음 문장에서 어법상 틀린 부분은? This puzzle is very harder than that one.",
+            "options": [
+              "harder",
+              "than that one",
+              "This puzzle",
+              "very"
+            ],
+            "answer": 3,
+            "explain": "비교급 harder는 very로 강조할 수 없습니다. much/far/a lot으로 바꿔야 합니다."
+          },
+          {
+            "q": "다음 문장에서 어법상 틀린 부분은? My phone is more cheap than yours.",
+            "options": [
+              "My phone",
+              "than",
+              "more cheap",
+              "yours"
+            ],
+            "answer": 2,
+            "explain": "cheap은 짧은 단어라 more cheap이 아니라 cheaper로 써야 합니다."
+          },
+          {
+            "q": "The blue whale is the ______ animal on Earth, even ______ than the biggest dinosaur.",
+            "options": [
+              "largest / larger",
+              "larger / largest",
+              "large / large",
+              "larger / larger"
+            ],
+            "answer": 0,
+            "explain": "'가장 ~한'은 최상급 largest, '~보다 더 ~한'은 than과 함께 비교급 larger를 씁니다."
+          },
+          {
+            "q": "Which subject is ______ for you, math or English? (둘 중 어느 것이 더 쉬운지)",
+            "options": [
+              "easiest",
+              "easy",
+              "easier",
+              "more easy"
+            ],
+            "answer": 2,
+            "explain": "둘을 비교하므로 easy의 비교급 easier를 씁니다. easy는 y를 i로 바꿔 easier가 됩니다."
+          },
+          {
+            "q": "다음 중 어법상 옳은 문장은?",
+            "options": [
               "My room is smaller than yours.",
+              "My room is more small than yours.",
               "My room is smaller then yours.",
               "My room is small than yours."
             ],
-            "answer": 1,
-            "explain": "small→smaller, 비교의 than은 then이 아니라 than입니다."
+            "answer": 0,
+            "explain": "small은 smaller로 만들고, '~보다'는 then이 아니라 than입니다."
           },
           {
-            "q": "다음 중 문장이 어법상 옳은 것은?",
+            "q": "The actor became ______ than before after the movie won a big prize.",
             "options": [
-              "This is more good than that.",
-              "This is gooder than that.",
-              "This is better than that.",
-              "This is best than that."
+              "famouser",
+              "famousest",
+              "more famous",
+              "most famous"
             ],
             "answer": 2,
-            "explain": "good의 비교급은 better입니다."
+            "explain": "famous는 긴 단어라 more famous로 비교급을 만듭니다."
           },
           {
-            "q": "My sister is ______ than me. (나의 언니는 나보다 더 부지런하다: diligent)",
+            "q": "My cousin is only two years ______ than me, so we play together a lot.",
             "options": [
-              "diligenter",
-              "more diligent",
-              "most diligent",
-              "diligentest"
+              "more old",
+              "old",
+              "older",
+              "oldest"
             ],
-            "answer": 1,
-            "explain": "diligent은 긴 단어이므로 more diligent으로 씁니다."
+            "answer": 2,
+            "explain": "old는 짧은 단어라 -er을 붙여 older가 됩니다."
           },
           {
-            "q": "This problem is ______ than that problem. (이 문제가 더 쉽다: easy)",
+            "q": "단어를 바르게 배열한 것은? ( than / runs / he / faster / me )",
             "options": [
-              "easyer",
+              "He runs faster than me.",
+              "He faster runs than me.",
+              "He runs than faster me.",
+              "Faster he runs than me."
+            ],
+            "answer": 0,
+            "explain": "'주어+동사+비교급+than+비교 대상' 순서로 He runs faster than me.가 맞습니다."
+          },
+          {
+            "q": "This chair is not as ______ as that sofa, so my back hurts when I sit here.",
+            "options": [
+              "comfortabler",
+              "more comfortable",
+              "comfortable",
+              "most comfortable"
+            ],
+            "answer": 2,
+            "explain": "'as ~ as' 사이에는 원급 comfortable을 씁니다. 비교급/최상급 형태는 쓸 수 없습니다."
+          },
+          {
+            "q": "The homework today was ______ than yesterday's, so I finished it in ten minutes.",
+            "options": [
               "more easy",
               "easier",
+              "easyer",
               "easiest"
             ],
-            "answer": 2,
+            "answer": 1,
             "explain": "「자음+y」로 끝나는 easy는 y를 i로 바꿔 easier가 됩니다."
+          },
+          {
+            "q": "This bag is ______ than that one; it has room for all my books and my lunch box.",
+            "options": [
+              "more big",
+              "biger",
+              "biggest",
+              "bigger"
+            ],
+            "answer": 3,
+            "explain": "big은 마지막 자음을 겹쳐 bigger가 됩니다."
+          },
+          {
+            "q": "다음 중 비교급 형태가 틀린 것은?",
+            "options": [
+              "more careful",
+              "usefuller",
+              "thinner",
+              "happier"
+            ],
+            "answer": 1,
+            "explain": "useful은 긴 단어라 more useful로 써야 합니다. usefuller는 틀린 형태입니다."
+          },
+          {
+            "q": "The second question was ______ difficult than the first one, so many students got it wrong.",
+            "options": [
+              "so more",
+              "much more",
+              "more much",
+              "very"
+            ],
+            "answer": 1,
+            "explain": "긴 단어 비교급 more difficult를 강조할 때는 much more difficult로 씁니다. very는 비교급을 강조하지 못합니다."
+          },
+          {
+            "q": "다음 중 어법상 옳은 문장은?",
+            "options": [
+              "This is better than that.",
+              "This is more good than that.",
+              "This is best than that.",
+              "This is gooder than that."
+            ],
+            "answer": 0,
+            "explain": "good의 비교급은 better입니다. best는 최상급이라 than과 쓸 수 없습니다."
+          },
+          {
+            "q": "After a good night's sleep, I felt ______ than before and finished all my work.",
+            "options": [
+              "best",
+              "more well",
+              "better",
+              "gooder"
+            ],
+            "answer": 2,
+            "explain": "몸 상태가 '더 좋은'은 good/well의 비교급 better로 나타냅니다."
+          },
+          {
+            "q": "단어를 바르게 배열한 것은? ( is / than / this / more / expensive / phone / that / one )",
+            "options": [
+              "This phone is more than expensive that one.",
+              "This phone is expensive more than that one.",
+              "This phone more is expensive than that one.",
+              "This phone is more expensive than that one."
+            ],
+            "answer": 3,
+            "explain": "긴 단어는 'is more expensive than' 순서로 씁니다."
+          },
+          {
+            "q": "Turtles move ______ than rabbits, so the rabbit was sure it would win the race.",
+            "options": [
+              "slowlier",
+              "most slowly",
+              "more slowly",
+              "slowly"
+            ],
+            "answer": 2,
+            "explain": "-ly로 끝나는 부사 slowly는 앞에 more를 붙여 more slowly로 비교급을 만듭니다."
+          },
+          {
+            "q": "This water bottle is ______ than that thermos, so it's easy to hold, but it gets warm fast.",
+            "options": [
+              "thiner",
+              "thinnest",
+              "thinner",
+              "more thin"
+            ],
+            "answer": 2,
+            "explain": "thin은 「단모음+단자음」이라 n을 겹쳐 thinner가 됩니다."
+          },
+          {
+            "q": "Winter days are ______ than summer days; the sun sets before dinner.",
+            "options": [
+              "brighter",
+              "warmer",
+              "shorter",
+              "longer"
+            ],
+            "answer": 2,
+            "explain": "겨울에는 낮이 더 짧아 해가 일찍 지므로 '더 짧은' shorter가 문맥에 맞습니다."
+          },
+          {
+            "q": "After exercising every day, I feel ______ than before; I rarely catch a cold now.",
+            "options": [
+              "healthier",
+              "sicker",
+              "lazier",
+              "weaker"
+            ],
+            "answer": 0,
+            "explain": "운동 후 감기에 잘 안 걸린다는 문맥이므로 '더 건강한' healthier가 맞습니다."
+          },
+          {
+            "q": "The library is ______ than the cafeteria, so I always go there to study for tests.",
+            "options": [
+              "noisier",
+              "quieter",
+              "busier",
+              "louder"
+            ],
+            "answer": 1,
+            "explain": "공부하기 좋은 곳이라는 문맥이므로 '더 조용한' quieter가 맞습니다."
+          },
+          {
+            "q": "A diamond is ______ than glass, so it does not get scratched easily.",
+            "options": [
+              "harder",
+              "cheaper",
+              "lighter",
+              "softer"
+            ],
+            "answer": 0,
+            "explain": "흠집이 잘 안 난다는 문맥이므로 '더 단단한' harder가 맞습니다."
           }
         ],
         "sa": [
@@ -2619,444 +2618,444 @@ export const courses = [
         "concept": "「when + 주어 + 동사」는 '~할 때'라는 뜻이며, when절이 문장 앞에 오면 그 뒤에 콤마(,)를 쓴다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nI wear a coat ___ it is cold.",
-            "options": [
-              "when",
-              "what",
-              "who",
-              "where"
-            ],
-            "answer": 0,
-            "explain": "'추울 때'라는 시간의 뜻이므로 접속사 when이 알맞습니다. 「when + 주어 + 동사」로 '~할 때'를 나타냅니다."
-          },
-          {
-            "q": "밑줄 친 when의 뜻이 나머지와 다른 것은?",
-            "options": [
-              "When did you come?",
-              "I read comics when I am free.",
-              "He smiles when he sees her.",
-              "We stop talking when the movie starts."
-            ],
-            "answer": 0,
-            "explain": "①의 when은 '언제'라는 뜻의 의문사이고, 나머지는 모두 '~할 때'라는 뜻의 접속사입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ it rains, I stay home.",
-            "options": [
-              "When",
-              "What",
-              "Which",
-              "How"
-            ],
-            "answer": 0,
-            "explain": "'비가 올 때'라는 뜻이므로 접속사 When이 알맞습니다. When절이 앞에 오면 뒤에 콤마를 씁니다."
-          },
-          {
-            "q": "다음 두 문장을 한 문장으로 바르게 연결한 것은?\nHe feels tired. + He takes a rest.",
-            "options": [
-              "He takes a rest when he feels tired.",
-              "He takes a rest when he feel tired.",
-              "He takes a rest what he feels tired.",
-              "He takes rest when he feels tired he."
-            ],
-            "answer": 0,
-            "explain": "'그는 피곤할 때 쉰다'는 뜻입니다. when 뒤에는 주어(he)와 동사(feels)가 옵니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the bell rings___ children laugh.",
-            "options": [
-              ",",
-              ".",
-              "?",
-              "!"
-            ],
-            "answer": 0,
-            "explain": "when절이 문장 앞에 왔으므로 when절이 끝나는 자리에 콤마(,)를 씁니다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것은?\n종이 울릴 때, 우리는 나간다.\n___ the bell rings, we go out.",
-            "options": [
-              "When",
-              "Where",
-              "What",
-              "Why"
-            ],
-            "answer": 0,
-            "explain": "'~할 때'는 접속사 When으로 나타냅니다."
-          },
-          {
-            "q": "어법상 어색한 것은?",
-            "options": [
-              "When I was young I liked candy.",
-              "When it snows, children make a snowman.",
-              "I wash my hands when I get home.",
-              "We wash the dishes when we finish dinner."
-            ],
-            "answer": 0,
-            "explain": "when절이 문장 앞에 오면 그 뒤에 콤마가 필요합니다. → When I was young, I liked candy."
-          },
-          {
-            "q": "빈칸에 공통으로 알맞은 말을 고르세요.\n· I feel excited ___ I play soccer.\n· ___ she arrives, we will start.",
-            "options": [
-              "when / When",
-              "what / What",
-              "who / Who",
-              "why / Why"
-            ],
-            "answer": 0,
-            "explain": "두 문장 모두 '~할 때'라는 뜻의 접속사 when이 필요합니다. 문장 맨 앞에 올 때는 첫 글자를 대문자로 씁니다."
-          },
-          {
-            "q": "다음 중 올바른 문장은?",
-            "options": [
-              "When it snows, children make a snowman.",
-              "When it snows children make a snowman.",
-              "When, it snows children make a snowman.",
-              "It snows when, children make a snowman."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 오면 그 절이 끝난 뒤에 콤마를 한 번만 씁니다."
-          },
-          {
-            "q": "밑줄 친 부분이 의문사 when으로 쓰인 것은?",
-            "options": [
-              "When do you feel sleepy?",
-              "I feel sleepy when I eat too much.",
-              "She sings when she is happy.",
-              "When it rains, we play inside."
-            ],
-            "answer": 0,
-            "explain": "①은 '언제'라고 묻는 의문사 when입니다. 나머지는 '~할 때'라는 접속사입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen she ___ home, her dog barks.",
-            "options": [
-              "arrives",
-              "arrive",
-              "arriving",
-              "to arrive"
-            ],
-            "answer": 0,
-            "explain": "주어 she가 3인칭 단수이고 현재의 반복적인 일이므로 arrives가 알맞습니다."
-          },
-          {
-            "q": "다음 두 문장을 when으로 연결할 때 알맞은 것은?\nIt snows. + Children make a snowman.",
-            "options": [
-              "Children make a snowman when it snows.",
-              "Children make a snowman when it snow.",
-              "When it snows children make a snowman.",
-              "It snows children make a snowman when."
-            ],
-            "answer": 0,
-            "explain": "'눈이 올 때 아이들은 눈사람을 만든다'는 뜻입니다. it은 3인칭 단수이므로 snows가 됩니다."
-          },
-          {
-            "q": "우리말을 영어로 바르게 옮긴 것은?\n내가 집에 오면, 나는 손을 씻는다.",
-            "options": [
-              "When I get home, I wash my hands.",
-              "When I get home I wash my hands.",
-              "I get home when I wash my hands.",
-              "When do I get home, I wash my hands."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 왔으므로 뒤에 콤마가 필요합니다. 순서와 의미도 자연스러운 ①이 정답입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWe stop talking ___ the movie starts.",
-            "options": [
-              "when",
-              "when do",
-              "what",
-              "which"
-            ],
-            "answer": 0,
-            "explain": "'영화가 시작될 때'라는 뜻이므로 접속사 when이 알맞습니다."
-          },
-          {
-            "q": "다음 문장에서 콤마(,)가 들어갈 위치로 알맞은 곳은?\nWhen ⓐ the weather ⓑ is warm ⓒ I ⓓ play outside.",
-            "options": [
-              "ⓒ",
-              "ⓐ",
-              "ⓑ",
-              "ⓓ"
-            ],
-            "answer": 0,
-            "explain": "when절(When the weather is warm)이 끝나는 자리, 즉 warm 다음(ⓒ 앞)에 콤마를 씁니다."
-          },
-          {
-            "q": "밑줄 친 when의 쓰임이 나머지와 다른 것은?",
-            "options": [
-              "When is your birthday?",
-              "I am happy when I sing.",
-              "When he is angry, he says nothing.",
-              "She reads books when she has time."
-            ],
-            "answer": 0,
-            "explain": "①은 '언제'라는 의문사이고, 나머지는 '~할 때'라는 접속사입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ we finish our homework, we watch TV.",
-            "options": [
-              "When",
-              "What",
-              "That",
-              "Who"
-            ],
-            "answer": 0,
-            "explain": "'숙제를 끝낼 때'라는 뜻이므로 접속사 When이 알맞습니다."
-          },
-          {
-            "q": "다음 중 어법상 옳은 문장은?",
-            "options": [
-              "When I have time, I read books.",
-              "When I have time I, read books.",
-              "When, I have time I read books.",
-              "I read books when, I have time."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 올 때는 그 절 뒤(time 다음)에 콤마를 씁니다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸을 완성할 때 알맞은 것은?\n그가 다섯 살이었을 때, 그는 피아노를 배웠다.\nWhen he ___ five, he learned the piano.",
-            "options": [
-              "was",
-              "is",
-              "were",
-              "be"
-            ],
-            "answer": 0,
-            "explain": "과거의 일이고 주어 he가 단수이므로 was가 알맞습니다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것은?\nA: ___ do you listen to music?\nB: I listen to music when I feel sad.",
-            "options": [
-              "When",
-              "What",
-              "Which",
-              "Whose"
-            ],
-            "answer": 0,
-            "explain": "'언제 음악을 듣니?'라고 묻는 의문사 When이 알맞습니다. B의 when은 접속사입니다."
-          },
-          {
-            "q": "다음 두 문장을 when으로 연결한 것으로 알맞은 것은?\nI am free. + I read comics.",
-            "options": [
-              "I read comics when I am free.",
-              "I read comics when I free.",
-              "I read comics what I am free.",
-              "When I am free I read comics."
-            ],
-            "answer": 0,
-            "explain": "'한가할 때 만화를 읽는다'는 뜻입니다. when 뒤에는 「주어+동사」가 오고, when절을 뒤에 두면 콤마가 필요 없습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the sun sets___ the sky turns red.",
-            "options": [
-              ",",
-              "?",
-              "!",
-              "and"
-            ],
-            "answer": 0,
-            "explain": "when절이 문장 앞에 왔으므로 그 뒤에 콤마(,)를 씁니다."
-          },
-          {
-            "q": "다음 중 뜻이 자연스러운 문장은?",
-            "options": [
-              "I try again when I make a mistake.",
-              "I make a mistake when I try again.",
-              "When I try again, make a mistake I often.",
-              "I mistake make when I try again."
-            ],
-            "answer": 0,
-            "explain": "'실수를 할 때 다시 시도한다'가 자연스럽습니다."
-          },
-          {
-            "q": "우리말을 영어로 바르게 옮긴 것은?\n내가 학교에 갈 때, 나는 버스를 탄다.",
-            "options": [
-              "When I go to school, I take the bus.",
-              "When I go to school I take the bus.",
-              "I go to school when I take the bus.",
-              "When do I go to school, I take the bus."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 왔으므로 콤마가 필요하고, 의미도 자연스러운 ①이 정답입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nEveryone becomes quiet ___ she sings.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nThe dog barks loudly ___ someone knocks on the front door.",
             "options": [
               "when",
               "who",
-              "where",
+              "which",
               "what"
             ],
             "answer": 0,
-            "explain": "'그녀가 노래할 때'라는 뜻이므로 접속사 when이 알맞습니다."
+            "explain": "'누군가 문을 두드릴 때'라는 시간의 뜻이므로 접속사 when이 알맞습니다. what/which/who는 의미가 맞지 않습니다."
           },
           {
-            "q": "다음 문장을 when절이 앞에 오도록 바꾼 것으로 알맞은 것은?\nWe wear coats when it is cold.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the alarm rings early in the morning, I ___ up and get ready for school.",
             "options": [
-              "When it is cold, we wear coats.",
-              "When it is cold we wear coats.",
-              "When we wear coats, it is cold.",
-              "When is it cold, we wear coats."
+              "sit",
+              "fall",
+              "wake",
+              "sleep"
+            ],
+            "answer": 2,
+            "explain": "'알람이 울릴 때 잠에서 깬다'가 자연스러우므로 wake가 알맞습니다. wake up은 '일어나다'입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen the baby ___ hungry, she starts to cry loudly.",
+            "options": [
+              "gets",
+              "to get",
+              "getting",
+              "get"
             ],
             "answer": 0,
-            "explain": "when절을 앞으로 옮기면 그 뒤에 콤마를 써야 합니다. 뜻은 그대로 '추울 때 우리는 코트를 입는다'입니다."
+            "explain": "주어 the baby가 3인칭 단수이고 현재의 반복적인 일이므로 gets가 알맞습니다."
           },
           {
-            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen I ___ young, I liked candy.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nStudents should not use their phones ___ the exam.",
             "options": [
-              "was",
-              "am",
-              "is",
-              "were"
+              "during",
+              "when",
+              "while",
+              "because"
             ],
             "answer": 0,
-            "explain": "과거의 일이고 주어 I이므로 was가 알맞습니다."
+            "explain": "뒤에 명사(the exam)가 오므로 전치사 during이 알맞습니다. when/while은 「주어+동사」의 절을 이끄는 접속사입니다."
           },
           {
-            "q": "밑줄 친 when이 '언제'라는 뜻으로 쓰인 것은?",
-            "options": [
-              "When did you go to Jeju?",
-              "I went to Jeju when I was ten.",
-              "She smiles when she sees her friends.",
-              "When lunch time came, we ate together."
-            ],
-            "answer": 0,
-            "explain": "①은 '언제 제주에 갔니?'로 묻는 의문사 when입니다."
-          },
-          {
-            "q": "다음 중 어색한 문장은?",
-            "options": [
-              "When she arrives we will start the party.",
-              "When she arrives, we will start the party.",
-              "We will start the party when she arrives.",
-              "She arrives, and we start the party."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 왔으므로 arrives 다음에 콤마가 필요합니다."
-          },
-          {
-            "q": "단어를 바르게 배열한 문장을 고르세요.\n( when / rings / the bell / we / go out )",
-            "options": [
-              "When the bell rings, we go out.",
-              "When rings the bell, we go out.",
-              "The bell when rings, we go out.",
-              "We go out the bell when rings."
-            ],
-            "answer": 0,
-            "explain": "「When + 주어(the bell) + 동사(rings)」 다음에 콤마, 그리고 주절(we go out)이 옵니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nI eat lunch fast ___ I am busy.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nEveryone stands up ___ the national anthem plays at the ceremony.",
             "options": [
               "when",
-              "what",
-              "why",
-              "who"
+              "where",
+              "during",
+              "what"
             ],
             "answer": 0,
-            "explain": "'바쁠 때'라는 뜻이므로 접속사 when이 알맞습니다."
+            "explain": "뒤에 「주어(the national anthem)+동사(plays)」가 오므로 접속사 when이 알맞습니다. during 뒤에는 명사만 옵니다."
           },
           {
-            "q": "우리말을 영어로 바르게 옮긴 것은?\n방학이 시작될 때, 우리는 여행을 간다.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the weather is very hot in summer, we ___ a lot of cold water.",
             "options": [
-              "When vacation starts, we go on a trip.",
-              "When vacation start, we go on a trip.",
-              "When vacation starts we go on a trip.",
-              "Vacation starts when we go on a trip."
+              "drink",
+              "read",
+              "wear",
+              "wash"
             ],
             "answer": 0,
-            "explain": "vacation은 3인칭 단수이므로 starts, when절이 앞에 오므로 콤마가 필요합니다."
+            "explain": "'더울 때 물을 많이 마신다'가 자연스러우므로 drink가 알맞습니다."
           },
           {
-            "q": "다음 대화의 빈칸에 공통으로 알맞은 것은?\nA: ___ do you help your mom?\nB: I help my mom ___ she cooks.",
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n우리는 저녁을 먹은 후에 산책을 한다.\nWe take a walk ___ we eat dinner.",
             "options": [
-              "When",
-              "What",
-              "Where",
-              "Which"
+              "while",
+              "after",
+              "before",
+              "when"
+            ],
+            "answer": 1,
+            "explain": "'~한 후에'라는 뜻이므로 after가 알맞습니다. when은 '~할 때', before는 '~하기 전에'입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen you cross the busy street, you must be very ___.",
+            "options": [
+              "careless",
+              "careful",
+              "carefully",
+              "care"
+            ],
+            "answer": 1,
+            "explain": "be동사 뒤에는 형용사가 오고 '조심하는'의 뜻이 필요하므로 careful이 알맞습니다. carefully는 부사, careless는 '부주의한'입니다."
+          },
+          {
+            "q": "다음 문장에서 콤마(,)가 들어갈 위치로 알맞은 곳을 고르세요.\nWhen ⓐ the class ⓑ is over ⓒ the students ⓓ go home.",
+            "options": [
+              "ⓑ",
+              "ⓓ",
+              "ⓒ",
+              "ⓐ"
+            ],
+            "answer": 2,
+            "explain": "when절(When the class is over)이 끝나는 자리, 즉 over 다음(ⓒ 앞)에 콤마를 씁니다."
+          },
+          {
+            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen he ___ a little child, he lived in a small village.",
+            "options": [
+              "are",
+              "was",
+              "were",
+              "is"
+            ],
+            "answer": 1,
+            "explain": "과거의 일이고 주어 he가 단수이므로 was가 알맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the students hear the good news, they become very ___.",
+            "options": [
+              "excited",
+              "silent",
+              "sleepy",
+              "bored"
             ],
             "answer": 0,
-            "explain": "A의 When은 '언제'라는 의문사, B의 when은 '~할 때'라는 접속사로, 형태는 같습니다."
+            "explain": "'좋은 소식을 들을 때'는 신이 나므로 excited가 알맞습니다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\n___ they were young, they played at the playground every day.",
+            "q": "밑줄 친 when의 쓰임이 나머지와 다른 것을 고르세요.",
             "options": [
-              "When",
-              "What",
+              "I stay inside when it is too hot.",
+              "We clap when the show ends.",
+              "When does the next train leave?",
+              "She hums a song when she cooks."
+            ],
+            "answer": 2,
+            "explain": "③은 '언제'라고 묻는 의문사 when이고, 나머지는 '~할 때'라는 접속사입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen you feel very sick, you should ___ a doctor right away.",
+            "options": [
+              "watch",
+              "look",
+              "read",
+              "see"
+            ],
+            "answer": 3,
+            "explain": "'의사에게 진찰받다'는 see a doctor로 표현하므로 see가 알맞습니다. watch/look은 의미가 맞지 않습니다."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n만약 내일 비가 오면, 우리는 소풍을 취소할 것이다.\n___ it rains tomorrow, we will cancel the picnic.",
+            "options": [
               "That",
-              "Who"
-            ],
-            "answer": 0,
-            "explain": "'그들이 어렸을 때'라는 뜻이므로 접속사 When이 알맞습니다. 앞에 왔으므로 뒤에 콤마가 있습니다."
-          },
-          {
-            "q": "밑줄 친 부분이 어법상 틀린 것은?",
-            "options": [
-              "When it rain, we play inside.",
-              "When it rains, we play inside.",
-              "We play inside when it rains.",
-              "When the weather is warm, I play outside."
-            ],
-            "answer": 0,
-            "explain": "it은 3인칭 단수이므로 rain이 아니라 rains가 되어야 합니다."
-          },
-          {
-            "q": "다음 문장에서 when의 역할로 알맞은 것은?\nI laughed a lot when we shared funny stories.",
-            "options": [
-              "'~할 때'라는 뜻의 접속사",
-              "'언제'라는 뜻의 의문사",
-              "'무엇'이라는 뜻의 의문사",
-              "'어디'라는 뜻의 접속사"
-            ],
-            "answer": 0,
-            "explain": "두 문장을 이어주며 '~할 때'라는 뜻을 나타내는 접속사입니다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것은?\n해가 졌을 때, 우리는 모두 집으로 걸어갔다.\n___ the sun went down, we all walked home.",
-            "options": [
+              "If",
               "When",
+              "What"
+            ],
+            "answer": 1,
+            "explain": "'만약 ~라면'이라는 조건의 뜻이므로 If가 알맞습니다. When은 '~할 때'라는 뜻입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen we ___ young, we played outside every single day.",
+            "options": [
+              "are",
+              "were",
+              "is",
+              "was"
+            ],
+            "answer": 1,
+            "explain": "과거의 일이고 주어 we가 복수이므로 were가 알맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen it gets dark in the evening, we ___ on the lights in the house.",
+            "options": [
+              "take",
+              "make",
+              "open",
+              "turn"
+            ],
+            "answer": 3,
+            "explain": "'불을 켜다'는 turn on the lights이므로 turn이 알맞습니다."
+          },
+          {
+            "q": "다음 두 문장을 when으로 바르게 연결한 것을 고르세요.\nThe rain stops. + The children run outside.",
+            "options": [
+              "The children run outside when the rain stop.",
+              "When the rain stops the children run outside.",
+              "The children run outside what the rain stops.",
+              "The children run outside when the rain stops."
+            ],
+            "answer": 3,
+            "explain": "the rain은 3인칭 단수이므로 stops가 되고, when절을 뒤에 두면 콤마가 필요 없습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the concert finishes, all the people ___ their hands loudly.",
+            "options": [
+              "carry",
+              "close",
+              "clap",
+              "clean"
+            ],
+            "answer": 2,
+            "explain": "'박수를 치다'는 clap one's hands이므로 clap이 알맞습니다."
+          },
+          {
+            "q": "다음 중 어법상 옳은 문장을 고르세요.",
+            "options": [
+              "When the sun rises the birds sing.",
+              "When, the sun rises the birds sing.",
+              "When the sun rises, the birds sing.",
+              "The birds sing when, the sun rises."
+            ],
+            "answer": 2,
+            "explain": "when절이 앞에 오면 그 절이 끝난 뒤(rises 다음)에 콤마를 한 번 씁니다."
+          },
+          {
+            "q": "다음 중 어법상 옳은 문장을 고르세요.",
+            "options": [
+              "I feel happy, when I see my friends.",
+              "I feel happy when I see my friends.",
+              "I feel happy when, I see my friends.",
+              "When I see my friends I feel happy."
+            ],
+            "answer": 1,
+            "explain": "when절이 뒤에 올 때는 앞에 콤마를 쓰지 않습니다. ④는 when절이 앞에 왔는데 콤마가 빠져 틀립니다."
+          },
+          {
+            "q": "단어를 바르게 배열한 문장을 고르세요.\n( when / arrives / the teacher / stand up / we )",
+            "options": [
+              "We when the teacher arrives stand up.",
+              "We stand up when the teacher arrives.",
+              "We stand up when arrives the teacher.",
+              "When the teacher arrives we stand up."
+            ],
+            "answer": 1,
+            "explain": "「주어(we)+동사(stand up)+when+주어(the teacher)+동사(arrives)」 순서가 자연스럽습니다. when절을 뒤에 두면 콤마가 필요 없습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen winter comes, the weather becomes very ___ and it often snows.",
+            "options": [
+              "kind",
+              "tall",
+              "cold",
+              "warm"
+            ],
+            "answer": 2,
+            "explain": "'겨울이 올 때'는 날씨가 추워지므로 cold가 알맞습니다."
+          },
+          {
+            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: ___ do you usually study English?\nB: I usually study English when I get home from school.",
+            "options": [
               "What",
               "Where",
-              "Who"
+              "Which",
+              "When"
             ],
-            "answer": 0,
-            "explain": "'해가 졌을 때'라는 뜻이므로 접속사 When이 알맞고, 뒤에 콤마가 있습니다."
+            "answer": 3,
+            "explain": "'언제 영어를 공부하니?'라고 묻는 의문사 When이 알맞습니다. B의 when은 '~할 때'의 접속사입니다."
           },
           {
-            "q": "다음 두 문장을 when으로 연결한 것으로 알맞은 것은?\nShe was seven. + She learned to swim.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the phone rings during dinner, my mom ___ it politely.",
             "options": [
-              "She learned to swim when she was seven.",
-              "She learned to swim when she is seven.",
-              "She learned to swim what she was seven.",
-              "When she was seven she learned to swim."
+              "talks",
+              "answers",
+              "asks",
+              "speaks"
             ],
-            "answer": 0,
-            "explain": "과거 시제(was)에 맞추고, when절을 뒤에 두면 콤마가 필요 없습니다."
+            "answer": 1,
+            "explain": "'전화를 받다'는 answer the phone이므로 answers가 알맞습니다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen I woke up___ it was raining.",
+            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen the movie ___, we will take the bus home together.",
             "options": [
-              ",",
-              ".",
-              "?",
-              "and"
+              "ended",
+              "end",
+              "ends",
+              "ending"
             ],
-            "answer": 0,
-            "explain": "when절(When I woke up)이 문장 앞에 왔으므로 그 뒤에 콤마(,)를 씁니다."
+            "answer": 2,
+            "explain": "when이 이끄는 시간의 부사절에서는 미래의 일도 현재시제로 쓰므로 ends가 알맞습니다. 주어(the movie)가 단수인 점도 맞습니다."
           },
           {
-            "q": "다음 중 우리말 해석이 바르지 않은 것은?",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the weather is warm and sunny, our family goes on a ___ in the park.",
             "options": [
-              "When is the party? → 파티할 때 나는 간다.",
-              "I sing when I am happy. → 나는 행복할 때 노래한다.",
-              "When it snows, we ski. → 눈이 올 때, 우리는 스키를 탄다.",
-              "He rests when he is tired. → 그는 피곤할 때 쉰다."
+              "kitchen",
+              "pencil",
+              "ticket",
+              "picnic"
+            ],
+            "answer": 3,
+            "explain": "'날씨가 좋을 때 공원으로 소풍을 간다'가 자연스러우므로 picnic이 알맞습니다."
+          },
+          {
+            "q": "빈칸에 공통으로 알맞은 말을 고르세요.\n· The baby laughs ___ her father sings.\n· ___ the light turns green, we can cross.",
+            "options": [
+              "what / What",
+              "who / Who",
+              "when / When",
+              "where / Where"
+            ],
+            "answer": 2,
+            "explain": "두 문장 모두 '~할 때'라는 뜻의 접속사 when이 필요합니다. 문장 맨 앞에서는 대문자로 씁니다."
+          },
+          {
+            "q": "밑줄 친 when이 '언제'라는 뜻의 의문사로 쓰인 것을 고르세요.",
+            "options": [
+              "I get nervous when I speak in front of people.",
+              "When will the summer vacation begin?",
+              "We go camping when the weather is nice.",
+              "He always smiles when he meets his friends."
+            ],
+            "answer": 1,
+            "explain": "②는 '언제 방학이 시작되나요?'라고 묻는 의문사 when입니다. 나머지는 '~할 때'라는 접속사입니다."
+          },
+          {
+            "q": "우리말을 영어로 바르게 옮긴 것을 고르세요.\n비가 올 때, 나는 우산을 가져간다.",
+            "options": [
+              "When it rain, I take an umbrella.",
+              "I take an umbrella when, it rains.",
+              "When it rains I take an umbrella.",
+              "When it rains, I take an umbrella."
+            ],
+            "answer": 3,
+            "explain": "it은 3인칭 단수이므로 rains, when절이 앞에 오므로 뒤에 콤마가 필요합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen we water the plants every day, they ___ well and become strong.",
+            "options": [
+              "fall",
+              "stop",
+              "break",
+              "grow"
+            ],
+            "answer": 3,
+            "explain": "'물을 줄 때 식물이 잘 자란다'가 자연스러우므로 grow가 알맞습니다."
+          },
+          {
+            "q": "다음 문장에서 when의 역할로 알맞은 것을 고르세요.\nMy grandmother tells old stories when we visit her house.",
+            "options": [
+              "'무엇'이라는 뜻의 의문사",
+              "'어디'라는 뜻의 접속사",
+              "'~할 때'라는 뜻의 접속사",
+              "'언제'라는 뜻의 의문사"
+            ],
+            "answer": 2,
+            "explain": "두 문장을 이어 주며 '우리가 방문할 때'라는 뜻을 나타내는 접속사입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the bus is very late, many people at the stop become ___.",
+            "options": [
+              "happy",
+              "angry",
+              "proud",
+              "quiet"
+            ],
+            "answer": 1,
+            "explain": "'버스가 많이 늦을 때' 사람들은 화가 나므로 angry가 알맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen my father ___ home from work, we all have dinner together.",
+            "options": [
+              "comes",
+              "coming",
+              "come",
+              "to come"
             ],
             "answer": 0,
-            "explain": "①의 when은 '언제'라는 의문사이므로 '파티가 언제니?'라고 해석해야 합니다."
+            "explain": "주어 my father가 3인칭 단수이고 현재의 반복적인 일이므로 comes가 알맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the teacher explains a hard rule, we listen ___ to understand it.",
+            "options": [
+              "care",
+              "carefully",
+              "careful",
+              "careless"
+            ],
+            "answer": 1,
+            "explain": "동사 listen을 꾸며 주는 부사가 필요하므로 carefully가 알맞습니다. careful은 형용사입니다."
+          },
+          {
+            "q": "밑줄 친 부분이 어법상 틀린 것을 고르세요.",
+            "options": [
+              "When the dog sees a cat, it runs fast.",
+              "When the bell rings, class begins.",
+              "When it snow, the road becomes white.",
+              "We stay home when it rains hard."
+            ],
+            "answer": 2,
+            "explain": "it은 3인칭 단수이므로 snow가 아니라 snows가 되어야 합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nThe whole class becomes quiet ___ the principal enters the room.",
+            "options": [
+              "what",
+              "when",
+              "where",
+              "which"
+            ],
+            "answer": 1,
+            "explain": "'교장 선생님이 들어오실 때'라는 시간의 뜻이므로 접속사 when이 알맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen our team won the match, all the players felt very ___.",
+            "options": [
+              "afraid",
+              "bored",
+              "proud",
+              "sad"
+            ],
+            "answer": 2,
+            "explain": "'경기를 이겼을 때'는 자랑스러우므로 proud가 알맞습니다."
+          },
+          {
+            "q": "다음 두 문장을 when절이 문장 앞에 오도록 연결한 것을 고르세요.\nThe holidays begin. + We visit our grandparents.",
+            "options": [
+              "When the holidays begin, we visit our grandparents.",
+              "When the holidays begin we visit our grandparents.",
+              "We visit our grandparents when the holidays begin.",
+              "When begin the holidays, we visit our grandparents."
+            ],
+            "answer": 0,
+            "explain": "when절이 앞에 오면 그 뒤(begin 다음)에 콤마를 씁니다. ②는 콤마가 빠졌고, ③은 when절이 뒤에 있어 조건에 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhen I wake up too late in the morning, I often ___ the school bus.",
+            "options": [
+              "catch",
+              "miss",
+              "ride",
+              "meet"
+            ],
+            "answer": 1,
+            "explain": "'늦게 일어날 때 버스를 놓친다'가 자연스러우므로 miss가 알맞습니다. catch/ride는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "다음 중 밑줄 친 when의 우리말 해석이 바르지 않은 것을 고르세요.",
+            "options": [
+              "When is the next class? → 다음 수업이 언제니?",
+              "I feel calm when I listen to music. → 나는 음악을 들을 때 차분해진다.",
+              "When it is sunny, we walk to school. → 화창할 때, 우리는 학교에 걸어간다.",
+              "She reads a book when the train is late. → 그녀는 언제 기차가 늦는지 읽는다."
+            ],
+            "answer": 3,
+            "explain": "④의 when은 '~할 때'라는 접속사이므로 '기차가 늦을 때 그녀는 책을 읽는다'로 해석해야 합니다."
           }
         ],
         "sa": [
@@ -3145,444 +3144,444 @@ export const courses = [
         "concept": "수여동사는 '동사 + 사람(간접목적어) + 사물(직접목적어)' 순서로 '~에게 ~을 ~해주다'라고 해석하며, 3형식으로 바꿀 때 give/send/show/teach 등은 to를, buy/make/cook/get 등은 for를 쓴다.",
         "mc": [
           {
-            "q": "다음 중 어순이 바르게 배열된 문장을 고르세요.\nHe gave ______.",
-            "options": [
-              "a book me",
-              "me a book",
-              "to me a book",
-              "a book to me a book"
-            ],
-            "answer": 1,
-            "explain": "수여동사는 '동사 + 사람(me) + 사물(a book)' 순서예요. 4형식에서는 사람이 사물보다 먼저 와요."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy mom made ______ a nice sweater.",
-            "options": [
-              "for me",
-              "to me",
-              "me",
-              "of me"
-            ],
-            "answer": 2,
-            "explain": "4형식은 '동사 + 사람 + 사물'이므로 사람 앞에 전치사를 쓰지 않아요. made me a sweater."
-          },
-          {
-            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nShe gave me a present.",
-            "options": [
-              "She gave a present me.",
-              "She gave a present to me.",
-              "She gave a present for me.",
-              "She gave to me a present."
-            ],
-            "answer": 1,
-            "explain": "give는 3형식으로 바꿀 때 전치사 to를 써요. give me a present = give a present to me."
-          },
-          {
-            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nDad bought me a laptop.",
-            "options": [
-              "Dad bought a laptop to me.",
-              "Dad bought a laptop for me.",
-              "Dad bought a laptop me.",
-              "Dad bought for me a laptop."
-            ],
-            "answer": 1,
-            "explain": "buy는 3형식으로 바꿀 때 전치사 for를 써요. buy me a laptop = buy a laptop for me."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nHe sent a package ______ us.",
+            "q": "Because it was raining hard, my teacher kindly gave her umbrella ______ me after class.",
             "options": [
               "for",
+              "at",
+              "to",
+              "of"
+            ],
+            "answer": 2,
+            "explain": "give는 3형식에서 간접목적어 앞에 to를 써요. gave her umbrella to me. for/of/at은 give와 어울리지 않아요."
+          },
+          {
+            "q": "For my birthday party next week, my father is going to bake a huge chocolate cake ______ all my friends.",
+            "options": [
+              "on",
+              "for",
+              "to",
+              "with"
+            ],
+            "answer": 1,
+            "explain": "bake(make류)는 3형식에서 for를 써요. bake a cake for my friends. to/with/on은 의미와 어법상 맞지 않아요."
+          },
+          {
+            "q": "The tour guide was very helpful and showed ______ during our trip to the old palace.",
+            "options": [
+              "the way us",
+              "the way to us to",
+              "us the way",
+              "to us the way"
+            ],
+            "answer": 2,
+            "explain": "4형식은 '동사 + 사람 + 사물' 순서예요. showed us the way. 나머지는 어순이 틀렸거나 to가 중복돼요."
+          },
+          {
+            "q": "After the long meeting, our manager sent an important email ______ every member of the team.",
+            "options": [
+              "about",
               "of",
-              "to",
-              "at"
-            ],
-            "answer": 2,
-            "explain": "send는 3형식에서 to를 써요. send us a package = send a package to us."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nGrandma made rice cakes ______ us.",
-            "options": [
-              "to",
               "for",
-              "with",
-              "on"
+              "to"
             ],
-            "answer": 1,
-            "explain": "make는 3형식에서 for를 써요. make us rice cakes = make rice cakes for us."
+            "answer": 3,
+            "explain": "send는 3형식에서 to를 써요. sent an email to every member. for/about/of는 어법상 맞지 않아요."
           },
           {
-            "q": "밑줄 친 부분이 어법상 틀린 것을 고르세요.",
-            "options": [
-              "She showed me her report card.",
-              "I gave him my phone number.",
-              "He bought a cake to me.",
-              "They told us a story."
-            ],
-            "answer": 2,
-            "explain": "buy는 3형식에서 for를 써야 해요. bought a cake to me → bought a cake for me."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMs. Park teaches ______.",
-            "options": [
-              "music us",
-              "to us music",
-              "us music",
-              "music us for"
-            ],
-            "answer": 2,
-            "explain": "4형식은 '동사 + 사람 + 사물' 순서예요. teaches us music."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n그는 나에게 그의 새 차를 보여주었다.\nHe showed ______.",
-            "options": [
-              "me his new car",
-              "his new car me",
-              "to me his new car",
-              "me to his new car"
-            ],
-            "answer": 0,
-            "explain": "'~에게 ~을 보여주다'는 show + 사람 + 사물. showed me his new car."
-          },
-          {
-            "q": "다음 두 문장의 뜻이 같도록 할 때 빈칸에 알맞은 것을 고르세요.\nI showed my drawing to her. = I showed ______.",
-            "options": [
-              "her my drawing",
-              "my drawing her",
-              "to her my drawing",
-              "her to my drawing"
-            ],
-            "answer": 0,
-            "explain": "3형식 'show 사물 to 사람'을 4형식 'show 사람 사물'로 바꾸면 showed her my drawing."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nI got a ticket ______ her.",
+            "q": "My grandmother is a wonderful cook, and every weekend she makes delicious soup ______ the whole family.",
             "options": [
               "to",
               "for",
               "in",
-              "by"
+              "at"
             ],
             "answer": 1,
-            "explain": "get은 3형식에서 for를 써요. get her a ticket = get a ticket for her."
+            "explain": "make는 3형식에서 for를 써요. makes soup for the whole family. to/at/in은 어울리지 않아요."
           },
           {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nShe teaches art ______ them.",
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n지훈이는 반 친구들에게 자신의 여행 사진을 보여주었다.\nJihun showed ______ during the break.",
             "options": [
-              "for",
-              "to",
-              "with",
-              "of"
+              "to the class his travel photos",
+              "the class his travel photos",
+              "the class to his travel photos",
+              "his travel photos the class"
             ],
             "answer": 1,
-            "explain": "teach는 3형식에서 to를 써요. teach them art = teach art to them."
+            "explain": "'~에게 ~을 보여주다'는 show + 사람 + 사물. showed the class his travel photos. 나머지는 어순이 틀렸어요."
           },
           {
-            "q": "다음 중 어법상 옳은 문장을 고르세요.",
+            "q": "I forgot my textbook at home, so my kind classmate ______ me her book during the lesson.",
             "options": [
-              "He told the news us.",
-              "He told us the news.",
-              "He told to us the news.",
-              "He told the news us to."
-            ],
-            "answer": 1,
-            "explain": "4형식은 '동사 + 사람 + 사물'. told us the news가 올바른 어순이에요."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy sister made ______.",
-            "options": [
-              "a cake me",
-              "me a cake",
-              "for me a cake",
-              "a cake for me for"
-            ],
-            "answer": 1,
-            "explain": "4형식 '동사 + 사람 + 사물'. made me a cake."
-          },
-          {
-            "q": "다음 문장을 4형식으로 바르게 바꾼 것을 고르세요.\nShe sent a letter to her parents.",
-            "options": [
-              "She sent her parents a letter.",
-              "She sent a letter her parents.",
-              "She sent to her parents a letter.",
-              "She sent her parents to a letter."
-            ],
-            "answer": 0,
-            "explain": "3형식 'send 사물 to 사람'을 4형식으로 바꾸면 'send 사람 사물'. sent her parents a letter."
-          },
-          {
-            "q": "빈칸에 공통으로 알맞은 전치사를 고르세요.\nI gave the book ______ him.\nShe told the truth ______ me.",
-            "options": [
-              "for",
-              "to",
-              "of",
-              "with"
-            ],
-            "answer": 1,
-            "explain": "give, tell 모두 3형식에서 to를 써요."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nMy mom cooked dinner ______ us.",
-            "options": [
-              "to",
-              "for",
-              "at",
-              "in"
-            ],
-            "answer": 1,
-            "explain": "cook은 3형식에서 for를 써요. cook us dinner = cook dinner for us."
-          },
-          {
-            "q": "밑줄 친 부분이 어법상 틀린 것을 고르세요.",
-            "options": [
-              "I gave a present to him.",
-              "She made a cake for me.",
-              "He sent a letter for me.",
-              "They taught English to us."
-            ],
-            "answer": 2,
-            "explain": "send는 to를 써야 해요. sent a letter for me → sent a letter to me."
-          },
-          {
-            "q": "다음 중 나머지 셋과 3형식 전치사가 다른 하나를 고르세요.",
-            "options": [
-              "give",
-              "send",
-              "show",
-              "buy"
+              "received",
+              "borrowed",
+              "took",
+              "lent"
             ],
             "answer": 3,
-            "explain": "give/send/show는 to를 쓰고, buy는 for를 써요. 따라서 buy가 나머지와 달라요."
+            "explain": "'빌려주다'는 lend예요. lent me her book. borrow(빌리다)/receive(받다)/take(가져가다)는 의미가 반대이거나 맞지 않아요."
           },
           {
-            "q": "다음 중 나머지 셋과 3형식 전치사가 다른 하나를 고르세요.",
+            "q": "The store was closing, but the friendly clerk still ______ us a warm cup of tea while we waited.",
             "options": [
-              "make",
-              "cook",
-              "teach",
-              "buy"
+              "asked",
+              "listened",
+              "offered",
+              "borrowed"
             ],
             "answer": 2,
-            "explain": "make/cook/buy는 for를 쓰고, teach는 to를 써요. 따라서 teach가 나머지와 달라요."
+            "explain": "'제공하다, 권하다'는 offer. offered us a cup of tea. ask는 뒤 의미가 다르고, borrow/listen은 수여동사 문맥에 맞지 않아요."
           },
           {
-            "q": "우리말에 맞게 빈칸을 채울 때 알맞은 것을 고르세요.\n삼촌이 나에게 용돈을 주셨다.\nMy uncle gave ______.",
-            "options": [
-              "some money me",
-              "me some money",
-              "some money to me for",
-              "to me some money"
-            ],
-            "answer": 1,
-            "explain": "give + 사람 + 사물 순서. gave me some money."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nCan you show ______?",
-            "options": [
-              "me your ticket",
-              "your ticket me",
-              "to me your ticket",
-              "your ticket to me me"
-            ],
-            "answer": 0,
-            "explain": "4형식 '동사 + 사람 + 사물'. show me your ticket."
-          },
-          {
-            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nHe threw me the ball.",
-            "options": [
-              "He threw the ball for me.",
-              "He threw the ball to me.",
-              "He threw the ball me.",
-              "He threw to me the ball."
-            ],
-            "answer": 1,
-            "explain": "throw는 3형식에서 to를 써요. throw me the ball = throw the ball to me."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nShe lent her notebook ______ me.",
+            "q": "다음 두 문장의 뜻이 같도록 빈칸에 알맞은 것을 고르세요.\nMom cooked us a special dinner. = Mom cooked a special dinner ______ us.",
             "options": [
               "for",
+              "by",
               "to",
-              "of",
-              "about"
+              "with"
             ],
-            "answer": 1,
-            "explain": "lend는 3형식에서 to를 써요. lend me her notebook = lend her notebook to me."
+            "answer": 0,
+            "explain": "cook은 3형식에서 for를 써요. cooked a special dinner for us. to/with/by는 맞지 않아요."
+          },
+          {
+            "q": "밑줄 친 부분이 어법상 틀린 문장을 고르세요.",
+            "options": [
+              "She taught us French for two years.",
+              "The waiter brought us some cold water.",
+              "They sent us a postcard from Paris.",
+              "My uncle bought a new bike to me."
+            ],
+            "answer": 3,
+            "explain": "buy는 3형식에서 for를 써야 해요. bought a new bike to me → bought a new bike for me."
+          },
+          {
+            "q": "Since I did not understand the math problem, Mr. Han patiently ______ it to me one more time.",
+            "options": [
+              "answered",
+              "spoke",
+              "explained",
+              "told"
+            ],
+            "answer": 2,
+            "explain": "'설명하다'는 explain. explained it to me. answer/speak는 이 구조에 맞지 않고, tell은 뒤에 사람이 바로 와야 자연스러워요."
+          },
+          {
+            "q": "빈칸에 알맞은 전치사끼리 바르게 짝지은 것을 고르세요.\nI sent a card ______ Grandpa and made a gift ______ him.",
+            "options": [
+              "to / to",
+              "for / to",
+              "for / for",
+              "to / for"
+            ],
+            "answer": 3,
+            "explain": "send는 to, make는 for를 써요. 따라서 to / for가 정답이에요."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n선생님은 우리에게 재미있는 옛날이야기를 들려주셨다.\nThe teacher told ______ during the class.",
+            "options": [
+              "to us an old story",
+              "an old story us",
+              "us an old story",
+              "us to an old story"
+            ],
+            "answer": 2,
+            "explain": "tell + 사람 + 사물 순서. told us an old story. 사람 앞에는 전치사를 쓰지 않아요."
+          },
+          {
+            "q": "When the singer finished the concert, the excited fans ______ her a big bunch of flowers on the stage.",
+            "options": [
+              "watched",
+              "wanted",
+              "gave",
+              "took"
+            ],
+            "answer": 2,
+            "explain": "'주다'는 give. gave her flowers. take는 '가져가다'로 반대 의미이고, want/watch는 수여동사 문맥에 맞지 않아요."
+          },
+          {
+            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nThe coach threw me the ball quickly.",
+            "options": [
+              "The coach threw the ball me quickly.",
+              "The coach threw the ball for me quickly.",
+              "The coach threw to me the ball quickly.",
+              "The coach threw the ball to me quickly."
+            ],
+            "answer": 3,
+            "explain": "throw는 3형식에서 to를 써요. threw me the ball = threw the ball to me. for나 어순 오류는 틀려요."
+          },
+          {
+            "q": "My best friend moved to another city, so I write a long letter ______ her every month.",
+            "options": [
+              "to",
+              "at",
+              "for",
+              "of"
+            ],
+            "answer": 0,
+            "explain": "write는 3형식에서 to를 써요. write a letter to her. for/at/of는 맞지 않아요."
           },
           {
             "q": "다음 중 어법상 옳은 문장을 고르세요.",
             "options": [
-              "Grandma gave a hug to me.",
-              "Grandma gave a hug for me.",
-              "Grandma gave me to a hug.",
-              "Grandma gave to me a hug."
+              "Please pass to me the salt.",
+              "Please pass the salt me to.",
+              "Please pass the salt me.",
+              "Please pass me the salt."
+            ],
+            "answer": 3,
+            "explain": "4형식 '동사 + 사람 + 사물' 순서. pass me the salt가 올바른 어순이에요."
+          },
+          {
+            "q": "The library will not let students take the rare books home, but it ______ them a quiet room to read in.",
+            "options": [
+              "offers",
+              "asks",
+              "buys",
+              "borrows"
             ],
             "answer": 0,
-            "explain": "give는 3형식에서 to를 쓰고 어순은 '동사 + 사물 + to 사람'. gave a hug to me."
+            "explain": "'제공하다'는 offer. offers them a quiet room. borrow(빌리다)/ask/buy는 문맥상 의미가 맞지 않아요."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy grandma gave ______ a card on my birthday.",
+            "q": "다음 문장을 4형식으로 바르게 바꾼 것을 고르세요.\nMy aunt bought a warm scarf for me last winter.",
             "options": [
-              "to me",
-              "for me",
-              "me",
-              "me for"
+              "My aunt bought me a warm scarf last winter.",
+              "My aunt bought a warm scarf me last winter.",
+              "My aunt bought me for a warm scarf last winter.",
+              "My aunt bought for me a warm scarf last winter."
+            ],
+            "answer": 0,
+            "explain": "3형식 'buy 사물 for 사람'을 4형식으로 바꾸면 'buy 사람 사물'. bought me a warm scarf."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n삼촌이 나에게 새 자전거를 사 주셨다.\nMy uncle ______ me a new bike.",
+            "options": [
+              "sent",
+              "showed",
+              "bought",
+              "told"
             ],
             "answer": 2,
-            "explain": "4형식 '동사 + 사람 + 사물'이므로 사람 앞에 전치사가 없어요. gave me a card."
+            "explain": "'사 주다'는 buy의 과거형 bought. bought me a new bike. send/show/tell은 뜻이 달라요."
           },
           {
-            "q": "다음 두 문장의 뜻이 같도록 빈칸에 알맞은 것을 고르세요.\nHe bought me a new watch. = He bought a new watch ______ me.",
+            "q": "The airline promised to deliver our lost suitcase ______ the hotel by tomorrow morning.",
             "options": [
-              "to",
               "for",
-              "at",
+              "to",
+              "of",
               "with"
             ],
             "answer": 1,
-            "explain": "buy는 3형식에서 for를 써요."
-          },
-          {
-            "q": "우리말에 맞게 문장을 완성할 때 빈칸에 알맞은 것을 고르세요.\n그는 나에게 비밀을 말해주었다.\nHe told ______.",
-            "options": [
-              "a secret me",
-              "me a secret",
-              "to me a secret",
-              "me to a secret"
-            ],
-            "answer": 1,
-            "explain": "tell + 사람 + 사물 순서. told me a secret."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: What did your dad buy you?\nB: He bought ______.",
-            "options": [
-              "a bike me",
-              "me a bike",
-              "to me a bike",
-              "a bike me for"
-            ],
-            "answer": 1,
-            "explain": "buy + 사람 + 사물 순서. bought me a bike."
+            "explain": "deliver는 3형식에서 to를 써요. deliver the suitcase to the hotel. for/with/of는 맞지 않아요."
           },
           {
             "q": "다음 중 빈칸에 for가 들어갈 수 없는 문장을 고르세요.",
             "options": [
-              "My mom made a dress ______ me.",
-              "Dad bought a bag ______ me.",
-              "She cooked lunch ______ me.",
-              "He gave a book ______ me."
-            ],
-            "answer": 3,
-            "explain": "give는 to를 써요. 나머지 make/buy/cook은 모두 for를 써요."
-          },
-          {
-            "q": "다음 중 빈칸에 to가 들어갈 수 없는 문장을 고르세요.",
-            "options": [
-              "He showed the photo ______ us.",
-              "She sent a gift ______ me.",
-              "My mom bought shoes ______ me.",
-              "They taught music ______ us."
+              "The chef cooked a meal ______ us.",
+              "My mother knitted a sweater ______ me.",
+              "The teacher sent a message ______ us.",
+              "My dad bought a phone ______ me."
             ],
             "answer": 2,
-            "explain": "buy는 for를 써요. 나머지 show/send/teach는 모두 to를 써요."
+            "explain": "send는 to를 써요. 나머지 knit/cook/buy는 모두 for를 쓰므로, send가 for가 들어갈 수 없는 문장이에요."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWill you get ______?",
+            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: What did your homeroom teacher give you today?\nB: She gave ______ before the exam.",
             "options": [
-              "me a drink",
-              "a drink me",
-              "to me a drink",
-              "for me a drink me"
+              "us some useful advice",
+              "to us some useful advice",
+              "us to some useful advice",
+              "some useful advice us"
             ],
             "answer": 0,
-            "explain": "4형식 '동사 + 사람 + 사물'. get me a drink."
+            "explain": "4형식 '동사 + 사람 + 사물'. gave us some useful advice. 사람(us)이 사물보다 먼저 와요."
           },
           {
-            "q": "다음 문장을 4형식으로 바르게 바꾼 것을 고르세요.\nShe cooked dinner for us.",
+            "q": "My little brother could not reach the shelf, so I ______ him the book he wanted.",
             "options": [
-              "She cooked us dinner.",
-              "She cooked dinner us.",
-              "She cooked us for dinner.",
-              "She cooked to us dinner."
+              "received",
+              "handed",
+              "listened",
+              "borrowed"
             ],
-            "answer": 0,
-            "explain": "3형식 'cook 사물 for 사람'을 4형식으로 바꾸면 'cook 사람 사물'. cooked us dinner."
+            "answer": 1,
+            "explain": "'건네주다'는 hand. handed him the book. receive(받다)/borrow(빌리다)/listen은 문맥상 맞지 않아요."
+          },
+          {
+            "q": "다음 두 문장의 뜻이 같도록 빈칸에 알맞은 것을 고르세요.\nThe guide gave the tourists a map. = The guide gave a map ______ the tourists.",
+            "options": [
+              "with",
+              "at",
+              "for",
+              "to"
+            ],
+            "answer": 3,
+            "explain": "give는 3형식에서 to를 써요. gave a map to the tourists."
           },
           {
             "q": "밑줄 친 부분이 어법상 옳은 문장을 고르세요.",
             "options": [
-              "He gave me for a gift.",
-              "She teaches us English.",
-              "I bought to him a pen.",
-              "They sent for us a card."
+              "She teaches science to us.",
+              "I sent a gift for my friend.",
+              "They bought a toy to the baby.",
+              "He made a sandwich to me."
             ],
-            "answer": 1,
-            "explain": "4형식 '동사 + 사람 + 사물'은 사람 앞에 전치사가 없어요. teaches us English가 올바른 문장이에요."
+            "answer": 0,
+            "explain": "teach는 3형식에서 to를 써요. teaches science to us. make/buy는 for를, send는 to를 써야 하므로 나머지는 틀려요."
           },
           {
-            "q": "우리말에 맞게 빈칸에 알맞은 것을 고르세요.\n언니는 나에게 케이크를 만들어주었다.\nMy sister ______ me a cake.",
+            "q": "Because our classroom was too hot, the principal ______ us a new electric fan.",
             "options": [
-              "gave",
-              "made",
-              "sent",
-              "showed"
-            ],
-            "answer": 1,
-            "explain": "'만들어주다'는 make. made me a cake."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사끼리 바르게 짝지은 것을 고르세요.\nI gave a pen ______ him and bought a book ______ him.",
-            "options": [
-              "to / to",
-              "for / for",
-              "to / for",
-              "for / to"
+              "took",
+              "wanted",
+              "bought",
+              "borrowed"
             ],
             "answer": 2,
-            "explain": "give는 to, buy는 for를 써요. 따라서 to / for."
+            "explain": "'사 주다'는 buy. bought us a new fan. take(가져가다)/want/borrow(빌리다)는 문맥에 맞지 않아요."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n엄마는 매일 아침 나에게 아침을 만들어 주신다.\nMy mom ______ me breakfast every morning.",
+            "options": [
+              "makes",
+              "tells",
+              "gives",
+              "sends"
+            ],
+            "answer": 0,
+            "explain": "'만들어 주다'는 make. makes me breakfast. give/send/tell은 뜻이 달라요."
           },
           {
             "q": "다음 중 어순이 틀린 문장을 고르세요.",
             "options": [
-              "She sent me an email.",
-              "He showed us his room.",
-              "I gave my number him.",
-              "They told us a story."
+              "The nurse gave the patient some medicine.",
+              "He showed the police his ID card.",
+              "I sent my grandmother it.",
+              "She teaches the children English."
             ],
             "answer": 2,
-            "explain": "'gave my number him'은 어순이 틀렸어요. gave him my number 또는 gave my number to him이 맞아요."
+            "explain": "대명사 it이 직접목적어일 때는 4형식이 어색해서 sent it to my grandmother로 써야 해요. 나머지는 모두 올바른 어순이에요."
           },
           {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: Who teaches you math?\nB: Mr. Kim teaches ______.",
+            "q": "The bakery near my house ______ free bread to poor children every Friday afternoon.",
             "options": [
-              "math me",
-              "me math",
-              "to me math",
-              "for me math"
-            ],
-            "answer": 1,
-            "explain": "teach + 사람 + 사물 순서. teaches me math."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사를 고르세요.\nShe wrote a letter ______ me.",
-            "options": [
-              "for",
-              "to",
-              "at",
-              "of"
-            ],
-            "answer": 1,
-            "explain": "write는 3형식에서 to를 써요. write me a letter = write a letter to me."
-          },
-          {
-            "q": "다음 두 문장의 뜻이 같도록 빈칸에 알맞은 것을 고르세요.\nHe gave his phone number to me. = He gave ______.",
-            "options": [
-              "me his phone number",
-              "his phone number me",
-              "to me his phone number",
-              "me to his phone number"
+              "gives",
+              "takes",
+              "asks",
+              "buys"
             ],
             "answer": 0,
-            "explain": "3형식 'give 사물 to 사람'을 4형식 'give 사람 사물'로 바꾸면 gave me his phone number."
+            "explain": "'주다'는 give. gives free bread to children. ask/take/buy는 문맥상 의미가 맞지 않아요."
+          },
+          {
+            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nGrandma knitted me a pair of gloves.",
+            "options": [
+              "Grandma knitted a pair of gloves for me.",
+              "Grandma knitted a pair of gloves to me.",
+              "Grandma knitted for me a pair of gloves.",
+              "Grandma knitted a pair of gloves me."
+            ],
+            "answer": 0,
+            "explain": "knit(make류)은 3형식에서 for를 써요. knitted a pair of gloves for me. to나 어순 오류는 틀려요."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n웨이터가 우리에게 메뉴판을 가져다주었다.\nThe waiter ______ us the menu.",
+            "options": [
+              "took",
+              "asked",
+              "brought",
+              "borrowed"
+            ],
+            "answer": 2,
+            "explain": "'가져다주다'는 bring의 과거형 brought. brought us the menu. take는 '가져가다', ask/borrow는 뜻이 달라요."
+          },
+          {
+            "q": "다음 중 빈칸에 to가 들어갈 수 없는 문장을 고르세요.",
+            "options": [
+              "My mom made a dress ______ my sister.",
+              "She showed her homework ______ the teacher.",
+              "They sent a letter ______ the mayor.",
+              "He told the news ______ his parents."
+            ],
+            "answer": 0,
+            "explain": "make는 for를 써요. 나머지 show/tell/send는 모두 to를 쓰므로, make가 to가 들어갈 수 없는 문장이에요."
+          },
+          {
+            "q": "빈칸에 알맞은 전치사끼리 바르게 짝지은 것을 고르세요.\nThe teacher taught grammar ______ us and got new pens ______ us.",
+            "options": [
+              "for / for",
+              "to / for",
+              "for / to",
+              "to / to"
+            ],
+            "answer": 1,
+            "explain": "teach는 to, get은 for를 써요. 따라서 to / for가 정답이에요."
+          },
+          {
+            "q": "The bank clerk said she could ______ us some money if we filled out the forms correctly.",
+            "options": [
+              "borrow",
+              "lend",
+              "keep",
+              "buy"
+            ],
+            "answer": 1,
+            "explain": "은행이 고객에게 '빌려주다'는 lend. lend us some money. borrow(빌리다)는 반대이고 buy/keep은 문맥에 맞지 않아요."
+          },
+          {
+            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: Could you get me a glass of water, please?\nB: Sure, I will get ______ right now.",
+            "options": [
+              "to you a glass of water",
+              "you a glass of water",
+              "a glass of water you",
+              "for you a glass of water you"
+            ],
+            "answer": 1,
+            "explain": "4형식 '동사 + 사람 + 사물'. get you a glass of water. 나머지는 어순 오류이거나 you가 중복돼요."
+          },
+          {
+            "q": "다음 문장을 4형식으로 바르게 바꾼 것을 고르세요.\nThe teacher read a fairy tale to the young students.",
+            "options": [
+              "The teacher read the young students a fairy tale.",
+              "The teacher read a fairy tale the young students.",
+              "The teacher read the young students to a fairy tale.",
+              "The teacher read to the young students a fairy tale."
+            ],
+            "answer": 0,
+            "explain": "3형식 'read 사물 to 사람'을 4형식으로 바꾸면 'read 사람 사물'. read the young students a fairy tale."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n나는 아픈 친구에게 내 노트를 빌려주었다.\nI ______ my sick friend my notebook.",
+            "options": [
+              "borrowed",
+              "lent",
+              "took",
+              "kept"
+            ],
+            "answer": 1,
+            "explain": "'빌려주다'는 lend의 과거형 lent. lent my friend my notebook. borrow(빌리다)/keep/take는 뜻이 달라요."
+          },
+          {
+            "q": "밑줄 친 부분이 어법상 틀린 문장을 고르세요.",
+            "options": [
+              "He cooked a tasty meal for his friends.",
+              "The teacher showed a video for the class.",
+              "She gave a warm hug to her mother.",
+              "They sent a thank-you card to their coach."
+            ],
+            "answer": 1,
+            "explain": "show는 3형식에서 to를 써야 해요. showed a video for the class → showed a video to the class."
+          },
+          {
+            "q": "The kind old man at the park often ______ hungry pigeons some bread from his pocket.",
+            "options": [
+              "takes",
+              "feeds",
+              "asks",
+              "borrows"
+            ],
+            "answer": 1,
+            "explain": "'먹이를 주다'는 feed. feeds pigeons some bread. take/ask/borrow는 문맥상 의미가 맞지 않아요."
           }
         ],
         "sa": [
@@ -3667,444 +3666,444 @@ export const courses = [
         "concept": "동사 뒤의 「that + 주어 + 동사」는 '~라는 것을/~라고'로 해석하며 목적어 역할을 하고, 이때 that은 생략할 수 있다.",
         "mc": [
           {
-            "q": "I think ___ she is smart. 빈칸에 알맞은 것은?",
+            "q": "Our science teacher explained ___ the moon has a strong effect on the ocean tides, and we wrote it down in our notebooks.",
             "options": [
               "that",
+              "whose",
               "what",
-              "who",
               "which"
             ],
             "answer": 0,
-            "explain": "동사 think 뒤에서 '~라는 것을/~라고'로 해석되는 명사절을 이끄는 접속사는 that이다."
+            "explain": "빈칸 뒤에 완전한 절(the moon has ...)이 오므로 명사절을 이끄는 접속사 that이 알맞다. what/which/whose는 뒤 절에 빠진 성분이 있어야 한다."
           },
           {
-            "q": "다음 중 빈칸에 들어갈 that이 명사절 접속사가 아닌 것은?",
+            "q": "Halfway through the trip, I suddenly realized ___ I had left my phone at the hotel, so I ran back to get it.",
             "options": [
-              "I know ___ you like music.",
-              "She believes ___ he tells the truth.",
-              "Look at ___ big tree.",
-              "We hope ___ you have a great trip."
-            ],
-            "answer": 2,
-            "explain": "'Look at that big tree'의 that은 '저 ~'라는 뜻의 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
-          },
-          {
-            "q": "'나는 그가 정직하다고 믿는다.'를 영어로 바르게 옮긴 것은?",
-            "options": [
-              "I believe that he is honest.",
-              "I believe that honest.",
-              "I believe he that is honest.",
-              "That I believe he is honest."
-            ],
-            "answer": 0,
-            "explain": "believe 뒤에 'that + 주어(he) + 동사(is)' 순서로 명사절이 온다."
-          },
-          {
-            "q": "밑줄 친 that의 쓰임이 나머지와 다른 것은?",
-            "options": [
-              "I know that you are kind.",
-              "She said that it was true.",
-              "That house is very old.",
-              "We think that the plan is good."
-            ],
-            "answer": 2,
-            "explain": "'That house'의 that은 '저 ~'라는 지시형용사이고, 나머지는 명사절을 이끄는 접속사 that이다."
-          },
-          {
-            "q": "두 문장을 that으로 이을 때 알맞은 것은? I think it. + The book is fun.",
-            "options": [
-              "I think that the book is fun.",
-              "I think it that the book is fun.",
-              "I think the book that is fun.",
-              "That I think the book is fun."
-            ],
-            "answer": 0,
-            "explain": "'I think it'의 it을 that절 'that the book is fun'으로 바꿔 목적어 자리에 넣는다."
-          },
-          {
-            "q": "다음 문장에서 생략할 수 있는 단어는? I know that you are right.",
-            "options": [
-              "that",
-              "you",
-              "know",
-              "right"
-            ],
-            "answer": 0,
-            "explain": "목적어 역할을 하는 명사절 접속사 that은 생략할 수 있다."
-          },
-          {
-            "q": "빈칸에 공통으로 들어갈 말은? I hope ___ you win. / She says ___ it is true.",
-            "options": [
-              "that",
+              "where",
               "what",
-              "if",
-              "who"
+              "that",
+              "whom"
             ],
-            "answer": 0,
-            "explain": "두 문장 모두 동사 뒤에서 명사절을 이끄는 접속사 that이 들어간다."
+            "answer": 2,
+            "explain": "뒤에 완전한 절이 이어지므로 realize의 목적어절을 이끄는 접속사 that이 알맞다. what/whom/where는 절에 빠진 성분이 있을 때 쓴다."
+          },
+          {
+            "q": "I read the message twice, but I still don't understand ___ my friend wants me to do this weekend.",
+            "options": [
+              "whether",
+              "that",
+              "because",
+              "what"
+            ],
+            "answer": 3,
+            "explain": "do의 목적어가 비어 있으므로 선행사를 포함한 관계대명사 what이 알맞다. that은 뒤에 완전한 절이 와야 한다."
+          },
+          {
+            "q": "My parents haven't decided ___ we will go to the beach or the mountains for our summer holiday.",
+            "options": [
+              "that",
+              "whether",
+              "which",
+              "what"
+            ],
+            "answer": 1,
+            "explain": "'~인지 (아니면 ~인지)'처럼 선택을 나타내는 명사절은 whether가 이끈다. that은 확정된 사실을 나타낼 때 쓴다."
+          },
+          {
+            "q": "The new student asked me ___ the school library was open on Saturdays or not.",
+            "options": [
+              "who",
+              "what",
+              "that",
+              "if"
+            ],
+            "answer": 3,
+            "explain": "'~인지 아닌지'를 묻는 명사절은 if(=whether)가 이끈다. that은 사실을 전달할 때 쓴다."
+          },
+          {
+            "q": "다음 중 밑줄 친 that의 쓰임이 나머지 셋과 다른 것은?",
+            "options": [
+              "We noticed that the door was open.",
+              "She promised that she would call me.",
+              "I heard that the concert was canceled.",
+              "That backpack on the chair is mine."
+            ],
+            "answer": 3,
+            "explain": "'That backpack'의 that은 명사를 꾸미는 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
           },
           {
             "q": "어법상 옳은 문장은?",
             "options": [
-              "He believes that she can do it.",
-              "He believes that she can do it that.",
-              "He believes she that can do it.",
-              "He believes can do it that she."
+              "Everyone believes that she are a great singer.",
+              "Everyone believes that she being a great singer.",
+              "Everyone believes that she is a great singer.",
+              "Everyone believes that she be a great singer."
             ],
-            "answer": 0,
-            "explain": "'that + 주어(she) + 동사(can do)' 순서가 맞다."
+            "answer": 2,
+            "explain": "that절 안의 주어 she에 맞는 동사는 is이다. are/be/being은 어법상 틀리다."
           },
           {
-            "q": "'She thinks that the movie is boring.'에서 that절의 역할은?",
+            "q": "다음 중 밑줄 친 that을 생략할 수 있는 문장은?",
             "options": [
-              "think의 목적어",
-              "think의 주어",
-              "the movie를 꾸미는 형용사",
-              "장소를 나타내는 부사"
+              "I bought that red umbrella.",
+              "That is the best answer.",
+              "Look at that carefully.",
+              "I believe that we will succeed."
             ],
-            "answer": 0,
-            "explain": "동사 think 뒤의 that절은 '무엇을 생각하는지'를 나타내는 목적어이다."
+            "answer": 3,
+            "explain": "목적어절을 이끄는 명사절 접속사 that만 생략할 수 있다. 나머지 that은 지시대명사/지시형용사라 생략할 수 없다."
           },
           {
-            "q": "빈칸에 알맞지 않은 동사는? I ___ that he is a good student.",
+            "q": "우리말과 같도록 바르게 쓴 것은? '나는 그 영화가 지루하다고 생각했다.'",
             "options": [
-              "arrive",
-              "think",
-              "know",
-              "believe"
+              "I thought the movie that was boring.",
+              "That I thought the movie was boring.",
+              "I thought that the movie was boring.",
+              "I thought was boring that the movie."
             ],
-            "answer": 0,
-            "explain": "think/know/believe 등은 뒤에 that 명사절을 목적어로 취하지만, arrive는 that절을 목적어로 쓰지 않는다."
+            "answer": 2,
+            "explain": "think + that + 주어(the movie) + 동사(was) 순서가 옳다."
           },
           {
-            "q": "우리말과 일치하도록 빈칸에 알맞은 것은? '나는 네가 최선을 다했다는 것을 안다.' → I ___ that you did your best.",
+            "q": "두 문장을 that으로 이을 때 알맞은 것은? I heard it. + The new library will open next month.",
             "options": [
-              "know",
-              "want",
-              "give",
-              "meet"
+              "I heard that the new library will open next month.",
+              "I heard the new library that will open next month.",
+              "I heard it that the new library will open next month.",
+              "That I heard the new library will open next month."
             ],
             "answer": 0,
-            "explain": "'~라는 것을 안다'는 know that ~으로 표현한다."
+            "explain": "'I heard it'의 it을 that절로 바꿔 heard의 목적어 자리에 넣는다."
           },
           {
-            "q": "다음 중 that을 생략할 수 없는 문장은?",
+            "q": "빈칸에 공통으로 들어갈 말은? The doctor said ___ I should rest. / I feel ___ my cold is getting better.",
             "options": [
-              "I want that book.",
-              "I think that she is nice.",
-              "She hopes that we win.",
-              "He knows that I am busy."
-            ],
-            "answer": 0,
-            "explain": "'I want that book'의 that은 명사 book을 꾸미는 지시형용사라 생략할 수 없다. 나머지는 모두 목적어절을 이끄는 명사절 접속사 that이라 생략할 수 있다."
-          },
-          {
-            "q": "'그들은 그 계획이 좋다고 생각한다.'를 바르게 옮긴 것은?",
-            "options": [
-              "They think that the plan is good.",
-              "They think the plan that good.",
-              "They think good the plan is that.",
-              "That they think the plan good."
-            ],
-            "answer": 0,
-            "explain": "think + that + 주어(the plan) + 동사(is) 순서이다."
-          },
-          {
-            "q": "빈칸에 들어갈 말로 알맞은 것은? My mom knows ___ I am tired.",
-            "options": [
+              "if",
+              "which",
               "that",
-              "this",
-              "it",
-              "so"
+              "what"
             ],
-            "answer": 0,
-            "explain": "know 뒤에 '~라는 것을'의 의미로 명사절을 이끄는 접속사 that이 온다."
+            "answer": 2,
+            "explain": "두 문장 모두 동사 뒤에서 완전한 절을 이끄는 명사절 접속사 that이 들어간다."
           },
           {
-            "q": "밑줄 친 that이 '접속사(명사절)'로 쓰인 것은?",
+            "q": "In the sentence 'My sister hopes that she will become a doctor,' what is the role of the 'that' clause?",
             "options": [
-              "I hope that we can meet again.",
-              "That is a good idea.",
-              "Give me that pen.",
-              "Who said that?"
+              "hope의 목적어",
+              "시간을 나타내는 부사",
+              "hope의 주어",
+              "sister를 꾸미는 형용사"
             ],
             "answer": 0,
-            "explain": "①은 hope 뒤 명사절 접속사 that. ②는 지시대명사, ③은 지시형용사, ④는 지시대명사이다."
+            "explain": "동사 hope 뒤의 that절은 '무엇을 바라는지'를 나타내는 목적어이다."
           },
           {
-            "q": "다음 문장을 that을 생략한 형태로 바르게 바꾼 것은? I think that it will rain.",
+            "q": "빈칸에 들어갈 수 없는 동사는? Everyone ___ that the festival was a big success.",
             "options": [
-              "I think it will rain.",
-              "I think will rain it.",
-              "I it think will rain.",
-              "Think I it will rain."
+              "enjoyed",
+              "felt",
+              "knew",
+              "agreed"
             ],
             "answer": 0,
+            "explain": "agree/know/feel은 that 명사절을 목적어로 취하지만, enjoy는 that절을 목적어로 쓰지 않는다."
+          },
+          {
+            "q": "다음 중 어법상 어색한 문장은?",
+            "options": [
+              "We think that the plan very good.",
+              "I know that the store closes at nine.",
+              "She hopes that everything goes well.",
+              "He said that he was tired."
+            ],
+            "answer": 0,
+            "explain": "that절 안에도 '주어+동사'가 있어야 하므로 'the plan very good'은 동사가 없어 어색하다. 'the plan is very good'이 되어야 한다."
+          },
+          {
+            "q": "A: Why are you so happy today? B: I just heard ___ our team won the soccer match!",
+            "options": [
+              "than",
+              "whose",
+              "what",
+              "that"
+            ],
+            "answer": 3,
+            "explain": "heard 뒤에서 완전한 절을 이끄는 명사절 접속사 that이 알맞다."
+          },
+          {
+            "q": "다음 중 밑줄 친 that이 '저것'을 뜻하는 지시대명사인 것은?",
+            "options": [
+              "I think that the answer is correct.",
+              "That is the tallest building in our city.",
+              "She knows that I am telling the truth.",
+              "We hope that you can join us."
+            ],
+            "answer": 1,
+            "explain": "②의 That은 '저것'을 뜻하는 지시대명사로 문장의 주어이다. 나머지는 명사절 접속사 that이다."
+          },
+          {
+            "q": "다음 중 밑줄 친 that의 쓰임이 나머지와 다른 것은?",
+            "options": [
+              "I know that you are honest.",
+              "She believes that we can win.",
+              "The book that I read last night was fun.",
+              "He said that it was already late."
+            ],
+            "answer": 2,
+            "explain": "'The book that I read'의 that은 명사 book을 꾸미는 관계대명사이고, 나머지는 명사절을 이끄는 접속사 that이다."
+          },
+          {
+            "q": "단어를 바르게 배열할 때 세 번째로 오는 단어는? ( that / believe / I / honest / is / he ) → '나는 그가 정직하다고 믿는다.'",
+            "options": [
+              "believe",
+              "that",
+              "he",
+              "honest"
+            ],
+            "answer": 1,
+            "explain": "I / believe / that / he / is / honest 순서이므로 세 번째 단어는 that이다."
+          },
+          {
+            "q": "빈칸에 들어갈 말이 나머지 셋과 다른 것은?",
+            "options": [
+              "Please pass me ___ plate on the table.",
+              "I think ___ the food is delicious.",
+              "She knows ___ we are very hungry.",
+              "He said ___ dinner is ready."
+            ],
+            "answer": 0,
+            "explain": "①은 명사 plate를 꾸미는 지시형용사 '저 ~', 나머지는 명사절 접속사 that이다."
+          },
+          {
+            "q": "다음 문장에서 that을 생략한 형태로 바른 것은? She said that the test would be easy.",
+            "options": [
+              "She the test said would be easy.",
+              "She said would be easy the test.",
+              "Said she the test would be easy.",
+              "She said the test would be easy."
+            ],
+            "answer": 3,
             "explain": "명사절 접속사 that만 빼고 나머지 어순은 그대로 둔다."
           },
           {
-            "q": "어법상 어색한 문장은?",
+            "q": "어법상 옳은 문장은?",
             "options": [
-              "I believe that we can win.",
-              "She says that she is late.",
-              "We hope that everything be fine.",
-              "He knows that I am busy."
+              "The report shows that more people recycling now.",
+              "That the report shows more people are recycling now.",
+              "The report shows that more people are recycling now.",
+              "The report shows more people that are recycling now."
             ],
             "answer": 2,
-            "explain": "'everything be fine'은 틀리며, that절 안의 동사는 주어에 맞게 'everything is/will be fine'이 되어야 한다."
-          },
-          {
-            "q": "A: What do you think about the test? B: I think ___ it is easy. 빈칸에 알맞은 것은?",
-            "options": [
-              "that",
-              "what",
-              "when",
-              "where"
-            ],
-            "answer": 0,
-            "explain": "think 뒤에서 '~라고 생각한다'의 명사절을 이끄는 that이다."
-          },
-          {
-            "q": "'그는 자신이 그 사고를 봤다고 말한다.'를 옮긴 것은?",
-            "options": [
-              "He says that he saw the accident.",
-              "He says that saw the accident.",
-              "He says he the accident saw that.",
-              "That he says saw the accident."
-            ],
-            "answer": 0,
-            "explain": "say + that + 주어(he) + 동사(saw) 순서이다."
+            "explain": "show + that + 주어(more people) + 동사(are recycling) 순서가 옳다."
           },
           {
             "q": "다음 중 빈칸에 들어갈 that이 명사절 접속사가 아닌 것은?",
             "options": [
-              "I feel ___ something is wrong.",
-              "We think ___ the news is true.",
-              "She likes ___ song very much.",
-              "They believe ___ he is kind."
-            ],
-            "answer": 2,
-            "explain": "'She likes that song'의 that은 명사 song을 꾸미는 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
-          },
-          {
-            "q": "다음 중 밑줄 친 that이 지시대명사(저것)인 것은?",
-            "options": [
-              "I know that he is honest.",
-              "That is a beautiful flower.",
-              "I hope that you feel better.",
-              "She thinks that math is hard."
+              "We agreed ___ the idea was great.",
+              "Do you see ___ tall tower over there?",
+              "I noticed ___ the light was still on.",
+              "She feels ___ something is wrong."
             ],
             "answer": 1,
-            "explain": "②의 That은 '저것'을 뜻하는 지시대명사이고 주어 역할을 한다. 나머지는 명사절 접속사이다."
+            "explain": "'저 ~'의 뜻으로 명사(tower)를 꾸미는 지시형용사이고, 나머지는 동사 뒤에서 명사절을 이끄는 접속사 that이다."
           },
           {
-            "q": "우리말에 맞게 배열할 때 세 번째로 오는 단어는? ( that / I / think / he / is / kind ) → '나는 그가 착하다고 생각한다.'",
+            "q": "빈칸에 알맞은 것은? Yesterday, my friend told me that she ___ her homework already.",
             "options": [
-              "that",
-              "think",
-              "he",
-              "kind"
+              "finishes",
+              "finishing",
+              "to finish",
+              "finished"
             ],
-            "answer": 0,
-            "explain": "I / think / that / he / is / kind 순서이므로 세 번째 단어는 that이다."
+            "answer": 3,
+            "explain": "that절 안에는 '주어(she)+동사'가 필요하고, 어제 전한 내용이므로 과거형 finished가 알맞다. finishing/to finish는 본동사가 될 수 없고 finishes는 시제가 맞지 않는다."
           },
           {
-            "q": "다음 대화의 빈칸에 알맞은 것은? A: Do you believe his story? B: Yes, I believe ___ it is true.",
+            "q": "빈칸에 알맞은 것은? I'm really glad ___ you passed the difficult exam.",
             "options": [
               "that",
+              "what",
               "who",
-              "what",
-              "why"
-            ],
-            "answer": 0,
-            "explain": "believe 뒤에서 명사절을 이끄는 접속사 that이 들어간다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오. Everyone thinks ___ the weather will be sunny.",
-            "options": [
-              "that",
-              "there",
-              "then",
-              "this"
-            ],
-            "answer": 0,
-            "explain": "think 뒤에 명사절 접속사 that이 온다."
-          },
-          {
-            "q": "어법상 옳은 문장은?",
-            "options": [
-              "I know that you are a good friend.",
-              "I know that you a good friend.",
-              "I know are you a good friend that.",
-              "Know I that you good friend."
-            ],
-            "answer": 0,
-            "explain": "know + that + 주어(you) + 동사(are) + 보어 순서가 옳다."
-          },
-          {
-            "q": "다음 문장에서 that의 뜻으로 알맞은 것은? She believes that he will come.",
-            "options": [
-              "~라는 것을",
-              "저것",
-              "저 ~",
-              "그래서"
-            ],
-            "answer": 0,
-            "explain": "동사 뒤 명사절 접속사 that은 '~라는 것을/~라고'로 해석한다."
-          },
-          {
-            "q": "두 문장을 한 문장으로 바르게 이은 것은? We hope it. + You have a great trip.",
-            "options": [
-              "We hope that you have a great trip.",
-              "We hope you that have a great trip.",
-              "We hope have a great trip you that.",
-              "That we hope you have a great trip."
-            ],
-            "answer": 0,
-            "explain": "'it'을 that절로 바꿔 hope의 목적어 자리에 넣는다."
-          },
-          {
-            "q": "빈칸에 들어갈 말이 나머지와 다른 것은?",
-            "options": [
-              "Please close ___ door.",
-              "I think ___ you are right.",
-              "We know ___ she is smart.",
-              "He says ___ it is easy."
-            ],
-            "answer": 0,
-            "explain": "①은 '저 문'이라는 지시형용사 that, 나머지는 명사절 접속사 that이다."
-          },
-          {
-            "q": "'우리는 그가 매일 운동한다는 것을 안다.'를 옮긴 것은?",
-            "options": [
-              "We know that he exercises every day.",
-              "We know that exercises every day.",
-              "We know he every day that exercises.",
-              "That we know he exercises every day."
-            ],
-            "answer": 0,
-            "explain": "know + that + 주어(he) + 동사(exercises) 순서이며 3인칭 단수 -s에 유의한다."
-          },
-          {
-            "q": "다음 중 that절이 목적어로 쓰이지 않은 문장은?",
-            "options": [
-              "That book is mine.",
-              "I think that it is fun.",
-              "She knows that I am here.",
-              "We believe that he is right."
-            ],
-            "answer": 0,
-            "explain": "①의 That은 book을 꾸미는 지시형용사이고 that절 목적어가 아니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것은? My teacher says ___ we should bring water.",
-            "options": [
-              "that",
-              "what",
-              "how",
               "which"
             ],
             "answer": 0,
-            "explain": "say 뒤에서 '~라고'의 명사절을 이끄는 접속사 that이 온다."
+            "explain": "감정을 나타내는 형용사(glad) 뒤에서 그 이유가 되는 절을 이끄는 접속사 that이 알맞다."
           },
           {
-            "q": "밑줄 친 that을 생략할 수 있는 문장은?",
+            "q": "우리말과 같도록 빈칸에 알맞은 것은? '선생님은 우리가 조용히 해야 한다고 말씀하셨다.' → The teacher said ___ we had to be quiet.",
             "options": [
-              "I believe that we can win.",
-              "That is my bag.",
-              "I like that color.",
-              "Look at that!"
-            ],
-            "answer": 0,
-            "explain": "①의 that만 목적어절을 이끄는 접속사라 생략 가능하고, 나머지는 지시(대)명사·지시형용사라 생략할 수 없다."
-          },
-          {
-            "q": "우리말과 뜻이 같은 문장은? '나는 무언가 잘못되었다고 느낀다.'",
-            "options": [
-              "I feel that something is wrong.",
-              "I feel something that is wrong.",
-              "That I feel something is wrong.",
-              "I feel wrong that something is."
-            ],
-            "answer": 0,
-            "explain": "feel + that + 주어(something) + 동사(is) + 보어(wrong) 순서이다."
-          },
-          {
-            "q": "빈칸에 알맞은 동사를 고르시오. I ___ that the news is true. (나는 그 소식이 사실이라고 생각한다.)",
-            "options": [
-              "think",
-              "run",
-              "open",
-              "close"
-            ],
-            "answer": 0,
-            "explain": "'~라고 생각한다'는 think that ~이다."
-          },
-          {
-            "q": "다음 중 어순이 바른 것은?",
-            "options": [
-              "She knows that I am late.",
-              "She that knows I am late.",
-              "She knows I that am late.",
-              "That she knows I am late."
-            ],
-            "answer": 0,
-            "explain": "주어(She) + 동사(knows) + that + 주어(I) + 동사(am) 순서가 옳다."
-          },
-          {
-            "q": "빈칸에 알맞은 것은? I hope ___ tomorrow's weather will be nice.",
-            "options": [
+              "how",
               "that",
-              "this",
-              "these",
-              "those"
-            ],
-            "answer": 0,
-            "explain": "hope 뒤에 명사절을 이끄는 접속사 that이 온다."
-          },
-          {
-            "q": "다음 문장에 대한 설명으로 옳은 것은? I think he is a genius.",
-            "options": [
-              "think 뒤에 접속사 that이 생략되어 있다.",
-              "he가 문장의 주어이다.",
-              "is가 문장 전체의 본동사이다.",
-              "틀린 문장이다."
-            ],
-            "answer": 0,
-            "explain": "'I think (that) he is a genius'에서 목적어절 접속사 that이 생략된 올바른 문장이다."
-          },
-          {
-            "q": "'그녀는 자신이 시험에 합격할 거라고 믿는다.'를 옮긴 것은?",
-            "options": [
-              "She believes that she will pass the exam.",
-              "She believes that will pass the exam.",
-              "She believes will she pass the exam that.",
-              "That she believes will pass the exam."
-            ],
-            "answer": 0,
-            "explain": "believe + that + 주어(she) + 동사(will pass) 순서이다."
-          },
-          {
-            "q": "빈칸에 공통으로 들어갈 말은? He knows ___ I am tired. / I think ___ the answer is right.",
-            "options": [
-              "that",
-              "if",
               "what",
-              "when"
+              "why"
             ],
-            "answer": 0,
-            "explain": "두 문장 모두 동사 뒤에서 목적어 역할을 하는 명사절 접속사 that이 들어간다."
+            "answer": 1,
+            "explain": "say 뒤에서 '~라고'의 뜻으로 완전한 절을 이끄는 명사절 접속사 that이 알맞다."
           },
           {
-            "q": "두 문장을 that으로 이을 때 알맞은 것은? She believes it. + He tells the truth.",
+            "q": "다음 문장에 대한 설명으로 옳은 것은? I believe he will keep his promise.",
             "options": [
-              "She believes that he tells the truth.",
-              "She believes he that tells the truth.",
-              "She believes it that he tells the truth.",
-              "That she believes he tells the truth."
+              "he는 believe의 주어이다.",
+              "will은 이 문장 전체의 본동사이다.",
+              "이 문장은 어법상 틀렸다.",
+              "believe 뒤에 접속사 that이 생략되어 있다."
+            ],
+            "answer": 3,
+            "explain": "'I believe (that) he will keep his promise'에서 목적어절을 이끄는 접속사 that이 생략된 올바른 문장이다."
+          },
+          {
+            "q": "At the meeting, our club president ___ that we should hold the event outdoors, and most members liked the idea.",
+            "options": [
+              "doubted",
+              "denied",
+              "feared",
+              "suggested"
+            ],
+            "answer": 3,
+            "explain": "'제안했다'는 문맥에 맞는 동사는 suggested이다. doubt(의심하다)/deny(부인하다)/fear(두려워하다)는 의미가 맞지 않는다."
+          },
+          {
+            "q": "Halfway through the exam, Mina ___ that she had answered question 5 incorrectly.",
+            "options": [
+              "promised",
+              "wished",
+              "hoped",
+              "realized"
+            ],
+            "answer": 3,
+            "explain": "시험 도중 자신의 실수를 '깨달았다'는 뜻이므로 realized가 알맞다. promise/hope/wish는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "After a long discussion, everyone finally ___ that the school festival should be held in May.",
+            "options": [
+              "agreed",
+              "forgot",
+              "refused",
+              "doubted"
             ],
             "answer": 0,
-            "explain": "'She believes it'의 it을 that절 'that he tells the truth'로 바꿔 목적어 자리에 넣는다."
+            "explain": "오랜 논의 끝에 '동의했다'는 뜻이므로 agreed가 알맞다. 나머지는 문맥상 어울리지 않는다."
+          },
+          {
+            "q": "When I entered the classroom this morning, I ___ that the windows had been left open all night.",
+            "options": [
+              "promised",
+              "decided",
+              "imagined",
+              "noticed"
+            ],
+            "answer": 3,
+            "explain": "창문이 열려 있는 것을 '알아차렸다'는 뜻이므로 noticed가 알맞다. 나머지는 의미가 어울리지 않는다."
+          },
+          {
+            "q": "After breaking the vase, the little boy ___ that it was his fault and said sorry to his mother.",
+            "options": [
+              "denied",
+              "admitted",
+              "refused",
+              "pretended"
+            ],
+            "answer": 1,
+            "explain": "자기 잘못임을 '인정했다'는 뜻이므로 admitted가 알맞다. deny(부인)/refuse(거절)/pretend(~인 척)는 반대 의미이다."
+          },
+          {
+            "q": "The sky is full of dark clouds, so I ___ that we will be able to play soccer this afternoon.",
+            "options": [
+              "hope",
+              "know",
+              "doubt",
+              "promise"
+            ],
+            "answer": 2,
+            "explain": "날씨가 나빠 경기를 못 할 것 같다는 문맥이므로 '~일지 의심스럽다'의 doubt가 알맞다."
+          },
+          {
+            "q": "Because she has studied so hard all year, we all ___ that she will get the highest score in the class.",
+            "options": [
+              "regret",
+              "expect",
+              "doubt",
+              "worry"
+            ],
+            "answer": 1,
+            "explain": "열심히 공부했으니 높은 점수를 '기대한다'는 뜻이므로 expect가 알맞다. 나머지는 문맥과 반대이거나 어울리지 않는다."
+          },
+          {
+            "q": "My brother ___ that he would help me clean the room, but he fell asleep on the sofa instead.",
+            "options": [
+              "denied",
+              "promised",
+              "doubted",
+              "feared"
+            ],
+            "answer": 1,
+            "explain": "방 청소를 도와주겠다고 '약속했다'는 뜻이므로 promised가 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "Before the school trip, my mother ___ that the weather might be too cold for us at the mountain.",
+            "options": [
+              "hoped",
+              "promised",
+              "worried",
+              "agreed"
+            ],
+            "answer": 2,
+            "explain": "날씨가 추울까 봐 '걱정했다'는 뜻이므로 worried가 알맞다. 나머지는 의미가 어울리지 않는다."
+          },
+          {
+            "q": "During the tour, the guide ___ that the old castle had been built more than 500 years ago.",
+            "options": [
+              "refused",
+              "explained",
+              "doubted",
+              "complained"
+            ],
+            "answer": 1,
+            "explain": "성의 역사를 '설명했다'는 뜻이므로 explained가 알맞다. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "Everyone agreed that the volunteers had worked very ___ to clean up the whole park.",
+            "options": [
+              "harder",
+              "hardly",
+              "hardness",
+              "hard"
+            ],
+            "answer": 3,
+            "explain": "동사(worked)를 꾸미며 '열심히'를 뜻하는 부사는 hard이다. hardly는 '거의 ~않다'로 의미가 반대이고, hardness는 명사, harder는 비교급이다."
+          },
+          {
+            "q": "We all know that good health is very ___, so our family exercises together every morning.",
+            "options": [
+              "importance",
+              "important",
+              "importantly",
+              "import"
+            ],
+            "answer": 1,
+            "explain": "be동사(is) 뒤 보어 자리에는 형용사 important가 온다. importantly(부사)/importance(명사)/import(동사)는 알맞지 않다."
+          },
+          {
+            "q": "The scientist explained that the ___ of the sun's surface is extremely high, about 5,500 degrees.",
+            "options": [
+              "temper",
+              "temperate",
+              "temperature",
+              "temporary"
+            ],
+            "answer": 2,
+            "explain": "'온도'를 뜻하는 명사 temperature가 알맞다. temporary(임시의)/temperate(온화한)/temper(성질)는 의미가 맞지 않는다."
+          },
+          {
+            "q": "I really think that Sujin sings more ___ than anyone else in our school choir.",
+            "options": [
+              "beauty",
+              "beautiful",
+              "beautifully",
+              "beautify"
+            ],
+            "answer": 2,
+            "explain": "동사(sings)를 꾸미는 부사가 필요하므로 beautifully가 알맞다. beautiful(형용사)/beauty(명사)/beautify(동사)는 알맞지 않다."
           }
         ],
         "sa": [
@@ -4196,444 +4195,444 @@ export const courses = [
         "concept": "「It is + 형용사 (+ for 목적격) + to부정사」에서 It은 뜻 없는 가주어이고, 진짜 주어인 to부정사가 뒤로 간다.",
         "mc": [
           {
-            "q": "To learn English is important.  →  ___ is important to learn English.",
+            "q": "Our science teacher always says that ___ is important to ask questions when you do not understand something in class.",
             "options": [
-              "It",
-              "That",
-              "This",
-              "There"
-            ],
-            "answer": 0,
-            "explain": "진주어 to부정사를 뒤로 보내고 그 자리에 뜻 없는 가주어 It을 쓴다. That/This/There는 가주어로 쓰지 않는다."
-          },
-          {
-            "q": "To exercise every day is good.  →  It is good ___ exercise every day.",
-            "options": [
-              "for",
-              "to",
-              "of",
-              "at"
-            ],
-            "answer": 1,
-            "explain": "진주어는 to부정사이므로 「to + 동사원형」인 to exercise가 와야 한다."
-          },
-          {
-            "q": "To swim in the deep river is dangerous. 를 가주어 It으로 바르게 바꾼 것은?",
-            "options": [
-              "It is dangerous to swim in the deep river.",
-              "It is dangerous swim in the deep river.",
-              "Is it dangerous to swim in the deep river.",
-              "It dangerous is to swim in the deep river."
-            ],
-            "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 어순을 지켜야 한다. to 뒤에는 동사원형 swim이 온다."
-          },
-          {
-            "q": "To keep a diary is useful.  →  It is useful ___ a diary.",
-            "options": [
-              "keep",
-              "keeps",
-              "to keep",
-              "keeping"
+              "that",
+              "there",
+              "it",
+              "this"
             ],
             "answer": 2,
-            "explain": "가주어 It 뒤로 보낸 진주어는 to부정사 형태 to keep이어야 한다."
+            "explain": "뒤의 to부정사(to ask)가 진주어이고 그 자리를 채우는 가주어는 It이다. that/there/this는 가주어로 쓰지 않는다."
           },
           {
-            "q": "다음 중 가주어 It이 바르게 쓰인 문장은?",
+            "q": "During the school festival, ___ was exciting to see so many students performing on the big stage together.",
             "options": [
-              "It is wonderful to help other people.",
-              "It is wonderful helps other people.",
-              "It wonderful is to help other people.",
-              "Is wonderful to help other people."
+              "what",
+              "there",
+              "it",
+              "that"
+            ],
+            "answer": 2,
+            "explain": "진주어 to see를 뒤로 보낸 가주어 자리이므로 It이 알맞다. There is 구문이 아니며 that/what도 가주어로 쓰이지 않는다."
+          },
+          {
+            "q": "Choose the correct sentence. My mother believes that a healthy breakfast helps students study better.",
+            "options": [
+              "Is necessary to eat breakfast before school.",
+              "There is necessary to eat breakfast before school.",
+              "That is necessary to eat breakfast before school.",
+              "It is necessary to eat breakfast before school."
+            ],
+            "answer": 3,
+            "explain": "「It is + 형용사 + to부정사」 가주어 구문이 올바르다. There/That은 이 구문의 가주어가 될 수 없고, 주어 없이 Is로 시작할 수도 없다."
+          },
+          {
+            "q": "A: Why do you go to bed so early every night?  B: Because ___ is not easy for me to wake up at six in the morning.",
+            "options": [
+              "there",
+              "that",
+              "he",
+              "it"
+            ],
+            "answer": 3,
+            "explain": "진주어 to wake up을 대신하는 가주어 It이 필요하다. there/that/he는 이 자리에 쓸 수 없다."
+          },
+          {
+            "q": "When the weather is very cold and the roads are covered with ice, ___ is dangerous to ride a bicycle to school.",
+            "options": [
+              "there",
+              "it",
+              "this",
+              "that"
+            ],
+            "answer": 1,
+            "explain": "뒤의 to ride가 진주어이므로 가주어 It이 알맞다."
+          },
+          {
+            "q": "The city library is very quiet, so it is a good place to study. It is helpful ___ there before an important test.",
+            "options": [
+              "studies",
+              "studying",
+              "study",
+              "to study"
+            ],
+            "answer": 3,
+            "explain": "가주어 It 뒤의 진주어는 to부정사여야 하므로 to study가 알맞다."
+          },
+          {
+            "q": "My grandfather often tells me that it is important ___ kind to people who need help, even when you are busy.",
+            "options": [
+              "to be",
+              "being",
+              "been",
+              "be"
             ],
             "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 형태가 올바르다. 나머지는 어순·형태가 틀렸다."
+            "explain": "진주어 자리에는 to부정사가 오므로 to be가 알맞다. being/be/been은 이 구문에 맞지 않는다."
           },
           {
-            "q": "약속을 지키는 것은 중요하다. = It is important ___ ___ promises.",
+            "q": "Before the class trip, our teacher reminded us that it is necessary ___ our tickets and student cards.",
             "options": [
-              "to keep",
-              "keeping",
-              "keep to",
-              "to keeping"
+              "brought",
+              "brings",
+              "bringing",
+              "to bring"
+            ],
+            "answer": 3,
+            "explain": "가주어 구문의 진주어는 to부정사이므로 to bring이 알맞다."
+          },
+          {
+            "q": "Everyone in our club agrees that it is fun ___ new songs together during the weekend practice.",
+            "options": [
+              "to learn",
+              "learning",
+              "learned",
+              "learn"
             ],
             "answer": 0,
-            "explain": "진주어는 to부정사이므로 to keep이 알맞다. to 뒤에는 항상 동사원형이 온다."
+            "explain": "진주어는 to부정사이므로 to learn이 알맞다. 가주어 It 구문에서는 동명사가 아니라 to부정사를 쓴다."
           },
           {
-            "q": "자전거를 타는 것은 쉽다. = ___ is easy to ride a bike.",
+            "q": "Because the mountain path was steep and long, it was really hard ___ to the top before sunset.",
             "options": [
-              "It",
-              "He",
-              "Bike",
-              "Riding"
+              "climbing",
+              "climb",
+              "climbs",
+              "to climb"
+            ],
+            "answer": 3,
+            "explain": "진주어 to부정사 to climb이 알맞다."
+          },
+          {
+            "q": "My little brother is only five, so it is not easy for him ___ his shoes by himself every morning.",
+            "options": [
+              "to tie",
+              "tied",
+              "tie",
+              "tying"
             ],
             "answer": 0,
-            "explain": "문장 맨 앞에는 뜻 없는 가주어 It을 쓴다."
+            "explain": "의미상 주어 for him 뒤의 진주어는 to부정사이므로 to tie가 알맞다."
           },
           {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '일찍 일어나는 것은 쉽지 않다.'",
+            "q": "Which sentence is grammatically correct?",
             "options": [
-              "It is not easy to get up early.",
-              "It is not easy get up early.",
-              "It not is easy to get up early.",
-              "Get up early is not easy it."
+              "It is exciting travels to a foreign country.",
+              "It is exciting to travel to a foreign country.",
+              "It is exciting traveled to a foreign country.",
+              "It is exciting travel to a foreign country."
             ],
-            "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 형태로 It is not easy to get up early가 올바르다."
+            "answer": 1,
+            "explain": "가주어 It 뒤의 진주어는 to부정사이므로 to travel이 들어간 문장이 올바르다."
           },
           {
-            "q": "It is fun ___ play soccer with friends.",
+            "q": "The movie was three hours long, and honestly, most students did not enjoy ___ in the dark theater for so long.",
             "options": [
-              "to",
-              "for",
-              "at",
-              "in"
+              "to sit",
+              "sit",
+              "sitting",
+              "sat"
             ],
-            "answer": 0,
-            "explain": "진주어 to부정사 to play가 와야 하므로 빈칸에는 to가 알맞다."
+            "answer": 2,
+            "explain": "동사 enjoy는 목적어로 동명사를 취하므로 sitting이 알맞다. 가주어 구문이 아닌 일반 동사의 목적어 자리라 to부정사는 오답이다."
           },
           {
-            "q": "다음 중 밑줄 친 It의 쓰임이 나머지와 다른 것은?",
+            "q": "It is polite to say thank you, but some people do not mind ___ in a long line for a popular restaurant.",
             "options": [
-              "It is a cute dog.",
-              "It is good to eat vegetables.",
-              "It is hard to finish the work.",
-              "It is fun to read books."
+              "wait",
+              "to wait",
+              "waiting",
+              "waited"
             ],
-            "answer": 0,
-            "explain": "①의 It은 '그것'이라는 뜻의 대명사이고, 나머지는 to부정사를 대신하는 뜻 없는 가주어이다."
+            "answer": 2,
+            "explain": "동사 mind는 동명사를 목적어로 취하므로 waiting이 알맞다. It is + 형용사 구문과 달리 이 빈칸은 mind의 목적어 자리이다."
           },
           {
-            "q": "It is dangerous ___ play with fire.",
+            "q": "Our new classmate just moved from another country, so it is still difficult ___ to understand fast Korean.",
             "options": [
-              "to",
-              "of",
-              "for",
-              "with"
+              "of her",
+              "for she",
+              "to her",
+              "for her"
             ],
-            "answer": 0,
-            "explain": "진주어 to부정사 to play가 필요하므로 to가 알맞다."
+            "answer": 3,
+            "explain": "to부정사의 의미상 주어는 「for + 목적격」이므로 for her가 알맞다. she는 주격이라 오답이다."
           },
           {
-            "q": "다음 문장에서 틀린 부분을 바르게 고친 것은?  'It is important eat breakfast.'",
+            "q": "The math problem had many steps, and it was almost impossible ___ to solve it without a calculator.",
             "options": [
-              "eat → to eat",
-              "It → That",
-              "is → are",
-              "important → importantly"
+              "to us",
+              "of us",
+              "for we",
+              "for us"
             ],
-            "answer": 0,
-            "explain": "진주어는 to부정사여야 하므로 eat을 to eat으로 고쳐야 한다."
+            "answer": 3,
+            "explain": "의미상 주어는 「for + 목적격」이므로 for us가 알맞다."
           },
           {
-            "q": "「It is + 형용사 + ___ + to부정사」에서 to부정사의 의미상 주어를 나타내는 빈칸에 알맞은 것은?",
+            "q": "Choose the correct sentence about the young children in the park.",
             "options": [
-              "for + 목적격",
-              "to + 목적격",
-              "of + 주격",
-              "for + 주격"
+              "It is dangerous to them to play near the deep pond.",
+              "It is dangerous for them to play near the deep pond.",
+              "It is dangerous for they to play near the deep pond.",
+              "It is dangerous of them to play near the deep pond."
             ],
-            "answer": 0,
-            "explain": "가주어 구문에서 행동의 주체(의미상 주어)는 「for + 목적격」으로 나타낸다."
+            "answer": 1,
+            "explain": "의미상 주어는 「for + 목적격」이므로 for them이 올바르다. they는 주격, of/to는 이 구문에 맞지 않는다."
           },
           {
-            "q": "It is hard ___ ___ to solve this puzzle. (그가 이 퍼즐을 푸는 것은)",
-            "options": [
-              "for him",
-              "for he",
-              "of him",
-              "to him"
-            ],
-            "answer": 0,
-            "explain": "to부정사의 의미상 주어는 「for + 목적격」이므로 for him이 알맞다. he는 목적격 him으로 써야 한다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것은? '아이들이 이 책을 읽는 것은 쉽다.'  It is easy ___ to read this book.",
-            "options": [
-              "for children",
-              "of children",
-              "for child",
-              "children"
-            ],
-            "answer": 0,
-            "explain": "의미상 주어는 「for + 목적격」으로 나타내며 children은 복수이므로 for children이 알맞다."
-          },
-          {
-            "q": "다음 중 어법상 올바른 문장은?",
-            "options": [
-              "It is easy for me to swim.",
-              "It is easy for I to swim.",
-              "It is easy of me to swim.",
-              "It is easy to me to swim."
-            ],
-            "answer": 0,
-            "explain": "의미상 주어는 「for + 목적격」이므로 for me가 올바르다."
-          },
-          {
-            "q": "It is exciting ___ learn new things.",
-            "options": [
-              "to",
-              "for",
-              "of",
-              "so"
-            ],
-            "answer": 0,
-            "explain": "진주어 to부정사 to learn이 와야 하므로 to가 알맞다."
-          },
-          {
-            "q": "다음 단어를 바르게 배열하시오.  ( it / is / fun / to / play / soccer )",
-            "options": [
-              "It is fun to play soccer.",
-              "It fun is to play soccer.",
-              "It is to play fun soccer.",
-              "Is it fun play to soccer."
-            ],
-            "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 어순에 따라 It is fun to play soccer가 된다."
-          },
-          {
-            "q": "다음 단어를 바르게 배열하시오.  ( it / is / hard / to / get up / early )",
-            "options": [
-              "It is hard to get up early.",
-              "It is to get up hard early.",
-              "It hard is to get up early.",
-              "It is hard get up to early."
-            ],
-            "answer": 0,
-            "explain": "It is + hard + to get up early 순서가 올바르다."
-          },
-          {
-            "q": "다음 단어를 바르게 배열하시오.  ( it / is / important / to / keep / promises )",
-            "options": [
-              "It is important to keep promises.",
-              "It is to keep important promises.",
-              "It important is to keep promises.",
-              "Is it important keep to promises."
-            ],
-            "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 어순에 따라 It is important to keep promises가 올바르다."
-          },
-          {
-            "q": "To read English books is fun. 과 뜻이 같은 문장은?",
-            "options": [
-              "It is fun to read English books.",
-              "It is fun reading English books to.",
-              "It is fun read English books.",
-              "Fun is it to read English books."
-            ],
-            "answer": 0,
-            "explain": "진주어 to부정사를 뒤로 보내고 가주어 It을 쓴 It is fun to read English books가 같은 뜻이다."
-          },
-          {
-            "q": "빈칸에 알맞은 형용사는? '채소를 먹는 것은 몸에 좋다.'  It is ___ to eat vegetables.",
-            "options": [
-              "good",
-              "boring",
-              "difficult",
-              "wrong"
-            ],
-            "answer": 0,
-            "explain": "몸에 좋다는 뜻이므로 good이 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 형용사는? '얼음 위에서 달리는 것은 위험하다.'  It is ___ to run on the ice.",
-            "options": [
-              "dangerous",
-              "safe",
-              "easy",
-              "useful"
-            ],
-            "answer": 0,
-            "explain": "위험하다는 뜻이므로 dangerous가 알맞다."
-          },
-          {
-            "q": "다음 중 문장이 어법상 틀린 것은?",
-            "options": [
-              "It is necessary drink water every day.",
-              "It is necessary to drink water every day.",
-              "It is good to go to bed early.",
-              "It is easy to solve the problem."
-            ],
-            "answer": 0,
-            "explain": "①은 진주어가 to부정사가 아니라 틀렸다. drink를 to drink로 고쳐야 한다."
-          },
-          {
-            "q": "It is good ___ go to bed early.",
-            "options": [
-              "to",
-              "for",
-              "of",
-              "and"
-            ],
-            "answer": 0,
-            "explain": "진주어 to부정사 to go가 와야 하므로 to가 알맞다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것은?  A: How is it to read English books?  B: ___ is fun to read them.",
-            "options": [
-              "It",
-              "That",
-              "This",
-              "He"
-            ],
-            "answer": 0,
-            "explain": "가주어 It으로 문장을 시작해야 한다."
-          },
-          {
-            "q": "It is ___ to make new friends. (즐겁다)",
-            "options": [
-              "fun",
-              "hard",
-              "boring",
-              "sad"
-            ],
-            "answer": 0,
-            "explain": "즐겁다는 뜻이므로 fun이 알맞다."
-          },
-          {
-            "q": "다음 문장에서 진주어에 해당하는 부분은?  It is important to follow the rules.",
-            "options": [
-              "to follow the rules",
-              "It",
-              "is important",
-              "important"
-            ],
-            "answer": 0,
-            "explain": "It은 가주어이고 진짜 주어(진주어)는 to부정사 to follow the rules이다."
-          },
-          {
-            "q": "다음 문장에서 가주어에 해당하는 것은?  It is easy to ride a bike.",
-            "options": [
-              "It",
-              "is",
-              "easy",
-              "to ride a bike"
-            ],
-            "answer": 0,
-            "explain": "뜻 없이 주어 자리를 채우는 It이 가주어이다."
-          },
-          {
-            "q": "It is wonderful ___ others.",
-            "options": [
-              "to help",
-              "help",
-              "helps",
-              "helping"
-            ],
-            "answer": 0,
-            "explain": "진주어는 to부정사이므로 to help가 알맞다."
-          },
-          {
-            "q": "우리말에 맞게 빈칸을 채우시오.  '매일 물을 마시는 것은 필요하다.'  It is ___ to drink water every day.",
-            "options": [
-              "necessary",
-              "impossible",
-              "dangerous",
-              "boring"
-            ],
-            "answer": 0,
-            "explain": "필요하다는 뜻이므로 necessary가 알맞다."
-          },
-          {
-            "q": "다음 중 어순이 올바른 문장은?",
-            "options": [
-              "It is healthy to drink enough water.",
-              "It is to drink healthy enough water.",
-              "It healthy is to drink enough water.",
-              "Is it healthy to enough water drink."
-            ],
-            "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 어순에 따라 It is healthy to drink enough water가 올바르다."
-          },
-          {
-            "q": "It is not easy ___ learn to swim.",
-            "options": [
-              "to",
-              "for",
-              "of",
-              "in"
-            ],
-            "answer": 0,
-            "explain": "진주어 to부정사 to learn이 와야 하므로 to가 알맞다."
-          },
-          {
-            "q": "다음 문장의 밑줄 친 It과 쓰임이 같은 것은?  It is fun to sing on stage.",
-            "options": [
-              "It is hard to keep a diary.",
-              "It is on the table.",
-              "It is my new phone.",
-              "It is raining now."
-            ],
-            "answer": 0,
-            "explain": "제시문의 It은 to부정사를 대신하는 가주어이다. ①만 같은 가주어이고 나머지는 대명사·비인칭 주어이다."
-          },
-          {
-            "q": "우리말에 맞게 빈칸에 알맞은 것은?  '내가 이 문제를 푸는 것은 어렵다.'  It is hard ___ to solve this problem.",
+            "q": "My parents both work late, so it is sometimes necessary ___ to cook dinner for my younger sister.",
             "options": [
               "for me",
+              "by me",
               "of me",
-              "for I",
-              "to me"
+              "for I"
             ],
             "answer": 0,
             "explain": "의미상 주어는 「for + 목적격」이므로 for me가 알맞다."
           },
           {
-            "q": "밑줄 친 부분이 어법상 틀린 것은?  It is important for we to study hard.",
+            "q": "The instructions were written only in English, so it was hard ___ the old man to fill out the form.",
             "options": [
-              "for we → for us",
+              "with",
+              "to",
+              "for",
+              "of"
+            ],
+            "answer": 2,
+            "explain": "to부정사의 의미상 주어를 나타낼 때는 for를 쓰므로 for the old man이 알맞다."
+          },
+          {
+            "q": "Find the part that is grammatically wrong. It is important for we to protect the environment.",
+            "options": [
+              "to protect → protecting",
               "is → are",
               "important → importantly",
-              "to study → studying"
+              "for we → for us"
             ],
-            "answer": 0,
+            "answer": 3,
             "explain": "의미상 주어는 「for + 목적격」이므로 for we를 for us로 고쳐야 한다."
           },
           {
-            "q": "다음 문장을 가주어 It으로 시작하는 문장으로 바꾼 것은?  To finish the work today is hard.",
+            "q": "Find the part that is grammatically wrong. It is good idea to save some money every month.",
             "options": [
-              "It is hard to finish the work today.",
-              "It is hard finish the work today.",
-              "It hard is to finish the work today.",
-              "Finish the work today it is hard."
+              "to save → saving",
+              "good idea → a good idea",
+              "every → all",
+              "It is → There is"
             ],
-            "answer": 0,
-            "explain": "진주어 to부정사를 뒤로 보내고 가주어 It으로 시작하면 It is hard to finish the work today가 된다."
+            "answer": 1,
+            "explain": "셀 수 있는 명사 idea 앞에는 관사 a가 필요하므로 a good idea로 고쳐야 한다. 가주어·to부정사 부분은 옳다."
           },
           {
-            "q": "It is useful ___ a foreign language.",
+            "q": "Find the part that is grammatically wrong. It is fun playing board games with my family on rainy days.",
             "options": [
-              "to learn",
-              "learn",
-              "learning",
-              "learns"
+              "playing → to play",
+              "fun → funny",
+              "family → families",
+              "It is → It has"
             ],
             "answer": 0,
-            "explain": "진주어는 to부정사이므로 to learn이 알맞다."
+            "explain": "가주어 It 구문의 진주어는 to부정사이므로 playing을 to play로 고쳐야 한다."
           },
           {
-            "q": "빈칸에 공통으로 들어갈 말은?  ___ is fun to play soccer.  ___ is hard to wake up early.",
+            "q": "Which sentence has the same meaning as 'To keep a diary in English is helpful'?",
             "options": [
-              "It",
-              "That",
-              "This",
-              "They"
+              "It is to keep helpful a diary in English.",
+              "It is helpful to keep a diary in English.",
+              "It is helpful keeping a diary in English.",
+              "Helpful it is to keep a diary in English."
             ],
-            "answer": 0,
-            "explain": "두 문장 모두 to부정사를 진주어로 하는 가주어 It이 필요하다."
+            "answer": 1,
+            "explain": "진주어 to부정사를 뒤로 보내고 가주어 It을 쓴 It is helpful to keep a diary in English가 같은 뜻이다."
           },
           {
-            "q": "다음 중 우리말 '남을 돕는 것은 멋진 일이다.'를 바르게 옮긴 것은?",
+            "q": "Which sentence has the same meaning as 'To finish this homework by tonight is difficult'?",
             "options": [
-              "It is wonderful to help others.",
-              "It is wonderful help others.",
-              "To help others it is wonderful.",
-              "It wonderful to help others is."
+              "There is difficult to finish this homework by tonight.",
+              "It is difficult to finish this homework by tonight.",
+              "It is difficult finishing this homework by tonight.",
+              "It difficult is to finish this homework by tonight."
+            ],
+            "answer": 1,
+            "explain": "가주어 It으로 시작하고 진주어 to finish를 뒤에 두는 문장이 같은 뜻이다."
+          },
+          {
+            "q": "In which sentence does 'It' work as a meaningless subject (가주어)?",
+            "options": [
+              "It is wonderful to help people in need.",
+              "It is a very expensive smartphone.",
+              "It is on the top shelf of the closet.",
+              "It is my favorite hat from last year."
             ],
             "answer": 0,
-            "explain": "「It is + 형용사 + to부정사」 형태로 It is wonderful to help others가 올바르다."
+            "explain": "①의 It은 진주어 to help를 대신하는 가주어이고, 나머지는 '그것'을 뜻하는 대명사이다."
+          },
+          {
+            "q": "The underlined 'It' in 'It is hard to make everyone happy' is used in the same way as the 'It' in ___.",
+            "options": [
+              "It is boring to wait for a late bus.",
+              "It is a warm and sunny day.",
+              "It is five o'clock already.",
+              "It is her brown leather bag."
+            ],
+            "answer": 0,
+            "explain": "제시문의 It은 to부정사를 대신하는 가주어이다. ①만 같은 가주어이고 나머지는 비인칭·대명사 It이다."
+          },
+          {
+            "q": "There will be a big test tomorrow, so it is ___ to review your notes and get enough sleep tonight.",
+            "options": [
+              "empty",
+              "silent",
+              "boring",
+              "important"
+            ],
+            "answer": 3,
+            "explain": "시험 전 복습과 수면은 '중요하다'는 뜻이므로 important가 문맥에 맞다. 나머지는 의미상 어울리지 않는다."
+          },
+          {
+            "q": "The kitchen knife is very sharp, so it is ___ for young children to use it without an adult nearby.",
+            "options": [
+              "dangerous",
+              "delicious",
+              "cheap",
+              "comfortable"
+            ],
+            "answer": 0,
+            "explain": "날카로운 칼을 아이가 쓰는 것은 '위험하다'는 뜻이므로 dangerous가 알맞다."
+          },
+          {
+            "q": "The instructions had many difficult words, so it was ___ for the new students to understand them at first.",
+            "options": [
+              "difficult",
+              "fresh",
+              "funny",
+              "famous"
+            ],
+            "answer": 0,
+            "explain": "어려운 단어가 많아 이해하기 '어렵다'는 뜻이므로 difficult가 문맥에 맞다."
+          },
+          {
+            "q": "Water is something our bodies really need, so it is ___ to drink enough of it every single day.",
+            "options": [
+              "necessary",
+              "terrible",
+              "noisy",
+              "impossible"
+            ],
+            "answer": 0,
+            "explain": "물을 충분히 마시는 것은 '필요하다'는 뜻이므로 necessary가 알맞다."
+          },
+          {
+            "q": "After the long hike, we found a bench under a tree, and it felt ___ to rest our tired legs for a while.",
+            "options": [
+              "strict",
+              "angry",
+              "loud",
+              "nice"
+            ],
+            "answer": 3,
+            "explain": "쉬는 것이 '좋게/편하게' 느껴진다는 뜻이므로 nice가 문맥에 맞다."
+          },
+          {
+            "q": "The lock on the classroom door was broken, so it was ___ for anyone to open it and take things.",
+            "options": [
+              "easy",
+              "heavy",
+              "quiet",
+              "polite"
+            ],
+            "answer": 0,
+            "explain": "잠금장치가 고장 나 누구나 열 수 있으니 '쉽다'는 뜻으로 easy가 알맞다."
+          },
+          {
+            "q": "Learning about other countries is interesting, so it is ___ to make friends from all around the world.",
+            "options": [
+              "sour",
+              "dirty",
+              "exciting",
+              "sleepy"
+            ],
+            "answer": 2,
+            "explain": "세계 친구를 사귀는 것은 '신난다'는 뜻이므로 exciting이 문맥에 맞다."
+          },
+          {
+            "q": "The road was covered with thick ice this morning, so it was ___ to walk slowly and carefully to school.",
+            "options": [
+              "tastier",
+              "richer",
+              "safer",
+              "louder"
+            ],
+            "answer": 2,
+            "explain": "얼음길에서는 천천히 걷는 것이 더 '안전하다'는 뜻이므로 safer가 알맞다."
+          },
+          {
+            "q": "He practiced the piano for many years, so now it is ___ for him to play even very difficult songs.",
+            "options": [
+              "impossible",
+              "easy",
+              "hard",
+              "strange"
+            ],
+            "answer": 1,
+            "explain": "오랜 연습으로 어려운 곡도 '쉽게' 연주한다는 흐름이므로 easy가 알맞다."
+          },
+          {
+            "q": "Telling lies can hurt people you love, so it is always ___ to be honest with your family and friends.",
+            "options": [
+              "worse",
+              "emptier",
+              "better",
+              "weaker"
+            ],
+            "answer": 2,
+            "explain": "정직한 것이 '더 낫다'는 뜻이므로 better가 문맥에 맞다."
+          },
+          {
+            "q": "The museum has thousands of old paintings, so it is ___ to see all of them in just one afternoon.",
+            "options": [
+              "comfortable",
+              "impossible",
+              "cheap",
+              "friendly"
+            ],
+            "answer": 1,
+            "explain": "수천 점을 하루에 다 보기는 '불가능하다'는 뜻이므로 impossible이 알맞다."
+          },
+          {
+            "q": "Everyone shares the classroom, so it is ___ to keep your desk and the floor around it clean.",
+            "options": [
+              "boring",
+              "empty",
+              "angry",
+              "important"
+            ],
+            "answer": 3,
+            "explain": "공용 교실을 깨끗이 유지하는 것은 '중요하다'는 뜻이므로 important가 알맞다."
+          },
+          {
+            "q": "The baby was finally sleeping, so it was ___ for everyone to stay very quiet in the small room.",
+            "options": [
+              "funny",
+              "necessary",
+              "delicious",
+              "colorful"
+            ],
+            "answer": 1,
+            "explain": "자는 아기를 위해 조용히 있는 것이 '필요하다'는 뜻이므로 necessary가 알맞다."
+          },
+          {
+            "q": "He forgot his umbrella and it started to rain hard, so it was ___ for him to walk home in the storm.",
+            "options": [
+              "easy",
+              "hard",
+              "sweet",
+              "cheap"
+            ],
+            "answer": 1,
+            "explain": "폭우 속을 걷는 것은 '힘들다'는 뜻이므로 hard가 문맥에 맞다."
           }
         ],
         "sa": [
@@ -4717,18 +4716,7 @@ export const courses = [
         "concept": "「The + 비교급 ~, the + 비교급 …」 = '~하면 할수록 더 …하다'로, 두 절 모두 비교급을 쓴다.",
         "mc": [
           {
-            "q": "The higher it is, the ___ it is. (높이 오를수록 더 춥다)",
-            "options": [
-              "cold",
-              "colder",
-              "coldest",
-              "more cold"
-            ],
-            "answer": 1,
-            "explain": "「the 비교급, the 비교급」 구문의 두 번째 절도 반드시 비교급을 써야 하므로 cold의 비교급 colder가 정답이다."
-          },
-          {
-            "q": "The more you practice, the ___ you become. (연습할수록 더 잘한다)",
+            "q": "The more information you gather, the ___ your final report will be. (정보를 더 모을수록 보고서가 더 좋아진다)",
             "options": [
               "good",
               "well",
@@ -4736,362 +4724,153 @@ export const courses = [
               "best"
             ],
             "answer": 2,
-            "explain": "good/well의 불규칙 비교급은 better이다. 최상급 best나 원급은 이 구문에 쓸 수 없다."
+            "explain": "good의 불규칙 비교급은 better이다. 이 구문의 두 번째 절도 반드시 비교급을 써야 하므로 원급 good/well이나 최상급 best는 쓸 수 없다."
           },
           {
-            "q": "___ you eat, the heavier you get. (많이 먹을수록 더 무거워진다)",
+            "q": "The harder the students study, the ___ their test scores become. (열심히 공부할수록 점수가 더 높아진다)",
             "options": [
-              "The more",
-              "More",
-              "The most",
-              "Much"
+              "higher",
+              "more high",
+              "highest",
+              "high"
             ],
             "answer": 0,
-            "explain": "구문의 앞 절은 「The + 비교급」으로 시작한다. much의 비교급 more 앞에 the를 붙인 The more가 정답이다."
+            "explain": "high는 1음절 단어로 -er을 붙여 higher가 된다. more high는 틀린 형태이고 최상급 highest는 이 구문에 맞지 않는다."
           },
           {
-            "q": "The longer you wait, the ___ you feel. (오래 기다릴수록 더 초조하다)",
+            "q": "___ we leave home, the more time we will have at the airport. (일찍 나갈수록 공항에서 시간이 많다)",
             "options": [
-              "nervous",
-              "nervouser",
-              "more nervous",
-              "most nervous"
+              "Earlier",
+              "The early",
+              "The earlier",
+              "The earliest"
             ],
             "answer": 2,
-            "explain": "nervous는 2음절 이상 형용사로 more를 붙여 비교급을 만든다. nervouser는 틀린 형태이다."
+            "explain": "앞 절은 「The + 비교급」으로 시작한다. early의 비교급 earlier에 the를 붙인 The earlier가 정답이다."
+          },
+          {
+            "q": "The more expensive the phone is, the ___ features it usually offers. (비쌀수록 더 많은 기능)",
+            "options": [
+              "much",
+              "most",
+              "more",
+              "many"
+            ],
+            "answer": 2,
+            "explain": "셀 수 있는 명사 features 앞에서 '더 많은'을 뜻하는 many의 비교급 more가 알맞다."
+          },
+          {
+            "q": "The longer the meeting lasts, the ___ everyone gets. (회의가 길어질수록 더 지친다)",
+            "options": [
+              "more tired",
+              "tireder",
+              "tired",
+              "most tired"
+            ],
+            "answer": 0,
+            "explain": "tired는 more로 비교급을 만든다. tireder는 존재하지 않는 형태이고 최상급 most tired는 쓸 수 없다."
           },
           {
             "q": "다음 중 어법상 올바른 문장은?",
             "options": [
-              "The harder you try, the stronger you become.",
-              "Harder you try, stronger you become.",
-              "The hard you try, the strong you become.",
-              "The harder you try, stronger you become."
+              "The faster you type, the sooner you finish.",
+              "The fast you type, the soon you finish.",
+              "Faster you type, sooner you finish.",
+              "The faster you type, sooner you finish."
             ],
             "answer": 0,
             "explain": "두 절 모두 「The + 비교급」 형태를 갖춰야 한다. the가 빠지거나 원급을 쓰면 틀린다."
           },
           {
-            "q": "The ___ you sleep, the more tired you feel. (적게 잘수록 더 피곤하다)",
+            "q": "___ money you save now, the more comfortable your future will be. (지금 많이 모을수록 미래가 편하다)",
             "options": [
-              "little",
+              "most",
+              "much",
+              "more",
+              "The more"
+            ],
+            "answer": 3,
+            "explain": "앞 절은 「The + 비교급」으로 시작하며 much의 비교급 more에 the를 붙인 The more가 정답이다."
+          },
+          {
+            "q": "The colder the winter is, the ___ energy the city uses. (겨울이 추울수록 에너지를 더 많이 쓴다)",
+            "options": [
+              "most",
+              "more",
+              "much",
+              "many"
+            ],
+            "answer": 1,
+            "explain": "셀 수 없는 명사 energy 앞에서는 much의 비교급 more를 쓴다. many는 셀 수 있는 명사에만 쓴다."
+          },
+          {
+            "q": "The ___ the instructions are, the easier the task becomes. (설명이 명확할수록 더 쉬워진다)",
+            "options": [
+              "more clear",
+              "clearer",
+              "clear",
+              "clearest"
+            ],
+            "answer": 1,
+            "explain": "clear는 1음절 단어로 -er을 붙여 clearer가 된다. more clear는 틀린 형태이다."
+          },
+          {
+            "q": "The more carefully she drives, the ___ accidents she has. (조심할수록 사고가 더 적다)",
+            "options": [
               "less",
-              "least",
-              "lesser"
-            ],
-            "answer": 1,
-            "explain": "little의 불규칙 비교급은 less이다. '적게 잘수록'이므로 less가 알맞다."
-          },
-          {
-            "q": "The faster he runs, the ___ he gets tired. (빨리 달릴수록 더 빨리 지친다)",
-            "options": [
-              "quick",
-              "quicker",
-              "quickest",
-              "most quickly"
-            ],
-            "answer": 1,
-            "explain": "quick의 비교급 quicker가 정답이다. 1음절 단어이므로 -er을 붙인다. 최상급 most quickly는 쓸 수 없다."
-          },
-          {
-            "q": "The more books you read, the ___ you know. (책을 많이 읽을수록 더 많이 안다)",
-            "options": [
-              "much",
-              "many",
-              "more",
-              "most"
+              "little",
+              "fewer",
+              "few"
             ],
             "answer": 2,
-            "explain": "much/many의 비교급은 more이다. '더 많이 안다'이므로 the more가 알맞다."
+            "explain": "셀 수 있는 명사 accidents 앞에서는 few의 비교급 fewer를 쓴다. less는 셀 수 없는 명사에 쓴다."
           },
           {
-            "q": "빈칸에 들어갈 말로 알맞은 것은? The ___ the sky is, the brighter the stars are.",
-            "options": [
-              "dark",
-              "darker",
-              "darkest",
-              "more dark"
-            ],
-            "answer": 1,
-            "explain": "dark는 1음절 단어로 -er을 붙여 darker가 된다. 앞 절도 비교급을 써야 한다."
-          },
-          {
-            "q": "The older he gets, the ___ he becomes. (나이가 들수록 더 현명해진다)",
-            "options": [
-              "wise",
-              "wiser",
-              "wisest",
-              "more wise"
-            ],
-            "answer": 1,
-            "explain": "wise는 -e로 끝나므로 -r만 붙여 wiser가 된다. more wise는 쓰지 않는다."
-          },
-          {
-            "q": "The warmer the weather is, the ___ I feel. (날씨가 따뜻할수록 기분이 좋다)",
+            "q": "The more he exercises, the ___ he sleeps at night. (운동할수록 밤에 더 잘 잔다)",
             "options": [
               "good",
+              "best",
               "well",
-              "better",
-              "gooder"
+              "better"
             ],
-            "answer": 2,
-            "explain": "good의 비교급은 불규칙형 better이다. gooder는 존재하지 않는다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '빨리 걸을수록 더 일찍 도착한다.'",
-            "options": [
-              "The faster you walk, the earlier you arrive.",
-              "The fast you walk, the early you arrive.",
-              "Faster you walk, earlier you arrive.",
-              "The more fast you walk, the more early you arrive."
-            ],
-            "answer": 0,
-            "explain": "fast→faster, early→earlier로 두 절 모두 비교급을 쓰고 각각 the를 붙인다."
-          },
-          {
-            "q": "The ___ we learn, the smarter we become. (많이 배울수록 더 똑똑해진다)",
-            "options": [
-              "much",
-              "more",
-              "many",
-              "most"
-            ],
-            "answer": 1,
-            "explain": "동사 learn을 수식하며 '더 많이'를 뜻하는 much의 비교급 more가 알맞다."
-          },
-          {
-            "q": "The higher you fly, the ___ you see. (높이 날수록 더 멀리 본다)",
-            "options": [
-              "farther",
-              "farthest",
-              "far",
-              "more far"
-            ],
-            "answer": 0,
-            "explain": "far의 비교급 farther가 정답이다. 원급 far, 잘못된 형태 more far, 최상급 farthest는 이 구문에 쓸 수 없다."
-          },
-          {
-            "q": "The more time you spend, the ___ result you get. (시간을 많이 쓸수록 더 좋은 결과)",
-            "options": [
-              "good",
-              "well",
-              "better",
-              "best"
-            ],
-            "answer": 2,
-            "explain": "명사 result를 꾸미는 형용사 good의 비교급 better가 알맞다."
-          },
-          {
-            "q": "The ___ it is, the darker it is. (늦을수록 더 어둡다)",
-            "options": [
-              "late",
-              "later",
-              "latest",
-              "more late"
-            ],
-            "answer": 1,
-            "explain": "late는 -e로 끝나므로 -r을 붙여 later가 된다."
+            "answer": 3,
+            "explain": "동사 sleeps를 꾸미는 부사 well의 불규칙 비교급 better가 정답이다."
           },
           {
             "q": "다음 중 「the 비교급, the 비교급」 구문이 아닌 것은?",
             "options": [
-              "The more you give, the more you receive.",
+              "The more you plan, the less you worry.",
+              "She runs faster than her brother.",
               "The sooner, the better.",
-              "She is taller than her sister.",
-              "The harder it rains, the wetter we get."
-            ],
-            "answer": 2,
-            "explain": "3번은 than을 이용한 일반 비교 문장이다. 나머지는 모두 「the 비교급, the 비교급」 구문이다."
-          },
-          {
-            "q": "The more you talk, the ___ you understand each other. (많이 이야기할수록 더 잘 이해한다)",
-            "options": [
-              "good",
-              "well",
-              "better",
-              "gooder"
-            ],
-            "answer": 2,
-            "explain": "동사 understand를 꾸미는 well의 비교급은 불규칙형 better이다."
-          },
-          {
-            "q": "The ___ you get up, the more you can do. (일찍 일어날수록 더 많이 할 수 있다)",
-            "options": [
-              "early",
-              "earlier",
-              "earliest",
-              "more early"
+              "The higher we go, the colder it gets."
             ],
             "answer": 1,
-            "explain": "early는 -y로 끝나므로 y를 i로 바꾸고 -er을 붙여 earlier가 된다."
+            "explain": "2번은 than을 이용한 일반 비교 문장이다. 나머지는 모두 「the 비교급, the 비교급」 구문이다."
           },
           {
-            "q": "빈칸에 알맞은 것은? The ___ the box is, the harder it is to carry.",
+            "q": "The ___ difficult the exam is, the more time students need. (시험이 어려울수록 시간이 더 필요하다)",
             "options": [
-              "heavy",
-              "heavier",
-              "heaviest",
-              "more heavy"
-            ],
-            "answer": 1,
-            "explain": "heavy는 -y로 끝나므로 y를 i로 바꾸고 -er을 붙인 heavier가 정답이다."
-          },
-          {
-            "q": "The colder it becomes, the ___ clothes we wear. (추울수록 옷을 더 많이 입는다)",
-            "options": [
+              "more",
+              "most",
               "much",
+              "many"
+            ],
+            "answer": 0,
+            "explain": "difficult는 긴 형용사이므로 more difficult로 비교급을 만든다. 앞 절이므로 The more difficult가 알맞다."
+          },
+          {
+            "q": "The busier the restaurant is, the ___ waiters it needs. (바쁠수록 종업원이 더 많이 필요하다)",
+            "options": [
               "many",
               "more",
-              "most"
-            ],
-            "answer": 2,
-            "explain": "셀 수 있는 명사 clothes 앞이므로 many의 비교급 more를 쓴다."
-          },
-          {
-            "q": "다음 문장에서 어법상 옳은 것은?",
-            "options": [
-              "The more expensive it is, the better it is.",
-              "The expensiver it is, the better it is.",
-              "The more expensiver it is, the better it is.",
-              "The most expensive it is, the better it is."
-            ],
-            "answer": 0,
-            "explain": "expensive는 긴 형용사이므로 more expensive로 비교급을 만든다. -er을 붙이거나 more를 이중으로 쓰면 틀린다."
-          },
-          {
-            "q": "The harder you study, the ___ grades you get. (열심히 공부할수록 더 좋은 점수)",
-            "options": [
-              "good",
-              "well",
-              "better",
-              "best"
-            ],
-            "answer": 2,
-            "explain": "명사 grades를 꾸미는 good의 비교급 better가 정답이다."
-          },
-          {
-            "q": "The longer you sleep, the ___ you feel. (오래 잘수록 더 상쾌하다)",
-            "options": [
-              "fresh",
-              "fresher",
-              "freshest",
-              "more fresh"
+              "most",
+              "much"
             ],
             "answer": 1,
-            "explain": "fresh는 1음절 단어로 -er을 붙여 fresher가 된다."
+            "explain": "셀 수 있는 명사 waiters 앞에서는 many의 비교급 more를 쓴다."
           },
           {
-            "q": "___ we practice, the better we become. 빈칸에 알맞은 것은?",
-            "options": [
-              "The more",
-              "More",
-              "The much",
-              "Most"
-            ],
-            "answer": 0,
-            "explain": "앞 절은 「The + 비교급」으로 시작한다. much의 비교급 more에 the를 붙인 The more가 정답이다."
-          },
-          {
-            "q": "The busier she is, the ___ she looks. (바쁠수록 더 행복해 보인다)",
-            "options": [
-              "happy",
-              "happier",
-              "happiest",
-              "more happy"
-            ],
-            "answer": 1,
-            "explain": "happy는 -y로 끝나므로 y를 i로 바꾸고 -er을 붙여 happier가 된다."
-          },
-          {
-            "q": "다음 중 빈칸에 more가 들어갈 수 없는 것은?",
-            "options": [
-              "The ___ you smile, the happier you feel.",
-              "The ___ difficult it is, the more careful you must be.",
-              "The ___ you eat, the fuller you feel.",
-              "The higher it is, the ___ it is."
-            ],
-            "answer": 3,
-            "explain": "4번은 cold의 비교급 colder가 들어가야 하므로 more가 들어갈 수 없다."
-          },
-          {
-            "q": "The more slowly you speak, the ___ people understand you. (천천히 말할수록 더 잘 이해한다)",
-            "options": [
-              "good",
-              "well",
-              "better",
-              "best"
-            ],
-            "answer": 2,
-            "explain": "동사 understand를 꾸미는 well의 비교급 better가 정답이다."
-          },
-          {
-            "q": "우리말에 맞게 빈칸을 완성할 때 알맞은 것은? '하늘이 어두울수록 별이 더 밝다.' The darker the sky is, the ___ the stars are.",
-            "options": [
-              "bright",
-              "brighter",
-              "brightest",
-              "more bright"
-            ],
-            "answer": 1,
-            "explain": "bright는 1음절 단어로 -er을 붙여 brighter가 된다."
-          },
-          {
-            "q": "The ___ the road is, the more dangerous it becomes. (길이 좁을수록 더 위험하다)",
-            "options": [
-              "narrow",
-              "narrower",
-              "narrowest",
-              "narrowly"
-            ],
-            "answer": 1,
-            "explain": "narrow는 -er을 붙여 narrower로 비교급을 만든다. 원급 narrow, 최상급 narrowest, 부사 narrowly는 쓸 수 없다."
-          },
-          {
-            "q": "빈칸에 공통으로 들어갈 말은? The ___ you give, the ___ you receive. (많이 줄수록 많이 받는다)",
-            "options": [
-              "more, more",
-              "much, much",
-              "many, many",
-              "most, most"
-            ],
-            "answer": 0,
-            "explain": "much의 비교급 more가 두 절 모두에 들어간다. 앞뒤 the more, the more가 자연스럽다."
-          },
-          {
-            "q": "The faster you drive, the ___ it is. (빨리 운전할수록 더 위험하다)",
-            "options": [
-              "dangerous",
-              "dangerouser",
-              "more dangerous",
-              "most dangerous"
-            ],
-            "answer": 2,
-            "explain": "dangerous는 긴 형용사이므로 more dangerous로 비교급을 만든다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '많이 웃을수록 더 행복해진다.'",
-            "options": [
-              "The more you smile, the happier you become.",
-              "The much you smile, the happy you become.",
-              "More you smile, happier you become.",
-              "The more you smile, the more happy you become."
-            ],
-            "answer": 0,
-            "explain": "smile은 more로, happy는 happier로 비교급을 만들고 각각 the를 붙인다."
-          },
-          {
-            "q": "The ___ we wait, the angrier she will be. (오래 기다릴수록 더 화낼 것이다)",
-            "options": [
-              "long",
-              "longer",
-              "longest",
-              "more long"
-            ],
-            "answer": 1,
-            "explain": "long은 1음절 단어로 -er을 붙여 longer가 된다."
-          },
-          {
-            "q": "밑줄 친 부분을 바르게 고친 것은? The more you try, the good you get. → the good을 ___",
+            "q": "밑줄 친 부분을 바르게 고친 것은? The more you practice, the good you become. → the good을 ___",
             "options": [
               "good",
               "gooder",
@@ -5099,10 +4878,32 @@ export const courses = [
               "best"
             ],
             "answer": 2,
-            "explain": "good의 비교급은 불규칙형 better이다. 두 번째 절도 비교급을 써야 한다."
+            "explain": "good의 불규칙 비교급은 better이다. 두 번째 절도 비교급이어야 하므로 the better가 된다."
           },
           {
-            "q": "The bigger the city is, the ___ people live there. (도시가 클수록 더 많은 사람이 산다)",
+            "q": "The ___ you wake up, the more you can finish before noon. (일찍 일어날수록 더 많이 끝낸다)",
+            "options": [
+              "earliest",
+              "earlier",
+              "early",
+              "more early"
+            ],
+            "answer": 1,
+            "explain": "early는 -y로 끝나므로 y를 i로 바꾸고 -er을 붙여 earlier가 된다."
+          },
+          {
+            "q": "The heavier the bag is, the ___ it is to carry. (가방이 무거울수록 옮기기 더 힘들다)",
+            "options": [
+              "harder",
+              "hard",
+              "more hard",
+              "hardest"
+            ],
+            "answer": 0,
+            "explain": "hard는 1음절 단어로 -er을 붙여 harder가 된다. more hard는 틀린 형태이다."
+          },
+          {
+            "q": "The more polite you are, the ___ friends you will make. (예의 바를수록 친구를 더 많이 사귄다)",
             "options": [
               "much",
               "many",
@@ -5110,51 +4911,249 @@ export const courses = [
               "most"
             ],
             "answer": 2,
-            "explain": "셀 수 있는 명사 people 앞이므로 many의 비교급 more를 쓴다."
+            "explain": "셀 수 있는 명사 friends 앞에서는 many의 비교급 more를 쓴다."
           },
           {
             "q": "다음 중 어법상 어색한 문장은?",
             "options": [
-              "The more you know, the more you want to know.",
-              "The hotter it gets, the more water we drink.",
-              "The more fast you run, the sooner you finish.",
-              "The louder the music is, the more excited we feel."
+              "The more fast you walk, the earlier you arrive.",
+              "The louder he shouts, the angrier she gets.",
+              "The more careful you are, the fewer mistakes you make.",
+              "The bigger the crowd is, the more noise it makes."
             ],
-            "answer": 2,
+            "answer": 0,
             "explain": "fast의 비교급은 faster이다. 'the more fast'가 아니라 'the faster'로 써야 한다."
           },
           {
-            "q": "The ___ you climb, the thinner the air becomes. (높이 오를수록 공기가 더 희박하다)",
+            "q": "The ___ the temperature drops, the thicker clothes we wear. (기온이 낮을수록 더 두꺼운 옷을 입는다)",
             "options": [
-              "high",
-              "higher",
-              "highest",
-              "more high"
+              "more low",
+              "lowest",
+              "lower",
+              "low"
             ],
-            "answer": 1,
-            "explain": "high는 1음절 단어로 -er을 붙여 higher가 된다."
+            "answer": 2,
+            "explain": "low는 1음절 단어로 -er을 붙여 lower가 된다. 앞 절도 비교급을 써야 한다."
           },
           {
-            "q": "The more careful you are, the ___ mistakes you make. (조심할수록 실수를 덜 한다)",
+            "q": "The less you spend, the ___ you can save. (덜 쓸수록 더 많이 모을 수 있다)",
             "options": [
-              "few",
-              "fewer",
-              "less",
-              "little"
+              "more",
+              "many",
+              "much",
+              "most"
             ],
-            "answer": 1,
-            "explain": "셀 수 있는 명사 mistakes 앞에서는 few의 비교급 fewer를 쓴다. '더 적은 실수'를 뜻한다."
+            "answer": 0,
+            "explain": "much의 비교급 more가 정답이다. '더 많이 모으다'를 뜻하므로 the more가 알맞다."
           },
           {
-            "q": "The deeper the water is, the ___ it looks. (물이 깊을수록 더 어둡게 보인다)",
+            "q": "The ___ expensive the ticket is, the fewer people buy it. (표가 비쌀수록 사는 사람이 적다)",
             "options": [
-              "dark",
-              "darker",
-              "darkest",
-              "more dark"
+              "very",
+              "more",
+              "much",
+              "most"
             ],
             "answer": 1,
-            "explain": "dark는 1음절 단어로 -er을 붙여 darker가 된다."
+            "explain": "expensive는 긴 형용사이므로 more expensive로 비교급을 만든다. 앞 절이므로 The more expensive가 알맞다."
+          },
+          {
+            "q": "The more you smile, the ___ you feel. (많이 웃을수록 더 행복하다)",
+            "options": [
+              "happy",
+              "more happy",
+              "happiest",
+              "happier"
+            ],
+            "answer": 3,
+            "explain": "happy는 -y로 끝나므로 y를 i로 바꾸고 -er을 붙여 happier가 된다."
+          },
+          {
+            "q": "다음 우리말을 영어로 바르게 옮긴 것은? '식당이 붐빌수록 서비스가 더 느려진다.'",
+            "options": [
+              "The most crowded the restaurant is, the slowest the service becomes.",
+              "The more crowded the restaurant is, the slower the service becomes.",
+              "More crowded the restaurant is, slower the service becomes.",
+              "The more crowded the restaurant is, the more slow the service becomes."
+            ],
+            "answer": 1,
+            "explain": "crowded는 more로, slow는 slower로 비교급을 만들고 각 절 앞에 the를 붙인다."
+          },
+          {
+            "q": "The ___ languages you learn, the more cultures you understand. (언어를 많이 배울수록 문화를 더 이해한다)",
+            "options": [
+              "many",
+              "much",
+              "more",
+              "most"
+            ],
+            "answer": 2,
+            "explain": "셀 수 있는 명사 languages 앞에서는 many의 비교급 more를 쓴다."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장은?",
+            "options": [
+              "The more we practice, the more better we get.",
+              "The most we practice, the best we get.",
+              "The much we practice, the good we get.",
+              "The more we practice, the better we get."
+            ],
+            "answer": 3,
+            "explain": "good의 비교급은 better 하나로 충분하다. 'more better'처럼 이중 비교급을 쓰거나 최상급/원급을 쓰면 틀린다."
+          },
+          {
+            "q": "The more you ___ your teacher's advice, the better your grades will be. (조언을 따를수록 성적이 좋아진다)",
+            "options": [
+              "waste",
+              "forget",
+              "follow",
+              "refuse"
+            ],
+            "answer": 2,
+            "explain": "성적이 좋아지려면 조언을 '따라야(follow)' 한다. forget(잊다)/refuse(거절하다)/waste(낭비하다)는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "The harder the workers ___, the sooner the project will be done. (열심히 일할수록 빨리 끝난다)",
+            "options": [
+              "rest",
+              "work",
+              "sleep",
+              "complain"
+            ],
+            "answer": 1,
+            "explain": "프로젝트가 빨리 끝나려면 '일해야(work)' 한다. rest(쉬다)/complain(불평하다)/sleep(자다)은 의미상 어울리지 않는다."
+          },
+          {
+            "q": "The more vegetables you eat, the ___ your body becomes. (채소를 많이 먹을수록 몸이 건강해진다)",
+            "options": [
+              "slower",
+              "sicker",
+              "healthier",
+              "weaker"
+            ],
+            "answer": 2,
+            "explain": "채소를 많이 먹으면 몸이 '더 건강해진다(healthier)'. sicker/weaker/slower는 반대 의미로 맞지 않는다."
+          },
+          {
+            "q": "The longer you ___ a language, the more fluent you become. (오래 공부할수록 유창해진다)",
+            "options": [
+              "study",
+              "ignore",
+              "quit",
+              "avoid"
+            ],
+            "answer": 0,
+            "explain": "유창해지려면 언어를 '공부해야(study)' 한다. ignore/avoid/quit은 문맥상 반대이다."
+          },
+          {
+            "q": "The more you ___ others, the more they will trust you. (남을 도울수록 더 신뢰받는다)",
+            "options": [
+              "help",
+              "blame",
+              "ignore",
+              "cheat"
+            ],
+            "answer": 0,
+            "explain": "신뢰를 얻으려면 남을 '도와야(help)' 한다. cheat(속이다)/ignore(무시하다)/blame(탓하다)은 의미상 맞지 않는다."
+          },
+          {
+            "q": "The clearer the road signs are, the ___ it is for drivers to find their way. (표지판이 명확할수록 더 쉽다)",
+            "options": [
+              "slower",
+              "worse",
+              "harder",
+              "easier"
+            ],
+            "answer": 3,
+            "explain": "표지판이 명확하면 길 찾기가 '더 쉬워진다(easier)'. harder/slower/worse는 반대 의미이다."
+          },
+          {
+            "q": "The more customers a shop ___, the more money it earns. (손님을 많이 끌수록 돈을 많이 번다)",
+            "options": [
+              "attracts",
+              "refuses",
+              "ignores",
+              "loses"
+            ],
+            "answer": 0,
+            "explain": "돈을 많이 벌려면 손님을 '끌어야(attracts)' 한다. loses/ignores/refuses는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "The more you ___, the more mistakes you will notice and fix. (연습할수록 실수를 발견해 고친다)",
+            "options": [
+              "hide",
+              "forget",
+              "rush",
+              "practice"
+            ],
+            "answer": 3,
+            "explain": "실수를 발견해 고치려면 '연습해야(practice)' 한다. forget/hide/rush는 의미상 어울리지 않는다."
+          },
+          {
+            "q": "The colder it gets, the more ___ people become without warm clothes. (추울수록 더 불편해진다)",
+            "options": [
+              "uncomfortable",
+              "relaxed",
+              "active",
+              "comfortable"
+            ],
+            "answer": 0,
+            "explain": "따뜻한 옷 없이 추워지면 사람들은 '더 불편해진다(uncomfortable)'. comfortable/relaxed/active는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "The more time you spend outdoors, the ___ you feel. (야외에 오래 있을수록 더 상쾌하다)",
+            "options": [
+              "dirtier",
+              "sadder",
+              "lazier",
+              "fresher"
+            ],
+            "answer": 3,
+            "explain": "야외 활동은 기분을 '더 상쾌하게(fresher)' 한다. dirtier/lazier/sadder는 반대 의미이다."
+          },
+          {
+            "q": "The more he ___ to the teacher, the more he learned in class. (선생님 말을 들을수록 많이 배웠다)",
+            "options": [
+              "lied",
+              "slept",
+              "listened",
+              "shouted"
+            ],
+            "answer": 2,
+            "explain": "많이 배우려면 선생님 말을 '들어야(listened)' 한다. shouted/lied/slept는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "The more difficult the puzzle is, the more ___ you feel when you solve it. (어려운 퍼즐을 풀수록 더 뿌듯하다)",
+            "options": [
+              "angry",
+              "proud",
+              "tired",
+              "bored"
+            ],
+            "answer": 1,
+            "explain": "어려운 퍼즐을 풀면 '뿌듯함(proud)'을 느낀다. bored/tired/angry는 문맥상 어울리지 않는다."
+          },
+          {
+            "q": "The faster the runner is, the ___ he finishes the race. (빠를수록 더 일찍 완주한다)",
+            "options": [
+              "slower",
+              "sooner",
+              "later",
+              "harder"
+            ],
+            "answer": 1,
+            "explain": "빠른 주자는 경주를 '더 일찍(sooner)' 끝낸다. later/slower/harder는 반대 의미이다."
+          },
+          {
+            "q": "The more books a library ___, the more visitors it welcomes. (책이 많을수록 방문객이 많다)",
+            "options": [
+              "hides",
+              "sells",
+              "burns",
+              "holds"
+            ],
+            "answer": 3,
+            "explain": "방문객이 많으려면 도서관이 책을 많이 '보유해야(holds)' 한다. burns/hides/sells는 의미상 맞지 않는다."
           }
         ],
         "sa": [
@@ -5246,238 +5245,183 @@ export const courses = [
         "concept": "주어가 단수인지 복수인지 확인해 동사를 일치시킨다(-thing/each/every·단수, A and B·복수, 수식어구에 속지 않기).",
         "mc": [
           {
-            "q": "Every child ___ love.",
-            "options": [
-              "need",
-              "needs",
-              "are needing",
-              "do need"
-            ],
-            "answer": 1,
-            "explain": "「every+단수명사」는 단수 취급이므로 동사에 -s를 붙여 needs."
-          },
-          {
-            "q": "Tom and Jerry ___ together every afternoon.",
-            "options": [
-              "plays",
-              "play",
-              "is playing",
-              "has played"
-            ],
-            "answer": 1,
-            "explain": "「A and B」는 복수 주어이므로 동사원형 play."
-          },
-          {
-            "q": "The students ___ in the classroom.",
+            "q": "The box of old family photos ___ on the top shelf of the closet.",
             "options": [
               "is",
+              "were",
+              "have",
+              "are"
+            ],
+            "answer": 0,
+            "explain": "진짜 주어는 The box(단수), of old family photos는 수식어구이므로 is. are/were는 복수형이라 오답."
+          },
+          {
+            "q": "Tom and his brother ___ the dishes together after dinner every day.",
+            "options": [
+              "washes up",
+              "is washing",
+              "washes",
+              "wash"
+            ],
+            "answer": 3,
+            "explain": "「A and B」는 복수 주어이므로 동사원형 wash. 단수형 washes나 is washing은 오답."
+          },
+          {
+            "q": "Every seat in the two large theaters ___ already been reserved for the show.",
+            "options": [
+              "are",
+              "has",
+              "were",
+              "have"
+            ],
+            "answer": 1,
+            "explain": "「every+단수명사」인 Every seat는 단수 취급이므로 has been. 복수형 have/are/were는 오답."
+          },
+          {
+            "q": "There ___ a lot of people waiting in line for the new burger shop.",
+            "options": [
+              "was",
+              "are",
+              "has",
+              "is"
+            ],
+            "answer": 1,
+            "explain": "There 구문은 뒤 주어에 일치하고 a lot of people은 복수이므로 are. is/was는 단수라 오답."
+          },
+          {
+            "q": "A number of tourists ___ taking photos in front of the old palace.",
+            "options": [
+              "are",
+              "has",
+              "was",
+              "is"
+            ],
+            "answer": 0,
+            "explain": "「a number of+복수명사」는 '많은 ~'로 복수 취급이므로 are. 단수형 is/was/has는 오답."
+          },
+          {
+            "q": "The number of students who ride bikes to school ___ increasing every year.",
+            "options": [
+              "are",
+              "were",
+              "is",
+              "have"
+            ],
+            "answer": 2,
+            "explain": "「the number of ~」는 '~의 수'로 단수 취급이므로 is. a number of와 헷갈려 are를 고르면 오답."
+          },
+          {
+            "q": "Each of the players ___ a bottle of water before the match starts.",
+            "options": [
+              "gets",
+              "do get",
+              "are getting",
+              "get"
+            ],
+            "answer": 0,
+            "explain": "「each of+복수명사」의 핵심 주어는 each(단수)이므로 gets. 복수처럼 보이지만 get은 오답."
+          },
+          {
+            "q": "Mathematics ___ my favorite subject because I enjoy solving hard problems.",
+            "options": [
+              "have",
+              "is",
+              "were",
+              "are"
+            ],
+            "answer": 1,
+            "explain": "-s로 끝나지만 과목명 Mathematics는 단수 취급이므로 is. are/were는 오답."
+          },
+          {
+            "q": "My younger sister and I ___ going to the same school this year.",
+            "options": [
               "am",
-              "are",
-              "be"
-            ],
-            "answer": 2,
-            "explain": "복수 주어 The students에는 복수형 be동사 are."
-          },
-          {
-            "q": "The news ___ surprising.",
-            "options": [
-              "are",
-              "were",
               "is",
-              "have"
-            ],
-            "answer": 2,
-            "explain": "news는 형태는 -s로 끝나지만 단수 취급이므로 is."
-          },
-          {
-            "q": "Each of the boys ___ a bike.",
-            "options": [
-              "have",
-              "has",
-              "are",
-              "do"
-            ],
-            "answer": 1,
-            "explain": "「each of+복수명사」의 핵심 주어는 each(단수) → has."
-          },
-          {
-            "q": "Water ___ at 100°C.",
-            "options": [
-              "boil",
-              "are boiling",
-              "boils",
-              "have boiled"
-            ],
-            "answer": 2,
-            "explain": "물질명사 Water는 단수 취급, 현재의 일반적 사실 → boils."
-          },
-          {
-            "q": "My friends ___ lunch at noon.",
-            "options": [
-              "has",
-              "haves",
-              "have",
-              "is having"
-            ],
-            "answer": 2,
-            "explain": "복수 주어 My friends에는 동사원형 have."
-          },
-          {
-            "q": "Everybody ___ summer vacation.",
-            "options": [
-              "like",
-              "likes",
-              "are liking",
-              "do like"
-            ],
-            "answer": 1,
-            "explain": "-body로 끝나는 대명사(Everybody)는 단수 취급 → likes."
-          },
-          {
-            "q": "Something ___ wrong with my phone.",
-            "options": [
-              "are",
-              "were",
-              "is",
-              "have"
-            ],
-            "answer": 2,
-            "explain": "-thing으로 끝나는 대명사(Something)는 단수 취급 → is."
-          },
-          {
-            "q": "Everyone in my class ___ a smartphone.",
-            "options": [
-              "have",
-              "has",
-              "are having",
-              "do have"
-            ],
-            "answer": 1,
-            "explain": "주어는 Everyone(단수), in my class는 수식어구이므로 has."
-          },
-          {
-            "q": "The boys on the team ___ tall.",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "has"
-            ],
-            "answer": 1,
-            "explain": "주어는 The boys(복수), on the team은 수식어구이므로 are."
-          },
-          {
-            "q": "A number of people ___ waiting outside.",
-            "options": [
-              "is",
-              "was",
-              "are",
-              "has"
-            ],
-            "answer": 2,
-            "explain": "「a number of+복수명사」는 '많은 ~'로 복수 취급 → are."
-          },
-          {
-            "q": "The number of students ___ growing.",
-            "options": [
-              "are",
-              "is",
-              "were",
-              "have"
-            ],
-            "answer": 1,
-            "explain": "「the number of ~」는 '~의 수'로 단수 취급 → is."
-          },
-          {
-            "q": "Every morning, my father ___ coffee.",
-            "options": [
-              "drink",
-              "drinks",
-              "are drinking",
-              "do drink"
-            ],
-            "answer": 1,
-            "explain": "주어 my father(3인칭 단수) → drinks."
-          },
-          {
-            "q": "My parents ___ in a hospital.",
-            "options": [
-              "works",
-              "work",
-              "is working",
-              "has worked"
-            ],
-            "answer": 1,
-            "explain": "복수 주어 My parents에는 동사원형 work."
-          },
-          {
-            "q": "Math ___ my favorite subject.",
-            "options": [
-              "are",
-              "is",
-              "were",
-              "have"
-            ],
-            "answer": 1,
-            "explain": "과목명 Math는 단수 취급 → is."
-          },
-          {
-            "q": "These books ___ interesting.",
-            "options": [
-              "looks",
-              "look",
-              "is looking",
-              "looks like"
-            ],
-            "answer": 1,
-            "explain": "복수 주어 These books에는 동사원형 look."
-          },
-          {
-            "q": "Each student ___ a locker.",
-            "options": [
-              "have",
-              "are having",
-              "has",
-              "do have"
-            ],
-            "answer": 2,
-            "explain": "「each+단수명사」는 단수 취급 → has."
-          },
-          {
-            "q": "Everything ___ ready for the party.",
-            "options": [
-              "are",
-              "were",
-              "is",
-              "have"
-            ],
-            "answer": 2,
-            "explain": "-thing으로 끝나는 Everything은 단수 취급 → is."
-          },
-          {
-            "q": "Apples and oranges ___ my favorite fruits.",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "has"
-            ],
-            "answer": 1,
-            "explain": "「A and B」는 복수 주어이므로 are."
-          },
-          {
-            "q": "My sister and I ___ good friends.",
-            "options": [
-              "is",
-              "am",
               "are",
               "was"
             ],
             "answer": 2,
-            "explain": "「A and I」는 복수(we) 취급이므로 are."
+            "explain": "「A and I」는 복수(we) 취급이므로 are. am/is/was는 모두 단수라 오답."
           },
           {
-            "q": "Nobody ___ the answer.",
+            "q": "Something ___ wrong with the printer; it keeps making a strange noise.",
+            "options": [
+              "have",
+              "were",
+              "is",
+              "are"
+            ],
+            "answer": 2,
+            "explain": "-thing으로 끝나는 Something은 단수 취급이므로 is. are/were는 오답."
+          },
+          {
+            "q": "The players on the school team ___ hard every morning before class.",
+            "options": [
+              "practice",
+              "practices",
+              "is practicing",
+              "practices a lot"
+            ],
+            "answer": 0,
+            "explain": "진짜 주어는 The players(복수), on the school team은 수식어구이므로 practice. 단수형 practices는 오답."
+          },
+          {
+            "q": "Both of my parents ___ up early in the morning to go to work.",
+            "options": [
+              "wakes",
+              "is waking",
+              "wakes up",
+              "wake"
+            ],
+            "answer": 3,
+            "explain": "「both of ~」는 '둘 다'로 복수 취급이므로 wake. 단수형 wakes/is waking은 오답."
+          },
+          {
+            "q": "The information in these science books ___ very useful for my report.",
+            "options": [
+              "were",
+              "is",
+              "have",
+              "are"
+            ],
+            "answer": 1,
+            "explain": "information은 셀 수 없는 명사로 단수 취급이므로 is. 복수형 are/were는 오답."
+          },
+          {
+            "q": "Everybody in our club ___ to help clean the park this weekend.",
+            "options": [
+              "do want",
+              "are wanting",
+              "wants",
+              "want"
+            ],
+            "answer": 2,
+            "explain": "-body로 끝나는 Everybody는 단수 취급이므로 wants. want/are wanting은 오답."
+          },
+          {
+            "q": "One of my close friends ___ a beautiful garden behind her house.",
+            "options": [
+              "have",
+              "has",
+              "do have",
+              "are having"
+            ],
+            "answer": 1,
+            "explain": "「one of+복수명사」의 핵심 주어는 one(단수)이므로 has. friends에 이끌려 have를 고르면 오답."
+          },
+          {
+            "q": "The children in the playground ___ very excited about the school festival.",
+            "options": [
+              "is",
+              "are",
+              "was",
+              "has"
+            ],
+            "answer": 1,
+            "explain": "child의 복수형 children은 복수 취급이므로 are. 단수형 is/was는 오답."
+          },
+          {
+            "q": "Neither of the twins ___ how to swim in deep water yet.",
             "options": [
               "know",
               "knows",
@@ -5485,21 +5429,43 @@ export const courses = [
               "do know"
             ],
             "answer": 1,
-            "explain": "-body로 끝나는 Nobody는 단수 취급 → knows."
+            "explain": "「neither of ~」는 단수 취급이므로 knows. twins에 이끌려 know를 고르면 오답."
           },
           {
-            "q": "One of my friends ___ from Canada.",
+            "q": "My homeroom teacher, as well as her assistants, ___ ready to start the class.",
             "options": [
-              "are",
-              "come",
-              "comes",
-              "do come"
+              "were",
+              "have",
+              "is",
+              "are"
             ],
             "answer": 2,
-            "explain": "「one of+복수명사」의 핵심 주어는 one(단수) → comes."
+            "explain": "「A as well as B」는 A(My teacher, 단수)에 일치하므로 is. assistants에 이끌려 are를 고르면 오답."
           },
           {
-            "q": "The girl with the red bags ___ my cousin.",
+            "q": "The heavy boxes in the storage room ___ full of old toys and books.",
+            "options": [
+              "is",
+              "was",
+              "has",
+              "are"
+            ],
+            "answer": 3,
+            "explain": "진짜 주어는 The boxes(복수), in the storage room은 수식어구이므로 are. 단수형 is/was는 오답."
+          },
+          {
+            "q": "Water ___ into ice when the temperature drops below zero degrees.",
+            "options": [
+              "turn",
+              "do turn",
+              "turns",
+              "are turning"
+            ],
+            "answer": 2,
+            "explain": "물질명사 Water는 단수 취급이고 일반적 사실이므로 turns. turn/are turning은 오답."
+          },
+          {
+            "q": "Everything in the shops downtown ___ on sale during the holiday season.",
             "options": [
               "are",
               "were",
@@ -5507,183 +5473,216 @@ export const courses = [
               "have"
             ],
             "answer": 2,
-            "explain": "주어는 The girl(단수), with the red bags는 수식어구 → is."
+            "explain": "-thing으로 끝나는 Everything은 단수 취급이므로 is. shops에 이끌려 are를 고르면 오답."
           },
           {
-            "q": "Every student in the classes ___ a name tag.",
+            "q": "My dog and my cat ___ next to each other by the warm fire.",
+            "options": [
+              "sleeps together",
+              "is sleeping",
+              "sleep",
+              "sleeps"
+            ],
+            "answer": 2,
+            "explain": "「A and B」는 복수 주어이므로 동사원형 sleep. 단수형 sleeps/is sleeping은 오답."
+          },
+          {
+            "q": "Each country ___ its own flag, language, and special traditions.",
+            "options": [
+              "has",
+              "have",
+              "do have",
+              "are having"
+            ],
+            "answer": 0,
+            "explain": "「each+단수명사」인 Each country는 단수 취급이므로 has. have/are having은 오답."
+          },
+          {
+            "q": "The girl with the two big suitcases ___ looking for the train platform.",
             "options": [
               "have",
+              "is",
+              "are",
+              "were"
+            ],
+            "answer": 1,
+            "explain": "진짜 주어는 The girl(단수), with the two big suitcases는 수식어구이므로 is. 복수형 are/were는 오답."
+          },
+          {
+            "q": "A: Where are the boys?  B: They ___ in the gym practicing basketball now.",
+            "options": [
+              "are",
+              "was",
               "has",
-              "are",
-              "do"
+              "is"
             ],
-            "answer": 1,
-            "explain": "주어는 Every student(단수), in the classes는 수식어구 → has."
+            "answer": 0,
+            "explain": "주어 They는 복수이므로 are. 단수형 is/was는 오답."
           },
           {
-            "q": "The children ___ very noisy.",
+            "q": "Every weekend, my father and my uncle ___ jogging together in the park.",
             "options": [
-              "is",
-              "was",
-              "are",
-              "has"
+              "is going",
+              "goes out",
+              "go",
+              "goes"
             ],
             "answer": 2,
-            "explain": "child의 복수형 children은 복수 취급 → are."
+            "explain": "「A and B」는 복수 주어이므로 동사원형 go. 단수형 goes/is going은 오답."
           },
           {
-            "q": "My dog and my cat ___ every morning.",
+            "q": "Everyone in our grade ___ the new science teacher because she makes every lesson fun.",
             "options": [
-              "fights",
-              "fight",
-              "is fighting",
-              "fights each"
+              "loves",
+              "lends",
+              "loses",
+              "leaves"
+            ],
+            "answer": 0,
+            "explain": "'수업을 재미있게 해서 좋아한다'는 문맥이므로 loves. 나머지는 문법은 맞아도 의미상 어색하다."
+          },
+          {
+            "q": "The students in my class always ___ their homework before the deadline.",
+            "options": [
+              "follow",
+              "forget",
+              "freeze",
+              "finish"
+            ],
+            "answer": 3,
+            "explain": "'마감 전에 숙제를 끝낸다'는 문맥이므로 finish. forget/follow/freeze는 의미가 맞지 않는다."
+          },
+          {
+            "q": "There are many ___ in the science museum, from old rockets to real dinosaur bones.",
+            "options": [
+              "exhibits",
+              "engines",
+              "excuses",
+              "envelopes"
+            ],
+            "answer": 0,
+            "explain": "'박물관에 전시물이 많다'는 문맥이므로 exhibits(전시물). 나머지 명사는 의미상 맞지 않는다."
+          },
+          {
+            "q": "Each student needs a ___ to write down the important dates for the final exam.",
+            "options": [
+              "candle",
+              "carpet",
+              "camera",
+              "calendar"
+            ],
+            "answer": 3,
+            "explain": "'중요한 날짜를 적으려면' 달력이 필요하므로 calendar. 나머지는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "The weather today is very ___, so remember to take your umbrella with you.",
+            "options": [
+              "dry",
+              "rainy",
+              "sunny",
+              "windy"
             ],
             "answer": 1,
-            "explain": "「A and B」는 복수 주어이므로 동사원형 fight."
+            "explain": "'우산을 챙기라'는 단서로 보아 rainy(비 오는). sunny/dry는 반대 의미라 오답."
           },
           {
-            "q": "Each of us ___ a different opinion.",
+            "q": "My little brother enjoys ___ new songs on his guitar every evening.",
             "options": [
-              "have",
-              "has",
-              "are having",
-              "do have"
+              "playing",
+              "planning",
+              "praying",
+              "paying"
             ],
-            "answer": 1,
-            "explain": "「each of+복수」의 핵심 주어는 each(단수) → has."
+            "answer": 0,
+            "explain": "'기타로 노래를 연주한다'는 문맥이므로 playing. 발음이 비슷한 paying/praying은 의미가 다르다."
           },
           {
-            "q": "The information ___ useful.",
+            "q": "Please speak more ___ so that everyone at the back of the room can hear you.",
             "options": [
-              "are",
-              "were",
-              "is",
-              "have"
+              "slowly",
+              "politely",
+              "loudly",
+              "quietly"
             ],
             "answer": 2,
-            "explain": "information은 셀 수 없는 명사로 단수 취급 → is."
+            "explain": "'뒤에서도 들리게'라는 문맥이므로 loudly(크게). quietly는 반대 의미라 오답."
           },
           {
-            "q": "Both of the boys ___ soccer.",
+            "q": "Everybody in the office ___ hard to finish the big project before Friday.",
             "options": [
-              "likes",
-              "like",
-              "is liking",
-              "does like"
+              "washes",
+              "works",
+              "walks",
+              "waits"
             ],
             "answer": 1,
-            "explain": "「both of ~」는 '둘 다'로 복수 취급 → like."
+            "explain": "'프로젝트를 끝내려고 열심히'라는 문맥이므로 works. 나머지는 의미가 맞지 않는다."
           },
           {
-            "q": "There ___ many books on the desk.",
+            "q": "The library is a quiet place where students can ___ for their exams in peace.",
             "options": [
-              "is",
-              "was",
-              "are",
-              "has"
+              "sleep",
+              "study",
+              "shop",
+              "shout"
+            ],
+            "answer": 1,
+            "explain": "'시험 준비를 하는 조용한 곳'이므로 study. shout/sleep/shop은 도서관 문맥에 어색하다."
+          },
+          {
+            "q": "Both of the sisters are very ___; they always help other people without complaining.",
+            "options": [
+              "rude",
+              "selfish",
+              "lazy",
+              "kind"
+            ],
+            "answer": 3,
+            "explain": "'남을 잘 돕는다'는 문맥이므로 kind(친절한). lazy/rude/selfish는 반대 의미라 오답."
+          },
+          {
+            "q": "There is a warm ___ of fresh bread on the kitchen table for breakfast.",
+            "options": [
+              "loaf",
+              "leaf",
+              "proof",
+              "roof"
+            ],
+            "answer": 0,
+            "explain": "'빵 한 덩이'를 뜻하는 loaf가 정답. 발음이 비슷한 leaf/roof/proof는 의미가 다르다."
+          },
+          {
+            "q": "My parents always ___ me to study hard and to do my best in everything.",
+            "options": [
+              "encourage",
+              "interrupt",
+              "punish",
+              "ignore"
+            ],
+            "answer": 0,
+            "explain": "'열심히 하라고 격려한다'는 문맥이므로 encourage. interrupt/punish/ignore는 의미가 맞지 않는다."
+          },
+          {
+            "q": "Everyone found the instructions very ___, so building the toy robot was easy.",
+            "options": [
+              "heavy",
+              "loud",
+              "clear",
+              "dark"
             ],
             "answer": 2,
-            "explain": "There is/are 구문은 뒤의 주어에 일치, many books(복수) → are."
+            "explain": "'쉽게 만들었다'는 결과로 보아 설명이 clear(명확한)해야 하므로 clear. 나머지는 문맥에 안 맞는다."
           },
           {
-            "q": "There ___ a cat under the table.",
+            "q": "Our class ___ a special prize for collecting the most books this semester.",
             "options": [
-              "are",
-              "were",
-              "is",
-              "have"
+              "lost",
+              "paid",
+              "sold",
+              "won"
             ],
-            "answer": 2,
-            "explain": "There is/are 구문에서 뒤의 주어 a cat(단수) → is."
-          },
-          {
-            "q": "Everybody ___ to be happy.",
-            "options": [
-              "want",
-              "wants",
-              "are wanting",
-              "do want"
-            ],
-            "answer": 1,
-            "explain": "-body로 끝나는 Everybody는 단수 취급 → wants."
-          },
-          {
-            "q": "A: What does your brother do at night?  B: He ___ TV every night.",
-            "options": [
-              "watch",
-              "watches",
-              "are watching",
-              "do watch"
-            ],
-            "answer": 1,
-            "explain": "주어 He(3인칭 단수)의 일반동사 현재형 → watches."
-          },
-          {
-            "q": "The students and the teacher ___ in the gym.",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "has"
-            ],
-            "answer": 1,
-            "explain": "「A and B」는 복수 주어이므로 are."
-          },
-          {
-            "q": "Someone ___ knocking at the door.",
-            "options": [
-              "are",
-              "is",
-              "were",
-              "have"
-            ],
-            "answer": 1,
-            "explain": "-one으로 끝나는 Someone은 단수 취급 → is."
-          },
-          {
-            "q": "Each country ___ its own flag.",
-            "options": [
-              "have",
-              "has",
-              "are",
-              "do"
-            ],
-            "answer": 1,
-            "explain": "「each+단수명사」는 단수 취급 → has."
-          },
-          {
-            "q": "A number of cars ___ parked here.",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "has"
-            ],
-            "answer": 1,
-            "explain": "「a number of+복수명사」는 복수 취급 → are."
-          },
-          {
-            "q": "The people in the room ___ quiet.",
-            "options": [
-              "is",
-              "was",
-              "are",
-              "has"
-            ],
-            "answer": 2,
-            "explain": "people은 복수 취급, in the room은 수식어구 → are."
-          },
-          {
-            "q": "My teacher, as well as the students, ___ excited.",
-            "options": [
-              "are",
-              "were",
-              "is",
-              "have"
-            ],
-            "answer": 2,
-            "explain": "「A as well as B」는 A(My teacher, 단수)에 일치 → is."
+            "answer": 3,
+            "explain": "'가장 많이 모아서 상을 받았다'는 문맥이므로 won(받았다/이겼다). lost는 반대 의미라 오답."
           }
         ],
         "sa": [
@@ -5766,444 +5765,444 @@ export const courses = [
         "concept": "지각동사(see, watch, hear, listen to, feel, smell 등)의 목적격보어로는 to부정사가 아니라 동사원형 또는 -ing(진행·생생함)를 쓴다.",
         "mc": [
           {
-            "q": "I saw him ___ fast toward the bus stop.",
+            "q": "As the marathon began, we saw the runners ___ down the main street with great energy.",
             "options": [
-              "to run",
-              "run",
-              "ran",
-              "runs"
-            ],
-            "answer": 1,
-            "explain": "지각동사 saw의 목적격보어는 동사원형 run을 쓴다. to run(X), ran(X), runs(X)."
-          },
-          {
-            "q": "She heard the baby ___ in the next room.",
-            "options": [
-              "cry",
-              "to cry",
-              "cried",
-              "cries"
+              "race",
+              "races",
+              "raced",
+              "to race"
             ],
             "answer": 0,
-            "explain": "지각동사 heard 뒤 목적격보어는 동사원형 cry 또는 crying. to cry는 틀린 함정이다."
+            "explain": "지각동사 saw의 목적격보어는 동사원형 race를 쓴다. to race·raced·races는 모두 틀리다."
           },
           {
-            "q": "We watched them ___ on the stage all night.",
+            "q": "During the concert last night, I heard the famous singer ___ my favorite song beautifully.",
             "options": [
-              "to dance",
-              "danced",
-              "dance",
-              "dances"
-            ],
-            "answer": 2,
-            "explain": "지각동사 watched의 목적격보어는 동사원형 dance(또는 dancing). to dance는 쓰지 않는다."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 어법상 옳은 것은?",
-            "options": [
-              "I felt something to move.",
-              "I felt something move.",
-              "I felt something moves.",
-              "I felt something to moving."
-            ],
-            "answer": 1,
-            "explain": "지각동사 felt 뒤에는 동사원형 move나 moving을 쓴다. to move·moves·to moving 모두 틀리다."
-          },
-          {
-            "q": "He saw the sun ___ over the sea this morning.",
-            "options": [
-              "rise",
-              "to rise",
-              "rose",
-              "to rising"
+              "sing",
+              "sings",
+              "to sing",
+              "to singing"
             ],
             "answer": 0,
-            "explain": "지각동사 saw의 목적격보어로 동사원형 rise가 알맞다. rising도 가능하지만 rose·to rise는 안 된다."
+            "explain": "지각동사 heard의 목적격보어는 동사원형 sing이다. to sing·sings·to singing은 틀리다."
           },
           {
-            "q": "They heard a dog ___ loudly outside.",
+            "q": "When the alarm went off, everyone in the office felt the floor ___ beneath their feet.",
             "options": [
-              "to bark",
-              "barks",
-              "bark",
-              "to barking"
-            ],
-            "answer": 2,
-            "explain": "지각동사 heard 뒤 목적격보어는 동사원형 bark(또는 barking). to bark는 틀리다."
-          },
-          {
-            "q": "다음 빈칸에 들어갈 수 없는 것은?  I watched him ___ .",
-            "options": [
-              "swim",
-              "swimming",
-              "to swim",
-              "jump"
-            ],
-            "answer": 2,
-            "explain": "지각동사 watched의 목적격보어로는 동사원형이나 -ing만 가능하다. to swim은 쓸 수 없다."
-          },
-          {
-            "q": "I noticed her ___ at me from across the street.",
-            "options": [
-              "to smile",
-              "smile",
-              "smiled",
-              "to smiling"
-            ],
-            "answer": 1,
-            "explain": "notice도 지각동사처럼 목적격보어에 동사원형 smile(또는 smiling)을 쓴다. to smile은 틀리다."
-          },
-          {
-            "q": "We saw the players ___ across the field.",
-            "options": [
-              "ran",
-              "to run",
-              "running",
-              "runs"
-            ],
-            "answer": 2,
-            "explain": "지각동사 saw 뒤에는 동사원형 run 또는 -ing running을 쓴다. running이 정답이다."
-          },
-          {
-            "q": "I saw a bird ___ over the lake.",
-            "options": [
-              "fly",
-              "to fly",
-              "flew",
-              "to flying"
-            ],
-            "answer": 0,
-            "explain": "지각동사 saw의 목적격보어는 동사원형 fly(또는 flying). flew·to fly는 안 된다."
-          },
-          {
-            "q": "She heard someone ___ her name.",
-            "options": [
-              "to call",
-              "called",
-              "call",
-              "to calling"
-            ],
-            "answer": 2,
-            "explain": "지각동사 heard 뒤 목적격보어는 동사원형 call(또는 calling). to call은 틀리다."
-          },
-          {
-            "q": "We watched the sun slowly ___ behind the hills.",
-            "options": [
-              "set",
-              "to set",
-              "sets",
-              "to setting"
-            ],
-            "answer": 0,
-            "explain": "지각동사 watched의 목적격보어로 동사원형 set이 알맞다. to set·sets는 안 된다."
-          },
-          {
-            "q": "He felt the ground ___ during the earthquake.",
-            "options": [
-              "to shake",
+              "to shaking",
               "shakes",
-              "shake",
-              "to shaking"
+              "to shake",
+              "shake"
             ],
-            "answer": 2,
-            "explain": "지각동사 felt 뒤에는 동사원형 shake(또는 shaking)를 쓴다. to shake는 틀리다."
+            "answer": 3,
+            "explain": "지각동사 felt의 목적격보어는 동사원형 shake이다. to shake·shakes는 쓸 수 없다."
           },
           {
-            "q": "I saw the children ___ soccer in the park.",
-            "options": [
-              "played",
-              "playing",
-              "to play",
-              "plays"
-            ],
-            "answer": 1,
-            "explain": "지각동사 saw의 목적격보어로 동사원형 play나 -ing playing을 쓴다. playing이 정답이다."
-          },
-          {
-            "q": "They heard the rain ___ on the roof.",
+            "q": "Standing by the window, she watched the heavy rain ___ against the glass for hours.",
             "options": [
               "to fall",
-              "fall",
-              "fell",
-              "to falling"
+              "falling",
+              "falls",
+              "fell"
             ],
             "answer": 1,
-            "explain": "지각동사 heard 뒤 목적격보어는 동사원형 fall(또는 falling). to fall·fell은 안 된다."
+            "explain": "지속되는 생생한 동작이므로 지각동사 watched 뒤에 -ing falling이 자연스럽다. to fall·fell·falls는 틀리다."
           },
           {
-            "q": "She noticed him ___ the room quietly.",
+            "q": "In the early morning, the farmers noticed the cows slowly ___ toward the open field.",
             "options": [
-              "enter",
-              "to enter",
-              "entered",
-              "enters"
+              "to move",
+              "moved",
+              "to moving",
+              "moving"
+            ],
+            "answer": 3,
+            "explain": "지각동사처럼 쓰인 notice의 목적격보어로 -ing moving이 알맞다. to move·moved·to moving은 틀리다."
+          },
+          {
+            "q": "Because the door was open, I could hear my neighbors ___ loudly about the football game.",
+            "options": [
+              "argues",
+              "to argue",
+              "arguing",
+              "argued"
+            ],
+            "answer": 2,
+            "explain": "지각동사 hear의 목적격보어로 진행의 -ing arguing이 자연스럽다. to argue·argued·argues는 틀리다."
+          },
+          {
+            "q": "While waiting at the station, the boy watched a long train ___ into the platform.",
+            "options": [
+              "to coming",
+              "came",
+              "come",
+              "to come"
+            ],
+            "answer": 2,
+            "explain": "지각동사 watched의 목적격보어는 동사원형 come이다. to come·came·to coming은 틀리다."
+          },
+          {
+            "q": "From the classroom window, the students saw a small bird ___ its nest on the tree branch.",
+            "options": [
+              "build",
+              "builds",
+              "to build",
+              "to building"
             ],
             "answer": 0,
-            "explain": "지각동사처럼 쓰인 notice의 목적격보어는 동사원형 enter(또는 entering). to enter는 틀리다."
+            "explain": "지각동사 saw의 목적격보어는 동사원형 build이다. to build·builds는 쓸 수 없다."
+          },
+          {
+            "q": "As the storm grew stronger, everyone felt the old bridge ___ under the powerful wind.",
+            "options": [
+              "sway",
+              "to sway",
+              "sways",
+              "to swaying"
+            ],
+            "answer": 0,
+            "explain": "지각동사 felt의 목적격보어는 동사원형 sway이다. to sway·sways는 틀리다."
+          },
+          {
+            "q": "Late at night, she heard someone quietly ___ up the wooden stairs toward her room.",
+            "options": [
+              "walks",
+              "walked",
+              "walking",
+              "to walk"
+            ],
+            "answer": 2,
+            "explain": "지각동사 heard의 목적격보어로 진행의 -ing walking이 자연스럽다. to walk·walked·walks는 틀리다."
+          },
+          {
+            "q": "During the science class, we watched the ice slowly ___ into water under the warm lamp.",
+            "options": [
+              "to melting",
+              "melts",
+              "to melt",
+              "melt"
+            ],
+            "answer": 3,
+            "explain": "지각동사 watched의 목적격보어는 동사원형 melt이다. to melt·melts는 틀리다."
+          },
+          {
+            "q": "Sitting in the park, the old man listened to the children ___ happily near the fountain.",
+            "options": [
+              "laughed",
+              "laughs",
+              "to laugh",
+              "laugh"
+            ],
+            "answer": 3,
+            "explain": "listen to도 지각동사로, 목적격보어에 동사원형 laugh를 쓴다. to laugh·laughed·laughs는 틀리다."
           },
           {
             "q": "다음 중 어법상 옳은 문장은?",
             "options": [
-              "I heard him to sing.",
-              "I heard him sing.",
-              "I heard him sings.",
-              "I heard him to singing."
-            ],
-            "answer": 1,
-            "explain": "지각동사 heard의 목적격보어는 동사원형 sing이나 singing이다. to sing·sings·to singing은 모두 틀리다."
-          },
-          {
-            "q": "We saw the baby ___ for the first time.",
-            "options": [
-              "to cry",
-              "cries",
-              "cry",
-              "to crying"
-            ],
-            "answer": 2,
-            "explain": "지각동사 saw 뒤 목적격보어는 동사원형 cry(또는 crying). to cry는 틀리다."
-          },
-          {
-            "q": "She felt the door ___ behind her.",
-            "options": [
-              "open",
-              "to open",
-              "opened",
-              "opens"
+              "The coach saw the players practice hard.",
+              "The coach saw the players to practice hard.",
+              "The coach saw the players practices hard.",
+              "The coach saw the players to practicing hard."
             ],
             "answer": 0,
-            "explain": "지각동사 felt의 목적격보어로 동사원형 open(또는 opening)이 알맞다. to open은 안 된다."
-          },
-          {
-            "q": "They heard the birds ___ in the trees.",
-            "options": [
-              "to chirp",
-              "chirped",
-              "chirping",
-              "chirps"
-            ],
-            "answer": 2,
-            "explain": "지각동사 heard 뒤에는 동사원형 chirp나 -ing chirping을 쓴다. chirping이 정답이다."
-          },
-          {
-            "q": "I watched him ___ the street carefully.",
-            "options": [
-              "crossed",
-              "to cross",
-              "cross",
-              "crosses"
-            ],
-            "answer": 2,
-            "explain": "지각동사 watched의 목적격보어는 동사원형 cross(또는 crossing). to cross·crossed는 틀리다."
-          },
-          {
-            "q": "We felt the whole house ___ .",
-            "options": [
-              "shake",
-              "to shake",
-              "shook",
-              "shakes"
-            ],
-            "answer": 0,
-            "explain": "지각동사 felt 뒤 목적격보어는 동사원형 shake(또는 shaking). to shake·shook은 안 된다."
-          },
-          {
-            "q": "He heard someone ___ in the hallway.",
-            "options": [
-              "to laugh",
-              "laughing",
-              "laughed",
-              "laughs"
-            ],
-            "answer": 1,
-            "explain": "지각동사 heard의 목적격보어로 동사원형 laugh나 -ing laughing을 쓴다. laughing이 정답이다."
-          },
-          {
-            "q": "I saw her ___ on the stage right now.",
-            "options": [
-              "to dance",
-              "danced",
-              "dancing",
-              "dances"
-            ],
-            "answer": 2,
-            "explain": "지금 진행 중인 생생한 동작이므로 -ing dancing이 자연스럽다. to dance는 틀리다."
-          },
-          {
-            "q": "I heard him ___ the piano beautifully.",
-            "options": [
-              "play",
-              "to play",
-              "played",
-              "plays"
-            ],
-            "answer": 0,
-            "explain": "지각동사 heard의 목적격보어는 동사원형 play(또는 playing). to play·played는 안 된다."
-          },
-          {
-            "q": "We saw a star ___ from the sky.",
-            "options": [
-              "to fall",
-              "fell",
-              "fall",
-              "to falling"
-            ],
-            "answer": 2,
-            "explain": "지각동사 saw 뒤 목적격보어는 동사원형 fall(또는 falling). to fall·fell은 틀리다."
-          },
-          {
-            "q": "She watched the children ___ in the yard.",
-            "options": [
-              "to play",
-              "played",
-              "play",
-              "plays"
-            ],
-            "answer": 2,
-            "explain": "지각동사 watched의 목적격보어는 동사원형 play(또는 playing). to play·played는 안 된다."
-          },
-          {
-            "q": "I felt the wind ___ against my face.",
-            "options": [
-              "blew",
-              "to blow",
-              "blow",
-              "blows"
-            ],
-            "answer": 2,
-            "explain": "지각동사 felt 뒤에는 동사원형 blow(또는 blowing). to blow·blew는 틀리다."
-          },
-          {
-            "q": "They saw the train ___ into the station.",
-            "options": [
-              "to come",
-              "came",
-              "come",
-              "to coming"
-            ],
-            "answer": 2,
-            "explain": "지각동사 saw의 목적격보어는 동사원형 come(또는 coming). to come·came은 안 된다."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분을 잘못 고친 것은?  I saw him to open the box.",
-            "options": [
-              "to open → open",
-              "to open → opening",
-              "to open → opened",
-              "밑줄은 open으로 고쳐야 한다"
-            ],
-            "answer": 2,
-            "explain": "지각동사 뒤 목적격보어는 open(동사원형)이나 opening(-ing)으로 고쳐야 한다. opened(과거형)로는 고칠 수 없다."
-          },
-          {
-            "q": "We saw the rain ___ hard outside the window.",
-            "options": [
-              "to fall",
-              "falling",
-              "fell",
-              "falls"
-            ],
-            "answer": 1,
-            "explain": "지각동사 saw의 목적격보어로 동사원형 fall이나 -ing falling을 쓴다. falling이 정답이다."
-          },
-          {
-            "q": "Listen! Can you hear the phone ___ ?",
-            "options": [
-              "to ring",
-              "rings",
-              "ring",
-              "to ringing"
-            ],
-            "answer": 2,
-            "explain": "지각동사 hear의 목적격보어는 동사원형 ring(또는 ringing). to ring·rings는 안 된다."
+            "explain": "지각동사 saw의 목적격보어는 동사원형 practice이다. to practice·practices·to practicing은 모두 틀리다."
           },
           {
             "q": "다음 중 어법상 틀린 문장은?",
             "options": [
-              "I watched them dance.",
-              "I watched them dancing.",
-              "I watched them to dance.",
-              "I watched them run."
-            ],
-            "answer": 2,
-            "explain": "지각동사 watched 뒤에는 동사원형이나 -ing만 온다. to dance는 틀린 문장이다."
-          },
-          {
-            "q": "I smelled something ___ in the kitchen.",
-            "options": [
-              "to burn",
-              "burned",
-              "burning",
-              "burns"
-            ],
-            "answer": 2,
-            "explain": "smell도 지각동사로, 목적격보어에 동사원형 burn이나 -ing burning을 쓴다. burning이 정답이다."
-          },
-          {
-            "q": "다음 빈칸에 알맞은 것은?  We ___ him climb the wall.",
-            "options": [
-              "wanted",
-              "watched",
-              "told",
-              "asked"
-            ],
-            "answer": 1,
-            "explain": "목적격보어로 동사원형 climb이 왔으므로 지각동사 watched가 알맞다. want·tell·ask는 to부정사를 취한다."
-          },
-          {
-            "q": "She listened to him ___ a song.",
-            "options": [
-              "to sing",
-              "sang",
-              "sing",
-              "sings"
-            ],
-            "answer": 2,
-            "explain": "listen to도 지각동사로, 목적격보어에 동사원형 sing(또는 singing)을 쓴다. to sing은 틀리다."
-          },
-          {
-            "q": "다음 중 지각동사가 아닌 것은?",
-            "options": [
-              "watch",
-              "hear",
-              "want",
-              "feel"
-            ],
-            "answer": 2,
-            "explain": "watch·hear·feel은 지각동사이지만 want는 to부정사를 목적격보어로 취하는 동사이다."
-          },
-          {
-            "q": "I saw him ___ and ___ to the music.",
-            "options": [
-              "to jump / to move",
-              "jump / move",
-              "jumped / moved",
-              "jumps / moves"
-            ],
-            "answer": 1,
-            "explain": "지각동사 saw의 목적격보어는 두 개 모두 동사원형 jump·move를 쓴다. to부정사·과거형은 안 된다."
-          },
-          {
-            "q": "다음 우리말을 영어로 옳게 옮긴 것은?  '나는 그가 춤추는 것을 보았다.'",
-            "options": [
-              "I saw him to dance.",
-              "I saw him dance.",
-              "I saw him danced.",
-              "I saw him dances."
-            ],
-            "answer": 1,
-            "explain": "지각동사 saw의 목적격보어는 동사원형 dance(또는 dancing). to dance·danced·dances는 틀리다."
-          },
-          {
-            "q": "Everyone felt the bridge ___ in the strong wind.",
-            "options": [
-              "moving",
-              "to move",
-              "moved",
-              "to moving"
+              "I heard the wind to blow all night.",
+              "I heard the wind blowing all night.",
+              "I heard the wind howl all night.",
+              "I heard the wind blow all night."
             ],
             "answer": 0,
-            "explain": "지각동사 felt의 목적격보어로 동사원형 move나 -ing moving을 쓴다. moving이 정답이다."
+            "explain": "지각동사 heard 뒤에는 동사원형이나 -ing만 온다. to blow가 들어간 문장이 틀리다."
+          },
+          {
+            "q": "다음 빈칸에 들어갈 수 없는 것은?  On the field trip, we watched the dolphins ___ in the deep blue sea.",
+            "options": [
+              "to swim",
+              "jump",
+              "swim",
+              "swimming"
+            ],
+            "answer": 0,
+            "explain": "지각동사 watched의 목적격보어로는 동사원형이나 -ing만 가능하다. to swim은 쓸 수 없다."
+          },
+          {
+            "q": "Standing at the gate, the guard ___ a stranger climb over the tall fence quickly.",
+            "options": [
+              "allowed",
+              "wanted",
+              "watched",
+              "told"
+            ],
+            "answer": 2,
+            "explain": "목적격보어로 동사원형 climb이 왔으므로 지각동사 watched가 알맞다. want·tell·allow는 to부정사를 취한다."
+          },
+          {
+            "q": "다음 빈칸에 알맞은 것은?  We ___ the actor perform on the stage for almost two hours.",
+            "options": [
+              "expected",
+              "wanted",
+              "watched",
+              "hoped"
+            ],
+            "answer": 2,
+            "explain": "목적격보어로 동사원형 perform이 왔으므로 지각동사 watched가 알맞다. hope·want·expect는 to부정사를 취한다."
+          },
+          {
+            "q": "The manager ___ the new workers carry the heavy boxes into the storage room.",
+            "options": [
+              "asked",
+              "forced",
+              "watched",
+              "ordered"
+            ],
+            "answer": 2,
+            "explain": "목적격보어로 동사원형 carry가 왔으므로 지각동사 watched가 알맞다. order·ask·force는 to부정사를 취한다."
+          },
+          {
+            "q": "As soon as the movie started, the children saw the superhero ___ high into the sky.",
+            "options": [
+              "to fly",
+              "to flying",
+              "fly",
+              "flew"
+            ],
+            "answer": 2,
+            "explain": "지각동사 saw의 목적격보어는 동사원형 fly이다. to fly·flew는 쓸 수 없다."
+          },
+          {
+            "q": "Every evening, the guests can hear the ocean waves gently ___ against the shore.",
+            "options": [
+              "crashed",
+              "crashes",
+              "crashing",
+              "to crash"
+            ],
+            "answer": 2,
+            "explain": "지각동사 hear의 목적격보어로 진행의 -ing crashing이 자연스럽다. to crash·crashed·crashes는 틀리다."
+          },
+          {
+            "q": "The nurse felt the patient's hand ___ slightly when she checked his temperature.",
+            "options": [
+              "moves",
+              "to move",
+              "move",
+              "to moving"
+            ],
+            "answer": 2,
+            "explain": "지각동사 felt의 목적격보어는 동사원형 move이다. to move·moves는 틀리다."
+          },
+          {
+            "q": "During the parade, thousands of people watched the soldiers ___ proudly down the main avenue.",
+            "options": [
+              "marches",
+              "march",
+              "marched",
+              "to march"
+            ],
+            "answer": 1,
+            "explain": "지각동사 watched의 목적격보어는 동사원형 march이다. to march·marched·marches는 틀리다."
+          },
+          {
+            "q": "Right now, if you look outside, you can see the snow ___ softly on the empty streets.",
+            "options": [
+              "to fall",
+              "fell",
+              "falling",
+              "falls"
+            ],
+            "answer": 2,
+            "explain": "'right now' 지금 진행 중인 생생한 동작이므로 -ing falling이 알맞다. to fall·fell·falls는 틀리다."
+          },
+          {
+            "q": "다음 우리말을 영어로 옳게 옮긴 것은?  '우리는 그 새들이 노래하는 것을 들었다.'",
+            "options": [
+              "We heard the birds to singing.",
+              "We heard the birds sing.",
+              "We heard the birds to sing.",
+              "We heard the birds sang."
+            ],
+            "answer": 1,
+            "explain": "지각동사 heard의 목적격보어는 동사원형 sing(또는 singing)이다. to sing·sang·to singing은 틀리다."
+          },
+          {
+            "q": "밑줄 친 부분을 바르게 고친 것으로 알맞지 않은 것은?  I saw the man to enter the building.",
+            "options": [
+              "to enter → entered",
+              "enter 또는 entering 둘 다 가능하다",
+              "to enter → entering",
+              "to enter → enter"
+            ],
+            "answer": 0,
+            "explain": "지각동사 뒤 목적격보어는 enter(동사원형)나 entering(-ing)으로 고쳐야 한다. entered(과거형)로는 고칠 수 없다."
+          },
+          {
+            "q": "At the zoo, the excited kids saw a monkey ___ from one tree to another.",
+            "options": [
+              "to jump",
+              "jumped",
+              "jump",
+              "jumps"
+            ],
+            "answer": 2,
+            "explain": "지각동사 saw의 목적격보어는 동사원형 jump이다. to jump·jumped·jumps는 틀리다."
+          },
+          {
+            "q": "It was so dark inside the cave that I couldn't ___ anything in front of me, not even my own hands.",
+            "options": [
+              "smell",
+              "taste",
+              "listen",
+              "see"
+            ],
+            "answer": 3,
+            "explain": "어두워서 눈으로 볼 수 없다는 의미이므로 see가 알맞다. listen·smell·taste는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "The soup smelled delicious, and I could almost ___ the fresh vegetables cooked in it.",
+            "options": [
+              "hear",
+              "watch",
+              "notice",
+              "taste"
+            ],
+            "answer": 3,
+            "explain": "음식의 맛을 느낀다는 의미이므로 taste가 알맞다. hear·watch·notice는 의미상 어색하다."
+          },
+          {
+            "q": "Please be quiet for a moment—I think I can ___ someone calling my name from downstairs.",
+            "options": [
+              "taste",
+              "watch",
+              "look",
+              "hear"
+            ],
+            "answer": 3,
+            "explain": "소리를 듣는다는 의미이므로 hear가 알맞다. look·watch는 시각, taste는 미각이라 문맥에 안 맞는다."
+          },
+          {
+            "q": "From the airplane window, the passengers could ___ the beautiful mountains far below them.",
+            "options": [
+              "smell",
+              "hear",
+              "listen",
+              "see"
+            ],
+            "answer": 3,
+            "explain": "멀리 있는 산을 눈으로 본다는 의미이므로 see가 알맞다. listen·hear는 청각, smell은 후각이라 맞지 않는다."
+          },
+          {
+            "q": "The careful scientist quietly ___ the small insect moving slowly across the green leaf.",
+            "options": [
+              "decided",
+              "forgot",
+              "shouted",
+              "observed"
+            ],
+            "answer": 3,
+            "explain": "곤충을 관찰한다는 의미이므로 observed가 알맞다. shout·forget·decide는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "The audience sat silently and listened very ___ to the pianist during the whole performance.",
+            "options": [
+              "careful",
+              "careless",
+              "care",
+              "carefully"
+            ],
+            "answer": 3,
+            "explain": "동사 listened를 꾸미는 부사가 필요하므로 carefully가 알맞다. careful·careless는 형용사, care는 명사·동사이다."
+          },
+          {
+            "q": "Everyone felt a ___ wind blow through the open window on that freezing winter night.",
+            "options": [
+              "colds",
+              "coldness",
+              "coldly",
+              "cold"
+            ],
+            "answer": 3,
+            "explain": "명사 wind를 꾸미는 형용사가 필요하므로 cold가 알맞다. coldly는 부사, coldness는 명사이다."
+          },
+          {
+            "q": "The whole family listened ___ the radio as the exciting soccer match continued late into the night.",
+            "options": [
+              "on",
+              "at",
+              "for",
+              "to"
+            ],
+            "answer": 3,
+            "explain": "'~을 듣다'는 listen to이므로 전치사 to가 알맞다. at·on·for는 함께 쓰지 않는다."
+          },
+          {
+            "q": "The little girl quietly looked ___ the bright stars in the clear night sky for a long time.",
+            "options": [
+              "of",
+              "at",
+              "in",
+              "to"
+            ],
+            "answer": 1,
+            "explain": "'~을 바라보다'는 look at이므로 전치사 at이 알맞다. to·in·of는 어색하다."
+          },
+          {
+            "q": "The kitchen was suddenly full of smoke, and we could clearly ___ something burning on the stove.",
+            "options": [
+              "listen",
+              "hear",
+              "sound",
+              "smell"
+            ],
+            "answer": 3,
+            "explain": "타는 냄새를 맡는다는 의미이므로 smell이 알맞다. hear·listen·sound는 소리와 관련되어 맞지 않는다."
+          },
+          {
+            "q": "The old wooden stairs made a strange noise, so she walked up them very ___ so no one would wake up.",
+            "options": [
+              "quiet",
+              "quietly",
+              "quietness",
+              "quieter"
+            ],
+            "answer": 1,
+            "explain": "동사 walked를 꾸미는 부사가 필요하므로 quietly가 알맞다. quiet는 형용사, quietness는 명사이다."
+          },
+          {
+            "q": "When I touched the metal gate in the middle of winter, I could really ___ how cold it was.",
+            "options": [
+              "feel",
+              "hear",
+              "smell",
+              "see"
+            ],
+            "answer": 0,
+            "explain": "차가움을 손으로 느낀다는 의미이므로 feel이 알맞다. hear·see·smell은 문맥에 맞지 않는다."
+          },
+          {
+            "q": "The music at the birthday party was so ___ that we could hear it from the next street.",
+            "options": [
+              "loudness",
+              "loud",
+              "louder",
+              "loudly"
+            ],
+            "answer": 1,
+            "explain": "'so ___ that' 구문에서 be동사 뒤 보어로 형용사 loud가 알맞다. loudly는 부사, loudness는 명사이다."
+          },
+          {
+            "q": "Standing quietly near the river, the children ___ the fish jumping out of the clear water.",
+            "options": [
+              "heard",
+              "tasted",
+              "watched",
+              "smelled"
+            ],
+            "answer": 2,
+            "explain": "물고기가 뛰는 모습을 지켜본다는 의미이므로 watched가 알맞다. hear·taste·smell은 문맥에 맞지 않는다."
           }
         ],
         "sa": [
@@ -6296,183 +6295,194 @@ export const courses = [
         "concept": "목적격 관계대명사는 사람이면 who(m)/that, 사물이면 which/that을 쓰고 뒤에 '주어+동사'가 오며 생략할 수 있다.",
         "mc": [
           {
-            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThis is the book ___ I bought yesterday.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe novel ___ our English teacher recommended became a bestseller.",
             "options": [
-              "who",
               "which",
-              "whose",
-              "what"
+              "who",
+              "what",
+              "whose"
             ],
-            "answer": 1,
-            "explain": "선행사 the book이 사물이고 목적격이므로 which(또는 that)를 쓴다. 뒤에 'I bought(주어+동사)'가 온다."
+            "answer": 0,
+            "explain": "선행사 The novel은 사물이고 뒤에 'our teacher recommended(주어+동사)'가 오는 목적격이므로 which를 쓴다. 사람용 who, 소유격 whose, 선행사 없는 what은 틀리다."
           },
           {
-            "q": "다음 빈칸에 알맞은 것을 고르시오.\nShe is the girl ___ I met at the party.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nMy uncle, ___ I visited last summer, lives near the ocean.",
             "options": [
-              "which",
               "whom",
-              "whose",
-              "it"
+              "which",
+              "it",
+              "whose"
             ],
-            "answer": 1,
-            "explain": "선행사 the girl이 사람이고 목적격이므로 whom(또는 who/that)을 쓴다. 뒤에 'I met'이 온다."
+            "answer": 0,
+            "explain": "선행사 My uncle은 사람이고 visited의 목적어이므로 목적격 whom을 쓴다. 사물용 which, 소유격 whose, 대명사 it은 관계대명사가 아니다."
           },
           {
-            "q": "빈칸에 들어갈 수 없는 것을 고르시오.\nThat is the movie ___ we watched last night.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe smartphone ___ I dropped on the floor still works well.",
             "options": [
-              "which",
-              "that",
               "who",
-              "생략"
+              "what",
+              "that",
+              "whose"
             ],
             "answer": 2,
-            "explain": "선행사 the movie는 사물이므로 which/that을 쓰거나 목적격이라 생략할 수 있다. 사람에 쓰는 who는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 들어갈 수 없는 것을 고르시오.\nHe is the singer ___ everyone loves.",
-            "options": [
-              "whom",
-              "who",
-              "that",
-              "which"
-            ],
-            "answer": 3,
-            "explain": "선행사 the singer는 사람이므로 who(m)/that을 쓴다. 사물에 쓰는 which는 올 수 없다."
+            "explain": "선행사 The smartphone은 사물이고 목적격이므로 that(또는 which)을 쓴다. 사람용 who, 소유격 whose는 틀리다."
           },
           {
             "q": "다음 중 어법상 옳은 문장을 고르시오.",
             "options": [
-              "This is the cake which my mom made it.",
-              "This is the cake which my mom made.",
-              "This is the cake who my mom made.",
-              "This is the cake which made my mom."
+              "The letter who she wrote was long.",
+              "The letter which she wrote was long.",
+              "The letter which wrote she was long.",
+              "The letter which she wrote it was long."
             ],
             "answer": 1,
-            "explain": "목적격 관계대명사 which 뒤의 동사 made의 목적어 자리는 비어야 한다. it을 다시 쓰면 안 되고, 사물이므로 who도 틀리다."
+            "explain": "목적격 관계대명사 which 뒤 동사 wrote의 목적어 자리는 비워야 하므로 it을 다시 쓰면 안 된다. 사물이라 who도, 어순이 뒤바뀐 것도 틀리다."
           },
           {
-            "q": "두 문장을 하나로 바르게 연결한 것을 고르시오.\nHere is the pen. You lost it.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nI have a classmate ___ father runs a bakery downtown.",
             "options": [
-              "Here is the pen who you lost.",
-              "Here is the pen which you lost it.",
-              "Here is the pen that you lost.",
-              "Here is the pen that lost you."
-            ],
-            "answer": 2,
-            "explain": "the pen은 사물이고 lost의 목적어이므로 that/which를 쓰고, 대명사 it은 삭제한다."
-          },
-          {
-            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe bag ___ you bought looks nice.",
-            "options": [
-              "who",
               "whom",
-              "that",
+              "which",
+              "who",
+              "whose"
+            ],
+            "answer": 3,
+            "explain": "뒤에 명사 father가 바로 오고 '~의 아버지'라는 소유 관계이므로 소유격 whose를 쓴다. 목적격 whom과는 구분해야 한다."
+          },
+          {
+            "q": "두 문장을 하나로 바르게 연결한 것을 고르시오.\nThis is the song. Everyone loves it.",
+            "options": [
+              "This is the song that everyone loves.",
+              "This is the song who everyone loves.",
+              "This is the song which everyone loves it.",
+              "This is the song that loves everyone."
+            ],
+            "answer": 0,
+            "explain": "the song은 사물이고 loves의 목적어이므로 that/which를 쓰고 대명사 it은 삭제한다. 사람용 who와 의미가 뒤바뀐 것은 틀리다."
+          },
+          {
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe movie ___ we saw last night made everyone cry.",
+            "options": [
+              "whom",
+              "who",
+              "which",
               "whose"
             ],
             "answer": 2,
-            "explain": "선행사 the bag은 사물이고 목적격이므로 that(또는 which)을 쓴다. 뒤에 'you bought'가 온다."
+            "explain": "선행사 The movie는 사물이고 목적격이므로 which(또는 that)를 쓴다. 사람용 who(m), 소유격 whose는 틀리다."
           },
           {
             "q": "밑줄 친 관계대명사를 생략할 수 있는 문장을 고르시오.",
             "options": [
-              "I have a friend who lives in Busan.",
-              "The book which is on the desk is mine.",
-              "This is the song that I like.",
-              "The boy who broke the window ran away."
+              "I know a boy who plays the drums.",
+              "The pen which is on the table is mine.",
+              "The girl who won the prize is happy.",
+              "This is the movie that we enjoyed."
             ],
-            "answer": 2,
-            "explain": "목적격 관계대명사(that I like)는 생략할 수 있다. 나머지는 모두 주격이라 생략할 수 없다."
+            "answer": 3,
+            "explain": "목적격 관계대명사(that we enjoyed)는 생략할 수 있다. 나머지는 모두 주격이라 생략할 수 없다."
+          },
+          {
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThat is the scientist ___ discovery surprised the world.",
+            "options": [
+              "whose",
+              "which",
+              "who",
+              "whom"
+            ],
+            "answer": 0,
+            "explain": "뒤에 명사 discovery가 바로 오고 '~의 발견'이라는 소유 관계이므로 소유격 whose를 쓴다. 목적격 whom과 구분해야 한다."
           },
           {
             "q": "빈칸에 which를 쓸 수 있는 문장을 고르시오.",
             "options": [
-              "She is the teacher ___ I respect.",
-              "The food ___ he cooked was delicious.",
-              "They are the friends ___ I trust.",
-              "He is the boy ___ I met."
-            ],
-            "answer": 1,
-            "explain": "which는 사물 선행사에 쓴다. the food만 사물이고 나머지는 모두 사람이다."
-          },
-          {
-            "q": "다음 문장의 빈칸에 알맞은 것을 고르시오.\nThe people ___ we met were kind.",
-            "options": [
-              "which",
-              "whom",
-              "whose",
-              "it"
-            ],
-            "answer": 1,
-            "explain": "선행사 the people은 사람이고 목적격이므로 whom(또는 who/that)을 쓴다."
-          },
-          {
-            "q": "밑줄 친 부분이 어법상 틀린 것을 고르시오.",
-            "options": [
-              "This is the house that they built.",
-              "The song which I love is popular.",
-              "She is the girl whom I like.",
-              "That is the movie which we saw it."
-            ],
-            "answer": 3,
-            "explain": "목적격 관계대명사 which 뒤에는 목적어 it을 다시 쓰지 않는다. 'which we saw'가 옳다."
-          },
-          {
-            "q": "빈칸에 공통으로 들어갈 수 있는 것을 고르시오.\nThe man ___ I saw was tall.\nThe car ___ I saw was red.",
-            "options": [
-              "who",
-              "which",
-              "that",
-              "whom"
+              "They are the players ___ we cheered for.",
+              "He is the man ___ I called.",
+              "The dessert ___ he made was sweet.",
+              "She is the doctor ___ I trust."
             ],
             "answer": 2,
-            "explain": "that은 사람과 사물 선행사에 모두 쓸 수 있다. who는 사물에, which는 사람에 쓸 수 없다."
+            "explain": "which는 사물 선행사에 쓴다. the dessert만 사물이고 나머지는 모두 사람이다."
           },
           {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르시오.\n'그가 요리한 그 음식은 맛있었다.'",
+            "q": "다음 중 어법상 옳지 않은 문장을 고르시오.",
             "options": [
-              "The food who he cooked was delicious.",
-              "The food which he cooked was delicious.",
-              "The food which cooked he was delicious.",
-              "The food which he cooked it was delicious."
+              "The song I heard on the radio was nice.",
+              "The boy which I met is very kind.",
+              "This is the bike that I ride every day.",
+              "The cake which mom baked was delicious."
             ],
             "answer": 1,
-            "explain": "the food는 사물이므로 which를 쓰고 뒤에 'he cooked(주어+동사)'가 온다. it은 반복하지 않는다."
+            "explain": "the boy는 사람이므로 사물용 which를 쓸 수 없고 who(m)/that을 써야 한다. 나머지는 옳은 문장이다."
+          },
+          {
+            "q": "빈칸에 공통으로 들어갈 수 있는 것을 고르시오.\nThe man ___ I helped was grateful.\nThe box ___ I carried was heavy.",
+            "options": [
+              "that",
+              "who",
+              "which",
+              "whom"
+            ],
+            "answer": 0,
+            "explain": "that은 사람(the man)과 사물(the box) 선행사에 모두 쓸 수 있는 목적격 관계대명사이다. who는 사물에, which는 사람에 쓸 수 없다."
+          },
+          {
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe guests ___ we invited to the party arrived on time.",
+            "options": [
+              "which",
+              "it",
+              "whom",
+              "whose"
+            ],
+            "answer": 2,
+            "explain": "선행사 The guests는 사람이고 목적격이므로 whom(또는 who/that)을 쓴다. 사물용 which, 소유격 whose는 틀리다."
+          },
+          {
+            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르시오.\n'이것은 그가 그린 그림이다.'",
+            "options": [
+              "This is the picture who he drew.",
+              "This is the picture which drew he.",
+              "This is the picture which he drew.",
+              "This is the picture which he drew it."
+            ],
+            "answer": 2,
+            "explain": "the picture는 사물이므로 which를 쓰고 뒤에 'he drew(주어+동사)'가 온다. 사람용 who, 어순 오류, 목적어 it 반복은 틀리다."
           },
           {
             "q": "다음 중 주격 관계대명사가 쓰인 문장을 고르시오.",
             "options": [
-              "This is the book that I read.",
-              "The dog that runs fast is mine.",
-              "She is the girl whom I met.",
-              "The cake which mom made was sweet."
+              "The soup which mom cooked was hot.",
+              "The train that arrives at nine is fast.",
+              "She is the girl whom I like.",
+              "This is the book that I borrowed."
             ],
             "answer": 1,
-            "explain": "'that runs fast'는 뒤에 동사가 바로 와서 주격이다. 나머지는 뒤에 '주어+동사'가 오는 목적격이다."
+            "explain": "'that arrives at nine'은 뒤에 동사가 바로 와서 주격이다. 나머지는 뒤에 '주어+동사'가 오는 목적격이다."
           },
           {
             "q": "다음 중 목적격 관계대명사가 쓰인 문장을 고르시오.",
             "options": [
-              "I know a boy who plays soccer.",
-              "The girl who is singing is my sister.",
-              "The pen which you lost is here.",
-              "The bird which sings is beautiful."
+              "The watch which you gave me is nice.",
+              "The bird which sings well is rare.",
+              "The girl who is dancing is my sister.",
+              "I have a dog which barks loudly."
             ],
-            "answer": 2,
-            "explain": "'which you lost'는 뒤에 '주어(you)+동사(lost)'가 와서 목적격이다. 나머지는 뒤에 동사가 바로 오는 주격이다."
+            "answer": 0,
+            "explain": "'which you gave me'는 뒤에 '주어(you)+동사(gave)'가 와서 목적격이다. 나머지는 뒤에 동사가 바로 오는 주격이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르시오.\nThat is the house ___ they built.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThat is the house ___ my grandparents built long ago.",
             "options": [
               "who",
-              "whom",
               "that",
+              "whom",
               "whose"
             ],
-            "answer": 2,
-            "explain": "선행사 the house는 사물이고 목적격이므로 that(또는 which)을 쓴다."
+            "answer": 1,
+            "explain": "선행사 the house는 사물이고 목적격이므로 that(또는 which)을 쓴다. 사람용 who(m), 소유격 whose는 틀리다."
           },
           {
-            "q": "다음 문장에서 생략된 관계대명사가 들어갈 위치를 고르시오.\nThis is (①) the (②) picture (③) you (④) drew.",
+            "q": "다음 문장에서 생략된 관계대명사가 들어갈 위치를 고르시오.\nThat is (①) the (②) sandwich (③) she (④) made.",
             "options": [
               "①",
               "②",
@@ -6480,260 +6490,249 @@ export const courses = [
               "④"
             ],
             "answer": 2,
-            "explain": "선행사 the picture 바로 뒤(③)에 목적격 관계대명사가 생략되었다. 'the picture (that) you drew'"
+            "explain": "선행사 the sandwich 바로 뒤(③)에 목적격 관계대명사가 생략되었다. 'the sandwich (that) she made'."
           },
           {
-            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe teacher ___ I respect is strict.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe manager ___ I talked to yesterday was very kind.",
             "options": [
-              "which",
-              "whom",
               "whose",
-              "what"
+              "which",
+              "what",
+              "whom"
             ],
-            "answer": 1,
-            "explain": "선행사 the teacher는 사람이고 목적격이므로 whom(또는 who/that)을 쓴다."
+            "answer": 3,
+            "explain": "선행사 The manager는 사람이고 (전치사 to의) 목적격이므로 whom(또는 who/that)을 쓴다. 사물용 which, 소유격 whose는 틀리다."
           },
           {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르시오.\nA: Which book do you want?\nB: I want the book ___ you recommended.",
+            "q": "다음 대화의 빈칸에 알맞은 것을 고르시오.\nA: Which movie do you mean?\nB: The one ___ my brother directed last year.",
             "options": [
               "who",
-              "that",
               "whose",
-              "what"
+              "what",
+              "that"
+            ],
+            "answer": 3,
+            "explain": "선행사 The one(=movie)은 사물이고 목적격이므로 that(또는 which)을 쓴다. 뒤에 'my brother directed'가 온다."
+          },
+          {
+            "q": "밑줄 친 부분이 어법상 틀린 것을 고르시오.",
+            "options": [
+              "The email which I sent is important.",
+              "He is the friend whom I trust.",
+              "This is the ring that she chose.",
+              "That is the game which we played it."
+            ],
+            "answer": 3,
+            "explain": "목적격 관계대명사 which 뒤에는 목적어 it을 다시 쓰지 않는다. 'which we played'가 옳다."
+          },
+          {
+            "q": "두 문장을 하나로 바르게 연결한 것을 고르시오.\nShe is the singer. We saw her on TV.",
+            "options": [
+              "She is the singer which we saw on TV.",
+              "She is the singer whom we saw on TV.",
+              "She is the singer who saw we on TV.",
+              "She is the singer whom we saw her on TV."
             ],
             "answer": 1,
-            "explain": "선행사 the book은 사물이고 목적격이므로 that(또는 which)을 쓴다. 뒤에 'you recommended'가 온다."
+            "explain": "the singer는 사람이고 saw의 목적어이므로 whom(who/that)을 쓰고 대명사 her는 삭제한다. 사물용 which, it/her 반복, 어순 오류는 틀리다."
           },
           {
-            "q": "다음 중 어법상 옳지 않은 문장을 고르시오.",
+            "q": "다음 빈칸에 알맞은 것을 고르시오.\nThe report ___ we need for the meeting is almost ready.",
             "options": [
-              "She is the girl I like.",
-              "This is the cake I made.",
-              "The boy which I met is kind.",
-              "The song I heard was nice."
-            ],
-            "answer": 2,
-            "explain": "the boy는 사람이므로 which를 쓸 수 없다. who(m)/that을 써야 한다. 나머지는 목적격 관계대명사가 생략된 옳은 문장이다."
-          },
-          {
-            "q": "두 문장을 하나로 바르게 연결한 것을 고르시오.\nShe is the girl. I met her yesterday.",
-            "options": [
-              "She is the girl which I met yesterday.",
-              "She is the girl whom I met yesterday.",
-              "She is the girl whom I met her yesterday.",
-              "She is the girl who met I yesterday."
-            ],
-            "answer": 1,
-            "explain": "the girl은 사람이고 met의 목적어이므로 whom(who/that)을 쓰고, 대명사 her는 삭제한다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오.\nThe information ___ we need is on the website.",
-            "options": [
-              "who",
               "whom",
-              "which",
-              "whose"
+              "whose",
+              "who",
+              "which"
             ],
-            "answer": 2,
-            "explain": "선행사 the information은 사물이고 목적격이므로 which(또는 that)를 쓴다."
+            "answer": 3,
+            "explain": "선행사 The report는 사물이고 목적격이므로 which(또는 that)를 쓴다."
           },
           {
             "q": "다음 중 관계대명사를 생략할 수 없는 문장을 고르시오.",
             "options": [
-              "This is the bike that I want.",
-              "The girl who knows the answer is smart.",
-              "The letter which he wrote is long.",
-              "The guests whom I invited came."
+              "This is the phone that I want.",
+              "The doctor who cured me is famous.",
+              "The novel which he wrote is long.",
+              "The people whom we met were nice."
             ],
             "answer": 1,
-            "explain": "'who knows'는 주격 관계대명사라서 생략할 수 없다. 나머지는 모두 목적격이라 생략할 수 있다."
+            "explain": "'who cured me'는 주격 관계대명사라 생략할 수 없다. 나머지는 모두 목적격이라 생략할 수 있다."
           },
           {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르시오.\n'이것은 그가 쓴 편지다.'",
+            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르시오.\n'그녀는 내가 존경하는 선생님이다.'",
             "options": [
-              "This is the letter who he wrote.",
-              "This is the letter which he wrote.",
-              "This is the letter which wrote he.",
-              "This is the letter he wrote it."
-            ],
-            "answer": 1,
-            "explain": "the letter는 사물이므로 which(또는 that, 생략)를 쓰고 뒤에 'he wrote'가 온다. it은 반복하지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오.\nHe is the friend ___ I trust the most.",
-            "options": [
-              "which",
-              "whom",
-              "whose",
-              "what"
-            ],
-            "answer": 1,
-            "explain": "선행사 the friend는 사람이고 목적격이므로 whom(또는 who/that)을 쓴다."
-          },
-          {
-            "q": "다음 두 문장을 연결할 때 생략할 수 있는 관계대명사가 쓰인 것을 고르시오.\nThat is the picture. You drew it.",
-            "options": [
-              "That is the picture who drew you.",
-              "That is the picture that you drew.",
-              "That is the picture what you drew.",
-              "That is the picture drew you that."
-            ],
-            "answer": 1,
-            "explain": "목적격 관계대명사 that(=which)이 쓰였고, 목적격이라 'That is the picture you drew.'처럼 생략도 가능하다."
-          },
-          {
-            "q": "다음 문장에서 어법상 어색한 부분을 고르시오.\nThe guests ①whom ②I ③invited ④them came late.",
-            "options": [
-              "①whom",
-              "②I",
-              "③invited",
-              "④them"
-            ],
-            "answer": 3,
-            "explain": "목적격 관계대명사 whom이 목적어 역할을 하므로 목적어 them을 다시 쓰면 안 된다. them을 삭제해야 한다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오.\nThe bike ___ I want is expensive.",
-            "options": [
-              "who",
-              "whom",
-              "that",
-              "whose"
+              "She is the teacher I respect her.",
+              "She is the teacher whom respect I.",
+              "She is the teacher whom I respect.",
+              "She is the teacher which I respect."
             ],
             "answer": 2,
-            "explain": "선행사 the bike는 사물이고 목적격이므로 that(또는 which)을 쓴다."
-          },
-          {
-            "q": "다음 중 밑줄 친 that의 쓰임이 나머지와 다른 것을 고르시오.",
-            "options": [
-              "This is the book that I read.",
-              "She is the girl that I like.",
-              "The dog that barks is loud.",
-              "That is the cake that mom made."
-            ],
-            "answer": 2,
-            "explain": "'that barks'는 주격 관계대명사이고, 나머지는 뒤에 '주어+동사'가 오는 목적격 관계대명사이다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르시오.\nA: Who are they?\nB: They are the friends ___ I trust.",
-            "options": [
-              "which",
-              "whom",
-              "whose",
-              "it"
-            ],
-            "answer": 1,
-            "explain": "선행사 the friends는 사람이고 목적격이므로 whom(또는 who/that)을 쓴다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르시오.\n'그녀는 우리가 아는 소녀다.'",
-            "options": [
-              "She is the girl which we know.",
-              "She is the girl whom we know.",
-              "She is the girl whom we know her.",
-              "She is the girl whom knows we."
-            ],
-            "answer": 1,
-            "explain": "the girl은 사람이고 know의 목적어이므로 whom(who/that)을 쓰고 뒤에 'we know'가 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오.\nThe song ___ I like is popular.",
-            "options": [
-              "who",
-              "whom",
-              "which",
-              "whose"
-            ],
-            "answer": 2,
-            "explain": "선행사 the song은 사물이고 목적격이므로 which(또는 that)를 쓴다."
-          },
-          {
-            "q": "다음 중 어법상 옳은 문장을 고르시오.",
-            "options": [
-              "The people who we met were kind.",
-              "The people which we met were kind.",
-              "The people we met them were kind.",
-              "The people whom met we were kind."
-            ],
-            "answer": 0,
-            "explain": "사람 선행사에 목적격으로 who(m)/that을 쓰고 뒤에 '주어+동사(we met)'가 온다. 사물용 which와 목적어 them 반복은 틀리다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르시오.\n( she / is / the girl / whom / I / met )",
-            "options": [
-              "She is the girl whom met I.",
-              "She is the girl whom I met.",
-              "She is whom the girl I met.",
-              "She whom is the girl I met."
-            ],
-            "answer": 1,
-            "explain": "'선행사(the girl) + 목적격 관계대명사(whom) + 주어(I) + 동사(met)' 순서로 배열한다."
-          },
-          {
-            "q": "다음 문장의 빈칸에 알맞지 않은 것을 고르시오.\nThis is the cake ___ my mom made.",
-            "options": [
-              "which",
-              "that",
-              "생략",
-              "whom"
-            ],
-            "answer": 3,
-            "explain": "the cake는 사물이므로 which/that을 쓰거나 목적격이라 생략할 수 있다. 사람에 쓰는 whom은 쓸 수 없다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르시오.\nA: Which pen is yours?\nB: It is the pen ___ I bought yesterday.",
-            "options": [
-              "who",
-              "whom",
-              "which",
-              "whose"
-            ],
-            "answer": 2,
-            "explain": "선행사 the pen은 사물이고 목적격이므로 which(또는 that)를 쓴다."
-          },
-          {
-            "q": "다음 중 목적격 관계대명사가 생략된 문장을 고르시오.",
-            "options": [
-              "The man who called me is my uncle.",
-              "This is the movie we watched.",
-              "The bird which flies high is free.",
-              "The boy who is running is fast."
-            ],
-            "answer": 1,
-            "explain": "'the movie (which/that) we watched'에서 목적격 관계대명사가 생략되었다. 나머지는 주격이라 생략할 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르시오.\nThose are the guests ___ I invited to the party.",
-            "options": [
-              "which",
-              "whom",
-              "whose",
-              "what"
-            ],
-            "answer": 1,
-            "explain": "선행사 the guests는 사람이고 목적격이므로 whom(또는 who/that)을 쓴다."
-          },
-          {
-            "q": "다음 문장을 목적격 관계대명사를 생략하여 바르게 쓴 것을 고르시오.\nThat is the house that they built.",
-            "options": [
-              "That is the house they built.",
-              "That is the house built they.",
-              "That is house they built.",
-              "That is the they house built."
-            ],
-            "answer": 0,
-            "explain": "목적격 관계대명사 that을 생략하면 'That is the house they built.'가 된다. 어순은 그대로 유지한다."
+            "explain": "the teacher는 사람이고 respect의 목적어이므로 whom(who/that)을 쓰고 뒤에 'I respect'가 온다. 사물용 which, 어순 오류, 목적어 her 반복은 틀리다."
           },
           {
             "q": "다음 중 빈칸에 that만 쓸 수 있고 who는 쓸 수 없는 것을 고르시오.",
             "options": [
-              "She is the woman ___ I love.",
-              "He is the man ___ I met.",
-              "The car ___ I drive is new.",
-              "The boy ___ I saw is tall."
+              "The train ___ I missed was late.",
+              "The boy ___ I helped smiled.",
+              "She is the woman ___ I admire.",
+              "He is the man ___ I called."
+            ],
+            "answer": 0,
+            "explain": "the train은 사물이므로 which/that만 가능하고 사람용 who(m)은 쓸 수 없다. 나머지는 사람이라 who(m)/that 모두 가능하다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe book that I ___ from the library is due next Monday.",
+            "options": [
+              "lent",
+              "sold",
+              "borrowed",
+              "threw"
             ],
             "answer": 2,
-            "explain": "the car는 사물이므로 which/that만 가능하고 사람용 who(m)은 쓸 수 없다. 나머지는 사람이라 who(m)/that 모두 가능하다."
+            "explain": "도서관에서 '빌린' 책이므로 borrowed가 맞다. lent(빌려주다), sold(팔다), threw(던졌다)는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe song which she sang was so ___ that the whole audience cried.",
+            "options": [
+              "empty",
+              "noisy",
+              "touching",
+              "boring"
+            ],
+            "answer": 2,
+            "explain": "관객을 울릴 만큼 '감동적인' 노래이므로 touching이 맞다. boring(지루한), noisy(시끄러운), empty(텅 빈)는 의미가 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe teacher whom I respect always ___ us to try our best.",
+            "options": [
+              "discourages",
+              "ignores",
+              "encourages",
+              "refuses"
+            ],
+            "answer": 2,
+            "explain": "최선을 다하도록 '격려한다'는 뜻이므로 encourages가 맞다. discourages(낙담시키다), refuses(거절하다), ignores(무시하다)는 반대·부적절한 의미이다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe movie which we watched had a very exciting ___.",
+            "options": [
+              "price",
+              "plot",
+              "weather",
+              "menu"
+            ],
+            "answer": 1,
+            "explain": "영화의 '줄거리(plot)'가 흥미진진하다는 뜻이 자연스럽다. price(가격), menu(메뉴), weather(날씨)는 영화와 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe clothes which she bought were on ___, so they were cheap.",
+            "options": [
+              "stage",
+              "time",
+              "sale",
+              "fire"
+            ],
+            "answer": 2,
+            "explain": "'세일 중(on sale)'이라 저렴했다는 뜻이므로 sale이 맞다. on stage/on time/on fire는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe advice that my mother gave me was really ___.",
+            "options": [
+              "useless",
+              "helpful",
+              "careless",
+              "harmful"
+            ],
+            "answer": 1,
+            "explain": "어머니의 조언이 '도움이 되었다'는 긍정적 문맥이므로 helpful이 맞다. harmful(해로운), careless(부주의한), useless(쓸모없는)는 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe bag that I lost yesterday ___ my wallet and keys.",
+            "options": [
+              "invited",
+              "refused",
+              "contained",
+              "borrowed"
+            ],
+            "answer": 2,
+            "explain": "가방이 지갑과 열쇠를 '담고 있었다'는 뜻이므로 contained가 맞다. 나머지는 사물 주어와 의미가 맞지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe friend whom I trust always keeps my ___.",
+            "options": [
+              "garden",
+              "secret",
+              "window",
+              "ticket"
+            ],
+            "answer": 1,
+            "explain": "'비밀을 지킨다(keep one's secret)'는 표현이 자연스럽다. garden, ticket, window는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe restaurant that we visited was famous for its ___ service.",
+            "options": [
+              "excellent",
+              "terrible",
+              "empty",
+              "broken"
+            ],
+            "answer": 0,
+            "explain": "'유명한(famous for)' 이유로는 긍정적인 excellent(훌륭한)가 자연스럽다. terrible/empty/broken은 긍정 문맥과 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe problem which the students finally solved was very ___.",
+            "options": [
+              "delicious",
+              "quiet",
+              "difficult",
+              "tasty"
+            ],
+            "answer": 2,
+            "explain": "학생들이 어렵게 푼 '문제'이므로 difficult가 맞다. delicious/quiet/tasty는 problem과 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe photo which I took on the mountain shows beautiful ___.",
+            "options": [
+              "noise",
+              "scenery",
+              "homework",
+              "traffic"
+            ],
+            "answer": 1,
+            "explain": "산에서 찍은 사진이 보여주는 것은 아름다운 '경치(scenery)'이다. homework/traffic/noise는 문맥에 맞지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe gift that my best friend gave me was really ___ to me.",
+            "options": [
+              "precious",
+              "useless",
+              "noisy",
+              "boring"
+            ],
+            "answer": 0,
+            "explain": "친한 친구의 선물이 '소중했다'는 뜻이므로 precious가 맞다. useless/boring/noisy는 긍정 문맥과 어울리지 않는다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe house which they recently bought has a large ___ in the back.",
+            "options": [
+              "garden",
+              "holiday",
+              "weather",
+              "language"
+            ],
+            "answer": 0,
+            "explain": "집 뒤에 있는 넓은 공간으로는 '정원(garden)'이 자연스럽다. weather/holiday/language는 장소가 될 수 없다."
+          },
+          {
+            "q": "문맥에 맞는 단어를 고르시오.\nThe email that the boss sent this morning was very ___, so we read it carefully.",
+            "options": [
+              "delicious",
+              "sleepy",
+              "important",
+              "hungry"
+            ],
+            "answer": 2,
+            "explain": "주의 깊게 읽을 만큼 '중요한' 이메일이므로 important가 맞다. delicious/sleepy/hungry는 email과 어울리지 않는다."
           }
         ],
         "sa": [
@@ -6825,444 +6824,444 @@ export const courses = [
         "concept": "although + 주어 + 동사 = '비록 ~이지만'; but과 함께 쓰지 않고, 전치사 despite/in spite of + 명사와 구별한다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ it was raining, we went out.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ the weather was terrible all morning, the school sports day went on as planned.",
             "options": [
-              "Although",
-              "Despite",
-              "Because",
-              "But"
-            ],
-            "answer": 0,
-            "explain": "'비록 비가 왔지만'이라는 양보의 뜻이고 뒤에 '주어+동사(it was raining)'가 오므로 접속사 Although가 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ he was tired, he kept working.",
-            "options": [
-              "Although",
-              "Despite",
               "So",
-              "During"
-            ],
-            "answer": 0,
-            "explain": "뒤에 '주어+동사(he was tired)'가 있으므로 접속사 Although가 알맞다. Despite/During은 전치사이다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 그녀는 어리지만 매우 현명하다.\n___ she is young, she is very wise.",
-            "options": [
-              "Although",
               "Because",
               "If",
-              "When"
+              "Although"
             ],
-            "answer": 0,
-            "explain": "'비록 ~이지만'의 양보를 나타내므로 Although가 맞다. Because는 이유(때문에)라서 뜻이 반대이다."
+            "answer": 3,
+            "explain": "날씨가 나빴지만 행사를 진행했다는 양보이고 뒤에 '주어+동사(the weather was terrible)'가 오므로 Although가 맞다. Because(이유)는 뜻이 반대이다."
           },
           {
-            "q": "어법상 어색한 문장을 고르세요.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ the heavy traffic on the road, the school bus arrived at the station right on time.",
             "options": [
-              "Although it was cold, they went swimming.",
-              "Although he studied hard, but he failed.",
-              "Although we were busy, we helped them.",
-              "Although the food was expensive, it tasted bad."
-            ],
-            "answer": 1,
-            "explain": "although와 but을 한 문장에 함께 쓰지 않는다 (Although ~, but ✕). but을 빼야 한다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ the test was hard, I passed it.",
-            "options": [
-              "Although",
-              "Despite",
-              "Because of",
-              "In spite of"
-            ],
-            "answer": 0,
-            "explain": "뒤에 '주어+동사(the test was hard)'가 오므로 접속사 Although가 알맞다. 나머지는 뒤에 명사가 온다."
-          },
-          {
-            "q": "빈칸에 들어갈 수 <보기>와 바꿔 쓸 수 있는 말을 고르세요.\n___ she was sick, she went to school. (= Even though she was sick, ...)",
-            "options": [
-              "Although",
-              "Despite",
               "Because",
-              "So"
-            ],
-            "answer": 0,
-            "explain": "even though와 바꿔 쓸 수 있는 접속사는 although이다. 둘 다 '비록 ~이지만'의 뜻이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ his hard work, he made a mistake.",
-            "options": [
-              "Despite",
               "Although",
-              "Because",
+              "Despite",
               "Even though"
             ],
-            "answer": 0,
-            "explain": "뒤에 명사구(his hard work)가 오므로 전치사 Despite가 알맞다. Although/Even though는 뒤에 '주어+동사'가 온다."
+            "answer": 2,
+            "explain": "뒤에 명사구(the heavy traffic)가 오므로 전치사 Despite가 알맞다. Although/Even though는 뒤에 '주어+동사'가 와야 한다."
           },
           {
-            "q": "다음 문장에서 although의 우리말 뜻으로 알맞은 것을 고르세요.\nAlthough I was scared, I tried it.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nOur teacher explained the grammar very clearly, ___ some students still had a lot of questions.",
             "options": [
-              "비록 ~이지만",
-              "~ 때문에",
-              "만약 ~라면",
-              "~할 때"
+              "because",
+              "and",
+              "so",
+              "but"
+            ],
+            "answer": 3,
+            "explain": "앞뒤 내용이 대조되고 두 문장을 잇는 자리이므로 등위접속사 but이 알맞다. so(그래서)/because(때문에)는 의미가 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ he had studied all night for the test, he could not answer the last question.",
+            "options": [
+              "Because",
+              "Despite",
+              "During",
+              "Although"
+            ],
+            "answer": 3,
+            "explain": "밤새 공부했지만 못 풀었다는 양보이고 뒤에 '주어+동사'가 오므로 Although가 맞다. Despite/During은 전치사라 뒤에 명사가 온다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe hikers finally reached the top of the mountain ___ the cold and windy weather.",
+            "options": [
+              "despite",
+              "although",
+              "even though",
+              "because"
             ],
             "answer": 0,
-            "explain": "although는 양보를 나타내는 접속사로 '비록 ~이지만'의 뜻이다."
+            "explain": "뒤에 명사구(the cold and windy weather)가 오므로 전치사 despite가 알맞다. although/even though는 뒤에 '주어+동사'가 온다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ they are twins, they look different.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ working overtime almost every day, she never complained about being tired.",
             "options": [
               "Although",
-              "Because",
+              "Despite",
               "So",
-              "Before"
+              "Because"
+            ],
+            "answer": 1,
+            "explain": "뒤에 동명사구(working overtime, 명사 역할)가 오므로 전치사 Despite가 알맞다. Although는 '주어+동사'가 필요하다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ the movie got very bad reviews, many people went to see it on the opening day.",
+            "options": [
+              "Although",
+              "Despite",
+              "So",
+              "Because"
             ],
             "answer": 0,
-            "explain": "쌍둥이지만 다르게 생겼다는 대조(양보)이므로 Although가 알맞다."
+            "explain": "혹평을 받았지만 많이 봤다는 양보이고 뒤에 '주어+동사'가 오므로 Although가 맞다. Despite는 뒤에 명사가 와야 한다."
+          },
+          {
+            "q": "다음 중 어법상 어색한 문장을 고르세요.",
+            "options": [
+              "Although the shop was small, it had many kinds of snacks.",
+              "Although the shop was small, but it had many kinds of snacks.",
+              "Although the shop was small, it was always busy.",
+              "Although the price was high, the quality was good."
+            ],
+            "answer": 1,
+            "explain": "although와 but을 한 문장에 함께 쓸 수 없다(Although ~, but ✕). but을 빼야 한다."
+          },
+          {
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 그 책은 어려웠지만, 그녀는 끝까지 읽었다.\n___ the book was difficult, she read it to the end.",
+            "options": [
+              "When",
+              "Although",
+              "If",
+              "Because"
+            ],
+            "answer": 1,
+            "explain": "'비록 ~이지만'의 양보를 나타내므로 Although가 맞다. Because(때문에)는 뜻이 반대이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe soccer game continued ___ it started to rain heavily in the second half.",
+            "options": [
+              "because of",
+              "in spite of",
+              "despite",
+              "even though"
+            ],
+            "answer": 3,
+            "explain": "뒤에 '주어+동사(it started to rain)'가 오므로 접속사 even though가 알맞다. despite/because of/in spite of는 뒤에 명사가 온다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ her broken leg, the dancer performed on the stage that evening.",
+            "options": [
+              "Though",
+              "Despite",
+              "Although",
+              "Because"
+            ],
+            "answer": 1,
+            "explain": "뒤에 명사구(her broken leg)가 오므로 전치사 Despite가 알맞다. Although/Though는 '주어+동사'가 온다."
           },
           {
             "q": "다음 중 어법상 옳은 문장을 고르세요.",
             "options": [
-              "Although it was raining, we went out.",
-              "Although it was raining, but we went out.",
-              "Despite it was raining, we went out.",
-              "Although of the rain, we went out."
+              "Because the rain was heavy, but we kept playing.",
+              "Although the rain was heavy, but we kept playing.",
+              "Despite the rain was heavy, we kept playing.",
+              "Although the rain was heavy, we kept playing."
             ],
-            "answer": 0,
+            "answer": 3,
             "explain": "Although 뒤에는 '주어+동사'가 오고 but과 함께 쓰지 않는다. Despite는 뒤에 명사가 와야 한다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ the long road, the trip was enjoyable.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ his father is a famous chef, David does not know how to cook at all.",
             "options": [
-              "Despite",
-              "Although",
-              "Because",
-              "Even though"
-            ],
-            "answer": 0,
-            "explain": "뒤에 명사구(the long road)가 오므로 전치사 Despite가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ he is rich, he is not happy.",
-            "options": [
-              "Although",
-              "Because",
-              "Since",
-              "So"
-            ],
-            "answer": 0,
-            "explain": "부자지만 행복하지 않다는 대조이므로 Although가 맞다. Because/Since는 이유라서 뜻이 맞지 않는다."
-          },
-          {
-            "q": "밑줄 친 부분을 바르게 고친 것을 고르세요.\nAlthough she was late, but she kept reading.",
-            "options": [
-              "but을 삭제한다",
-              "Although를 Despite로 바꾼다",
-              "was를 is로 바꾼다",
-              "reading을 read로 바꾼다"
-            ],
-            "answer": 0,
-            "explain": "Although와 but을 함께 쓸 수 없으므로 but을 삭제해야 한다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 우리는 졌지만 최선을 다했다.\n___ we lost, we did our best.",
-            "options": [
-              "Although",
-              "Because",
-              "If",
-              "So"
-            ],
-            "answer": 0,
-            "explain": "'비록 졌지만'의 양보이므로 Although가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ the weather was bad, the trip was fun.",
-            "options": [
-              "Although",
-              "Despite",
-              "Because of",
-              "In spite of"
-            ],
-            "answer": 0,
-            "explain": "뒤에 '주어+동사(the weather was bad)'가 오므로 접속사 Although가 알맞다."
-          },
-          {
-            "q": "빈칸에 <보기>와 같은 뜻의 접속사가 들어갈 수 없는 것을 고르세요.\n___ he was tired, he smiled.",
-            "options": [
+              "So",
               "Because",
               "Although",
-              "Though",
-              "Even though"
+              "Despite"
             ],
-            "answer": 0,
-            "explain": "although = though = even though(비록 ~이지만)로 같은 뜻이다. Because(때문에)는 뜻이 다르다."
+            "answer": 2,
+            "explain": "아버지가 유명 요리사지만 David는 요리를 못 한다는 대조이므로 Although가 알맞다."
           },
           {
-            "q": "다음 두 문장을 although로 바르게 연결한 것을 고르세요.\nIt was cold. They played outside.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe still enjoyed the picnic ___ the sudden change in the weather.",
             "options": [
-              "Although it was cold, they played outside.",
-              "Although it was cold, but they played outside.",
-              "It was cold although they played outside so.",
-              "Although of cold, they played outside."
+              "because",
+              "although",
+              "even though",
+              "despite"
             ],
-            "answer": 0,
+            "answer": 3,
+            "explain": "뒤에 명사구(the sudden change)가 오므로 전치사 despite가 알맞다. although/even though는 '주어+동사'가 온다."
+          },
+          {
+            "q": "다음 두 문장을 although로 바르게 연결한 것을 고르세요.\nThe test was easy. Few students got a perfect score.",
+            "options": [
+              "Although of the easy test, few students got a perfect score.",
+              "Although the test was easy, but few students got a perfect score.",
+              "The test was easy although so few students got a perfect score.",
+              "Although the test was easy, few students got a perfect score."
+            ],
+            "answer": 3,
             "explain": "「Although + 주어 + 동사, 주어 + 동사」 형태가 맞고 but을 함께 쓰지 않는다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ being poor, they were kind to everyone.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ the tickets were quite expensive, the concert hall was completely full.",
             "options": [
+              "Because of",
+              "In spite of",
+              "Even though",
+              "Despite"
+            ],
+            "answer": 2,
+            "explain": "뒤에 '주어+동사(the tickets were expensive)'가 오므로 접속사 Even though가 알맞다. 나머지는 뒤에 명사가 온다."
+          },
+          {
+            "q": "다음 중 빈칸에 들어갈 수 없는 것을 고르세요.\n___ he was very nervous, he gave a great speech in front of everyone.",
+            "options": [
+              "Even though",
               "Despite",
-              "Although",
-              "Because",
-              "Even though"
+              "Though",
+              "Although"
             ],
-            "answer": 0,
-            "explain": "뒤에 동명사구(being poor, 명사 역할)가 오므로 전치사 Despite가 알맞다. Although는 '주어+동사'가 필요하다."
+            "answer": 1,
+            "explain": "Despite는 전치사라서 뒤에 '주어+동사(he was nervous)'가 오면 쓸 수 없다. although/though/even though는 가능하다."
           },
           {
-            "q": "다음 중 빈칸에 Although가 들어갈 수 없는 것을 고르세요.",
+            "q": "밑줄 친 부분을 바르게 고친 것을 고르세요.\nAlthough it was midnight, but the streets were still crowded.",
             "options": [
-              "___ his illness, he came to the party.",
-              "___ he was sick, he came to the party.",
-              "___ she was young, she was brave.",
-              "___ it was late, she kept reading."
+              "Although를 Despite로 바꾼다",
+              "it을 there로 바꾼다",
+              "but을 삭제한다",
+              "was를 were로 바꾼다"
             ],
-            "answer": 0,
-            "explain": "1번은 뒤에 명사(his illness)가 오므로 Although가 아닌 Despite를 써야 한다. 나머지는 '주어+동사'가 온다."
+            "answer": 2,
+            "explain": "Although와 but을 함께 쓸 수 없으므로 but을 삭제해야 한다."
           },
           {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 그는 열심히 공부했지만 실수를 했다.\n___ he studied hard, he made a mistake.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ the medicine tasted awful, the sick boy drank all of it without complaining.",
             "options": [
-              "Although",
               "Because",
-              "When",
+              "If",
+              "Although",
               "So"
             ],
-            "answer": 0,
-            "explain": "열심히 공부했음에도 실수했다는 대조이므로 Although가 알맞다."
+            "answer": 2,
+            "explain": "약이 맛없었지만 다 마셨다는 양보이고 뒤에 '주어+동사'가 오므로 Although가 알맞다."
           },
           {
-            "q": "어법상 옳은 문장을 고르세요.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe old bridge is still safe to cross ___ its age.",
             "options": [
-              "Although the food was expensive, it tasted bad.",
-              "Although the food expensive, it tasted bad.",
-              "Although expensive the food, it tasted bad.",
-              "Although but the food was expensive, it tasted bad."
-            ],
-            "answer": 0,
-            "explain": "Although 뒤에는 반드시 '주어(the food) + 동사(was)'가 완전한 형태로 와야 한다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe helped them ___ we were busy.",
-            "options": [
-              "although",
-              "because of",
+              "because",
               "despite",
-              "so"
+              "even though",
+              "although"
             ],
-            "answer": 0,
-            "explain": "although는 문장 중간에도 올 수 있고 뒤에 '주어+동사(we were busy)'가 온다. 바빴지만 도왔다는 양보이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ her illness, she went to school.",
-            "options": [
-              "Despite",
-              "Although",
-              "Because",
-              "Though"
-            ],
-            "answer": 0,
-            "explain": "뒤에 명사구(her illness)가 오므로 전치사 Despite가 알맞다."
-          },
-          {
-            "q": "다음 문장의 뜻으로 알맞은 것을 고르세요.\nAlthough it was expensive, he bought it.",
-            "options": [
-              "비록 그것은 비쌌지만 그는 그것을 샀다.",
-              "그것이 비쌌기 때문에 그는 그것을 샀다.",
-              "그것이 비싸지면 그는 그것을 살 것이다.",
-              "그것이 비쌀 때 그는 그것을 샀다."
-            ],
-            "answer": 0,
-            "explain": "although는 '비록 ~이지만'의 양보를 나타낸다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ she practiced a lot, she didn't win.",
-            "options": [
-              "Although",
-              "Because",
-              "Since",
-              "As"
-            ],
-            "answer": 0,
-            "explain": "많이 연습했지만 이기지 못했다는 대조이므로 Although가 알맞다."
+            "answer": 1,
+            "explain": "뒤에 명사구(its age)가 오므로 전치사 despite가 알맞다. although/even though는 '주어+동사'가 온다."
           },
           {
             "q": "다음 중 although의 쓰임이 어색한 문장을 고르세요.",
             "options": [
-              "Although the cold weather, we walked.",
-              "Although the weather was cold, we walked.",
-              "Although it was cold, we walked.",
-              "Although we were cold, we walked."
+              "Although the music was loud, I fell asleep quickly.",
+              "Although it was noisy, I fell asleep quickly.",
+              "Although I was tired, I fell asleep quickly.",
+              "Although the loud music, I fell asleep quickly."
             ],
-            "answer": 0,
-            "explain": "although 뒤에는 '주어+동사'가 와야 한다. 'the cold weather'는 명사구라서 Despite를 써야 한다."
+            "answer": 3,
+            "explain": "although 뒤에는 '주어+동사'가 와야 한다. 'the loud music'은 명사구라서 Despite를 써야 한다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ we were lost, we stayed calm.",
+            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 우리는 숲에서 길을 잃었지만, 침착함을 유지했다.\n___ we got lost in the forest, we stayed calm.",
             "options": [
               "Although",
-              "Because",
               "So",
-              "During"
+              "When",
+              "Because"
             ],
             "answer": 0,
             "explain": "길을 잃었지만 침착했다는 양보이므로 Although가 알맞다."
           },
           {
-            "q": "다음 문장을 despite를 사용해 바꿀 때 빈칸에 알맞은 것을 고르세요.\nAlthough it was raining, we went out. = ___ the rain, we went out.",
+            "q": "빈칸에 알맞은 것을 고르세요.\n___ she had never traveled abroad, she spoke three foreign languages fluently.",
             "options": [
-              "Despite",
-              "Although",
-              "Because",
-              "Even though"
-            ],
-            "answer": 0,
-            "explain": "although(접속사) + 주어+동사 = despite(전치사) + 명사. 뒤에 명사(the rain)가 오므로 Despite가 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ they trained hard, they lost the game.",
-            "options": [
-              "Although",
-              "Because",
-              "If",
-              "When"
-            ],
-            "answer": 0,
-            "explain": "열심히 훈련했지만 졌다는 대조이므로 Although가 알맞다."
-          },
-          {
-            "q": "다음 중 어법상 옳은 문장을 고르세요.",
-            "options": [
-              "Although she was young, she was wise.",
-              "Despite she was young, she was wise.",
-              "Although she was young, but she was wise.",
-              "Because she was young, but she was wise."
-            ],
-            "answer": 0,
-            "explain": "Although 뒤에는 '주어+동사'가 오고 but과 함께 쓰지 않는다. Despite는 뒤에 명사가 와야 한다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ the noise, the baby slept well.",
-            "options": [
-              "Despite",
-              "Although",
-              "Because",
-              "Even though"
-            ],
-            "answer": 0,
-            "explain": "뒤에 명사구(the noise)가 오므로 전치사 Despite가 알맞다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 그는 피곤했지만 계속 뛰었다.\n___ he was tired, he kept running.",
-            "options": [
-              "Although",
-              "Because",
-              "So",
-              "When"
-            ],
-            "answer": 0,
-            "explain": "피곤했지만 계속 뛰었다는 양보이므로 Although가 알맞다."
-          },
-          {
-            "q": "빈칸에 공통으로 들어갈 수 있는 말을 고르세요.\n___ it was late, she kept reading.\n___ he was rich, he was not happy.",
-            "options": [
+              "During",
               "Although",
               "Despite",
-              "Because",
-              "So"
+              "Because"
             ],
-            "answer": 0,
-            "explain": "두 문장 모두 뒤에 '주어+동사'가 오는 양보의 뜻이므로 Although가 공통으로 알맞다."
+            "answer": 1,
+            "explain": "해외에 가 본 적 없지만 언어를 유창하게 한다는 대조이고 뒤에 '주어+동사'가 오므로 Although가 알맞다."
           },
           {
-            "q": "다음 문장에서 밑줄 친 although 대신 쓸 수 없는 것을 고르세요.\nAlthough she was tired, she smiled.",
+            "q": "다음 문장을 despite로 바꿀 때 빈칸에 알맞은 것을 고르세요.\nAlthough the noise was loud, the baby kept sleeping. = ___ the loud noise, the baby kept sleeping.",
             "options": [
               "Despite",
-              "Though",
               "Even though",
+              "Because",
               "Although"
             ],
             "answer": 0,
-            "explain": "though, even though는 although와 바꿔 쓸 수 있다. Despite는 전치사라서 뒤에 '주어+동사'가 오면 쓸 수 없다."
+            "explain": "although(접속사) + 주어+동사 = despite(전치사) + 명사. 뒤에 명사(the loud noise)가 오므로 Despite가 맞다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ we were busy, we finished the project.",
+            "q": "빈칸에 공통으로 들어갈 수 있는 말을 고르세요.\n___ the road was icy, the driver kept going.\n___ she was afraid of heights, she climbed the tall tower.",
             "options": [
+              "So",
               "Although",
               "Because",
-              "If",
-              "So"
+              "Despite"
             ],
-            "answer": 0,
-            "explain": "바빴지만 끝냈다는 양보이므로 Although가 알맞다."
+            "answer": 1,
+            "explain": "두 문장 모두 뒤에 '주어+동사'가 오는 양보의 뜻이므로 Although가 공통으로 알맞다."
           },
           {
-            "q": "다음 두 문장의 의미 차이를 바르게 설명한 것을 고르세요.\n(a) Although he was tired, he ran.  (b) Because he was tired, he ran.",
+            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: You look really tired today.\nB: Yes, ___ I slept for ten hours, I still feel sleepy.",
             "options": [
-              "(a)는 '피곤했지만', (b)는 '피곤해서'라는 뜻이다.",
-              "(a)와 (b)는 같은 뜻이다.",
-              "(a)는 '피곤해서', (b)는 '피곤했지만'이라는 뜻이다.",
-              "둘 다 '만약 피곤하면'이라는 뜻이다."
-            ],
-            "answer": 0,
-            "explain": "although는 '비록 ~이지만'(양보), because는 '~때문에'(이유)로 뜻이 반대이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\n___ his young age, he is very responsible.",
-            "options": [
-              "Despite",
-              "Although",
-              "Because",
-              "Even though"
-            ],
-            "answer": 0,
-            "explain": "뒤에 명사구(his young age)가 오므로 전치사 Despite가 알맞다."
-          },
-          {
-            "q": "다음 중 빈칸에 들어갈 말이 나머지와 다른 하나를 고르세요.",
-            "options": [
-              "___ the heavy rain, the game continued.",
-              "___ it rained, the game continued.",
-              "___ she was sick, she smiled.",
-              "___ we were tired, we kept going."
-            ],
-            "answer": 0,
-            "explain": "1번은 뒤에 명사(the heavy rain)가 와서 Despite, 나머지는 '주어+동사'가 와서 Although가 들어간다."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n비록 늦었지만 그녀는 계속 일했다.\n___ she was late, she kept working.",
-            "options": [
-              "Although",
-              "Despite",
-              "Because",
-              "So"
-            ],
-            "answer": 0,
-            "explain": "뒤에 '주어+동사(she was late)'가 오는 양보의 뜻이므로 Although가 알맞다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: Did you go out in the rain?\nB: Yes, ___ it was raining, I went out.",
-            "options": [
-              "although",
               "despite",
-              "because of",
-              "so"
+              "so",
+              "although",
+              "because of"
+            ],
+            "answer": 2,
+            "explain": "뒤에 '주어+동사(I slept for ten hours)'가 오는 양보의 뜻이므로 접속사 although가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the box looked small, it was surprisingly ___; two grown-ups could hardly lift it.",
+            "options": [
+              "empty",
+              "light",
+              "heavy",
+              "soft"
+            ],
+            "answer": 2,
+            "explain": "'들기 힘들다'는 내용과 연결되므로 heavy(무거운)가 알맞다. 작아 보였지만 무거웠다는 대조가 자연스럽다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nDespite the long line at the ticket office, the fans waited ___ for the doors to open.",
+            "options": [
+              "angrily",
+              "quickly",
+              "patiently",
+              "rarely"
+            ],
+            "answer": 2,
+            "explain": "긴 줄에도 불구하고 불평 없이 기다렸다는 문맥이므로 patiently(참을성 있게)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the recipe was very simple, the final dish tasted ___ and everyone asked for more.",
+            "options": [
+              "delicious",
+              "salty",
+              "boring",
+              "terrible"
             ],
             "answer": 0,
-            "explain": "뒤에 '주어+동사(it was raining)'가 오므로 접속사 although가 알맞다."
+            "explain": "'더 달라고 했다'는 내용과 어울리므로 delicious(맛있는)가 알맞다. 나머지는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nEven though he had practiced for months, he still felt very ___ before his first piano concert.",
+            "options": [
+              "lazy",
+              "nervous",
+              "proud",
+              "hungry"
+            ],
+            "answer": 1,
+            "explain": "연습을 많이 했지만 그래도 긴장했다는 양보이므로 nervous(긴장한)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe students had to ___ the difficult problem, although the teacher gave them only ten minutes.",
+            "options": [
+              "solve",
+              "enjoy",
+              "forget",
+              "buy"
+            ],
+            "answer": 0,
+            "explain": "어려운 문제를 짧은 시간 안에 처리하는 상황이므로 solve(풀다)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the forecast promised sunshine, the sky suddenly turned ___ and it began to pour.",
+            "options": [
+              "sunny",
+              "bright",
+              "clear",
+              "cloudy"
+            ],
+            "answer": 3,
+            "explain": "'비가 쏟아지기 시작했다'는 내용과 어울리므로 cloudy(흐린)가 알맞다. 나머지는 맑은 날씨라 문맥에 맞지 않는다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nDespite her very busy schedule, the doctor always found time to ___ her patients kindly.",
+            "options": [
+              "ignore",
+              "lose",
+              "sell",
+              "treat"
+            ],
+            "answer": 3,
+            "explain": "환자를 친절히 대하는 상황이므로 treat(치료하다, 대하다)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the shoes were quite ___, Mina bought them because they were very comfortable.",
+            "options": [
+              "free",
+              "cheap",
+              "expensive",
+              "broken"
+            ],
+            "answer": 2,
+            "explain": "비쌌지만 편해서 샀다는 대조가 자연스러우므로 expensive(비싼)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe firefighters entered the building ___ to rescue the family, even though the flames were spreading fast.",
+            "options": [
+              "slowly",
+              "bravely",
+              "lazily",
+              "silently"
+            ],
+            "answer": 1,
+            "explain": "불이 번지는데도 사람을 구하러 들어갔으므로 bravely(용감하게)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the museum was free to enter, very few visitors ___ it on weekdays.",
+            "options": [
+              "closed",
+              "painted",
+              "visited",
+              "built"
+            ],
+            "answer": 2,
+            "explain": "박물관을 찾는 사람에 관한 문맥이므로 visited(방문했다)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nDespite the heavy snow all day, the postman ___ every letter to the right house on time.",
+            "options": [
+              "lost",
+              "delivered",
+              "burned",
+              "threw"
+            ],
+            "answer": 1,
+            "explain": "편지를 제때 배달한 상황이므로 delivered(배달했다)가 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the test results were ___, the teacher encouraged the students to try again next time.",
+            "options": [
+              "perfect",
+              "amazing",
+              "disappointing",
+              "exciting"
+            ],
+            "answer": 2,
+            "explain": "다시 도전하라고 격려한 것으로 보아 결과가 실망스러웠음을 알 수 있으므로 disappointing(실망스러운)이 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe little boy stayed ___ during the thunderstorm, although his younger sister was crying loudly.",
+            "options": [
+              "angry",
+              "afraid",
+              "noisy",
+              "calm"
+            ],
+            "answer": 3,
+            "explain": "동생은 울었지만 그는 침착했다는 대조이므로 calm(침착한)이 알맞다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the journey was long and tiring, the travelers finally ___ at the beautiful old city.",
+            "options": [
+              "started",
+              "returned",
+              "disappeared",
+              "arrived"
+            ],
+            "answer": 3,
+            "explain": "긴 여정 끝에 도시에 도착한 상황이므로 arrived(도착했다)가 알맞다. 'finally ~ at'과도 자연스럽게 이어진다."
           }
         ],
         "sa": [
@@ -7362,444 +7361,444 @@ export const courses = [
         "concept": "「의문사 + 주어 + should + 동사」는 「의문사 + to부정사」로 줄여 쓸 수 있으며, what/how/where/when/who(m)와 함께 쓰지만 why + to부정사는 쓰지 않는다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI don't know ___ do first.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nEmma just moved to our town, so she asked me ___ buy fresh vegetables near the market.",
             "options": [
-              "what to",
-              "what should",
-              "to what",
-              "what do"
-            ],
-            "answer": 0,
-            "explain": "「의문사 + to부정사」 형태이므로 what to do가 맞습니다. '무엇을 먼저 할지'라는 뜻입니다."
-          },
-          {
-            "q": "다음 문장과 뜻이 같은 것을 고르세요.\nTell me how I should get there.",
-            "options": [
-              "Tell me how to get there.",
-              "Tell me how getting there.",
-              "Tell me how get there.",
-              "Tell me how should get there."
-            ],
-            "answer": 0,
-            "explain": "「의문사 + 주어 + should + 동사」는 「의문사 + to부정사」로 줄일 수 있으므로 how I should get → how to get 입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nShe learned ___ swim.",
-            "options": [
-              "how to",
-              "what to",
-              "when to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'수영하는 법(어떻게 수영할지)'은 how to swim입니다."
-          },
-          {
-            "q": "어법상 어색한 것을 고르세요.",
-            "options": [
-              "I know why to leave.",
-              "I know what to do.",
-              "I know where to go.",
-              "I know when to start."
-            ],
-            "answer": 0,
-            "explain": "why는 to부정사와 함께 쓰지 않습니다. why to leave는 틀린 표현입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe decided ___ leave for the trip.",
-            "options": [
-              "when to",
-              "how to",
-              "what to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'언제 떠날지'는 when to leave입니다."
-          },
-          {
-            "q": "다음 우리말에 맞게 빈칸을 채우세요.\n(어디서 표를 살지) → I know ___ buy tickets.",
-            "options": [
-              "where to",
-              "when to",
-              "what to",
-              "who to"
-            ],
-            "answer": 0,
-            "explain": "'어디서 ~할지'는 where to이므로 where to buy가 맞습니다."
-          },
-          {
-            "q": "다음 문장을 바르게 줄인 것을 고르세요.\nI'm not sure what I should say.",
-            "options": [
-              "I'm not sure what to say.",
-              "I'm not sure to what say.",
-              "I'm not sure what saying.",
-              "I'm not sure what say to."
-            ],
-            "answer": 0,
-            "explain": "what I should say → what to say로 줄여 씁니다."
-          },
-          {
-            "q": "빈칸에 들어갈 수 없는 것을 고르세요.\nHe doesn't know ___ do.",
-            "options": [
+              "to where",
               "why to",
-              "what to",
-              "how to",
-              "when to"
+              "where should",
+              "where to"
             ],
-            "answer": 0,
-            "explain": "why는 to부정사와 함께 쓰지 않으므로 why to do는 쓸 수 없습니다."
+            "answer": 3,
+            "explain": "'어디서 살지'는 「where + to부정사」인 where to buy입니다. why는 to부정사와 쓰지 않고, where should는 뒤에 주어가 필요하며, to where는 어순이 틀립니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nPlease show me ___ use this app.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy little brother really wants to learn ___ ride a bike this summer.",
             "options": [
+              "how should",
               "how to",
               "what to",
-              "where to",
-              "who to"
+              "why to"
             ],
-            "answer": 0,
-            "explain": "'어떻게 사용하는지(사용하는 법)'는 how to use입니다."
+            "answer": 1,
+            "explain": "'타는 법(어떻게 탈지)'은 how to ride입니다. what to는 목적어를 묻고, why to는 쓰지 않으며, how should 뒤에는 주어가 와야 합니다."
           },
           {
-            "q": "다음 중 문법적으로 올바른 문장을 고르세요.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe runners kept their eyes on the coach so they would know ___ start the race.",
             "options": [
-              "I can't decide what to wear.",
-              "I can't decide what wear to.",
-              "I can't decide to what wear.",
-              "I can't decide what wearing."
-            ],
-            "answer": 0,
-            "explain": "「의문사 + to부정사」는 what to wear 순서로 씁니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThey are talking about ___ buy for the party.",
-            "options": [
-              "what to",
-              "how to",
+              "who to",
+              "when to",
               "why to",
               "when should"
             ],
-            "answer": 0,
-            "explain": "'무엇을 살지'는 what to buy입니다."
+            "answer": 1,
+            "explain": "'언제 시작할지'는 when to start입니다. who to는 대상을, why to는 쓰지 않으며, when should는 주어가 빠져 틀립니다."
           },
           {
-            "q": "다음 문장과 뜻이 같은 것을 고르세요.\nShe asked where she should go.",
-            "options": [
-              "She asked where to go.",
-              "She asked to where go.",
-              "She asked where going.",
-              "She asked where she go."
-            ],
-            "answer": 0,
-            "explain": "where she should go → where to go로 줄여 씁니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI don't know ___ ask for help.",
-            "options": [
-              "who to",
-              "why to",
-              "what to",
-              "how should"
-            ],
-            "answer": 0,
-            "explain": "'누구에게 도움을 청할지'는 who(m) to ask입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nCan you tell me ___ start?",
-            "options": [
-              "when to",
-              "who to",
-              "why to",
-              "what should"
-            ],
-            "answer": 0,
-            "explain": "'언제 시작할지'는 when to start입니다."
-          },
-          {
-            "q": "어법상 옳지 않은 것을 고르세요.",
-            "options": [
-              "Show me why to fix it.",
-              "Show me how to fix it.",
-              "Show me what to fix.",
-              "Show me where to fix it."
-            ],
-            "answer": 0,
-            "explain": "why + to부정사는 쓰지 않으므로 why to fix는 틀립니다."
-          },
-          {
-            "q": "다음 문장을 바르게 줄인 것을 고르세요.\nWe decided when we should leave.",
-            "options": [
-              "We decided when to leave.",
-              "We decided when leave to.",
-              "We decided when leaving.",
-              "We decided to when leave."
-            ],
-            "answer": 0,
-            "explain": "when we should leave → when to leave로 줄입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI'm not sure ___ sit at the concert.",
-            "options": [
-              "where to",
-              "what to",
-              "why to",
-              "who to"
-            ],
-            "answer": 0,
-            "explain": "'어디에 앉을지'는 where to sit입니다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르세요.\n나는 무엇을 요리할지 모른다.",
-            "options": [
-              "I don't know what to cook.",
-              "I don't know to cook what.",
-              "I don't know what cook to.",
-              "I don't know why to cook."
-            ],
-            "answer": 0,
-            "explain": "'무엇을 요리할지'는 what to cook입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nHe learned ___ open the box.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nBefore the field trip, our group couldn't decide ___ pack in the small backpack.",
             "options": [
               "how to",
-              "what to",
-              "when to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'어떻게 여는지'는 how to open입니다."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: I'm hungry.\nB: Let's decide ___ eat.",
-            "options": [
-              "what to",
               "why to",
-              "who to",
-              "how should"
+              "where to",
+              "what to"
             ],
-            "answer": 0,
-            "explain": "'무엇을 먹을지'는 what to eat입니다."
+            "answer": 3,
+            "explain": "'무엇을 챙길지'는 what to pack입니다. 목적어(무엇을)를 묻는 상황이므로 what이 맞고 why는 to부정사와 쓰지 않습니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nDo you know ___ meet them tomorrow?",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWhen my computer broke down, I really didn't know ___ ask for help.",
             "options": [
-              "where to",
+              "who to",
               "why to",
               "what should",
-              "how should"
+              "to who"
             ],
             "answer": 0,
-            "explain": "'어디서 만날지'는 where to meet입니다."
+            "explain": "'누구에게 도움을 청할지'는 who(m) to ask입니다. why to는 쓰지 않고, what should는 주어가 필요하며, to who는 어순이 틀립니다."
           },
           {
-            "q": "다음 중 밑줄 친 부분을 바르게 줄인 것을 고르세요.\nHe learned how he should swim.",
+            "q": "다음 문장과 뜻이 같은 것을 고르세요.\nPlease tell me how I should use this coffee machine.",
             "options": [
-              "how to swim",
-              "how swim to",
-              "how swimming",
-              "to how swim"
+              "Please tell me how using this coffee machine.",
+              "Please tell me how to use this coffee machine.",
+              "Please tell me how I should to use this coffee machine.",
+              "Please tell me how use to this coffee machine."
             ],
-            "answer": 0,
-            "explain": "how he should swim → how to swim으로 줄입니다."
+            "answer": 1,
+            "explain": "「의문사 + 주어 + should + 동사」는 「의문사 + to부정사」로 줄이므로 how I should use → how to use입니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI can't decide ___ put my bag.",
+            "q": "다음 중 어법상 틀린 표현을 고르세요.",
             "options": [
-              "where to",
+              "what to say",
+              "when to leave home",
+              "why to worry",
+              "how to solve it"
+            ],
+            "answer": 2,
+            "explain": "why는 to부정사와 함께 쓰지 않으므로 why to worry가 틀립니다. 나머지는 모두 올바른 「의문사 + to부정사」입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe recipe was confusing, so Mom searched online for ___ do after mixing the flour and eggs.",
+            "options": [
+              "what should",
               "what to",
-              "when to",
+              "why to",
+              "to what"
+            ],
+            "answer": 1,
+            "explain": "'무엇을 할지'는 what to do입니다. to what은 어순이 틀리고, why to는 쓰지 않으며, what should는 주어가 빠졌습니다."
+          },
+          {
+            "q": "다음 중 어법상 올바른 문장을 고르세요.",
+            "options": [
+              "He forgot when meeting to us at the station.",
+              "He forgot when to meet us at the station.",
+              "He forgot when meet to us at the station.",
+              "He forgot to when meet us at the station."
+            ],
+            "answer": 1,
+            "explain": "「의문사 + to부정사」는 when to meet 순서로 씁니다. 나머지는 어순이나 형태가 틀립니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe little booklet inside the box explains ___ build the toy robot step by step.",
+            "options": [
+              "who to",
+              "how should",
+              "how to",
               "why to"
             ],
-            "answer": 0,
-            "explain": "'어디에 둘지'는 where to put입니다."
+            "answer": 2,
+            "explain": "'어떻게 조립하는지(조립하는 법)'는 how to build입니다. why to는 쓰지 않고, how should는 주어가 필요하며, who to는 대상을 묻습니다."
           },
           {
-            "q": "다음 중 어색한 문장을 고르세요.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe tourist looked at the subway map to figure out ___ change trains.",
             "options": [
-              "Tell me why to go home early.",
-              "Tell me how to go home.",
-              "Tell me when to go home.",
-              "Tell me what to bring home."
+              "why to",
+              "to where",
+              "when should",
+              "where to"
             ],
-            "answer": 0,
-            "explain": "why + to부정사는 쓰지 않으므로 why to go는 틀립니다."
+            "answer": 3,
+            "explain": "'어디서 갈아탈지'는 where to change입니다. why to는 쓰지 않고, when should는 주어가 필요하며, to where는 어순이 틀립니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAsk him ___ start the game.",
+            "q": "빈칸에 들어갈 수 없는 것을 고르세요.\nThey are still discussing ___ finish the group project.",
             "options": [
               "how to",
               "why to",
-              "who to",
+              "where to",
+              "when to"
+            ],
+            "answer": 1,
+            "explain": "why는 to부정사와 함께 쓰지 않으므로 why to finish는 쓸 수 없습니다. 나머지는 모두 가능합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe menu was so long that the children didn't know ___ order for dinner.",
+            "options": [
+              "to what",
+              "what to",
+              "why to",
               "what should"
             ],
-            "answer": 0,
-            "explain": "'어떻게 시작하는지'는 how to start입니다."
+            "answer": 1,
+            "explain": "'무엇을 주문할지'는 what to order입니다. why to는 쓰지 않고, what should는 주어가 필요하며, to what은 어순이 틀립니다."
           },
           {
-            "q": "다음 문장과 뜻이 같은 것을 고르세요.\nThey wonder where they should stay.",
+            "q": "다음 문장을 바르게 줄인 것을 고르세요.\nWe haven't decided when we should announce the news.",
             "options": [
-              "They wonder where to stay.",
-              "They wonder where stay to.",
-              "They wonder to where stay.",
-              "They wonder where staying."
+              "We haven't decided when announcing the news.",
+              "We haven't decided when to announce the news.",
+              "We haven't decided when announce to the news.",
+              "We haven't decided to when announce the news."
             ],
-            "answer": 0,
-            "explain": "where they should stay → where to stay로 줄입니다."
+            "answer": 1,
+            "explain": "when we should announce → when to announce로 줄입니다. 나머지는 형태나 어순이 틀립니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nTell me ___ bring to the picnic.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nDuring the cooking class, the chef showed us ___ cut the onions safely.",
             "options": [
               "what to",
-              "when to",
               "why to",
-              "who should"
+              "how should",
+              "how to"
             ],
-            "answer": 0,
-            "explain": "'무엇을 가져올지'는 what to bring입니다."
+            "answer": 3,
+            "explain": "'어떻게 자르는지(자르는 법)'는 how to cut입니다. why to는 쓰지 않고, what to는 목적어를 묻고, how should는 주어가 필요합니다."
           },
           {
-            "q": "다음 단어를 바르게 배열한 것을 고르세요.\n( she / knows / when / to / call )",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThere were so many kind volunteers that I wasn't sure ___ thank first.",
             "options": [
-              "She knows when to call.",
-              "She knows to when call.",
-              "She knows when call to.",
-              "She when knows to call."
-            ],
-            "answer": 0,
-            "explain": "「주어 + 동사 + 의문사 + to부정사」 순서로 She knows when to call입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe have to decide ___ leave the house.",
-            "options": [
-              "when to",
-              "what to",
               "who to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'언제 떠날지'는 when to leave입니다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르세요.\n그에게 어떻게 시작하는지 물어봐.",
-            "options": [
-              "Ask him how to start.",
-              "Ask him to how start.",
-              "Ask him how start to.",
-              "Ask him why to start."
-            ],
-            "answer": 0,
-            "explain": "'어떻게 시작하는지'는 how to start입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI learned ___ ride a bike last summer.",
-            "options": [
-              "how to",
-              "what to",
-              "where to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'자전거 타는 법'은 how to ride입니다."
-          },
-          {
-            "q": "다음 중 밑줄 친 부분이 잘못된 문장을 고르세요.",
-            "options": [
-              "I don't know why to answer.",
-              "I don't know what to answer.",
-              "I don't know how to answer.",
-              "I don't know when to answer."
-            ],
-            "answer": 0,
-            "explain": "why + to부정사는 쓰지 않으므로 why to answer는 틀립니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe map shows us ___ go next.",
-            "options": [
-              "where to",
-              "what to",
-              "who to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'어디로 갈지'는 where to go입니다."
-          },
-          {
-            "q": "다음 문장을 바르게 줄인 것을 고르세요.\nShow me how I can use it.",
-            "options": [
-              "Show me how to use it.",
-              "Show me how using it.",
-              "Show me to how use it.",
-              "Show me how use it to."
-            ],
-            "answer": 0,
-            "explain": "how I can use it → how to use it로 줄입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI'll teach you ___ swim this weekend.",
-            "options": [
-              "how to",
               "what to",
               "when to",
               "why to"
             ],
             "answer": 0,
-            "explain": "'수영하는 법'은 how to swim입니다."
+            "explain": "'누구에게 먼저 감사할지'는 who(m) to thank입니다. 대상이 사람이므로 who가 맞고 why to는 쓰지 않습니다."
           },
           {
-            "q": "다음 중 문법적으로 올바른 문장을 고르세요.",
+            "q": "다음 중 어법상 올바른 문장을 고르세요.",
             "options": [
-              "She decided where to eat lunch.",
-              "She decided where eat to lunch.",
-              "She decided to where eat lunch.",
-              "She decided where lunch to eat."
+              "She showed me where hang to my coat.",
+              "She showed me where to hang my coat.",
+              "She showed me where hanging my coat.",
+              "She showed me to where hang my coat."
             ],
-            "answer": 0,
-            "explain": "「의문사 + to부정사」는 where to eat 순서입니다."
+            "answer": 1,
+            "explain": "「의문사 + to부정사」는 where to hang 순서입니다. 나머지는 어순이나 형태가 틀립니다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nHe doesn't know ___ stop playing games.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe nurse told the patient exactly ___ take the medicine each day.",
             "options": [
-              "when to",
-              "what to",
-              "where to",
-              "why to"
-            ],
-            "answer": 0,
-            "explain": "'언제 멈출지'는 when to stop입니다."
-          },
-          {
-            "q": "다음 우리말을 영어로 바르게 옮긴 것을 고르세요.\n나에게 무엇을 가져올지 말해줘.",
-            "options": [
-              "Tell me what to bring.",
-              "Tell me to what bring.",
-              "Tell me what bring to.",
-              "Tell me why to bring."
-            ],
-            "answer": 0,
-            "explain": "'무엇을 가져올지'는 what to bring입니다."
-          },
-          {
-            "q": "다음 문장을 바르게 줄인 것을 고르세요.\nI'm not sure what I should wear today.",
-            "options": [
-              "I'm not sure what to wear today.",
-              "I'm not sure to wear what today.",
-              "I'm not sure what wear today.",
-              "I'm not sure what wearing today."
-            ],
-            "answer": 0,
-            "explain": "what I should wear → what to wear로 줄입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe talked about ___ go on vacation.",
-            "options": [
-              "where to",
               "why to",
+              "when to",
               "who to",
-              "what should"
+              "what to"
+            ],
+            "answer": 1,
+            "explain": "'언제 약을 먹을지'는 when to take입니다. what to는 목적어를, who to는 대상을 묻고, why to는 쓰지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nExcuse me, could you tell me ___ get to the museum from here?",
+            "options": [
+              "how far",
+              "how to",
+              "how should",
+              "how"
+            ],
+            "answer": 1,
+            "explain": "'어떻게 가는지(가는 법)'는 how to get입니다. how나 how far, how should 뒤에는 뒤 구조가 맞지 않아 to부정사 형태인 how to가 맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy sister opened the empty fridge and sighed because she had no idea ___ cook for us.",
+            "options": [
+              "why to",
+              "what to",
+              "how should",
+              "when to"
+            ],
+            "answer": 1,
+            "explain": "'무엇을 요리할지'는 what to cook입니다. why to는 쓰지 않고, how should는 주어가 필요합니다."
+          },
+          {
+            "q": "다음 문장과 뜻이 같은 것을 고르세요.\nI'm not sure what I should say to my new classmates.",
+            "options": [
+              "I'm not sure what should say to my new classmates.",
+              "I'm not sure what to say to my new classmates.",
+              "I'm not sure to what say to my new classmates.",
+              "I'm not sure what saying to my new classmates."
+            ],
+            "answer": 1,
+            "explain": "what I should say → what to say로 줄입니다. 나머지는 어순이나 형태가 틀립니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe new employee asked his manager ___ put the extra boxes in the storage room.",
+            "options": [
+              "why to",
+              "where should",
+              "who to",
+              "where to"
+            ],
+            "answer": 3,
+            "explain": "'어디에 둘지'는 where to put입니다. why to는 쓰지 않고, who to는 대상을, where should는 주어가 필요합니다."
+          },
+          {
+            "q": "다음 중 어법상 어색한 문장을 고르세요.",
+            "options": [
+              "I learned how to save money.",
+              "We decided what to do next.",
+              "She knows when to be quiet.",
+              "He wonders why to keep trying."
+            ],
+            "answer": 3,
+            "explain": "why는 to부정사와 함께 쓰지 않으므로 why to keep이 어색합니다. 나머지는 모두 올바릅니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nAfter watching many videos, Jenny finally understood ___ fix the flat tire by herself.",
+            "options": [
+              "who to",
+              "how to",
+              "what should",
+              "why to"
+            ],
+            "answer": 1,
+            "explain": "'어떻게 고치는지(고치는 법)'는 how to fix입니다. why to는 쓰지 않고, what should는 주어가 필요합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nA good driver always knows ___ slow down near a school zone.",
+            "options": [
+              "when to",
+              "when should",
+              "why to",
+              "what to"
             ],
             "answer": 0,
-            "explain": "'어디로 갈지'는 where to go입니다."
+            "explain": "'언제 속도를 줄일지'는 when to slow down입니다. why to는 쓰지 않고, what to는 목적어를 묻으며, when should는 주어가 필요합니다."
+          },
+          {
+            "q": "다음 단어를 바르게 배열한 것을 고르세요.\n( knows / he / to / where / sit )",
+            "options": [
+              "He knows where to sit.",
+              "He where knows to sit.",
+              "He knows to where sit.",
+              "He knows where sit to."
+            ],
+            "answer": 0,
+            "explain": "「주어 + 동사 + 의문사 + to부정사」 순서이므로 He knows where to sit입니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nAfter thinking for a long time, we finally ___ where to spend our summer vacation.",
+            "options": [
+              "arrived",
+              "looked",
+              "decided",
+              "listened"
+            ],
+            "answer": 2,
+            "explain": "'어디서 보낼지를 결정했다'가 자연스러우므로 decided가 맞습니다. 나머지는 뒤의 「where to + 동사」와 의미가 어울리지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nIn the swimming class, the children slowly ___ how to float on the water.",
+            "options": [
+              "sold",
+              "closed",
+              "dropped",
+              "learned"
+            ],
+            "answer": 3,
+            "explain": "'뜨는 법을 배웠다'가 자연스러우므로 learned가 맞습니다. 나머지는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nThe friendly guide will ___ us where to find the best seats in the theater.",
+            "options": [
+              "lose",
+              "forget",
+              "break",
+              "show"
+            ],
+            "answer": 3,
+            "explain": "'어디서 찾을지 보여 준다'가 자연스러우므로 show가 맞습니다. 나머지는 문맥상 어색합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nBecause the road signs were confusing, the driver stopped to ___ a police officer where to turn.",
+            "options": [
+              "paint",
+              "ask",
+              "cook",
+              "carry"
+            ],
+            "answer": 1,
+            "explain": "'어디서 돌지 물어보다'가 자연스러우므로 ask가 맞습니다. 나머지는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nStanding in front of the huge library, the freshman began to ___ how to find one small book.",
+            "options": [
+              "enjoy",
+              "wonder",
+              "clean",
+              "water"
+            ],
+            "answer": 1,
+            "explain": "'어떻게 찾을지 궁금해하다'가 자연스러우므로 wonder가 맞습니다. 나머지는 문맥상 어색합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nI have no ___ what to buy for my dad's birthday this year.",
+            "options": [
+              "window",
+              "idea",
+              "hand",
+              "chair"
+            ],
+            "answer": 1,
+            "explain": "have no idea what to ~는 '무엇을 ~할지 전혀 모르다'라는 표현이므로 idea가 맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nOur art teacher promised to ___ us how to mix colors like a real painter.",
+            "options": [
+              "teach",
+              "miss",
+              "borrow",
+              "throw"
+            ],
+            "answer": 0,
+            "explain": "'색 섞는 법을 가르쳐 주다'가 자연스러우므로 teach가 맞습니다. 나머지는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nTom stood at the crossroad, not ___ which way to go to reach the stadium.",
+            "options": [
+              "empty",
+              "sure",
+              "late",
+              "hungry"
+            ],
+            "answer": 1,
+            "explain": "not sure which way to go는 '어느 길로 갈지 확신하지 못하다'라는 뜻이므로 sure가 맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nPlease ___ when to water the plants while I am away on my trip.",
+            "options": [
+              "spill",
+              "waste",
+              "break",
+              "remember"
+            ],
+            "answer": 3,
+            "explain": "'언제 물을 줄지 기억하라'가 자연스러우므로 remember가 맞습니다. 나머지는 문맥상 어색합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nDuring the meeting, the team members will ___ how to save more energy at school.",
+            "options": [
+              "discuss",
+              "swim",
+              "sleep",
+              "cry"
+            ],
+            "answer": 0,
+            "explain": "'어떻게 에너지를 아낄지 논의하다'가 자연스러우므로 discuss가 맞습니다. 나머지는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nThe students made a careful ___ about when to hold the school festival.",
+            "options": [
+              "meal",
+              "plan",
+              "storm",
+              "noise"
+            ],
+            "answer": 1,
+            "explain": "'언제 축제를 열지에 대한 계획을 세웠다'가 자연스러우므로 plan이 맞습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nIt was hard to ___ what to wear because all the clothes looked so nice.",
+            "options": [
+              "choose",
+              "drive",
+              "dig",
+              "drink"
+            ],
+            "answer": 0,
+            "explain": "'무엇을 입을지 고르기 어려웠다'가 자연스러우므로 choose가 맞습니다. 나머지는 의미가 맞지 않습니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nThe manual gave very ___ directions about how to set up the new printer.",
+            "options": [
+              "clear",
+              "angry",
+              "salty",
+              "sleepy"
+            ],
+            "answer": 0,
+            "explain": "'프린터 설치 방법에 대한 명확한 안내'가 자연스러우므로 clear가 맞습니다. 나머지는 문맥상 어색합니다."
+          },
+          {
+            "q": "빈칸에 알맞은 단어를 고르세요.\nExcuse me, could you please ___ me how to log in to the school website?",
+            "options": [
+              "throw",
+              "boil",
+              "tell",
+              "fold"
+            ],
+            "answer": 2,
+            "explain": "'로그인 방법을 알려 주다'가 자연스러우므로 tell이 맞습니다. 나머지는 의미가 맞지 않습니다."
           }
         ],
         "sa": [
@@ -7883,444 +7882,444 @@ export const courses = [
         "concept": "「so+형용사/부사+that+주어+동사」= 너무 ~해서 …하다 (so vs such 구별, so~that ↔ too~to 전환 포함)",
         "mc": [
           {
-            "q": "It was ___ hot that we couldn't play outside.",
+            "q": "The science museum was ___ crowded on Saturday that we waited an hour to buy tickets.",
             "options": [
-              "so",
               "such",
-              "very",
-              "too"
-            ],
-            "answer": 0,
-            "explain": "「so+형용사(hot)+that+주어+동사」구조이므로 빈칸에는 so가 알맞다."
-          },
-          {
-            "q": "He is so tall ___ he can touch the ceiling.",
-            "options": [
               "so",
-              "that",
-              "to",
-              "which"
+              "very",
+              "enough"
             ],
             "answer": 1,
-            "explain": "「so+형용사+that+주어+동사」에서 결과절을 이끄는 접속사는 that이다."
+            "explain": "형용사 crowded 앞이고 뒤에 that 결과절이 있으므로 so가 맞다. such는 명사 앞, very는 that절을 이끌 수 없다."
           },
           {
-            "q": "The box was so heavy ___ I couldn't lift it.",
+            "q": "During the trip, the guide spoke ___ clearly that even the youngest students understood everything.",
             "options": [
-              "that",
-              "than",
-              "then",
-              "as"
-            ],
-            "answer": 0,
-            "explain": "so ~ that 구문의 결과절은 that으로 연결한다. than(비교)·then(그때)과 혼동하지 않는다."
-          },
-          {
-            "q": "다음 중 빈칸에 알맞은 것은?  She was ___ tired that she fell asleep.",
-            "options": [
-              "such",
+              "such a",
               "so",
               "much",
-              "too"
+              "such"
             ],
             "answer": 1,
-            "explain": "형용사 tired 앞이므로 so를 쓴다. such는 명사(구) 앞에 쓴다."
+            "explain": "부사 clearly 앞이므로 so를 쓴다. such/such a는 명사 앞에 쓴다."
           },
           {
-            "q": "It was such ___ that everyone loved it.",
+            "q": "My little brother was ___ excited about the field trip that he couldn't sleep the night before.",
             "options": [
-              "a good movie",
-              "good movie",
-              "good",
-              "well"
+              "such",
+              "such a",
+              "so",
+              "too"
+            ],
+            "answer": 2,
+            "explain": "형용사 excited 앞이므로 so. that 결과절과 함께 쓰인다."
+          },
+          {
+            "q": "The final math test was ___ difficult that half of the class ran out of time.",
+            "options": [
+              "enough",
+              "very",
+              "such",
+              "so"
+            ],
+            "answer": 3,
+            "explain": "형용사 difficult 앞 + that 결과절이므로 so. very는 that절과 함께 결과를 나타낼 수 없다."
+          },
+          {
+            "q": "It was ___ a beautiful morning that the whole family decided to walk to school together.",
+            "options": [
+              "very",
+              "such",
+              "too",
+              "so"
+            ],
+            "answer": 1,
+            "explain": "「such+a+형용사+명사(a beautiful morning)」구조이므로 such."
+          },
+          {
+            "q": "They served ___ delicious food at the party that nobody wanted to go home.",
+            "options": [
+              "so",
+              "such a",
+              "such",
+              "very"
+            ],
+            "answer": 2,
+            "explain": "food는 셀 수 없는 명사라 관사 없이 「such+형용사+명사」→ such delicious food."
+          },
+          {
+            "q": "He is ___ a hard worker that his manager gave him an award last month.",
+            "options": [
+              "too",
+              "so",
+              "such",
+              "very"
+            ],
+            "answer": 2,
+            "explain": "「such+a+형용사+명사(a hard worker)」이므로 such. so는 관사와 함께 쓰지 않는다."
+          },
+          {
+            "q": "The library was so quiet ___ I could hear the clock ticking on the wall.",
+            "options": [
+              "which",
+              "so",
+              "that",
+              "than"
+            ],
+            "answer": 2,
+            "explain": "「so+형용사(quiet)+that+주어+동사」에서 결과절을 잇는 접속사는 that이다."
+          },
+          {
+            "q": "The backpack was so heavy ___ she had to stop and rest on the way home.",
+            "options": [
+              "than",
+              "as",
+              "then",
+              "that"
+            ],
+            "answer": 3,
+            "explain": "so~that 구문의 결과절은 that으로 연결한다. than(비교)·then(그때)과 혼동하지 않는다."
+          },
+          {
+            "q": "The instructions were so confusing ___ none of us could finish the project on time.",
+            "options": [
+              "that",
+              "who",
+              "what",
+              "where"
             ],
             "answer": 0,
-            "explain": "「such+a(n)+형용사+명사」구조이므로 such a good movie가 알맞다."
+            "explain": "결과를 나타내는 접속사는 that이다. 관계사 what/where/who는 여기 올 수 없다."
+          },
+          {
+            "q": "The comedy show last night was so funny that the whole audience ___ for ten minutes.",
+            "options": [
+              "laughing",
+              "laugh",
+              "to laugh",
+              "laughed"
+            ],
+            "answer": 3,
+            "explain": "that절은 「주어+동사」의 완전한 절이며 과거 상황이므로 laughed가 맞다."
+          },
+          {
+            "q": "The traffic this morning was so bad that we ___ the beginning of the movie.",
+            "options": [
+              "miss",
+              "missing",
+              "missed",
+              "to miss"
+            ],
+            "answer": 2,
+            "explain": "that 결과절에는 「주어+과거동사」가 온다. 과거이므로 missed."
+          },
+          {
+            "q": "'그 상자는 너무 무거워서 그가 혼자 옮길 수 없었다'와 뜻이 같은 문장은?",
+            "options": [
+              "The box was so heavy to carry alone.",
+              "The box was such heavy that he carried it alone.",
+              "The box was too heavy to carry it alone.",
+              "The box was too heavy for him to carry alone."
+            ],
+            "answer": 3,
+            "explain": "so heavy that he couldn't carry it = too heavy (for him) to carry. 목적어 it을 반복한 'to carry it', so~to 형태, such를 쓴 문장은 모두 틀리다."
+          },
+          {
+            "q": "The coffee was so hot that I couldn't drink it. 와 뜻이 같은 문장은?",
+            "options": [
+              "The coffee was hot enough to drink.",
+              "The coffee was too hot to drink.",
+              "The coffee was too hot to drink it.",
+              "The coffee was so hot to drink."
+            ],
+            "answer": 1,
+            "explain": "「so+형용사+that+주어+couldn't+동사」=「too+형용사+to부정사」. 목적어 it은 생략하므로 too hot to drink."
+          },
+          {
+            "q": "He was too tired to walk any farther. 와 뜻이 같은 문장은?",
+            "options": [
+              "He was such tired that he couldn't walk.",
+              "He was so tired to walk any farther.",
+              "He was so tired that he couldn't walk any farther.",
+              "He was so tired that he could walk farther."
+            ],
+            "answer": 2,
+            "explain": "too~to = so~that+주어+couldn't. 부정의 의미가 that절에 나타난다."
+          },
+          {
+            "q": "The problem was too hard for us to solve. 와 뜻이 같은 문장은?",
+            "options": [
+              "The problem was so hard to solve it.",
+              "The problem was so hard that we couldn't solve it.",
+              "The problem was so hard that we could solve it.",
+              "The problem was such hard that we couldn't solve it."
+            ],
+            "answer": 1,
+            "explain": "too~to = so~that+주어+couldn't. 부정의 뜻이 that절에 온다."
           },
           {
             "q": "다음 중 어법상 옳은 문장은?",
             "options": [
-              "It was so a hot day that we stayed home.",
-              "It was such a hot day that we stayed home.",
-              "It was such hot day that we stayed home.",
-              "It was so hot day that we stayed home."
+              "It was so a windy day that the game was canceled.",
+              "It was such windy day that the game was canceled.",
+              "It was so windy day that the game was canceled.",
+              "It was such a windy day that the game was canceled."
             ],
-            "answer": 1,
-            "explain": "「such+a+형용사+명사」가 올바르다. so는 명사 앞에 관사와 함께 쓰지 않는다."
-          },
-          {
-            "q": "The soup was so hot ___ I burned my tongue.",
-            "options": [
-              "that",
-              "so",
-              "and",
-              "but"
-            ],
-            "answer": 0,
-            "explain": "so + 형용사 + that + 주어 + 동사. 결과를 나타내는 that이 필요하다."
-          },
-          {
-            "q": "He ran ___ fast that nobody could catch him.  (fast는 부사)",
-            "options": [
-              "such",
-              "so",
-              "very much",
-              "too"
-            ],
-            "answer": 1,
-            "explain": "부사 fast 앞에도 so를 쓴다. so는 형용사·부사 앞, such는 명사 앞."
-          },
-          {
-            "q": "다음 문장과 뜻이 같은 것은?  The tea was so hot that I couldn't drink it.",
-            "options": [
-              "The tea was too hot to drink.",
-              "The tea was hot enough to drink.",
-              "The tea was too hot to drink it.",
-              "The tea was so hot to drink."
-            ],
-            "answer": 0,
-            "explain": "「so+형용사+that+주어+can't+동사」=「too+형용사+to부정사」. to부정사의 목적어(it)는 주어와 같으므로 생략한다."
-          },
-          {
-            "q": "다음을 too ~ to로 바르게 바꾼 것은?  The box was so heavy that I couldn't lift it.",
-            "options": [
-              "The box was too heavy to lift it.",
-              "The box was too heavy to lift.",
-              "The box was so heavy to lift.",
-              "The box was heavy enough to lift."
-            ],
-            "answer": 1,
-            "explain": "so heavy that I couldn't lift it → too heavy to lift. 반복되는 목적어 it은 쓰지 않는다."
-          },
-          {
-            "q": "The problem was too difficult to solve. 와 뜻이 같은 문장은?",
-            "options": [
-              "The problem was so difficult that we could solve it.",
-              "The problem was so difficult that we couldn't solve it.",
-              "The problem was such difficult that we couldn't solve it.",
-              "The problem was so difficult to solve it."
-            ],
-            "answer": 1,
-            "explain": "too ~ to = so ~ that + 주어 + can't/couldn't. 부정의 뜻이 that절에 나타난다."
-          },
-          {
-            "q": "빈칸에 공통으로 알맞은 말은?  He is ___ kind that everyone likes him. / It was ___ dark that I couldn't see.",
-            "options": [
-              "such",
-              "so",
-              "too",
-              "very"
-            ],
-            "answer": 1,
-            "explain": "두 문장 모두 형용사(kind, dark) 앞이므로 so가 들어간다."
-          },
-          {
-            "q": "다음 중 빈칸에 so를 쓸 수 없는 것은?",
-            "options": [
-              "It was ___ cold that we stayed home.",
-              "She spoke ___ quietly that I couldn't hear.",
-              "It was ___ a long movie that we got bored.",
-              "He is ___ funny that we always laugh."
-            ],
-            "answer": 2,
-            "explain": "「a+형용사+명사(long movie)」앞에는 such를 써야 한다. 나머지는 형용사·부사 앞이라 so가 맞다."
-          },
-          {
-            "q": "The music was so loud ___ we couldn't talk.",
-            "options": [
-              "that",
-              "what",
-              "where",
-              "who"
-            ],
-            "answer": 0,
-            "explain": "결과를 나타내는 접속사 that이 알맞다."
-          },
-          {
-            "q": "I was so busy ___ I skipped lunch.",
-            "options": [
-              "so",
-              "that",
-              "for",
-              "to"
-            ],
-            "answer": 1,
-            "explain": "so + 형용사(busy) + that + 주어 + 동사 구조."
+            "answer": 3,
+            "explain": "「such+a+형용사+명사(a windy day)」가 올바르다. so는 명사 앞에 관사와 함께 쓰지 않는다."
           },
           {
             "q": "다음 중 어법상 틀린 문장은?",
             "options": [
-              "The story was so sad that we cried.",
-              "The bag was so heavy that she dropped it.",
-              "It was so funny that we laughed a lot.",
-              "She was so a tired that she slept."
+              "The wind blew so hard that the door slammed shut.",
+              "She was so a smart student that she skipped a grade.",
+              "The cake was so sweet that I couldn't finish it.",
+              "The lecture was so boring that I fell asleep."
             ],
-            "answer": 3,
-            "explain": "so 다음에는 관사(a)를 쓰지 않고 형용사만 온다. 'so a tired'는 틀린 표현이다."
+            "answer": 1,
+            "explain": "so 다음에는 관사 a를 쓰지 않는다. 'so a smart student'는 틀리며 such a smart student가 맞다."
           },
           {
-            "q": "The joke was so funny that we ___ a lot.",
+            "q": "다음 중 빈칸에 so를 쓸 수 없는 것은?",
             "options": [
-              "laughed",
-              "laugh",
-              "laughing",
-              "to laugh"
+              "The test was ___ easy that everyone got an A.",
+              "The bus was ___ slow that we were late for class.",
+              "It was ___ a lovely garden that we took many photos.",
+              "She sang ___ beautifully that we clapped for a long time."
             ],
-            "answer": 0,
-            "explain": "that절은 「주어+동사」로 완전한 절이다. 과거 상황이므로 laughed가 알맞다."
+            "answer": 2,
+            "explain": "「a+형용사+명사(a lovely garden)」앞에는 such를 써야 한다. 나머지는 형용사·부사 앞이라 so가 맞다."
           },
           {
-            "q": "우리말에 맞게 빈칸을 채울 때 알맞은 것은?  그는 너무 빨리 달려서 아무도 그를 잡을 수 없었다.  He ran so fast that nobody ___ catch him.",
+            "q": "There were ___ many people at the concert that we couldn't find our seats.",
             "options": [
-              "could",
-              "couldn't",
               "so",
+              "very",
+              "such a",
               "such"
             ],
             "answer": 0,
-            "explain": "부정 주어 nobody가 이미 '아무도 ~않다'를 나타내므로 뒤에는 could를 쓴다. nobody could catch him = 아무도 그를 잡을 수 없었다."
+            "explain": "「so many/much + 명사」는 so를 쓴다. so many people이 맞다."
           },
           {
-            "q": "다음 두 문장을 한 문장으로 바르게 연결한 것은?  She was very tired. She fell asleep.",
+            "q": "He made ___ much noise while studying that his roommate asked him to be quiet.",
             "options": [
-              "She was too tired that she fell asleep.",
-              "She was so tired that she fell asleep.",
-              "She was such tired that she fell asleep.",
-              "She was so tired to fall asleep."
+              "too",
+              "so",
+              "such",
+              "such a"
             ],
             "answer": 1,
-            "explain": "very를 so로 바꾸고 두 문장을 that으로 연결한다. so+형용사+that+주어+동사."
+            "explain": "「so much + 셀 수 없는 명사(noise)」이므로 so."
           },
           {
-            "q": "다음 두 문장을 「so ~ that」으로 연결하시오.  The movie was very long. We got bored.",
+            "q": "It was ___ exciting a match that the fans stayed until the very last minute.",
             "options": [
-              "The movie was so long that we got bored.",
-              "The movie was such long that we got bored.",
-              "The movie was too long that we got bored.",
-              "The movie was so long so we got bored."
-            ],
-            "answer": 0,
-            "explain": "so + long(형용사) + that + we got bored(주어+동사)."
-          },
-          {
-            "q": "빈칸에 알맞은 것은?  It was ___ interesting a book that I read it twice.",
-            "options": [
-              "so",
               "such",
               "very",
+              "so",
               "too"
             ],
-            "answer": 0,
-            "explain": "「so+형용사+a+명사」어순도 가능하다: so interesting a book. such는 「such+a+형용사+명사」어순."
+            "answer": 2,
+            "explain": "「so+형용사+a+명사」어순도 가능하다: so exciting a match. such는 「such+a+형용사+명사」어순."
           },
           {
-            "q": "다음 중 밑줄 친 부분이 어법상 옳은 것은?",
+            "q": "우리말에 맞게 빈칸을 채울 때 알맞은 것은?  그는 너무 조용히 말해서 아무도 그의 말을 들을 수 없었다.  He spoke so softly that nobody ___ hear him.",
             "options": [
-              "It was such cold that we stayed inside.",
-              "It was so a cold day that we stayed inside.",
-              "It was such a cold day that we stayed inside.",
-              "It was so cold day that we stayed inside."
+              "so",
+              "such",
+              "could",
+              "couldn't"
             ],
             "answer": 2,
-            "explain": "「such+a+형용사+명사(a cold day)」가 올바른 어순이다."
+            "explain": "부정 주어 nobody가 이미 '아무도 ~않다'를 나타내므로 뒤에는 could를 쓴다. nobody could hear him = 아무도 들을 수 없었다."
           },
           {
-            "q": "The bag was so heavy ___ she dropped it.",
+            "q": "다음 두 문장을 한 문장으로 바르게 연결한 것은?  The room was very messy. We spent an hour cleaning it.",
             "options": [
-              "so",
-              "that",
-              "than",
-              "as"
+              "The room was too messy that we spent an hour cleaning it.",
+              "The room was so messy to spend an hour cleaning it.",
+              "The room was so messy that we spent an hour cleaning it.",
+              "The room was such messy that we spent an hour cleaning it."
+            ],
+            "answer": 2,
+            "explain": "very를 so로 바꾸고 that으로 연결한다. so+형용사(messy)+that+주어+동사."
+          },
+          {
+            "q": "다음 두 문장을 「so ~ that」으로 연결한 것으로 알맞은 것은?  The lake was very deep. The children were not allowed to swim.",
+            "options": [
+              "The lake was too deep that the children were not allowed to swim.",
+              "The lake was so deep that the children were not allowed to swim.",
+              "The lake was such deep that the children were not allowed to swim.",
+              "The lake was so deep so the children were not allowed to swim."
             ],
             "answer": 1,
-            "explain": "so ~ that 구문. 결과절을 that으로 연결한다."
-          },
-          {
-            "q": "다음 문장을 too ~ to로 바꿀 때 빈칸에 알맞은 것은?  It was so dark that I couldn't see. → It was too dark ___.",
-            "options": [
-              "to see",
-              "to see it",
-              "seeing",
-              "for see"
-            ],
-            "answer": 0,
-            "explain": "so dark that I couldn't see → too dark to see. 목적어가 없으므로 to see로 끝난다."
-          },
-          {
-            "q": "다음 중 「so ~ that」 구문이 바르게 쓰인 것은?",
-            "options": [
-              "He is so a tall that he can touch the ceiling.",
-              "He is so tall that he can touch the ceiling.",
-              "He is such tall that he can touch the ceiling.",
-              "He is so tall so he can touch the ceiling."
-            ],
-            "answer": 1,
-            "explain": "so + 형용사(tall) + that + 주어 + 동사. so 뒤에는 관사가 오지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 말은?  The story was ___ sad that everyone cried.",
-            "options": [
-              "such",
-              "so",
-              "too",
-              "enough"
-            ],
-            "answer": 1,
-            "explain": "형용사 sad 앞이므로 so."
+            "explain": "so+deep(형용사)+that+주어+동사. such는 명사 앞, 결과절 연결은 that."
           },
           {
             "q": "다음 중 뜻이 나머지와 다른 하나는?",
             "options": [
-              "The tea was too hot to drink.",
-              "The tea was so hot that I couldn't drink it.",
-              "The tea was so hot that I could drink it.",
-              "The tea was too hot for me to drink."
-            ],
-            "answer": 2,
-            "explain": "①②④는 '너무 뜨거워서 마실 수 없었다'는 뜻이지만, ③은 '마실 수 있었다'로 뜻이 반대다."
-          },
-          {
-            "q": "It was such ___ that we couldn't sleep.",
-            "options": [
-              "loud music",
-              "a loud music",
-              "loud",
-              "so loud"
+              "The soup was so salty that I ate it all.",
+              "The soup was too salty to eat.",
+              "The soup was too salty for me to eat.",
+              "The soup was so salty that I couldn't eat it."
             ],
             "answer": 0,
-            "explain": "music은 셀 수 없는 명사라 관사 a를 쓰지 않는다: such loud music."
+            "explain": "나머지는 '너무 짜서 먹을 수 없었다'는 뜻이지만, 'so salty that I ate it all'은 '다 먹었다'로 뜻이 반대다."
           },
           {
-            "q": "빈칸에 알맞은 것은?  He spoke ___ slowly that everyone understood him.  (slowly는 부사)",
+            "q": "The homework was so ___ that most students finished it in just five minutes.",
             "options": [
-              "such",
-              "so",
-              "such a",
-              "very much"
+              "careful",
+              "empty",
+              "famous",
+              "easy"
+            ],
+            "answer": 3,
+            "explain": "5분 만에 끝냈다는 결과와 어울리는 형용사는 easy(쉬운). 나머지는 문맥상 맞지 않는다."
+          },
+          {
+            "q": "The story was so ___ that I stayed up all night reading it.",
+            "options": [
+              "interesting",
+              "boring",
+              "quiet",
+              "angry"
+            ],
+            "answer": 0,
+            "explain": "밤새워 읽었다는 결과와 어울리는 것은 interesting(흥미로운). boring이면 밤새 읽지 않는다."
+          },
+          {
+            "q": "The runner was so ___ that he won the race by ten seconds.",
+            "options": [
+              "slow",
+              "fast",
+              "late",
+              "weak"
             ],
             "answer": 1,
-            "explain": "부사 slowly 앞에는 so를 쓴다."
+            "explain": "경주를 크게 이겼다는 결과와 어울리는 형용사는 fast(빠른)."
           },
           {
-            "q": "다음 문장의 빈칸에 알맞은 것은?  The room was ___ that we felt cold.",
+            "q": "She spoke so ___ that everyone in the back row could hear her clearly.",
             "options": [
-              "so cold",
-              "very cold",
-              "such cold",
+              "rudely",
+              "loudly",
+              "silently",
+              "carelessly"
+            ],
+            "answer": 1,
+            "explain": "뒷줄까지 또렷이 들렸다는 결과와 맞는 부사는 loudly(크게)."
+          },
+          {
+            "q": "The medicine worked so ___ that his fever was gone within an hour.",
+            "options": [
+              "rarely",
+              "quickly",
+              "hardly",
+              "slowly"
+            ],
+            "answer": 1,
+            "explain": "한 시간 안에 열이 내렸다는 결과와 맞는 부사는 quickly(빠르게)."
+          },
+          {
+            "q": "It was such a ___ day that we canceled the picnic and stayed inside.",
+            "options": [
+              "stormy",
+              "gentle",
+              "sunny",
+              "peaceful"
+            ],
+            "answer": 0,
+            "explain": "소풍을 취소하고 안에 있었다는 결과에는 stormy(폭풍우 치는)가 어울린다."
+          },
+          {
+            "q": "The teacher was so ___ that she explained the same idea three times until we understood.",
+            "options": [
+              "nervous",
+              "strict",
+              "lazy",
+              "patient"
+            ],
+            "answer": 3,
+            "explain": "이해할 때까지 세 번 설명했다는 문맥에는 patient(참을성 있는)가 맞다."
+          },
+          {
+            "q": "The bag was so ___ that I could carry it with just one finger.",
+            "options": [
+              "light",
+              "expensive",
+              "heavy",
+              "dirty"
+            ],
+            "answer": 0,
+            "explain": "손가락 하나로 들 수 있다는 결과에는 light(가벼운)가 맞다."
+          },
+          {
+            "q": "The joke was so ___ that even the teacher couldn't stop laughing.",
+            "options": [
+              "sad",
+              "serious",
+              "boring",
+              "funny"
+            ],
+            "answer": 3,
+            "explain": "웃음을 멈추지 못했다는 결과에는 funny(웃긴)가 어울린다."
+          },
+          {
+            "q": "The soup was so ___ that I had to add some water before eating it.",
+            "options": [
+              "empty",
+              "salty",
+              "fresh",
               "cold"
             ],
-            "answer": 0,
-            "explain": "결과의 that절을 이끌 수 있는 것은 so이다. 'so cold that ~'가 맞다. very·such·형용사 단독은 that 결과절과 함께 쓸 수 없다."
+            "answer": 1,
+            "explain": "물을 타야 했다는 결과에는 salty(짠)가 맞다."
           },
           {
-            "q": "Which is correct?  '그 문제는 너무 어려워서 아무도 풀 수 없었다.'",
+            "q": "The classroom became so ___ during the test that you could hear a pin drop.",
             "options": [
-              "The problem was so difficult that nobody could solve it.",
-              "The problem was such difficult that nobody could solve it.",
-              "The problem was so difficult to solve it.",
-              "The problem was too difficult that nobody could solve it."
+              "silent",
+              "crowded",
+              "noisy",
+              "messy"
             ],
             "answer": 0,
-            "explain": "so + difficult + that + nobody + could solve it. so~that 구문이 올바르다."
+            "explain": "핀 떨어지는 소리도 들릴 만큼이라는 표현과 맞는 것은 silent(조용한)."
           },
           {
-            "q": "다음 문장을 so ~ that으로 바꿀 때 알맞은 것은?  The coffee was too hot to drink.",
+            "q": "He studied so ___ for the exam that he easily answered every question.",
             "options": [
-              "The coffee was so hot that I drank it.",
-              "The coffee was so hot that I couldn't drink it.",
-              "The coffee was such hot that I couldn't drink it.",
-              "The coffee was so hot to drink it."
+              "hard",
+              "late",
+              "hardly",
+              "little"
+            ],
+            "answer": 0,
+            "explain": "모든 문제를 쉽게 풀었다는 결과와 맞는 부사는 hard(열심히). hardly는 '거의 ~않다'로 뜻이 반대다."
+          },
+          {
+            "q": "The gift was such a ___ that she hugged everyone with tears in her eyes.",
+            "options": [
+              "mistake",
+              "problem",
+              "surprise",
+              "danger"
+            ],
+            "answer": 2,
+            "explain": "눈물을 흘리며 안았다는 문맥에 맞는 명사는 surprise(놀라움/뜻밖의 선물)."
+          },
+          {
+            "q": "The road was so ___ after the snowstorm that all the buses stopped running.",
+            "options": [
+              "narrow",
+              "icy",
+              "clean",
+              "smooth"
             ],
             "answer": 1,
-            "explain": "too ~ to = so ~ that + 주어 + couldn't. 부정의 의미가 that절로 온다."
-          },
-          {
-            "q": "빈칸에 알맞은 것은?  I was ___ hungry that I ate everything.",
-            "options": [
-              "so",
-              "such",
-              "such a",
-              "too"
-            ],
-            "answer": 0,
-            "explain": "형용사 hungry 앞이므로 so."
-          },
-          {
-            "q": "다음 중 어법상 옳은 문장은?",
-            "options": [
-              "She was so busy that she skip lunch.",
-              "She was so busy that she skipped lunch.",
-              "She was so busy to skip lunch.",
-              "She was such busy that she skipped lunch."
-            ],
-            "answer": 1,
-            "explain": "that절에는 「주어+동사」가 오며, 과거이므로 skipped. so는 형용사 busy 앞에 쓴다."
-          },
-          {
-            "q": "The teacher spoke ___ clearly that we all understood.",
-            "options": [
-              "such",
-              "so",
-              "such a",
-              "much"
-            ],
-            "answer": 1,
-            "explain": "부사 clearly 앞에는 so를 쓴다."
-          },
-          {
-            "q": "다음 문장의 빈칸에 알맞은 것은?  He had ___ many books that his bag was heavy.",
-            "options": [
-              "so",
-              "such",
-              "such a",
-              "too"
-            ],
-            "answer": 0,
-            "explain": "「so many/much/few/little + 명사」는 so를 쓴다. so many books가 맞다."
-          },
-          {
-            "q": "다음 문장의 빈칸에 알맞은 것은?  She has ___ a kind heart that everyone loves her.",
-            "options": [
-              "so",
-              "such",
-              "very",
-              "too"
-            ],
-            "answer": 1,
-            "explain": "「such+a+형용사+명사(a kind heart)」구조이므로 such."
-          },
-          {
-            "q": "다음 중 우리말 뜻이 바르게 옮겨진 것은?  '날씨가 너무 좋아서 우리는 소풍을 갔다.'",
-            "options": [
-              "The weather was so nice that we went on a picnic.",
-              "The weather was such nice that we went on a picnic.",
-              "The weather was so nice to go on a picnic.",
-              "The weather was too nice that we went on a picnic."
-            ],
-            "answer": 0,
-            "explain": "so + nice(형용사) + that + we went ~ 구조가 올바르다."
-          },
-          {
-            "q": "빈칸에 알맞은 것은?  The show was ___ boring that many people left.",
-            "options": [
-              "so",
-              "such",
-              "such a",
-              "enough"
-            ],
-            "answer": 0,
-            "explain": "형용사 boring 앞이므로 so."
-          },
-          {
-            "q": "다음 문장을 too ~ to로 바꾼 것으로 알맞은 것은?  He was so weak that he couldn't walk.",
-            "options": [
-              "He was too weak to walk.",
-              "He was too weak to walk it.",
-              "He was so weak to walk.",
-              "He was such weak to walk."
-            ],
-            "answer": 0,
-            "explain": "so weak that he couldn't walk → too weak to walk. 자동사라 목적어가 없다."
+            "explain": "눈보라 뒤 버스가 멈췄다는 결과에는 icy(얼음으로 뒤덮인)가 알맞다."
           }
         ],
         "sa": [

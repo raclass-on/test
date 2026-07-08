@@ -10,6 +10,7 @@ export default function AdminDashboard({ adminToken }) {
   const [tab, setTab] = useState('승인 관리')
   const [students, setStudents] = useState([])
   const [rows, setRows] = useState([])
+  const [selectedKey, setSelectedKey] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -59,8 +60,8 @@ export default function AdminDashboard({ adminToken }) {
   return (
     <div>
       <div className="admin-tabs">
-        {['승인 관리', '전체 점수'].map((t) => (
-          <button key={t} className={`filter-btn ${tab === t ? 'active' : ''}`} onClick={() => setTab(t)}>{t}</button>
+        {['승인 관리', '학생 진도'].map((t) => (
+          <button key={t} className={`filter-btn ${tab === t ? 'active' : ''}`} onClick={() => { setTab(t); setSelectedKey(null) }}>{t}</button>
         ))}
         <button className="filter-btn" onClick={refresh}>새로고침 ⟳</button>
       </div>
@@ -116,42 +117,91 @@ export default function AdminDashboard({ adminToken }) {
           )}
         </div>
       ) : (
-        <div className="admin-section">
-          {rows.filter((r) => r.status === 'approved').length === 0 ? (
-            <p className="admin-empty">점수 데이터가 아직 없어요.</p>
-          ) : (
-            rows.filter((r) => r.status === 'approved').map((r) => {
-              const units = unitsOf(r.course)
-              const done = units.filter((u) => r.scores[u.id]?.best)
-              const avgStars = done.length ? Math.round(done.reduce((s, u) => s + r.scores[u.id].best.stars, 0) / done.length) : 0
-              return (
-                <div key={r.course + r.name} className="score-card">
-                  <div className="score-card-head">
-                    <div><b>{r.name}</b> <span className="muted">· {courseName(r.course)}</span></div>
-                    <div className="muted">학습 {done.length}/{units.length}유닛 · <Stars count={avgStars} /></div>
-                  </div>
-                  {done.length === 0 ? (
-                    <div className="muted small">아직 푼 유닛이 없어요.</div>
-                  ) : (
-                    <div className="score-units">
-                      {units.map((u) => {
-                        const best = r.scores[u.id]?.best
-                        if (!best) return null
-                        return (
-                          <div key={u.id} className="score-unit">
-                            <span className="score-unit-title">{u.title}</span>
-                            <span className="score-unit-nums">객 {best.mc}/{best.mcTotal} · 주 {best.sa}/{best.saTotal} <Stars count={best.stars} /></span>
-                          </div>
-                        )
-                      })}
-                    </div>
-                  )}
-                </div>
-              )
-            })
-          )}
-        </div>
+        <StudentProgress
+          rows={rows.filter((r) => r.status === 'approved')}
+          selectedKey={selectedKey}
+          onSelect={setSelectedKey}
+        />
       )}
+    </div>
+  )
+}
+
+function pct(mc, sa, mcTotal, saTotal) {
+  const t = mcTotal + saTotal
+  return t ? Math.round(((mc + sa) / t) * 100) : 0
+}
+function starsOf(p) {
+  return p >= 90 ? 5 : p >= 75 ? 4 : p >= 60 ? 3 : p >= 40 ? 2 : 1
+}
+
+function StudentProgress({ rows, selectedKey, onSelect }) {
+  if (rows.length === 0) return <p className="admin-empty">승인된 학생이 아직 없어요.</p>
+
+  // 상세 보기
+  const selected = rows.find((r) => r.course + '::' + r.name === selectedKey)
+  if (selected) {
+    const units = unitsOf(selected.course)
+    const done = units.filter((u) => selected.scores[u.id]?.best)
+    return (
+      <div className="admin-section">
+        <button className="back-link" onClick={() => onSelect(null)}>← 학생 목록</button>
+        <div className="score-card-head" style={{ marginTop: 6 }}>
+          <div><b style={{ fontSize: '1.1rem' }}>{selected.name}</b> <span className="muted">· {courseName(selected.course)}</span></div>
+          <span className="muted small">학습 {done.length}/{units.length}유닛</span>
+        </div>
+        {done.length === 0 ? (
+          <p className="admin-empty">아직 푼 유닛이 없어요.</p>
+        ) : (
+          units.map((u) => {
+            const rec = selected.scores[u.id]
+            if (!rec?.best) return null
+            const attempts = [...(rec.attempts || [])].reverse() // 최신순
+            return (
+              <div key={u.id} className="prog-unit">
+                <div className="prog-unit-head">
+                  <span className="prog-unit-title">{u.title}</span>
+                  <span className="muted small">최고 <Stars count={rec.best.stars} /></span>
+                </div>
+                <div className="prog-attempts">
+                  {attempts.map((a, i) => {
+                    const p = pct(a.mc, a.sa, a.mcTotal, a.saTotal)
+                    return (
+                      <div key={i} className="prog-attempt">
+                        <span className="prog-date">{a.date}</span>
+                        <span className="prog-score">객관식 {a.mc}/{a.mcTotal} · 주관식 {a.sa}/{a.saTotal}</span>
+                        <span className="prog-pct">{p}% <Stars count={starsOf(p)} /></span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })
+        )}
+      </div>
+    )
+  }
+
+  // 학생 목록
+  return (
+    <div className="admin-section">
+      <p className="admin-empty" style={{ marginBottom: 4 }}>학생을 누르면 날짜별 진도·점수를 볼 수 있어요.</p>
+      {rows.map((r) => {
+        const units = unitsOf(r.course)
+        const done = units.filter((u) => r.scores[u.id]?.best)
+        const avgStars = done.length ? Math.round(done.reduce((s, u) => s + r.scores[u.id].best.stars, 0) / done.length) : 0
+        const attemptCount = units.reduce((s, u) => s + (r.scores[u.id]?.attempts?.length || 0), 0)
+        return (
+          <button key={r.course + r.name} className="student-prog-row" onClick={() => onSelect(r.course + '::' + r.name)}>
+            <div><b>{r.name}</b> <span className="muted">· {courseName(r.course)}</span></div>
+            <div className="muted small">
+              {done.length > 0 ? <>학습 {done.length}/{units.length}유닛 · 응시 {attemptCount}회 · <Stars count={avgStars} /></> : '아직 기록 없음'}
+              <span className="prog-arrow"> ›</span>
+            </div>
+          </button>
+        )
+      })}
     </div>
   )
 }

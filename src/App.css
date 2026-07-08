@@ -299,6 +299,28 @@ body {
 .score-unit-title { font-weight: 600; }
 .score-unit-nums { color: var(--text-muted); white-space: nowrap; }
 
+/* ---------- Admin student progress ---------- */
+.student-prog-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%;
+  background: var(--card-bg); border: 2px solid var(--border); border-radius: 12px;
+  padding: 14px 16px; cursor: pointer; text-align: left; font-family: inherit; transition: all 0.12s;
+  box-shadow: var(--shadow);
+}
+.student-prog-row:hover { border-color: var(--primary); transform: translateY(-1px); }
+.prog-arrow { color: var(--primary); font-weight: 700; }
+
+.prog-unit { background: var(--card-bg); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+.prog-unit-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.prog-unit-title { font-weight: 700; font-size: 0.95rem; }
+.prog-attempts { display: flex; flex-direction: column; gap: 6px; }
+.prog-attempt {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+  padding: 8px 12px; background: var(--bg); border-radius: 8px; font-size: 0.85rem;
+}
+.prog-date { font-weight: 700; color: var(--primary-dark); min-width: 92px; }
+.prog-score { color: var(--text); flex: 1; }
+.prog-pct { color: var(--text-muted); white-space: nowrap; }
+
 /* ---------- Mobile ---------- */
 @media (max-width: 620px) {
   .logo { font-size: 1.25rem; }
