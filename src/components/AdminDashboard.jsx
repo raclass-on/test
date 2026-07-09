@@ -216,11 +216,15 @@ function starsOf(p) {
 }
 
 function StudentProgress({ rows, selectedKey, onSelect }) {
+  const [showReport, setShowReport] = useState(false)
+  useEffect(() => { setShowReport(false) }, [selectedKey])
+
   if (rows.length === 0) return <p className="admin-empty">승인된 학생이 아직 없어요.</p>
 
   // 상세 보기
   const selected = rows.find((r) => r.course + '::' + r.name === selectedKey)
   if (selected) {
+    if (showReport) return <StudentReport selected={selected} onBack={() => setShowReport(false)} />
     const units = unitsOf(selected.course)
     const done = units.filter((u) => selected.scores[u.id]?.best)
     const touched = units.filter((u) => {
@@ -234,6 +238,7 @@ function StudentProgress({ rows, selectedKey, onSelect }) {
           <div><b style={{ fontSize: '1.1rem' }}>{selected.name}</b> <span className="muted">· {courseName(selected.course)}</span></div>
           <span className="muted small">학습 {done.length}/{units.length}유닛</span>
         </div>
+        <button className="btn btn-primary small" style={{ alignSelf: 'flex-start' }} onClick={() => setShowReport(true)}>📄 종합 레포트 · PDF 저장</button>
         {touched.length === 0 ? (
           <p className="admin-empty">아직 푼 유닛이 없어요.</p>
         ) : (
@@ -300,6 +305,83 @@ function StudentProgress({ rows, selectedKey, onSelect }) {
           </button>
         )
       })}
+    </div>
+  )
+}
+
+// 학생 종합 성취 레포트 (인쇄 → 'PDF로 저장')
+function StudentReport({ selected, onBack }) {
+  const units = unitsOf(selected.course)
+  const done = units.filter((u) => selected.scores[u.id]?.best)
+  const avgStars = done.length
+    ? Math.round(done.reduce((s, u) => s + selected.scores[u.id].best.stars, 0) / done.length)
+    : 0
+  const avgPct = done.length
+    ? Math.round(done.reduce((s, u) => s + (selected.scores[u.id].best.percent || 0), 0) / done.length)
+    : 0
+  const now = new Date()
+  const dateStr = `${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()}.`
+
+  return (
+    <div className="report-page">
+      <div className="report-actions no-print">
+        <button className="btn btn-outline small" onClick={onBack}>← 뒤로</button>
+        <button className="btn btn-primary small" onClick={() => window.print()}>🖨️ 인쇄 · PDF 저장</button>
+      </div>
+      <p className="admin-empty no-print" style={{ marginTop: 0 }}>
+        버튼을 누르면 인쇄창이 열려요. 프린터를 <b>‘PDF로 저장’</b>으로 선택하면 PDF 파일로 저장됩니다.
+      </p>
+
+      <div className="report-doc" id="report-doc">
+        <div className="report-doc-head">
+          <div className="report-doc-title">레이첼 영어학원 · 학습 성취 레포트</div>
+          <div className="report-doc-meta">
+            <span><b>{selected.name}</b> 학생</span>
+            <span>{courseName(selected.course)}</span>
+            <span>발행일 {dateStr}</span>
+          </div>
+        </div>
+
+        <table className="report-doc-table">
+          <thead>
+            <tr><th>유닛</th><th>객관식</th><th>주관식</th><th>정답률</th><th>별점</th><th>최근 응시</th></tr>
+          </thead>
+          <tbody>
+            {units.map((u) => {
+              const b = selected.scores[u.id]?.best
+              return (
+                <tr key={u.id}>
+                  <td className="rd-unit">{u.title}</td>
+                  {b ? (
+                    <>
+                      <td>{b.mc}/{b.mcTotal}</td>
+                      <td>{b.sa}/{b.saTotal}</td>
+                      <td>{b.percent}%</td>
+                      <td className="rd-star">{'★'.repeat(b.stars)}{'☆'.repeat(5 - b.stars)}</td>
+                      <td>{b.date}</td>
+                    </>
+                  ) : (
+                    <><td>-</td><td>-</td><td>-</td><td className="rd-none">미완료</td><td>-</td></>
+                  )}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+
+        <div className="report-doc-summary">
+          <div><span className="rd-label">완료 유닛</span><span className="rd-val">{done.length} / {units.length}</span></div>
+          <div><span className="rd-label">평균 정답률</span><span className="rd-val">{avgPct}%</span></div>
+          <div><span className="rd-label">종합 별점</span><span className="rd-val rd-star">{'★'.repeat(avgStars)}{'☆'.repeat(5 - avgStars)} <span style={{ color: '#111827' }}>({avgStars}/5)</span></span></div>
+        </div>
+
+        <div className="report-doc-comment">
+          <div className="rd-label">선생님 코멘트</div>
+          <div className="rd-comment-box" />
+        </div>
+
+        <div className="report-doc-foot">※ 점수는 각 유닛 최고 기록 기준입니다. · 레이첼 영어학원</div>
+      </div>
     </div>
   )
 }

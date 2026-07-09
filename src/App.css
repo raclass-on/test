@@ -300,6 +300,34 @@ body {
 .cell-star.s3 { color: #ca8a04; }
 .cell-star.s2, .cell-star.s1 { color: #ea580c; }
 .cell-none { color: #cbd5e1; }
+
+/* 종합 레포트 (인쇄 → PDF) */
+.report-page { display: flex; flex-direction: column; gap: 10px; }
+.report-actions { display: flex; gap: 8px; }
+.report-doc { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 22px; color: #111827; }
+.report-doc-head { border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-bottom: 14px; }
+.report-doc-title { font-size: 1.15rem; font-weight: 800; color: var(--primary-dark); }
+.report-doc-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-size: 0.85rem; color: var(--text-muted); }
+.report-doc-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.report-doc-table th, .report-doc-table td { border: 1px solid var(--border); padding: 7px 8px; text-align: center; }
+.report-doc-table th { background: #f8fafc; font-weight: 700; color: var(--text-muted); }
+.report-doc-table .rd-unit { text-align: left; font-weight: 600; }
+.rd-star { color: #f59e0b; letter-spacing: 1px; white-space: nowrap; }
+.rd-none { color: var(--text-muted); }
+.report-doc-summary { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 14px; padding: 12px 14px; background: #f8fafc; border-radius: 10px; }
+.report-doc-summary > div { display: flex; flex-direction: column; gap: 2px; }
+.rd-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 700; }
+.rd-val { font-size: 1rem; font-weight: 700; color: #111827; }
+.report-doc-comment { margin-top: 14px; }
+.rd-comment-box { border: 1px dashed var(--border); border-radius: 8px; height: 70px; margin-top: 4px; }
+.report-doc-foot { margin-top: 16px; font-size: 0.72rem; color: var(--text-muted); text-align: center; }
+
+@media print {
+  body * { visibility: hidden !important; }
+  #report-doc, #report-doc * { visibility: visible !important; }
+  #report-doc { position: absolute; left: 0; top: 0; width: 100%; border: none; border-radius: 0; padding: 0; }
+  @page { margin: 14mm; }
+}
 .admin-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 .filter-btn {
   padding: 7px 16px; border-radius: 20px; border: 2px solid var(--border); background: var(--card-bg);
