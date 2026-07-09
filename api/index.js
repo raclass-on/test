@@ -1,19 +1,30 @@
-import { getStore } from '@netlify/blobs'
 import crypto from 'node:crypto'
+import { Redis } from '@upstash/redis'
 
 // ── 설정(환경변수) ──────────────────────────────────────────────
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin1234'
 const AUTH_SECRET = process.env.AUTH_SECRET || 'dev-secret-change-me'
 
-// v2 Netlify Function: /api 로 접근
-export const config = { path: '/api' }
+// ── 저장소 (Upstash Redis, REST) ────────────────────────────────
+// Vercel의 Upstash 통합이 넣어주는 환경변수를 사용. (이름이 환경마다 달라 폴백 처리)
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN,
+})
 
-// ── 저장소 ──────────────────────────────────────────────────────
-function store() {
-  return getStore({ name: 'grammar', consistency: 'strong' })
-}
 const sKey = (course, name) => `student:${course}:${encodeURIComponent(name)}`
 const scKey = (course, name) => `scores:${course}:${encodeURIComponent(name)}`
+
+async function listKeys(prefix) {
+  const keys = []
+  let cursor = '0'
+  do {
+    const [next, batch] = await redis.scan(cursor, { match: `${prefix}*`, count: 1000 })
+    cursor = String(next)
+    if (batch && batch.length) keys.push(...batch)
+  } while (cursor !== '0')
+  return keys
+}
 
 // ── 유틸 ────────────────────────────────────────────────────────
 function hmac(data) {
@@ -38,13 +49,6 @@ function verifyToken(t) {
 const adminToken = () => hmac('ADMIN-SESSION')
 const isAdmin = (t) => typeof t === 'string' && t === adminToken()
 
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: { 'content-type': 'application/json; charset=utf-8' },
-  })
-}
-
 const STAR_RULES = [
   { min: 90, stars: 5 },
   { min: 75, stars: 4 },
@@ -60,18 +64,16 @@ function todayStr() {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
 }
 
-// ── 메인 핸들러 ─────────────────────────────────────────────────
-export default async (req) => {
-  if (req.method !== 'POST') return json({ error: 'method' }, 405)
+// ── 메인 핸들러 (Vercel Serverless, Node) ───────────────────────
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'method' })
 
-  let body
-  try {
-    body = await req.json()
-  } catch {
-    return json({ error: 'bad json' }, 400)
+  let body = req.body
+  if (typeof body === 'string') {
+    try { body = JSON.parse(body) } catch { body = {} }
   }
+  if (!body || typeof body !== 'object') body = {}
 
-  const db = store()
   const action = body.action
 
   try {
@@ -79,12 +81,12 @@ export default async (req) => {
       // ── 학생: 가입 신청 ──────────────────────────────
       case 'signup': {
         const { course, name, password } = body
-        if (!course || !name?.trim() || !password) return json({ error: '입력값이 부족해요.' }, 400)
+        if (!course || !name?.trim() || !password) return res.status(400).json({ error: '입력값이 부족해요.' })
         const key = sKey(course, name.trim())
-        const existing = await db.get(key, { type: 'json' })
-        if (existing) return json({ error: '이미 신청한 이름이에요. 로그인하거나 다른 이름을 쓰세요.' }, 409)
+        const existing = await redis.get(key)
+        if (existing) return res.status(409).json({ error: '이미 신청한 이름이에요. 로그인하거나 다른 이름을 쓰세요.' })
         const salt = crypto.randomBytes(8).toString('hex')
-        await db.setJSON(key, {
+        await redis.set(key, {
           course,
           name: name.trim(),
           salt,
@@ -92,20 +94,20 @@ export default async (req) => {
           status: 'pending',
           createdAt: new Date().toISOString(),
         })
-        return json({ ok: true, status: 'pending' })
+        return res.status(200).json({ ok: true, status: 'pending' })
       }
 
       // ── 학생: 로그인 ─────────────────────────────────
       case 'login': {
         const { course, name, password } = body
-        if (!course || !name?.trim() || !password) return json({ error: '입력값이 부족해요.' }, 400)
-        const rec = await db.get(sKey(course, name.trim()), { type: 'json' })
+        if (!course || !name?.trim() || !password) return res.status(400).json({ error: '입력값이 부족해요.' })
+        const rec = await redis.get(sKey(course, name.trim()))
         if (!rec || rec.hash !== hashPw(password, rec.salt))
-          return json({ error: '이름 또는 비밀번호가 올바르지 않아요.' }, 401)
+          return res.status(401).json({ error: '이름 또는 비밀번호가 올바르지 않아요.' })
         if (rec.status !== 'approved')
-          return json({ ok: false, status: rec.status }) // pending / rejected
-        const scores = (await db.get(scKey(course, name.trim()), { type: 'json' })) || {}
-        return json({
+          return res.status(200).json({ ok: false, status: rec.status }) // pending / rejected
+        const scores = (await redis.get(scKey(course, name.trim()))) || {}
+        return res.status(200).json({
           ok: true,
           status: 'approved',
           token: makeToken(course, rec.name),
@@ -118,20 +120,20 @@ export default async (req) => {
       // ── 학생: 내 점수 조회 ───────────────────────────
       case 'my-scores': {
         const auth = verifyToken(body.token)
-        if (!auth) return json({ error: 'auth' }, 401)
-        const scores = (await db.get(scKey(auth.course, auth.name), { type: 'json' })) || {}
-        return json({ ok: true, scores })
+        if (!auth) return res.status(401).json({ error: 'auth' })
+        const scores = (await redis.get(scKey(auth.course, auth.name))) || {}
+        return res.status(200).json({ ok: true, scores })
       }
 
       // ── 학생: 점수 기록 ──────────────────────────────
       case 'score': {
         const auth = verifyToken(body.token)
-        if (!auth) return json({ error: 'auth' }, 401)
+        if (!auth) return res.status(401).json({ error: 'auth' })
         const { unitId, mc, sa, mcTotal, saTotal, partial } = body
         if (!unitId || [mc, sa, mcTotal, saTotal].some((n) => typeof n !== 'number') || mcTotal + saTotal <= 0)
-          return json({ error: 'bad score' }, 400)
+          return res.status(400).json({ error: 'bad score' })
         const key = scKey(auth.course, auth.name)
-        const scores = (await db.get(key, { type: 'json' })) || {}
+        const scores = (await redis.get(key)) || {}
         const prev = scores[unitId] || { best: null, attempts: [] }
         const percent = Math.round(((mc + sa) / (mcTotal + saTotal)) * 100)
         const stars = starsFor(percent)
@@ -143,81 +145,81 @@ export default async (req) => {
           best: isBetter ? { mc, sa, mcTotal, saTotal, percent, stars, date } : prev.best,
           attempts: [...prev.attempts, attempt].slice(-50),
         }
-        await db.setJSON(key, scores)
-        return json({ ok: true, percent, stars, unit: scores[unitId] })
+        await redis.set(key, scores)
+        return res.status(200).json({ ok: true, percent, stars, unit: scores[unitId] })
       }
 
       // ── 어드민: 로그인 ───────────────────────────────
       case 'admin-login': {
-        if (body.password !== ADMIN_PASSWORD) return json({ error: '어드민 비밀번호가 틀렸어요.' }, 401)
-        return json({ ok: true, adminToken: adminToken() })
+        if (body.password !== ADMIN_PASSWORD) return res.status(401).json({ error: '어드민 비밀번호가 틀렸어요.' })
+        return res.status(200).json({ ok: true, adminToken: adminToken() })
       }
 
       // ── 어드민: 학생 목록(승인 관리) ────────────────
       case 'admin-list': {
-        if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)
-        const { blobs } = await db.list({ prefix: 'student:' })
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
+        const keys = await listKeys('student:')
         const students = []
-        for (const b of blobs) {
-          const rec = await db.get(b.key, { type: 'json' })
+        for (const k of keys) {
+          const rec = await redis.get(k)
           if (rec) students.push({ course: rec.course, name: rec.name, status: rec.status, createdAt: rec.createdAt })
         }
         students.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
-        return json({ ok: true, students })
+        return res.status(200).json({ ok: true, students })
       }
 
       // ── 어드민: 승인/거절/삭제 ──────────────────────
       case 'admin-update': {
-        if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
         const { course, name, op } = body
         const key = sKey(course, name)
         if (op === 'delete') {
-          await db.delete(key)
-          await db.delete(scKey(course, name))
-          return json({ ok: true })
+          await redis.del(key)
+          await redis.del(scKey(course, name))
+          return res.status(200).json({ ok: true })
         }
-        const rec = await db.get(key, { type: 'json' })
-        if (!rec) return json({ error: 'not found' }, 404)
+        const rec = await redis.get(key)
+        if (!rec) return res.status(404).json({ error: 'not found' })
         rec.status = op === 'approve' ? 'approved' : 'rejected'
-        await db.setJSON(key, rec)
-        return json({ ok: true, status: rec.status })
+        await redis.set(key, rec)
+        return res.status(200).json({ ok: true, status: rec.status })
       }
 
       // ── 어드민: 학생 비밀번호 재설정 ────────────────
       case 'admin-set-password': {
-        if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
         const { course, name, newPassword } = body
         if (!newPassword || String(newPassword).length < 1)
-          return json({ error: '새 비밀번호를 입력하세요.' }, 400)
+          return res.status(400).json({ error: '새 비밀번호를 입력하세요.' })
         const key = sKey(course, name)
-        const rec = await db.get(key, { type: 'json' })
-        if (!rec) return json({ error: 'not found' }, 404)
+        const rec = await redis.get(key)
+        if (!rec) return res.status(404).json({ error: 'not found' })
         const salt = crypto.randomBytes(8).toString('hex')
         rec.salt = salt
         rec.hash = hashPw(newPassword, salt)
-        await db.setJSON(key, rec)
-        return json({ ok: true })
+        await redis.set(key, rec)
+        return res.status(200).json({ ok: true })
       }
 
       // ── 어드민: 전체 점수 조회 ──────────────────────
       case 'admin-scores': {
-        if (!isAdmin(body.adminToken)) return json({ error: 'auth' }, 401)
-        const { blobs } = await db.list({ prefix: 'student:' })
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
+        const keys = await listKeys('student:')
         const rows = []
-        for (const b of blobs) {
-          const rec = await db.get(b.key, { type: 'json' })
+        for (const k of keys) {
+          const rec = await redis.get(k)
           if (!rec) continue
-          const scores = (await db.get(scKey(rec.course, rec.name), { type: 'json' })) || {}
+          const scores = (await redis.get(scKey(rec.course, rec.name))) || {}
           rows.push({ course: rec.course, name: rec.name, status: rec.status, scores })
         }
         rows.sort((a, b) => (a.course + a.name < b.course + b.name ? -1 : 1))
-        return json({ ok: true, rows })
+        return res.status(200).json({ ok: true, rows })
       }
 
       default:
-        return json({ error: 'unknown action' }, 400)
+        return res.status(400).json({ error: 'unknown action' })
     }
   } catch (e) {
-    return json({ error: 'server', detail: String(e?.message || e) }, 500)
+    return res.status(500).json({ error: 'server', detail: String(e?.message || e) })
   }
 }
