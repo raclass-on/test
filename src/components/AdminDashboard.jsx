@@ -322,11 +322,34 @@ function StudentReport({ selected, onBack }) {
   const now = new Date()
   const dateStr = `${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()}.`
 
+  const shareText = () =>
+    [
+      `[${courseName(selected.course)}] ${selected.name} 학생 학습 성취 레포트`,
+      '',
+      ...done.map((u) => {
+        const b = selected.scores[u.id].best
+        return `· ${u.title}: 객관식 ${b.mc}/${b.mcTotal}, 주관식 ${b.sa}/${b.saTotal} (${'★'.repeat(b.stars)}${'☆'.repeat(5 - b.stars)})`
+      }),
+      '',
+      `완료 ${done.length}/${units.length}유닛 · 평균 정답률 ${avgPct}% · 종합 ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
+      '',
+      '레이첼 영어학원',
+    ].join('\n')
+
+  const share = async () => {
+    const text = shareText()
+    try {
+      if (navigator.share) await navigator.share({ title: `${selected.name} 학생 성취 레포트`, text })
+      else { await navigator.clipboard.writeText(text); alert('내용을 복사했어요. 카톡에 붙여넣어 보내세요.') }
+    } catch { /* 공유 취소 등은 무시 */ }
+  }
+
   return (
     <div className="report-page">
       <div className="report-actions no-print">
         <button className="btn btn-outline small" onClick={onBack}>← 뒤로</button>
         <button className="btn btn-primary small" onClick={() => window.print()}>🖨️ 인쇄 · PDF 저장</button>
+        <button className="btn btn-success small" onClick={share}>💬 카톡으로 공유</button>
       </div>
       <p className="admin-empty no-print" style={{ marginTop: 0 }}>
         버튼을 누르면 인쇄창이 열려요. 프린터를 <b>‘PDF로 저장’</b>으로 선택하면 PDF 파일로 저장됩니다.
