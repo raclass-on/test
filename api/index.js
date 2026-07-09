@@ -5,8 +5,9 @@ import { Redis } from '@upstash/redis'
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin1234'
 const AUTH_SECRET = process.env.AUTH_SECRET || 'dev-secret-change-me'
 
-const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL
-const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN
+// Upstash 통합이 자동 생성한 KV_* 값을 우선 사용(정확). 없으면 UPSTASH_* 별칭.
+const REDIS_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL
+const REDIS_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN
 
 // ── 저장소 (Upstash Redis, REST) — 필요할 때만 초기화(lazy) ─────
 // 모듈 최상단에서 new Redis()를 하면 환경변수 누락 시 함수 전체가
@@ -78,15 +79,34 @@ function todayStr() {
 export default async function handler(req, res) {
   // 진단용: 브라우저로 /api 를 열면(GET) 상태를 보여준다. (비밀값은 노출 안 함)
   if (req.method === 'GET') {
+    const env = {
+      adminPassword: ADMIN_PASSWORD !== 'admin1234' ? '설정됨(custom)' : '미설정(기본 admin1234)',
+      authSecret: AUTH_SECRET !== 'dev-secret-change-me' ? '설정됨(custom)' : '미설정(기본값)',
+      redisUrl: REDIS_URL ? '있음' : '없음',
+      redisToken: REDIS_TOKEN ? '있음' : '없음',
+      redisSource: process.env.KV_REST_API_URL ? 'KV_REST_API_*' : (process.env.UPSTASH_REDIS_REST_URL ? 'UPSTASH_*' : 'none'),
+    }
+    let redisTest, scanTest
+    try {
+      const db = getRedis()
+      await db.set('__healthcheck__', 'ok')
+      redisTest = (await db.get('__healthcheck__')) === 'ok' ? 'OK (읽기/쓰기 정상)' : 'get 값 불일치'
+    } catch (e) {
+      redisTest = 'ERROR: ' + String(e?.message || e)
+    }
+    try {
+      const db = getRedis()
+      const [, keys] = await db.scan('0', { match: 'student:*', count: 10 })
+      scanTest = `OK (학생 키 ${keys?.length ?? 0}개)`
+    } catch (e) {
+      scanTest = 'ERROR: ' + String(e?.message || e)
+    }
     return res.status(200).json({
       ok: true,
       hint: '이 화면이 보이면 /api 함수는 살아있어요.',
-      env: {
-        adminPassword: ADMIN_PASSWORD !== 'admin1234' ? '설정됨(custom)' : '미설정(기본 admin1234)',
-        authSecret: AUTH_SECRET !== 'dev-secret-change-me' ? '설정됨(custom)' : '미설정(기본값)',
-        redisUrl: REDIS_URL ? '있음' : '없음',
-        redisToken: REDIS_TOKEN ? '있음' : '없음',
-      },
+      env,
+      redisTest,
+      scanTest,
     })
   }
 
