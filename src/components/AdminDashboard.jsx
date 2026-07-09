@@ -324,24 +324,43 @@ function StudentReport({ selected, onBack }) {
 
   const shareText = () =>
     [
-      `[${courseName(selected.course)}] ${selected.name} 학생 학습 성취 레포트`,
+      '레이첼영어학원 문법특강수업',
+      `${selected.course} ${selected.name}학생 주간학습성취레포트`,
       '',
-      ...done.map((u) => {
+      ...done.flatMap((u) => {
         const b = selected.scores[u.id].best
-        return `· ${u.title}: 객관식 ${b.mc}/${b.mcTotal}, 주관식 ${b.sa}/${b.saTotal} (${'★'.repeat(b.stars)}${'☆'.repeat(5 - b.stars)})`
+        return [
+          u.title,
+          `객관식 : ${b.mc}/${b.mcTotal}`,
+          `주관식 : ${b.sa}/${b.saTotal}`,
+          '',
+        ]
       }),
-      '',
-      `완료 ${done.length}/${units.length}유닛 · 평균 정답률 ${avgPct}% · 종합 ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
-      '',
-      '레이첼 영어학원',
+      `진행완료 ${done.length}주 /${units.length}주 유닛`,
+      `평균 정답률 : ${avgPct}%`,
+      `종합 : ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
+      '레이첼영어 학원',
     ].join('\n')
 
   const share = async () => {
     const text = shareText()
     try {
-      if (navigator.share) await navigator.share({ title: `${selected.name} 학생 성취 레포트`, text })
-      else { await navigator.clipboard.writeText(text); alert('내용을 복사했어요. 카톡에 붙여넣어 보내세요.') }
-    } catch { /* 공유 취소 등은 무시 */ }
+      // 모바일: 공유 시트가 열리고 거기서 '카카오톡'을 고르면 바로 전송됨
+      if (navigator.share) {
+        await navigator.share({ title: `${selected.name} 학생 주간학습성취레포트`, text })
+        return
+      }
+    } catch {
+      // 사용자가 공유를 취소한 경우 등은 조용히 무시
+      return
+    }
+    // 공유 기능이 없는 환경(PC 브라우저 등): 클립보드로 복사
+    try {
+      await navigator.clipboard.writeText(text)
+      alert('레포트 내용을 복사했어요. 카톡 대화창에 붙여넣어 보내세요.')
+    } catch {
+      alert(text)
+    }
   }
 
   return (
