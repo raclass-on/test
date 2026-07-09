@@ -104,7 +104,9 @@ export default async function handler(req, res) {
     switch (action) {
       // ── 어드민: 로그인 (Redis 불필요) ───────────────
       case 'admin-login': {
-        if (body.password !== ADMIN_PASSWORD) return res.status(401).json({ error: '어드민 비밀번호가 틀렸어요.' })
+        // 앞뒤 공백은 무시해 비교(복붙 시 딸려오는 공백/개행 방어)
+        if (String(body.password || '').trim() !== ADMIN_PASSWORD.trim())
+          return res.status(401).json({ error: '어드민 비밀번호가 틀렸어요.' })
         return res.status(200).json({ ok: true, adminToken: adminToken() })
       }
 
