@@ -460,6 +460,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸을 채우세요. (동사 read 이용)  I want ___ comics.",
+            "ko": "나는 만화를 읽고 싶다.",
             "answers": [
               "to read"
             ],
@@ -467,6 +468,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 meet 이용)  I hope ___ my cousin.",
+            "ko": "나는 내 사촌을 만나기를 바란다.",
             "answers": [
               "to meet"
             ],
@@ -474,6 +476,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 clean 이용)  We decided ___ the classroom.",
+            "ko": "우리는 교실을 청소하기로 결정했다.",
             "answers": [
               "to clean"
             ],
@@ -481,6 +484,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 open 이용)  They plan ___ a bakery.",
+            "ko": "그들은 빵집을 열 계획이다.",
             "answers": [
               "to open"
             ],
@@ -488,6 +492,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 be 이용)  I want ___ a cook.",
+            "ko": "나는 요리사가 되고 싶다.",
             "answers": [
               "to be"
             ],
@@ -495,6 +500,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 speak 이용)  I want ___ English fluently.",
+            "ko": "나는 영어를 유창하게 말하고 싶다.",
             "answers": [
               "to speak"
             ],
@@ -502,6 +508,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 climb 이용)  We hope ___ the mountain.",
+            "ko": "우리는 그 산을 오르기를 바란다.",
             "answers": [
               "to climb"
             ],
@@ -509,6 +516,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 wash 이용)  He needs ___ his hands.",
+            "ko": "그는 손을 씻어야 한다.",
             "answers": [
               "to wash"
             ],
@@ -516,6 +524,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 travel 이용)  I plan ___ to Europe this summer.",
+            "ko": "나는 이번 여름에 유럽으로 여행 갈 계획이다.",
             "answers": [
               "to travel"
             ],
@@ -523,6 +532,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요. (동사 join 이용)  I decided ___ the film club.",
+            "ko": "나는 영화 동아리에 가입하기로 결정했다.",
             "answers": [
               "to join"
             ],
@@ -980,6 +990,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (날씨)\n___ is sunny today.",
+            "ko": "오늘은 날씨가 화창하다.",
             "answers": [
               "It"
             ],
@@ -987,6 +998,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (시간)\n___ is 9 o'clock now.",
+            "ko": "지금은 9시이다.",
             "answers": [
               "It"
             ],
@@ -994,6 +1006,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요. (줄임말, 요일)\n___ Wednesday today. (It is를 줄여서)",
+            "ko": "오늘은 수요일이다.",
             "answers": [
               "It's"
             ],
@@ -1001,6 +1014,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (거리)\n___ is 1 km to the park.",
+            "ko": "공원까지는 1킬로미터이다.",
             "answers": [
               "It"
             ],
@@ -1008,6 +1022,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (명암)\n___ is very dark outside.",
+            "ko": "밖은 매우 어둡다.",
             "answers": [
               "It"
             ],
@@ -1015,6 +1030,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요. (줄임말)\nA: What time is it now?  B: ___ 8:30. (It is를 줄여서)",
+            "ko": "지금은 8시 30분이다.",
             "answers": [
               "It's"
             ],
@@ -1022,6 +1038,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (계절)\n___ is summer now.",
+            "ko": "지금은 여름이다.",
             "answers": [
               "It"
             ],
@@ -1029,6 +1046,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸에 알맞은 한 단어를 쓰세요.\n여기서 역까지 멀다.  It's ___ from here to the station.",
+            "ko": "여기서 역까지는 멀다.",
             "answers": [
               "far"
             ],
@@ -1036,6 +1054,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸에 알맞은 한 단어를 쓰세요.\n방 안이 밝다.  It's ___ in the room.",
+            "ko": "방 안이 밝다.",
             "answers": [
               "bright"
             ],
@@ -1043,6 +1062,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 한 단어를 쓰세요. (요일)\n___ is Thursday today.",
+            "ko": "오늘은 목요일이다.",
             "answers": [
               "It"
             ],
@@ -1500,6 +1520,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  This juice tastes ___.  (이 주스는 단맛이 난다.)",
+            "ko": "이 주스는 단맛이 난다.",
             "answers": [
               "sweet"
             ],
@@ -1507,6 +1528,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 부사를 알맞은 형태(형용사)로 고쳐 쓰세요.  The music sounds (loudly).  →  The music sounds ___.",
+            "ko": "그 음악은 시끄럽게 들린다.",
             "answers": [
               "loud"
             ],
@@ -1514,6 +1536,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  You look ___ today.  (너는 오늘 행복해 보인다.)",
+            "ko": "너는 오늘 행복해 보인다.",
             "answers": [
               "happy"
             ],
@@ -1521,6 +1544,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  The bread smells (freshly).  →  The bread smells ___.",
+            "ko": "그 빵은 신선한 냄새가 난다.",
             "answers": [
               "fresh"
             ],
@@ -1528,6 +1552,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  This towel feels ___.  (이 수건은 따뜻하게 느껴진다.)",
+            "ko": "이 수건은 따뜻하게 느껴진다.",
             "answers": [
               "warm"
             ],
@@ -1535,6 +1560,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  This lemon tastes (sourly).  →  This lemon tastes ___.",
+            "ko": "이 레몬은 신맛이 난다.",
             "answers": [
               "sour"
             ],
@@ -1542,6 +1568,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 두 단어를 쓰세요.  You ___ ___ your father.  (너는 너의 아빠처럼 보인다.)",
+            "ko": "너는 너의 아빠처럼 보인다.",
             "answers": [
               "look like",
               "looklike"
@@ -1550,6 +1577,7 @@ export const courses = [
           },
           {
             "q": "다음 문장에서 틀린 한 단어를 바르게 고쳐 쓰세요.  He looks tiredly today.  →  He looks ___ today.",
+            "ko": "그는 오늘 피곤해 보인다.",
             "answers": [
               "tired"
             ],
@@ -1557,6 +1585,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  The pillow feels ___.  (그 베개는 부드럽게 느껴진다.)",
+            "ko": "그 베개는 부드럽게 느껴진다.",
             "answers": [
               "soft"
             ],
@@ -1564,6 +1593,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  Your voice sounds (greatly).  →  Your voice sounds ___.",
+            "ko": "너의 목소리는 멋지게 들린다.",
             "answers": [
               "great"
             ],
@@ -2021,6 +2051,7 @@ export const courses = [
         "sa": [
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. I enjoy ___ (draw) cartoons.",
+            "ko": "나는 만화 그리는 것을 즐긴다.",
             "answers": [
               "drawing"
             ],
@@ -2028,6 +2059,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. He finished ___ (clean) his room.",
+            "ko": "그는 방 청소하는 것을 끝냈다.",
             "answers": [
               "cleaning"
             ],
@@ -2035,6 +2067,7 @@ export const courses = [
           },
           {
             "q": "동명사 철자 규칙에 맞게 쓰세요. make의 동명사 형태는?",
+            "ko": "make의 동명사 형태는 making이다.",
             "answers": [
               "making"
             ],
@@ -2042,6 +2075,7 @@ export const courses = [
           },
           {
             "q": "동명사 철자 규칙에 맞게 쓰세요. run의 동명사 형태는?",
+            "ko": "run의 동명사 형태는 running이다.",
             "answers": [
               "running"
             ],
@@ -2049,6 +2083,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. She is good at ___ (swim).",
+            "ko": "그녀는 수영하는 것을 잘한다.",
             "answers": [
               "swimming"
             ],
@@ -2056,6 +2091,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. Thank you for ___ (help) me.",
+            "ko": "나를 도와줘서 고마워.",
             "answers": [
               "helping"
             ],
@@ -2063,6 +2099,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. They keep ___ (talk) in class.",
+            "ko": "그들은 수업 중에 계속 이야기한다.",
             "answers": [
               "talking"
             ],
@@ -2070,6 +2107,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. My hobby is ___ (write) stories.",
+            "ko": "나의 취미는 이야기를 쓰는 것이다.",
             "answers": [
               "writing"
             ],
@@ -2077,6 +2115,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. We avoid ___ (sit) too long.",
+            "ko": "우리는 너무 오래 앉아 있는 것을 피한다.",
             "answers": [
               "sitting"
             ],
@@ -2084,6 +2123,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 동명사로 바꿔 쓰세요. He practices ___ (play) the piano every day.",
+            "ko": "그는 매일 피아노 치는 것을 연습한다.",
             "answers": [
               "playing"
             ],
@@ -2541,6 +2581,7 @@ export const courses = [
         "sa": [
           {
             "q": "big의 비교급을 쓰세요. (한 단어)",
+            "ko": "big의 비교급은 bigger이다.",
             "answers": [
               "bigger"
             ],
@@ -2548,6 +2589,7 @@ export const courses = [
           },
           {
             "q": "good의 비교급을 쓰세요. (한 단어)",
+            "ko": "good의 비교급은 better이다.",
             "answers": [
               "better"
             ],
@@ -2555,6 +2597,7 @@ export const courses = [
           },
           {
             "q": "easy의 비교급을 쓰세요. (한 단어)",
+            "ko": "easy의 비교급은 easier이다.",
             "answers": [
               "easier"
             ],
@@ -2562,6 +2605,7 @@ export const courses = [
           },
           {
             "q": "beautiful의 비교급을 쓰세요. (두 단어)",
+            "ko": "beautiful의 비교급은 more beautiful이다.",
             "answers": [
               "more beautiful"
             ],
@@ -2569,6 +2613,7 @@ export const courses = [
           },
           {
             "q": "bad의 비교급을 쓰세요. (한 단어)",
+            "ko": "bad의 비교급은 worse이다.",
             "answers": [
               "worse"
             ],
@@ -2576,6 +2621,7 @@ export const courses = [
           },
           {
             "q": "My brother is ______ than me. (내 남동생은 나보다 키가 더 크다. tall을 알맞게 고쳐 쓰세요.)",
+            "ko": "내 남동생은 나보다 키가 더 크다.",
             "answers": [
               "taller"
             ],
@@ -2583,6 +2629,7 @@ export const courses = [
           },
           {
             "q": "Spring is ______ than winter. (봄이 겨울보다 더 따뜻하다. warm을 알맞게 고쳐 쓰세요.)",
+            "ko": "봄은 겨울보다 더 따뜻하다.",
             "answers": [
               "warmer"
             ],
@@ -2590,6 +2637,7 @@ export const courses = [
           },
           {
             "q": "many의 비교급을 쓰세요. (한 단어)",
+            "ko": "many의 비교급은 more이다.",
             "answers": [
               "more"
             ],
@@ -2597,6 +2645,7 @@ export const courses = [
           },
           {
             "q": "This box is 2kg, that box is 5kg. → That box is ______ than this box. (heavy를 알맞게 고쳐 쓰세요.)",
+            "ko": "저 상자가 이 상자보다 더 무겁다.",
             "answers": [
               "heavier"
             ],
@@ -2604,6 +2653,7 @@ export const courses = [
           },
           {
             "q": "This cake is 5,000 won, that cake is 7,000 won. → That cake is ______ ______ than this one. (expensive를 알맞게 고쳐 쓰세요. 두 단어)",
+            "ko": "저 케이크가 이 케이크보다 더 비싸다.",
             "answers": [
               "more expensive"
             ],
@@ -3061,6 +3111,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 접속사를 쓰세요. (한 단어)\nI wear a coat ___ it is cold. (추울 때)",
+            "ko": "나는 추울 때 코트를 입는다.",
             "answers": [
               "when",
               "When"
@@ -3069,6 +3120,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요. 문장 맨 앞이므로 대문자로 시작하세요. (한 단어)\n___ it rains, I stay home. (비가 올 때)",
+            "ko": "비가 올 때 나는 집에 있는다.",
             "answers": [
               "When",
               "when"
@@ -3077,6 +3129,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 문장 부호를 쓰세요.\nWhen the bell rings___ children laugh.",
+            "ko": "종이 울리면 아이들이 웃는다.",
             "answers": [
               ","
             ],
@@ -3084,6 +3137,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 동사를 보기에서 골라 알맞은 형태로 쓰세요. [ arrive ] (한 단어)\nWhen she ___ home, her dog barks.",
+            "ko": "그녀가 집에 도착하면 그녀의 개가 짖는다.",
             "answers": [
               "arrives"
             ],
@@ -3091,6 +3145,7 @@ export const courses = [
           },
           {
             "q": "밑줄 친 when이 '접속사'이면 C, '의문사'이면 Q를 쓰세요.\nWhen do you feel sleepy?",
+            "ko": "너는 언제 졸리니?",
             "answers": [
               "Q",
               "q"
@@ -3099,6 +3154,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 알맞은 형태로 쓰세요. (한 단어)\nWhen I ___ young, I liked candy. (be)",
+            "ko": "나는 어렸을 때 사탕을 좋아했다.",
             "answers": [
               "was"
             ],
@@ -3106,6 +3162,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사를 쓰세요. (한 단어)\nEveryone becomes quiet ___ she sings.",
+            "ko": "그녀가 노래할 때 모두가 조용해진다.",
             "answers": [
               "when",
               "When"
@@ -3114,6 +3171,7 @@ export const courses = [
           },
           {
             "q": "괄호 안의 동사를 알맞은 형태로 쓰세요. (한 단어)\nWhen it ___, we play inside. (rain)",
+            "ko": "비가 올 때 우리는 실내에서 논다.",
             "answers": [
               "rains"
             ],
@@ -3121,6 +3179,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요. 문장 맨 앞이므로 대문자로 시작하세요. (한 단어)\n___ vacation starts, we go on a trip. (방학이 시작될 때)",
+            "ko": "방학이 시작될 때 우리는 여행을 간다.",
             "answers": [
               "When",
               "when"
@@ -3129,6 +3188,7 @@ export const courses = [
           },
           {
             "q": "밑줄 친 when이 '접속사'이면 C, '의문사'이면 Q를 쓰세요.\nI went to Jeju when I was ten.",
+            "ko": "나는 열 살 때 제주에 갔다.",
             "answers": [
               "C",
               "c"
@@ -3587,6 +3647,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nShe gave a present ______ me.",
+            "ko": "그녀는 나에게 선물을 주었다.",
             "answers": [
               "to"
             ],
@@ -3594,6 +3655,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nDad bought a laptop ______ me.",
+            "ko": "아빠는 나에게 노트북을 사 주셨다.",
             "answers": [
               "for"
             ],
@@ -3601,6 +3663,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nHe sent a package ______ us.",
+            "ko": "그는 우리에게 소포를 보냈다.",
             "answers": [
               "to"
             ],
@@ -3608,6 +3671,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nGrandma made rice cakes ______ us.",
+            "ko": "할머니는 우리에게 떡을 만들어 주셨다.",
             "answers": [
               "for"
             ],
@@ -3615,6 +3679,7 @@ export const courses = [
           },
           {
             "q": "다음 3형식 문장을 4형식으로 바꿀 때 밑줄에 알맞은 한 단어를 쓰세요.\nHe gave a book to me. → He gave ______ a book.",
+            "ko": "그는 나에게 책을 주었다.",
             "answers": [
               "me"
             ],
@@ -3622,6 +3687,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸을 채우세요. (사람 + 사물)\n그는 나에게 그의 전화번호를 주었다.\nHe gave ______ his phone number.",
+            "ko": "그는 나에게 그의 전화번호를 주었다.",
             "answers": [
               "me"
             ],
@@ -3629,6 +3695,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nMs. Park teaches music ______ us.",
+            "ko": "Park 선생님은 우리에게 음악을 가르치신다.",
             "answers": [
               "to"
             ],
@@ -3636,6 +3703,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사를 쓰세요.\nI got a ticket ______ her.",
+            "ko": "나는 그녀에게 표를 구해 주었다.",
             "answers": [
               "for"
             ],
@@ -3643,6 +3711,7 @@ export const courses = [
           },
           {
             "q": "다음 4형식 문장을 3형식으로 바꿀 때 밑줄에 들어갈 두 단어를 순서대로 쓰세요.\nShe showed me her drawing. → She showed her drawing ______ ______.",
+            "ko": "그녀는 나에게 그녀의 그림을 보여 주었다.",
             "answers": [
               "to me",
               "to me."
@@ -3651,6 +3720,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 밑줄에 알맞은 말을 쓰세요. (사람 + 사물, 두 단어)\n그녀는 나에게 이메일을 보냈다.\nShe sent ______ ______.",
+            "ko": "그녀는 나에게 이메일을 보냈다.",
             "answers": [
               "me an email",
               "me an email."
@@ -4109,6 +4179,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰시오. I think ___ she is kind.",
+            "ko": "나는 그녀가 친절하다고 생각한다.",
             "answers": [
               "that"
             ],
@@ -4116,6 +4187,7 @@ export const courses = [
           },
           {
             "q": "두 문장을 한 문장으로 만들 때 빈칸에 들어갈 두 단어를 쓰시오. I know it. + You like music. → I ___ ___ you like music.",
+            "ko": "나는 네가 음악을 좋아한다는 것을 안다.",
             "answers": [
               "know that"
             ],
@@ -4123,6 +4195,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸에 알맞은 접속사를 쓰시오. '우리는 그가 정직하다고 믿는다.' → We believe ___ he is honest.",
+            "ko": "우리는 그가 정직하다고 믿는다.",
             "answers": [
               "that"
             ],
@@ -4130,6 +4203,7 @@ export const courses = [
           },
           {
             "q": "다음 문장에서 생략할 수 있는 한 단어를 쓰시오. She hopes that you feel better.",
+            "ko": "그녀는 네가 나아지기를 바란다.",
             "answers": [
               "that"
             ],
@@ -4137,6 +4211,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰시오. My mom knows ___ I am tired.",
+            "ko": "우리 엄마는 내가 피곤하다는 것을 아신다.",
             "answers": [
               "that"
             ],
@@ -4144,6 +4219,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸에 들어갈 두 단어를 쓰시오. '그는 자신이 바쁘다고 말한다.' → He ___ ___ he is busy.",
+            "ko": "그는 자신이 바쁘다고 말한다.",
             "answers": [
               "says that",
               "said that"
@@ -4152,6 +4228,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰시오. They think ___ the plan is good.",
+            "ko": "그들은 그 계획이 좋다고 생각한다.",
             "answers": [
               "that"
             ],
@@ -4159,6 +4236,7 @@ export const courses = [
           },
           {
             "q": "다음 밑줄 친 that의 종류를 쓰시오. (지시대명사 / 접속사 중 하나) → I feel that something is wrong.",
+            "ko": "나는 무언가 잘못되었다고 느낀다.",
             "answers": [
               "접속사",
               "명사절 접속사",
@@ -4168,6 +4246,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸에 들어갈 두 단어를 쓰시오. '나는 네가 최선을 다했다는 것을 안다.' → I ___ ___ you did your best.",
+            "ko": "나는 네가 최선을 다했다는 것을 안다.",
             "answers": [
               "know that"
             ],
@@ -4175,6 +4254,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰시오. I hope ___ we can help each other.",
+            "ko": "나는 우리가 서로 도울 수 있기를 바란다.",
             "answers": [
               "that"
             ],
@@ -4638,6 +4718,7 @@ export const courses = [
         "sa": [
           {
             "q": "To learn English is important.  →  ___ is important to learn English. (가주어)",
+            "ko": "영어를 배우는 것은 중요하다.",
             "answers": [
               "It"
             ],
@@ -4645,6 +4726,7 @@ export const courses = [
           },
           {
             "q": "It is good ___ exercise every day. (빈칸에 한 단어)",
+            "ko": "매일 운동하는 것은 좋다.",
             "answers": [
               "to"
             ],
@@ -4652,6 +4734,7 @@ export const courses = [
           },
           {
             "q": "It is fun ___ ___ books. (책을 읽는 것 → 두 단어)",
+            "ko": "책을 읽는 것은 재미있다.",
             "answers": [
               "to read"
             ],
@@ -4659,6 +4742,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채워 문장을 완성하시오.  ___ ___ dangerous to play with fire. (가주어 + be동사, 두 단어)",
+            "ko": "불을 가지고 노는 것은 위험하다.",
             "answers": [
               "It is",
               "It's"
@@ -4667,6 +4751,7 @@ export const courses = [
           },
           {
             "q": "It is easy ___ ___ to ride a bike. (그가 → 의미상 주어, 두 단어)",
+            "ko": "그가 자전거를 타는 것은 쉽다.",
             "answers": [
               "for him"
             ],
@@ -4674,6 +4759,7 @@ export const courses = [
           },
           {
             "q": "It is important ___ ___ to study hard. (우리가 → 의미상 주어, 두 단어)",
+            "ko": "우리가 열심히 공부하는 것은 중요하다.",
             "answers": [
               "for us"
             ],
@@ -4681,6 +4767,7 @@ export const courses = [
           },
           {
             "q": "It is important ___ keep promises. (빈칸에 한 단어)",
+            "ko": "약속을 지키는 것은 중요하다.",
             "answers": [
               "to"
             ],
@@ -4688,6 +4775,7 @@ export const courses = [
           },
           {
             "q": "It is hard to get up early. 에서 진짜 주어(진주어)를 이루는 to부정사의 첫 단어는?",
+            "ko": "일찍 일어나는 것은 힘들다.",
             "answers": [
               "to"
             ],
@@ -4695,6 +4783,7 @@ export const courses = [
           },
           {
             "q": "It is ___ to eat vegetables. (몸에 좋다 → 형용사 한 단어)",
+            "ko": "채소를 먹는 것은 몸에 좋다.",
             "answers": [
               "good"
             ],
@@ -4702,6 +4791,7 @@ export const courses = [
           },
           {
             "q": "It is ___ to run on the ice. (위험하다 → 형용사 한 단어)",
+            "ko": "얼음 위에서 뛰는 것은 위험하다.",
             "answers": [
               "dangerous"
             ],
@@ -5159,6 +5249,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸을 채우세요: The more you practice, ___ better you become. (연습할수록 더 잘한다)",
+            "ko": "연습을 많이 할수록 너는 더 잘하게 된다.",
             "answers": [
               "the"
             ],
@@ -5166,6 +5257,7 @@ export const courses = [
           },
           {
             "q": "high의 비교급을 쓰세요: The ___ it is, the colder it is.",
+            "ko": "높이 올라갈수록 더 춥다.",
             "answers": [
               "higher",
               "the higher"
@@ -5174,6 +5266,7 @@ export const courses = [
           },
           {
             "q": "good의 비교급 한 단어를 쓰세요: The more we practice, the ___ we play.",
+            "ko": "우리가 연습을 많이 할수록 더 잘한다.",
             "answers": [
               "better",
               "the better"
@@ -5182,6 +5275,7 @@ export const courses = [
           },
           {
             "q": "much의 비교급을 넣으세요: The ___ you read, the more you know. (많이 읽을수록)",
+            "ko": "많이 읽을수록 더 많이 알게 된다.",
             "answers": [
               "more",
               "the more"
@@ -5190,6 +5284,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 단어를 알맞은 형태로: The longer you wait, the ___ she will be. (angry)",
+            "ko": "네가 오래 기다릴수록 그녀는 더 화가 날 것이다.",
             "answers": [
               "angrier",
               "the angrier"
@@ -5198,6 +5293,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 단어를 알맞은 형태로: The faster you walk, the ___ you arrive. (early)",
+            "ko": "네가 빨리 걸을수록 더 일찍 도착한다.",
             "answers": [
               "earlier",
               "the earlier"
@@ -5206,6 +5302,7 @@ export const courses = [
           },
           {
             "q": "빈칸을 채우세요: ___ harder you try, the stronger you become. (앞 절 시작 부분)",
+            "ko": "네가 열심히 노력할수록 더 강해진다.",
             "answers": [
               "the",
               "The"
@@ -5214,6 +5311,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 단어를 알맞은 형태로: The more nervous, the ___ mistakes you make. (many, '더 많은')",
+            "ko": "더 긴장할수록 더 많은 실수를 한다.",
             "answers": [
               "more",
               "the more"
@@ -5222,6 +5320,7 @@ export const courses = [
           },
           {
             "q": "little의 비교급 한 단어를 쓰세요: The ___ you sleep, the more tired you feel. (적게 잘수록)",
+            "ko": "적게 잘수록 더 피곤함을 느낀다.",
             "answers": [
               "less",
               "the less"
@@ -5230,6 +5329,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 단어를 알맞은 형태로: The more expensive it is, the ___ it is. (good)",
+            "ko": "비쌀수록 더 좋다.",
             "answers": [
               "better",
               "the better"
@@ -5688,6 +5788,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 be동사를 쓰세요: \"The students ___ in the classroom.\"",
+            "ko": "그 학생들은 교실에 있다.",
             "answers": [
               "are"
             ],
@@ -5695,6 +5796,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"Every child ___ (need) love.\"",
+            "ko": "모든 아이는 사랑을 필요로 한다.",
             "answers": [
               "needs"
             ],
@@ -5702,6 +5804,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"Each of the boys ___ (have) a bike.\"",
+            "ko": "그 소년들은 각자 자전거를 가지고 있다.",
             "answers": [
               "has"
             ],
@@ -5709,6 +5812,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"Tom and Jerry ___ (play) together.\"",
+            "ko": "Tom과 Jerry는 함께 논다.",
             "answers": [
               "play"
             ],
@@ -5716,6 +5820,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 be동사를 쓰세요: \"The news ___ surprising.\"",
+            "ko": "그 소식은 놀랍다.",
             "answers": [
               "is"
             ],
@@ -5723,6 +5828,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 be동사를 쓰세요: \"A number of students ___ absent today.\"",
+            "ko": "오늘 많은 학생들이 결석했다.",
             "answers": [
               "are"
             ],
@@ -5730,6 +5836,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 be동사를 쓰세요: \"The number of cars ___ increasing.\"",
+            "ko": "자동차의 수가 증가하고 있다.",
             "answers": [
               "is"
             ],
@@ -5737,6 +5844,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"Everybody ___ (like) summer vacation.\"",
+            "ko": "모두가 여름 방학을 좋아한다.",
             "answers": [
               "likes"
             ],
@@ -5744,6 +5852,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"Everyone in my class ___ (have) a phone.\"",
+            "ko": "우리 반의 모든 사람은 휴대폰을 가지고 있다.",
             "answers": [
               "has"
             ],
@@ -5751,6 +5860,7 @@ export const courses = [
           },
           {
             "q": "괄호 안 동사를 알맞게: \"My parents ___ (work) in a hospital.\"",
+            "ko": "우리 부모님은 병원에서 일하신다.",
             "answers": [
               "work"
             ],
@@ -6208,6 +6318,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  She heard the baby ___ .  (cry)",
+            "ko": "그녀는 아기가 우는 소리를 들었다.",
             "answers": [
               "cry",
               "crying"
@@ -6216,6 +6327,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  We watched them ___ on the stage.  (dance)",
+            "ko": "우리는 그들이 무대에서 춤추는 것을 보았다.",
             "answers": [
               "dance",
               "dancing"
@@ -6224,6 +6336,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  I saw a bird ___ over the lake.  (fly)",
+            "ko": "나는 새가 호수 위로 날아가는 것을 보았다.",
             "answers": [
               "fly",
               "flying"
@@ -6232,6 +6345,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  He felt the ground ___ .  (shake)",
+            "ko": "그는 땅이 흔들리는 것을 느꼈다.",
             "answers": [
               "shake",
               "shaking"
@@ -6240,6 +6354,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  I heard him ___ the piano.  (play)",
+            "ko": "나는 그가 피아노를 치는 소리를 들었다.",
             "answers": [
               "play",
               "playing"
@@ -6248,6 +6363,7 @@ export const courses = [
           },
           {
             "q": "밑줄 친 틀린 부분을 바르게 고치세요.  I saw him to run fast.  →  I saw him ___ fast.",
+            "ko": "나는 그가 빨리 달리는 것을 보았다.",
             "answers": [
               "run",
               "running"
@@ -6256,6 +6372,7 @@ export const courses = [
           },
           {
             "q": "밑줄 친 틀린 부분을 바르게 고치세요.  She heard someone to call her name.  →  She heard someone ___ her name.",
+            "ko": "그녀는 누군가 그녀의 이름을 부르는 소리를 들었다.",
             "answers": [
               "call",
               "calling"
@@ -6264,6 +6381,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  They heard a dog ___ loudly.  (bark)",
+            "ko": "그들은 개가 크게 짖는 소리를 들었다.",
             "answers": [
               "bark",
               "barking"
@@ -6272,6 +6390,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.  We saw the sun ___ behind the hills.  (set)",
+            "ko": "우리는 해가 언덕 뒤로 지는 것을 보았다.",
             "answers": [
               "set",
               "setting"
@@ -6280,6 +6399,7 @@ export const courses = [
           },
           {
             "q": "밑줄 친 틀린 부분을 바르게 고치세요.  I felt the wind to blow.  →  I felt the wind ___ .",
+            "ko": "나는 바람이 부는 것을 느꼈다.",
             "answers": [
               "blow",
               "blowing"
@@ -6738,6 +6858,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사물, 한 단어)\nThis is the book ___ I bought.",
+            "ko": "이것은 내가 산 책이다.",
             "answers": [
               "which",
               "that"
@@ -6746,6 +6867,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. 사람·사물에 모두 쓸 수 있는 한 단어로 쓰시오.\nHere is the pen ___ you lost.",
+            "ko": "여기 네가 잃어버린 펜이 있다.",
             "answers": [
               "that"
             ],
@@ -6753,6 +6875,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사람, m으로 끝나는 목적격 형태)\nShe is the girl ___ I met yesterday.",
+            "ko": "그녀는 내가 어제 만난 소녀이다.",
             "answers": [
               "whom"
             ],
@@ -6760,6 +6883,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사물, 한 단어)\nThe food ___ he cooked was delicious.",
+            "ko": "그가 요리한 음식은 맛있었다.",
             "answers": [
               "which",
               "that"
@@ -6768,6 +6892,7 @@ export const courses = [
           },
           {
             "q": "다음 문장에서 생략할 수 있는 한 단어를 쓰시오.\nThis is the song that I like.",
+            "ko": "이것은 내가 좋아하는 노래이다.",
             "answers": [
               "that"
             ],
@@ -6775,6 +6900,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사람, 한 단어)\nHe is the singer ___ everyone loves.",
+            "ko": "그는 모두가 사랑하는 가수이다.",
             "answers": [
               "whom",
               "who",
@@ -6784,6 +6910,7 @@ export const courses = [
           },
           {
             "q": "다음 밑줄 친 관계대명사가 '주격'이면 S, '목적격'이면 O를 쓰시오.\nThe dog which barks loudly is mine.",
+            "ko": "크게 짖는 그 개는 내 것이다.",
             "answers": [
               "S",
               "주격"
@@ -6792,6 +6919,7 @@ export const courses = [
           },
           {
             "q": "다음 밑줄 친 관계대명사가 '주격'이면 S, '목적격'이면 O를 쓰시오.\nThat is the movie which we watched.",
+            "ko": "저것은 우리가 본 영화이다.",
             "answers": [
               "O",
               "목적격"
@@ -6800,6 +6928,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사물, 한 단어)\nThe bag ___ you bought looks nice.",
+            "ko": "네가 산 가방은 멋져 보인다.",
             "answers": [
               "which",
               "that"
@@ -6808,6 +6937,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 관계대명사를 쓰시오. (사람, 한 단어)\nThe teacher ___ I respect is strict.",
+            "ko": "내가 존경하는 선생님은 엄격하시다.",
             "answers": [
               "whom",
               "who",
@@ -7267,6 +7397,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰세요. (비록 ~이지만)\n___ he was tired, he kept working.",
+            "ko": "비록 그는 피곤했지만, 계속 일했다.",
             "answers": [
               "Although",
               "although"
@@ -7275,6 +7406,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사 한 단어를 쓰세요. (뒤에 명사가 옴)\n___ the rain, we went out.",
+            "ko": "비가 왔음에도 불구하고, 우리는 외출했다.",
             "answers": [
               "Despite",
               "despite"
@@ -7283,6 +7415,7 @@ export const courses = [
           },
           {
             "q": "although와 바꿔 쓸 수 있는 한 단어를 쓰세요. (even ___)\neven ___ = although",
+            "ko": "even though는 '비록 ~이지만'이라는 뜻으로 although와 같다.",
             "answers": [
               "though"
             ],
@@ -7290,6 +7423,7 @@ export const courses = [
           },
           {
             "q": "다음 문장에서 삭제해야 할 한 단어를 쓰세요.\nAlthough she was late, but she kept reading.",
+            "ko": "비록 그녀는 늦었지만, 계속 읽었다.",
             "answers": [
               "but"
             ],
@@ -7297,6 +7431,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰세요.\n___ she is young, she is very wise.",
+            "ko": "비록 그녀는 어리지만, 매우 현명하다.",
             "answers": [
               "Although",
               "although",
@@ -7307,6 +7442,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 전치사 한 단어를 쓰세요. (뒤에 명사구가 옴)\n___ his illness, he came to school.",
+            "ko": "그의 병에도 불구하고, 그는 학교에 왔다.",
             "answers": [
               "Despite",
               "despite"
@@ -7315,6 +7451,7 @@ export const courses = [
           },
           {
             "q": "우리말과 같도록 빈칸에 접속사 한 단어를 쓰세요.\n비록 그는 부자지만 행복하지 않다.\n___ he is rich, he is not happy.",
+            "ko": "비록 그는 부자지만, 행복하지 않다.",
             "answers": [
               "Although",
               "although",
@@ -7325,6 +7462,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 although와 뜻이 반대인 '이유'의 접속사 한 단어를 쓰세요.\n___ he was tired, he went to bed early. (피곤했기 때문에)",
+            "ko": "그는 피곤했기 때문에, 일찍 잠자리에 들었다.",
             "answers": [
               "Because",
               "because",
@@ -7337,6 +7475,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사 한 단어를 쓰세요.\n___ they are twins, they look different.",
+            "ko": "비록 그들은 쌍둥이지만, 다르게 생겼다.",
             "answers": [
               "Although",
               "although",
@@ -7347,6 +7486,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 in spite ___ 형태를 완성하는 한 단어를 쓰세요.\nin spite ___ the rain, we went out.",
+            "ko": "비가 왔음에도 불구하고, 우리는 외출했다.",
             "answers": [
               "of"
             ],
@@ -7804,6 +7944,7 @@ export const courses = [
         "sa": [
           {
             "q": "다음 문장을 「의문사 + to부정사」로 바꿀 때 빈칸에 알맞은 두 단어를 쓰세요.\nTell me how I can get there. → Tell me ___ get there.",
+            "ko": "거기에 어떻게 가는지 나에게 알려줘.",
             "answers": [
               "how to"
             ],
@@ -7811,6 +7952,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n나는 점심으로 무엇을 먹을지 모르겠다.\nI don't know ___ eat for lunch.",
+            "ko": "나는 점심으로 무엇을 먹을지 모르겠다.",
             "answers": [
               "what to"
             ],
@@ -7818,6 +7960,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n그녀는 어디서 표를 살지 알게 되었다.\nShe learned ___ buy tickets.",
+            "ko": "그녀는 어디서 표를 살지 알게 되었다.",
             "answers": [
               "where to"
             ],
@@ -7825,6 +7968,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n우리는 언제 시작할지 정하지 않았다.\nWe didn't decide ___ start.",
+            "ko": "우리는 언제 시작할지 정하지 않았다.",
             "answers": [
               "when to"
             ],
@@ -7832,6 +7976,7 @@ export const courses = [
           },
           {
             "q": "다음 문장을 「의문사 + to부정사」로 바꿀 때 빈칸에 알맞은 두 단어를 쓰세요.\nShe asked where she should go. → She asked ___ go.",
+            "ko": "그녀는 어디로 갈지 물었다.",
             "answers": [
               "where to"
             ],
@@ -7839,6 +7984,7 @@ export const courses = [
           },
           {
             "q": "다음 문장에서 어법상 틀린 한 단어를 바르게 고쳐, 밑줄 부분을 두 단어로 다시 쓰세요.\nI don't know why to do. → I don't know ___ do.",
+            "ko": "나는 무엇을 해야 할지 모르겠다.",
             "answers": [
               "what to"
             ],
@@ -7846,6 +7992,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n나에게 이것을 어떻게 쓰는지 알려줘.\nTell me ___ use this.",
+            "ko": "이것을 어떻게 사용하는지 나에게 알려줘.",
             "answers": [
               "how to"
             ],
@@ -7853,6 +8000,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n나는 누구에게 물어볼지 모르겠다.\nI don't know ___ ask.",
+            "ko": "나는 누구에게 물어볼지 모르겠다.",
             "answers": [
               "who to",
               "whom to"
@@ -7861,6 +8009,7 @@ export const courses = [
           },
           {
             "q": "다음 문장을 「의문사 + to부정사」로 바꿀 때 빈칸에 알맞은 두 단어를 쓰세요.\nHe learned how he should swim. → He learned ___ swim.",
+            "ko": "그는 수영하는 법을 배웠다.",
             "answers": [
               "how to"
             ],
@@ -7868,6 +8017,7 @@ export const courses = [
           },
           {
             "q": "다음 우리말에 맞게 빈칸을 채우세요. (두 단어)\n그는 언제 멈출지 모른다.\nHe doesn't know ___ stop.",
+            "ko": "그는 언제 멈춰야 할지 모른다.",
             "answers": [
               "when to"
             ],
@@ -8325,6 +8475,7 @@ export const courses = [
         "sa": [
           {
             "q": "빈칸에 알맞은 말을 쓰시오.  It was ___ hot that we couldn't play. (너무 ~해서)",
+            "ko": "너무 더워서 우리는 놀 수 없었다.",
             "answers": [
               "so"
             ],
@@ -8332,6 +8483,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 접속사를 쓰시오.  He is so tall ___ he can touch the ceiling.",
+            "ko": "그는 너무 키가 커서 천장을 만질 수 있다.",
             "answers": [
               "that"
             ],
@@ -8339,6 +8491,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  It was ___ a long movie that we got bored.",
+            "ko": "그것은 너무 긴 영화여서 우리는 지루해졌다.",
             "answers": [
               "such"
             ],
@@ -8346,6 +8499,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  She was ___ tired that she fell asleep.",
+            "ko": "그녀는 너무 피곤해서 잠들었다.",
             "answers": [
               "so"
             ],
@@ -8353,6 +8507,7 @@ export const courses = [
           },
           {
             "q": "다음 문장을 too ~ to로 바꿀 때 빈칸에 알맞은 두 단어를 쓰시오.  The box was so heavy that I couldn't lift it. → The box was ___ heavy to lift.",
+            "ko": "그 상자는 너무 무거워서 들 수 없었다.",
             "answers": [
               "too"
             ],
@@ -8360,6 +8515,7 @@ export const courses = [
           },
           {
             "q": "다음을 so ~ that으로 바꿀 때 빈칸에 알맞은 한 단어를 쓰시오.  The tea was too hot to drink. → The tea was so hot that I ___ drink it.",
+            "ko": "그 차는 너무 뜨거워서 나는 마실 수 없었다.",
             "answers": [
               "couldn't",
               "could not",
@@ -8370,6 +8526,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 말을 쓰시오. (한 단어)  The music was ___ loud that we couldn't talk.",
+            "ko": "음악이 너무 시끄러워서 우리는 이야기할 수 없었다.",
             "answers": [
               "so"
             ],
@@ -8377,6 +8534,7 @@ export const courses = [
           },
           {
             "q": "우리말에 맞게 빈칸을 채우시오. (두 단어)  나는 너무 바빠서 …  I was ___ ___ that I skipped lunch.",
+            "ko": "나는 너무 바빠서 점심을 걸렀다.",
             "answers": [
               "so busy"
             ],
@@ -8384,6 +8542,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  He had ___ many books that his bag was heavy.",
+            "ko": "그는 책이 너무 많아서 가방이 무거웠다.",
             "answers": [
               "so"
             ],
@@ -8391,6 +8550,7 @@ export const courses = [
           },
           {
             "q": "다음 문장을 too ~ to로 바꿀 때 밑줄에 알맞은 세 단어를 쓰시오.  It was so dark that I couldn't see. → It was ___ ___ ___.",
+            "ko": "너무 어두워서 볼 수 없었다.",
             "answers": [
               "too dark to see"
             ],

@@ -175,6 +175,10 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
         <div className="q-type-badge">{isMc ? '객관식' : '주관식'}</div>
         <div className="q-text">{q.q}</div>
 
+        {!isMc && q.ko && (
+          <div className="q-ko"><span className="q-ko-tag">해석</span>{q.ko}</div>
+        )}
+
         {checked && (
           <div className={`q-feedback ${correct ? 'correct' : 'wrong'}`}>
             <div className="fb-head">

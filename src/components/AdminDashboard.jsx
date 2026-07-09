@@ -312,12 +312,25 @@ function StudentProgress({ rows, selectedKey, onSelect }) {
 // 학생 종합 성취 레포트 (인쇄 → 'PDF로 저장')
 function StudentReport({ selected, onBack }) {
   const units = unitsOf(selected.course)
-  const done = units.filter((u) => selected.scores[u.id]?.best)
-  const avgStars = done.length
-    ? Math.round(done.reduce((s, u) => s + selected.scores[u.id].best.stars, 0) / done.length)
+  const done = units.filter((u) => selected.scores[u.id]?.best) // 기록이 있는(완료한) 유닛
+  // 레포트/카톡에 넣을 유닛 선택 (기본: 완료한 유닛 전체)
+  const [picked, setPicked] = useState(() => new Set(done.map((u) => u.id)))
+  const toggle = (id) =>
+    setPicked((prev) => {
+      const n = new Set(prev)
+      if (n.has(id)) n.delete(id); else n.add(id)
+      return n
+    })
+  const allOn = done.length > 0 && done.every((u) => picked.has(u.id))
+  const toggleAll = () => setPicked(allOn ? new Set() : new Set(done.map((u) => u.id)))
+
+  // 실제로 레포트에 담을 유닛 (선택된 것만)
+  const chosen = done.filter((u) => picked.has(u.id))
+  const avgStars = chosen.length
+    ? Math.round(chosen.reduce((s, u) => s + selected.scores[u.id].best.stars, 0) / chosen.length)
     : 0
-  const avgPct = done.length
-    ? Math.round(done.reduce((s, u) => s + (selected.scores[u.id].best.percent || 0), 0) / done.length)
+  const avgPct = chosen.length
+    ? Math.round(chosen.reduce((s, u) => s + (selected.scores[u.id].best.percent || 0), 0) / chosen.length)
     : 0
   const now = new Date()
   const dateStr = `${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()}.`
@@ -327,7 +340,7 @@ function StudentReport({ selected, onBack }) {
       '[레이첼영어학원] 문법특강수업',
       `🎀${selected.course} ${selected.name}학생 주간학습성취레포트`,
       '',
-      ...done.flatMap((u) => {
+      ...chosen.flatMap((u) => {
         const b = selected.scores[u.id].best
         return [
           `✅️ ${u.title}`,
@@ -342,6 +355,7 @@ function StudentReport({ selected, onBack }) {
     ].join('\n')
 
   const share = async () => {
+    if (chosen.length === 0) { alert('보낼 유닛을 하나 이상 선택하세요.'); return }
     const text = shareText()
     try {
       // 모바일: 공유 시트가 열리고 거기서 '카카오톡'을 고르면 바로 전송됨
@@ -366,11 +380,37 @@ function StudentReport({ selected, onBack }) {
     <div className="report-page">
       <div className="report-actions no-print">
         <button className="btn btn-outline small" onClick={onBack}>← 뒤로</button>
-        <button className="btn btn-primary small" onClick={() => window.print()}>🖨️ 인쇄 · PDF 저장</button>
-        <button className="btn btn-success small" onClick={share}>💬 카톡으로 공유</button>
+        <button className="btn btn-primary small" disabled={chosen.length === 0} onClick={() => window.print()}>🖨️ 인쇄 · PDF 저장</button>
+        <button className="btn btn-success small" disabled={chosen.length === 0} onClick={share}>💬 카톡으로 공유</button>
       </div>
+
+      <div className="unit-pick no-print">
+        <div className="unit-pick-head">
+          <span className="unit-pick-title">레포트에 넣을 유닛 선택 <span className="muted small">({chosen.length}/{done.length})</span></span>
+          {done.length > 0 && (
+            <button className="link-btn" onClick={toggleAll}>{allOn ? '전체 해제' : '전체 선택'}</button>
+          )}
+        </div>
+        {done.length === 0 ? (
+          <p className="admin-empty" style={{ margin: 0 }}>아직 완료한 유닛이 없어요.</p>
+        ) : (
+          <div className="unit-pick-list">
+            {done.map((u) => {
+              const b = selected.scores[u.id].best
+              return (
+                <label key={u.id} className={`unit-pick-item ${picked.has(u.id) ? 'on' : ''}`}>
+                  <input type="checkbox" checked={picked.has(u.id)} onChange={() => toggle(u.id)} />
+                  <span className="unit-pick-name">{u.title}</span>
+                  <span className="muted small">{b.percent}% · {'★'.repeat(b.stars)}</span>
+                </label>
+              )
+            })}
+          </div>
+        )}
+      </div>
+
       <p className="admin-empty no-print" style={{ marginTop: 0 }}>
-        버튼을 누르면 인쇄창이 열려요. 프린터를 <b>‘PDF로 저장’</b>으로 선택하면 PDF 파일로 저장됩니다.
+        선택한 유닛만 아래 레포트·PDF·카톡에 담겨요. 버튼을 누르면 인쇄창이 열리고, 프린터를 <b>‘PDF로 저장’</b>으로 선택하면 PDF로 저장됩니다.
       </p>
 
       <div className="report-doc" id="report-doc">
@@ -388,30 +428,27 @@ function StudentReport({ selected, onBack }) {
             <tr><th>유닛</th><th>객관식</th><th>주관식</th><th>정답률</th><th>별점</th><th>최근 응시</th></tr>
           </thead>
           <tbody>
-            {units.map((u) => {
-              const b = selected.scores[u.id]?.best
+            {chosen.map((u) => {
+              const b = selected.scores[u.id].best
               return (
                 <tr key={u.id}>
                   <td className="rd-unit">{u.title}</td>
-                  {b ? (
-                    <>
-                      <td>{b.mc}/{b.mcTotal}</td>
-                      <td>{b.sa}/{b.saTotal}</td>
-                      <td>{b.percent}%</td>
-                      <td className="rd-star">{'★'.repeat(b.stars)}{'☆'.repeat(5 - b.stars)}</td>
-                      <td>{b.date}</td>
-                    </>
-                  ) : (
-                    <><td>-</td><td>-</td><td>-</td><td className="rd-none">미완료</td><td>-</td></>
-                  )}
+                  <td>{b.mc}/{b.mcTotal}</td>
+                  <td>{b.sa}/{b.saTotal}</td>
+                  <td>{b.percent}%</td>
+                  <td className="rd-star">{'★'.repeat(b.stars)}{'☆'.repeat(5 - b.stars)}</td>
+                  <td>{b.date}</td>
                 </tr>
               )
             })}
+            {chosen.length === 0 && (
+              <tr><td className="rd-unit rd-none" colSpan={6}>선택한 유닛이 없어요.</td></tr>
+            )}
           </tbody>
         </table>
 
         <div className="report-doc-summary">
-          <div><span className="rd-label">완료 유닛</span><span className="rd-val">{done.length} / {units.length}</span></div>
+          <div><span className="rd-label">진행 완료</span><span className="rd-val">{done.length} / {units.length} 유닛</span></div>
           <div><span className="rd-label">평균 정답률</span><span className="rd-val">{avgPct}%</span></div>
           <div><span className="rd-label">종합 별점</span><span className="rd-val rd-star">{'★'.repeat(avgStars)}{'☆'.repeat(5 - avgStars)} <span style={{ color: '#111827' }}>({avgStars}/5)</span></span></div>
         </div>
