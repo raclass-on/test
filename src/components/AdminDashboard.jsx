@@ -398,11 +398,6 @@ function StudentReport({ selected, onBack }) {
           <div><span className="rd-label">종합 별점</span><span className="rd-val rd-star">{'★'.repeat(avgStars)}{'☆'.repeat(5 - avgStars)} <span style={{ color: '#111827' }}>({avgStars}/5)</span></span></div>
         </div>
 
-        <div className="report-doc-comment">
-          <div className="rd-label">선생님 코멘트</div>
-          <div className="rd-comment-box" />
-        </div>
-
         <div className="report-doc-foot">※ 점수는 각 유닛 최고 기록 기준입니다. · 레이첼 영어학원</div>
       </div>
     </div>
