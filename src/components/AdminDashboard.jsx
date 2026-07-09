@@ -324,22 +324,21 @@ function StudentReport({ selected, onBack }) {
 
   const shareText = () =>
     [
-      '레이첼영어학원 문법특강수업',
-      `${selected.course} ${selected.name}학생 주간학습성취레포트`,
+      '[레이첼영어학원] 문법특강수업',
+      `🎀${selected.course} ${selected.name}학생 주간학습성취레포트`,
       '',
       ...done.flatMap((u) => {
         const b = selected.scores[u.id].best
         return [
-          u.title,
-          `객관식 : ${b.mc}/${b.mcTotal}`,
-          `주관식 : ${b.sa}/${b.saTotal}`,
+          `✅️ ${u.title}`,
+          `▪️객관식 : ${b.mc}/${b.mcTotal}`,
+          `▪️주관식 : ${b.sa}/${b.saTotal}`,
           '',
         ]
       }),
-      `진행완료 ${done.length}주 /${units.length}주 유닛`,
-      `평균 정답률 : ${avgPct}%`,
-      `종합 : ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
-      '레이첼영어 학원',
+      `✔️진행완료 ${done.length}주 /${units.length}주 유닛`,
+      `✔️평균 정답률 : ${avgPct}%`,
+      `✔️종합 : ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
     ].join('\n')
 
   const share = async () => {
