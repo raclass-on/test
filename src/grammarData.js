@@ -404,7 +404,7 @@ export const courses = [
             "explain": "시각을 말하므로 숫자 seven이 알맞아요. It은 비인칭 주어예요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. Tomorrow is Tuesday!",
             "options": [
               "far",
               "dark",
@@ -412,7 +412,7 @@ export const courses = [
               "sunny"
             ],
             "answer": 2,
-            "explain": "요일을 말할 때 It is Monday today.로 써요."
+            "explain": "내일이 화요일이므로 오늘은 월요일이에요. It is Monday today.로 써요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ from here.",
@@ -456,10 +456,10 @@ export const courses = [
               "three"
             ],
             "answer": 2,
-            "explain": "요일을 말하므로 Wednesday가 알맞아요."
+            "explain": "near/far/three는 요일이 아니에요. 요일을 말하므로 Wednesday가 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now. Flowers are blooming!",
             "options": [
               "Monday",
               "dark",
@@ -467,7 +467,7 @@ export const courses = [
               "spring"
             ],
             "answer": 3,
-            "explain": "계절을 말할 때 It is spring now.로 써요."
+            "explain": "꽃이 피는 계절이므로 spring이에요. It is spring now.로 써요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ to the park.",
@@ -481,7 +481,7 @@ export const courses = [
             "explain": "거리를 말하므로 1 km가 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. I can't see the sun.",
             "options": [
               "eight",
               "cloudy",
@@ -489,7 +489,7 @@ export const courses = [
               "near"
             ],
             "answer": 1,
-            "explain": "날씨를 말하므로 cloudy가 알맞아요."
+            "explain": "해가 안 보이므로 흐린 날씨 cloudy가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ o'clock.",
@@ -503,7 +503,7 @@ export const courses = [
             "explain": "시각을 말하므로 숫자 five가 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. Tomorrow is Sunday!",
             "options": [
               "near",
               "rainy",
@@ -511,7 +511,7 @@ export const courses = [
               "Saturday"
             ],
             "answer": 3,
-            "explain": "요일을 말하므로 Saturday가 알맞아요."
+            "explain": "내일이 일요일이므로 오늘은 토요일이에요. Saturday가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 주어를 고르세요.\n___ is dark in the room.",
@@ -525,7 +525,7 @@ export const courses = [
             "explain": "명암의 주어는 비인칭 It이에요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now. It is cold and snowy.",
             "options": [
               "April",
               "winter",
@@ -533,7 +533,7 @@ export const courses = [
               "far"
             ],
             "answer": 1,
-            "explain": "계절을 말하므로 winter가 알맞아요."
+            "explain": "춥고 눈이 오므로 계절은 winter예요. It is winter now.로 써요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ in the room.",
@@ -547,7 +547,7 @@ export const courses = [
             "explain": "명암을 말하므로 bright가 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWhat is the date? It is ___ today.",
             "options": [
               "far",
               "dark",
@@ -555,7 +555,7 @@ export const courses = [
               "April 9th"
             ],
             "answer": 3,
-            "explain": "날짜를 말할 때 It is April 9th today.로 써요."
+            "explain": "날짜를 물었으므로 It is April 9th today.로 답해요."
           },
           {
             "q": "빈칸에 알맞은 주어를 고르세요.\n___ is snowy today.",
@@ -569,7 +569,7 @@ export const courses = [
             "explain": "날씨의 주어는 비인칭 It이에요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now. Look at the clock!",
             "options": [
               "Sunday",
               "three o'clock",
@@ -577,10 +577,10 @@ export const courses = [
               "far"
             ],
             "answer": 1,
-            "explain": "시각을 말하므로 three o'clock이 알맞아요."
+            "explain": "시계를 보라고 했으므로 시각 three o'clock이 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. Yesterday was Saturday.",
             "options": [
               "far",
               "dark",
@@ -588,10 +588,10 @@ export const courses = [
               "near"
             ],
             "answer": 2,
-            "explain": "요일을 말하므로 Sunday가 알맞아요."
+            "explain": "어제가 토요일이므로 오늘은 일요일 Sunday예요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now. It is very hot!",
             "options": [
               "Monday",
               "dark",
@@ -599,7 +599,7 @@ export const courses = [
               "summer"
             ],
             "answer": 3,
-            "explain": "계절을 말하므로 summer가 알맞아요."
+            "explain": "매우 더우므로 계절은 summer예요. It is summer now.로 써요."
           },
           {
             "q": "빈칸에 알맞은 주어를 고르세요.\n___ is far from here to school.",
@@ -613,7 +613,7 @@ export const courses = [
             "explain": "거리의 주어는 비인칭 It이에요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. Merry Christmas!",
             "options": [
               "dark",
               "December 25th",
@@ -621,10 +621,10 @@ export const courses = [
               "seven"
             ],
             "answer": 1,
-            "explain": "날짜를 말하므로 December 25th가 알맞아요."
+            "explain": "크리스마스이므로 날짜 December 25th가 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ now. The leaves are red and yellow.",
             "options": [
               "Monday",
               "dark",
@@ -632,7 +632,7 @@ export const courses = [
               "far"
             ],
             "answer": 2,
-            "explain": "계절을 말하므로 fall이 알맞아요."
+            "explain": "잎이 붉고 노랗게 물들었으므로 계절은 fall이에요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ o'clock.",
@@ -646,7 +646,7 @@ export const courses = [
             "explain": "시각을 말하므로 숫자 ten이 알맞아요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nIt is ___ today. Yesterday was Monday.",
             "options": [
               "Tuesday",
               "dark",
@@ -654,7 +654,7 @@ export const courses = [
               "near"
             ],
             "answer": 0,
-            "explain": "요일을 말하므로 Tuesday가 알맞아요."
+            "explain": "어제가 월요일이므로 오늘은 화요일 Tuesday예요."
           }
         ],
         "sa": [
@@ -766,7 +766,7 @@ export const courses = [
               "nicing"
             ],
             "answer": 1,
-            "explain": "감각동사 sound 뒤에는 형용사 nice가 와요."
+            "explain": "감각동사 sound 뒤에는 형용사 nice가 와요. 부사 nicely는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI feel ___.",
@@ -777,7 +777,7 @@ export const courses = [
               "to happy"
             ],
             "answer": 2,
-            "explain": "감각동사 feel 뒤에는 형용사 happy가 와요."
+            "explain": "감각동사 feel 뒤에는 형용사 happy가 와요. 부사 happily는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThis juice tastes ___.",
@@ -788,7 +788,7 @@ export const courses = [
               "sweet"
             ],
             "answer": 3,
-            "explain": "감각동사 taste 뒤에는 형용사 sweet가 와요."
+            "explain": "감각동사 taste 뒤에는 형용사 sweet가 와요. 부사 sweetly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe bread smells ___.",
@@ -799,7 +799,7 @@ export const courses = [
               "to fresh"
             ],
             "answer": 0,
-            "explain": "감각동사 smell 뒤에는 형용사 fresh가 와요."
+            "explain": "감각동사 smell 뒤에는 형용사 fresh가 와요. 부사 freshly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe blanket feels ___.",
@@ -810,7 +810,7 @@ export const courses = [
               "to soft"
             ],
             "answer": 1,
-            "explain": "감각동사 feel 뒤에는 형용사 soft가 와요."
+            "explain": "감각동사 feel 뒤에는 형용사 soft가 와요. 부사 softly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe music sounds ___.",
@@ -821,7 +821,7 @@ export const courses = [
               "loudness"
             ],
             "answer": 2,
-            "explain": "감각동사 sound 뒤에는 형용사 loud가 와요."
+            "explain": "감각동사 sound 뒤에는 형용사 loud가 와요. 부사 loudly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nYou look ___.",
@@ -832,7 +832,7 @@ export const courses = [
               "sad"
             ],
             "answer": 3,
-            "explain": "감각동사 look 뒤에는 형용사 sad가 와요."
+            "explain": "감각동사 look 뒤에는 형용사 sad가 와요. 부사 sadly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThis towel feels ___.",
@@ -843,7 +843,7 @@ export const courses = [
               "to warm"
             ],
             "answer": 0,
-            "explain": "감각동사 feel 뒤에는 형용사 warm이 와요."
+            "explain": "감각동사 feel 뒤에는 형용사 warm이 와요. 부사 warmly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe flower smells ___.",
@@ -865,7 +865,7 @@ export const courses = [
               "saltiness"
             ],
             "answer": 2,
-            "explain": "감각동사 taste 뒤에는 형용사 salty가 와요."
+            "explain": "감각동사 taste 뒤에는 형용사 salty가 와요. 부사 saltily는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe dog looks ___.",
@@ -876,7 +876,7 @@ export const courses = [
               "cute"
             ],
             "answer": 3,
-            "explain": "감각동사 look 뒤에는 형용사 cute가 와요."
+            "explain": "감각동사 look 뒤에는 형용사 cute가 와요. 부사 cutely는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe soup looks ___.",
@@ -887,7 +887,7 @@ export const courses = [
               "to hot"
             ],
             "answer": 0,
-            "explain": "감각동사 look 뒤에는 형용사 hot이 와요."
+            "explain": "감각동사 look 뒤에는 형용사 hot이 와요. 부사 hotly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe movie looks ___.",
@@ -898,7 +898,7 @@ export const courses = [
               "interestingness"
             ],
             "answer": 1,
-            "explain": "감각동사 look 뒤에는 형용사 interesting이 와요."
+            "explain": "감각동사 look 뒤에는 형용사 interesting이 와요. 부사 interestingly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nYour room looks ___.",
@@ -909,18 +909,18 @@ export const courses = [
               "cleanness"
             ],
             "answer": 2,
-            "explain": "감각동사 look 뒤에는 형용사 clean이 와요."
+            "explain": "감각동사 look 뒤에는 형용사 clean이 와요. 부사 cleanly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe teacher looks ___.",
             "options": [
-              "kindly",
-              "kindness",
-              "to kind",
-              "kind"
+              "tiredly",
+              "tiredness",
+              "to tired",
+              "tired"
             ],
             "answer": 3,
-            "explain": "감각동사 look 뒤에는 형용사 kind가 와요."
+            "explain": "감각동사 look 뒤에는 형용사 tired가 와요. 부사 tiredly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThis lemon tastes ___.",
@@ -931,7 +931,7 @@ export const courses = [
               "to sour"
             ],
             "answer": 0,
-            "explain": "감각동사 taste 뒤에는 형용사 sour가 와요."
+            "explain": "감각동사 taste 뒤에는 형용사 sour가 와요. 부사 sourly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe plan sounds ___.",
@@ -942,7 +942,7 @@ export const courses = [
               "dangerousness"
             ],
             "answer": 1,
-            "explain": "감각동사 sound 뒤에는 형용사 dangerous가 와요."
+            "explain": "감각동사 sound 뒤에는 형용사 dangerous가 와요. 부사 dangerously는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThat fish smells ___.",
@@ -953,7 +953,7 @@ export const courses = [
               "strangeness"
             ],
             "answer": 2,
-            "explain": "감각동사 smell 뒤에는 형용사 strange가 와요."
+            "explain": "감각동사 smell 뒤에는 형용사 strange가 와요. 부사 strangely는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nYou look ___ today.",
@@ -964,7 +964,7 @@ export const courses = [
               "cool"
             ],
             "answer": 3,
-            "explain": "감각동사 look 뒤에는 형용사 cool이 와요."
+            "explain": "감각동사 look 뒤에는 형용사 cool이 와요. 부사 coolly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe news sounds ___.",
@@ -975,7 +975,7 @@ export const courses = [
               "surprisingness"
             ],
             "answer": 0,
-            "explain": "감각동사 sound 뒤에는 형용사 surprising이 와요."
+            "explain": "감각동사 sound 뒤에는 형용사 surprising이 와요. 부사 surprisingly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThis ice cream tastes ___.",
@@ -986,7 +986,7 @@ export const courses = [
               "creaminess"
             ],
             "answer": 1,
-            "explain": "감각동사 taste 뒤에는 형용사 creamy가 와요."
+            "explain": "감각동사 taste 뒤에는 형용사 creamy가 와요. 부사 creamily는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThis pizza tastes ___.",
@@ -997,7 +997,7 @@ export const courses = [
               "deliciousness"
             ],
             "answer": 2,
-            "explain": "감각동사 taste 뒤에는 형용사 delicious가 와요."
+            "explain": "감각동사 taste 뒤에는 형용사 delicious가 와요. 부사 deliciously는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe water feels ___.",
@@ -1008,7 +1008,7 @@ export const courses = [
               "cold"
             ],
             "answer": 3,
-            "explain": "감각동사 feel 뒤에는 형용사 cold가 와요."
+            "explain": "감각동사 feel 뒤에는 형용사 cold가 와요. 부사 coldly는 안 돼요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe cake smells ___.",
@@ -1019,7 +1019,7 @@ export const courses = [
               "sweetness"
             ],
             "answer": 2,
-            "explain": "감각동사 smell 뒤에는 형용사 sweet가 와요."
+            "explain": "감각동사 smell 뒤에는 형용사 sweet가 와요. 부사 sweetly는 안 돼요."
           }
         ],
         "sa": [
@@ -1035,9 +1035,10 @@ export const courses = [
             "q": "빈칸에 알맞은 형용사를 쓰세요.\nThe music sounds ___.",
             "ko": "그 음악은 좋게 들린다.",
             "answers": [
-              "nice"
+              "nice",
+              "good"
             ],
-            "explain": "감각동사 sound 뒤에는 형용사 nice가 와요."
+            "explain": "감각동사 sound 뒤에는 형용사 nice(또는 good)가 와요."
           },
           {
             "q": "빈칸에 알맞은 형용사를 쓰세요.\nI feel ___.",
@@ -1059,9 +1060,10 @@ export const courses = [
             "q": "빈칸에 알맞은 형용사를 쓰세요.\nThe flower smells ___.",
             "ko": "그 꽃은 좋은 냄새가 난다.",
             "answers": [
-              "good"
+              "good",
+              "nice"
             ],
-            "explain": "감각동사 smell 뒤에는 형용사 good이 와요."
+            "explain": "감각동사 smell 뒤에는 형용사 good(또는 nice)이 와요."
           },
           {
             "q": "빈칸에 알맞은 형용사를 쓰세요.\nThe blanket feels ___.",
@@ -1244,7 +1246,7 @@ export const courses = [
             "explain": "finish 뒤에는 동명사(-ing)가 와요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nMy hobby is ___ the piano.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nWould you mind ___ the piano?",
             "options": [
               "playing",
               "play",
@@ -1252,7 +1254,7 @@ export const courses = [
               "plays"
             ],
             "answer": 0,
-            "explain": "be동사 뒤 보어로 동명사(-ing)가 와요."
+            "explain": "mind 뒤에는 동명사(-ing)가 와요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI enjoy ___ pictures.",
@@ -1332,7 +1334,7 @@ export const courses = [
             "explain": "finish 뒤에는 동명사(-ing)가 와요."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nMy hobby is ___ movies.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nI enjoy ___ movies.",
             "options": [
               "watching",
               "watch",
@@ -1340,7 +1342,7 @@ export const courses = [
               "watches"
             ],
             "answer": 0,
-            "explain": "be동사 뒤 보어로 동명사(-ing)가 와요."
+            "explain": "enjoy 뒤에는 동명사(-ing)가 와요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI enjoy ___ with my dog.",
@@ -1461,12 +1463,12 @@ export const courses = [
             "explain": "keep 뒤에는 동명사(-ing)가 와요."
           },
           {
-            "q": "빈칸에 알맞은 동명사를 쓰세요.\nMy hobby is ___ movies.",
-            "ko": "내 취미는 영화를 보는 것이다.",
+            "q": "빈칸에 알맞은 동명사를 쓰세요.\nDo you mind ___ the window?",
+            "ko": "창문 닫는 것을 꺼리나요?",
             "answers": [
-              "watching"
+              "closing"
             ],
-            "explain": "be동사 뒤 보어로 동명사(-ing)가 와요."
+            "explain": "mind 뒤에는 동명사(-ing)가 와요."
           }
         ]
       },
@@ -1480,7 +1482,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nTom is ___ than Sam.",
             "options": [
               "taller",
-              "more tall",
+              "more taller",
               "taller then",
               "tallest"
             ],
@@ -1501,7 +1503,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nMy bag is ___ than your bag.",
             "options": [
-              "more big",
+              "more bigger",
               "biggest",
               "bigger",
               "bigger then"
@@ -1512,7 +1514,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nA cheetah is ___ than a dog.",
             "options": [
-              "more fast",
+              "more faster",
               "fastest",
               "faster then",
               "faster"
@@ -1525,7 +1527,7 @@ export const courses = [
             "options": [
               "better",
               "gooder",
-              "more good",
+              "more better",
               "best"
             ],
             "answer": 0,
@@ -1534,7 +1536,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis shirt is ___ than that one.",
             "options": [
-              "more cheap",
+              "more cheaper",
               "cheaper",
               "cheapest",
               "cheaper then"
@@ -1545,7 +1547,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nToday is ___ than yesterday.",
             "options": [
-              "more hot",
+              "more hotter",
               "hottest",
               "hotter",
               "hot"
@@ -1556,7 +1558,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis box is ___ than that box.",
             "options": [
-              "more heavy",
+              "more heavier",
               "heaviest",
               "heavy",
               "heavier"
@@ -1568,7 +1570,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nSpring is ___ than winter.",
             "options": [
               "warmer",
-              "more warm",
+              "more warmer",
               "warmest",
               "warm"
             ],
@@ -1590,7 +1592,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nToday's weather is ___ than yesterday's.",
             "options": [
               "badder",
-              "more bad",
+              "more worse",
               "worse",
               "worst"
             ],
@@ -1612,7 +1614,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis flower is ___ than that one.",
             "options": [
               "prettier",
-              "more pretty",
+              "more prettier",
               "prettiest",
               "pretty"
             ],
@@ -1622,7 +1624,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThe Han River is ___ than this street.",
             "options": [
-              "more long",
+              "more longer",
               "longer",
               "longest",
               "longer then"
@@ -1633,7 +1635,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nMy cousin is ___ than me.",
             "options": [
-              "more old",
+              "more older",
               "oldest",
               "older",
               "old"
@@ -1656,7 +1658,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis mountain is ___ than that mountain.",
             "options": [
               "higher",
-              "more high",
+              "more higher",
               "highest",
               "high"
             ],
@@ -1666,7 +1668,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nShe walks ___ than me.",
             "options": [
-              "more fast",
+              "more faster",
               "faster",
               "fastest",
               "faster then"
@@ -1677,7 +1679,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis problem is ___ than that problem.",
             "options": [
-              "more easy",
+              "more easier",
               "easiest",
               "easier",
               "easier then"
@@ -1688,7 +1690,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nSeoul is ___ than my town.",
             "options": [
-              "more big",
+              "more bigger",
               "biggest",
               "big",
               "bigger"
@@ -1700,7 +1702,7 @@ export const courses = [
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis puzzle is ___ than that puzzle.",
             "options": [
               "harder",
-              "more hard",
+              "more harder",
               "hardest",
               "hard"
             ],
@@ -1710,7 +1712,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nMy room is ___ than your room.",
             "options": [
-              "more small",
+              "more smaller",
               "smaller",
               "smallest",
               "smaller then"
@@ -1721,7 +1723,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis lake is ___ than that pond.",
             "options": [
-              "more deep",
+              "more deeper",
               "deepest",
               "deeper",
               "deep"
@@ -1732,7 +1734,7 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 비교급을 고르세요.\nThis sweater is ___ than that sweater.",
             "options": [
-              "more warm",
+              "more warmer",
               "warmest",
               "warm",
               "warmer"
@@ -1853,7 +1855,7 @@ export const courses = [
             "explain": "현재시제이고 주어가 3인칭 단수이므로 rings."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\nI read comics ___ I am free.",
+            "q": "알맞은 접속사를 고르세요. (나는 한가할 때 만화책을 읽는다.)\nI read comics ___ I am free.",
             "options": [
               "while",
               "when",
@@ -1886,7 +1888,7 @@ export const courses = [
             "explain": "시간 부사절에서는 미래도 현재시제로 쓰므로 arrives."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\nWe stop talking ___ the movie starts.",
+            "q": "알맞은 접속사를 고르세요. (영화가 시작할 때, 우리는 이야기를 멈춘다.)\nWe stop talking ___ the movie starts.",
             "options": [
               "when",
               "while",
@@ -1919,7 +1921,7 @@ export const courses = [
             "explain": "현재시제이고 주어가 3인칭 단수이므로 gets."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\n___ we finish our homework, we watch TV.",
+            "q": "알맞은 접속사를 고르세요. (우리가 숙제를 끝낼 때, 우리는 TV를 본다.)\n___ we finish our homework, we watch TV.",
             "options": [
               "While",
               "Because",
@@ -1930,7 +1932,7 @@ export const courses = [
             "explain": "'~할 때'라는 뜻의 접속사는 When."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\nI feel excited ___ I win a game.",
+            "q": "알맞은 접속사를 고르세요. (나는 게임에서 이길 때 신이 난다.)\nI feel excited ___ I win a game.",
             "options": [
               "when",
               "while",
@@ -1996,7 +1998,7 @@ export const courses = [
             "explain": "현재시제이고 주어가 단수이므로 starts."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\n___ I make a mistake, I try again.",
+            "q": "알맞은 접속사를 고르세요. (내가 실수할 때, 나는 다시 시도한다.)\n___ I make a mistake, I try again.",
             "options": [
               "Because",
               "While",
@@ -2029,7 +2031,7 @@ export const courses = [
             "explain": "everyone은 단수 취급, 현재시제이므로 becomes."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\nHe takes a rest ___ he feels tired.",
+            "q": "알맞은 접속사를 고르세요. (그는 피곤할 때 휴식을 취한다.)\nHe takes a rest ___ he feels tired.",
             "options": [
               "while",
               "when",
@@ -2051,7 +2053,7 @@ export const courses = [
             "explain": "현재시제이고 주어가 we이므로 finish."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\n___ the weather is warm, I play outside.",
+            "q": "알맞은 접속사를 고르세요. (날씨가 따뜻할 때, 나는 밖에서 논다.)\n___ the weather is warm, I play outside.",
             "options": [
               "While",
               "Because",
@@ -2084,7 +2086,7 @@ export const courses = [
             "explain": "현재시제이고 주어가 I이므로 see."
           },
           {
-            "q": "알맞은 접속사를 고르세요.\nI feel sleepy ___ it is late at night.",
+            "q": "알맞은 접속사를 고르세요. (밤이 늦을 때, 나는 졸리다.)\nI feel sleepy ___ it is late at night.",
             "options": [
               "while",
               "because",
@@ -2226,18 +2228,18 @@ export const courses = [
               "sent to"
             ],
             "answer": 1,
-            "explain": "과거 문장이고 '우리에게 소포를 보냈다'이므로 sent us a package."
+            "explain": "주어가 He이고 4형식이므로 sent us a package. (send는 3인칭 단수 현재면 sends)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI ___ my mom my report card.",
             "options": [
-              "show",
+              "show to",
               "shows",
               "showed",
               "showed to"
             ],
             "answer": 2,
-            "explain": "4형식은 '동사+사람+사물' 순서. showed my mom my report card."
+            "explain": "4형식은 '동사+사람+사물' 순서이고 전치사를 쓰지 않아요. showed my mom my report card."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nMs. Park ___ us music.",
@@ -2259,7 +2261,7 @@ export const courses = [
               "bought to"
             ],
             "answer": 0,
-            "explain": "과거 문장 '나에게 신발을 사주셨다'이므로 bought me shoes."
+            "explain": "주어가 My mom이고 4형식이므로 bought me shoes. (buy는 3인칭 단수 현재면 buys)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nHe ___ me a secret.",
@@ -2270,7 +2272,7 @@ export const courses = [
               "told to"
             ],
             "answer": 1,
-            "explain": "'나에게 비밀을 말해주었다'는 과거. told me a secret."
+            "explain": "주어가 He이고 4형식이므로 told me a secret. (tell은 3인칭 단수 현재면 tells)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nMy sister ___ me a cake.",
@@ -2281,7 +2283,7 @@ export const courses = [
               "made to"
             ],
             "answer": 2,
-            "explain": "'나에게 케이크를 만들어주었다'는 과거. made me a cake."
+            "explain": "주어가 My sister이고 4형식이므로 made me a cake. (make는 3인칭 단수 현재면 makes)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nHe gave ___.",
@@ -2319,24 +2321,24 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI ___ him a ticket.",
             "options": [
-              "get",
+              "get to",
               "gets",
               "got",
               "got to"
             ],
             "answer": 2,
-            "explain": "'그에게 표를 구해주었다'는 과거. got him a ticket."
+            "explain": "4형식은 '동사+사람+사물' 순서이고 전치사를 쓰지 않아요. got him a ticket."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nGrandma ___ us rice cakes.",
             "options": [
               "make",
-              "makes",
+              "makes to",
               "make to",
               "made"
             ],
             "answer": 3,
-            "explain": "'우리에게 떡을 만들어주셨다'는 과거. made us rice cakes."
+            "explain": "주어가 Grandma이고 4형식이므로 made us rice cakes. (make는 3인칭 단수 현재면 makes)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nShe ___ me an email.",
@@ -2347,7 +2349,7 @@ export const courses = [
               "sent to"
             ],
             "answer": 0,
-            "explain": "'나에게 이메일을 보냈다'는 과거. sent me an email."
+            "explain": "주어가 She이고 4형식이므로 sent me an email. (send는 3인칭 단수 현재면 sends)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nHe ___ us his new car.",
@@ -2358,7 +2360,7 @@ export const courses = [
               "show to"
             ],
             "answer": 1,
-            "explain": "'우리에게 새 차를 보여주었다'는 과거. showed us his new car."
+            "explain": "주어가 He이고 4형식이므로 showed us his new car. (show는 3인칭 단수 현재면 shows)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nHe sent a letter ___ his parents.",
@@ -2396,13 +2398,13 @@ export const courses = [
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI ___ him a gift.",
             "options": [
-              "give",
+              "give to",
               "gave",
               "gives to",
               "gave to"
             ],
             "answer": 1,
-            "explain": "'그에게 선물을 주었다'는 과거. gave him a gift."
+            "explain": "4형식은 '동사+사람+사물' 순서이고 전치사를 쓰지 않아요. gave him a gift."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nShe showed ___.",
@@ -2419,23 +2421,23 @@ export const courses = [
             "q": "빈칸에 알맞은 말을 고르세요.\nMy dad ___ me a new phone.",
             "options": [
               "buy",
-              "buys",
+              "buys to",
               "buy to",
               "bought"
             ],
             "answer": 3,
-            "explain": "'나에게 새 휴대폰을 사주셨다'는 과거. bought me a new phone."
+            "explain": "주어가 My dad이고 4형식이므로 bought me a new phone. (buy는 3인칭 단수 현재면 buys)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI ___ my friend a card.",
             "options": [
               "sent",
-              "send",
+              "sends to",
               "sends",
               "send to"
             ],
             "answer": 0,
-            "explain": "'친구에게 카드를 보냈다'는 과거. sent my friend a card."
+            "explain": "4형식은 '동사+사람+사물' 순서이고 전치사를 쓰지 않아요. sent my friend a card."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nHe threw the ball ___ me.",
@@ -2463,12 +2465,12 @@ export const courses = [
             "q": "빈칸에 알맞은 말을 고르세요.\nMy uncle ___ me some money.",
             "options": [
               "give",
-              "gives",
+              "gives to",
               "give to",
               "gave"
             ],
             "answer": 3,
-            "explain": "'나에게 용돈을 주셨다'는 과거. gave me some money."
+            "explain": "주어가 My uncle이고 4형식이므로 gave me some money. (give는 3인칭 단수 현재면 gives)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nShe bought a bag ___ me.",
@@ -2583,7 +2585,7 @@ export const courses = [
             "explain": "'~라고'를 뜻하는 명사절을 이끄는 접속사는 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nI ___ that you like music.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 나는 네가 음악을 좋아한다는 것을 안다.)\nI ___ that you like music.",
             "options": [
               "hope",
               "know",
@@ -2605,7 +2607,7 @@ export const courses = [
             "explain": "believe의 목적어로 that절을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nWe ___ that you have a great trip.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 우리는 네가 즐거운 여행을 하길 바란다.)\nWe ___ that you have a great trip.",
             "options": [
               "think",
               "know",
@@ -2627,7 +2629,7 @@ export const courses = [
             "explain": "say 뒤의 명사절은 that으로 이끈다."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nThey ___ that the plan is good.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 그들은 그 계획이 좋다고 생각한다.)\nThey ___ that the plan is good.",
             "options": [
               "hope",
               "think",
@@ -2649,7 +2651,7 @@ export const courses = [
             "explain": "feel의 목적어로 that절을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nMy mom ___ that I am tired.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 우리 엄마는 내가 피곤하다는 것을 아신다.)\nMy mom ___ that I am tired.",
             "options": [
               "hopes",
               "thinks",
@@ -2671,7 +2673,7 @@ export const courses = [
             "explain": "명사절을 이끄는 접속사는 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nMy teacher ___ that I study hard.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 우리 선생님은 내가 열심히 공부한다는 것을 아신다.)\nMy teacher ___ that I study hard.",
             "options": [
               "hopes",
               "knows",
@@ -2693,7 +2695,7 @@ export const courses = [
             "explain": "believe 뒤의 명사절은 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nYou ___ that everything will be fine.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 너는 모든 것이 잘될 거라고 바란다.)\nYou ___ that everything will be fine.",
             "options": [
               "think",
               "know",
@@ -2704,7 +2706,7 @@ export const courses = [
             "explain": "'바라다'는 hope."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nShe ___ that she will be late.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 그녀는 자신이 늦을 거라고 말한다.)\nShe ___ that she will be late.",
             "options": [
               "says",
               "thinks",
@@ -2715,7 +2717,7 @@ export const courses = [
             "explain": "'말한다'는 say(says)."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 고르세요.\nI know ___ you did your best.",
+            "q": "빈칸에 알맞은 접속사를 고르세요.\nI think ___ you did your best.",
             "options": [
               "what",
               "that",
@@ -2723,10 +2725,10 @@ export const courses = [
               "it"
             ],
             "answer": 1,
-            "explain": "know의 목적어로 that절을 쓴다."
+            "explain": "think의 목적어로 that절을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nThey ___ that the plan is safe.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 그들은 그 계획이 안전하다고 생각한다.)\nThey ___ that the plan is safe.",
             "options": [
               "hope",
               "know",
@@ -2748,7 +2750,7 @@ export const courses = [
             "explain": "명사절을 이끄는 접속사는 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nI ___ that he missed the bus.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 나는 그가 버스를 놓쳤다는 것을 안다.)\nI ___ that he missed the bus.",
             "options": [
               "know",
               "hope",
@@ -2770,7 +2772,7 @@ export const courses = [
             "explain": "believe 뒤의 명사절은 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nI ___ that I will make new friends.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 나는 내가 새 친구들을 사귈 거라고 바란다.)\nI ___ that I will make new friends.",
             "options": [
               "think",
               "know",
@@ -2781,7 +2783,7 @@ export const courses = [
             "explain": "'바라다'는 hope."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nShe ___ that the test was easy.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 그녀는 그 시험이 쉬웠다고 말했다.)\nShe ___ that the test was easy.",
             "options": [
               "thought",
               "knew",
@@ -2803,7 +2805,7 @@ export const courses = [
             "explain": "feel의 목적어로 that절을 쓴다."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nI ___ that it is a great song.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 나는 그것이 멋진 노래라고 생각한다.)\nI ___ that it is a great song.",
             "options": [
               "hope",
               "think",
@@ -2814,7 +2816,7 @@ export const courses = [
             "explain": "'생각한다'는 think."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nWe ___ that he exercises every day.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 우리는 그가 매일 운동한다는 것을 안다.)\nWe ___ that he exercises every day.",
             "options": [
               "hope",
               "think",
@@ -2836,7 +2838,7 @@ export const courses = [
             "explain": "believe 뒤의 명사절은 that."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nI ___ that you will help me.",
+            "q": "빈칸에 알맞은 동사를 고르세요. (뜻: 나는 네가 나를 도와줄 거라고 믿는다.)\nI ___ that you will help me.",
             "options": [
               "believe",
               "hope",
@@ -2906,7 +2908,7 @@ export const courses = [
           },
           {
             "q": "빈칸에 알맞은 동사를 쓰세요.\nMy teacher ___ that I study hard.",
-            "ko": "우리 선생님은 내가 열심히 공부한다는 것을 안다.",
+            "ko": "우리 선생님은 내가 열심히 공부한다는 것을 아신다.",
             "answers": [
               "knows"
             ],
@@ -2943,15 +2945,15 @@ export const courses = [
         "concept": "「It is + 형용사 (+ for 목적격) + to부정사」에서 It은 뜻 없는 가주어이고, 진짜 주어인 to부정사가 뒤로 간다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to read books.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to read a book in a dark room.",
             "options": [
-              "fun",
-              "boring",
               "hard",
-              "easy"
+              "easy",
+              "funny",
+              "tall"
             ],
             "answer": 0,
-            "explain": "'책을 읽는 것은 재미있다'라는 뜻이므로 fun이 알맞아요."
+            "explain": "'어두운 방에서 책을 읽는 것은 어렵다'는 뜻이므로 hard가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is important ___ English.",
@@ -2965,15 +2967,15 @@ export const courses = [
             "explain": "진주어는 to부정사이므로 to learn이 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to exercise every day.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ for your health to exercise every day.",
             "options": [
+              "good",
               "bad",
               "dangerous",
-              "hard",
-              "good"
+              "dirty"
             ],
-            "answer": 3,
-            "explain": "'매일 운동하는 것은 몸에 좋다'는 뜻이므로 good이 알맞아요."
+            "answer": 0,
+            "explain": "'매일 운동하는 것은 건강에 좋다'는 뜻이므로 good이 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 가주어를 고르세요.\n___ is dangerous to swim in the deep river.",
@@ -2987,15 +2989,15 @@ export const courses = [
             "explain": "뜻 없는 가주어 It이 문장 앞에 와요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to keep a diary.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to write down new English words.",
             "options": [
               "useful",
               "useless",
-              "boring",
-              "scary"
+              "scary",
+              "dirty"
             ],
             "answer": 0,
-            "explain": "'일기를 쓰는 것은 유용하다'는 뜻이므로 useful이 알맞아요."
+            "explain": "'새 영어 단어를 적어 두는 것은 유용하다'는 뜻이므로 useful이 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is wonderful ___ other people.",
@@ -3009,15 +3011,15 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to help가 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to finish the work today.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to finish all this homework in one hour.",
             "options": [
-              "easy",
-              "hard",
               "fun",
-              "nice"
+              "easy",
+              "kind",
+              "hard"
             ],
-            "answer": 1,
-            "explain": "'오늘 그 일을 끝내는 것은 어렵다'는 뜻이므로 hard가 알맞아요."
+            "answer": 3,
+            "explain": "'이 모든 숙제를 한 시간 안에 끝내는 것은 어렵다'는 뜻이므로 hard가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is not easy ___ up early.",
@@ -3031,15 +3033,15 @@ export const courses = [
             "explain": "진주어는 to부정사이므로 to get이 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to keep your promise.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to keep your promise to your friends.",
             "options": [
               "boring",
               "important",
               "funny",
-              "easy"
+              "dirty"
             ],
             "answer": 1,
-            "explain": "'약속을 지키는 것은 중요하다'는 뜻이므로 important가 알맞아요."
+            "explain": "'친구와의 약속을 지키는 것은 중요하다'는 뜻이므로 important가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is easy ___ a bike.",
@@ -3053,15 +3055,15 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to ride가 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to play with fire.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to play with fire at home.",
             "options": [
               "safe",
               "fun",
               "dangerous",
-              "good"
+              "clean"
             ],
             "answer": 2,
-            "explain": "'불을 가지고 노는 것은 위험하다'는 뜻이므로 dangerous가 알맞아요."
+            "explain": "'집에서 불을 가지고 노는 것은 위험하다'는 뜻이므로 dangerous가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 가주어를 고르세요.\n___ is fun to travel with friends.",
@@ -3086,15 +3088,15 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to eat이 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to wake up early.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to wake up early on cold winter mornings.",
             "options": [
-              "hard",
               "happy",
               "kind",
-              "tall"
+              "tall",
+              "hard"
             ],
-            "answer": 0,
-            "explain": "'일찍 일어나는 것은 어렵다'는 뜻이므로 hard가 알맞아요."
+            "answer": 3,
+            "explain": "'추운 겨울 아침에 일찍 일어나는 것은 어렵다'는 뜻이므로 hard가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is useful ___ a foreign language.",
@@ -3108,15 +3110,15 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to learn이 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to read English books.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to read English comic books.",
             "options": [
-              "boring",
               "sleepy",
+              "angry",
               "interesting",
-              "angry"
+              "hungry"
             ],
             "answer": 2,
-            "explain": "'영어책을 읽는 것은 흥미롭다'는 뜻이므로 interesting이 알맞아요."
+            "explain": "'영어 만화책을 읽는 것은 흥미롭다'는 뜻이므로 interesting이 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is exciting ___ soccer.",
@@ -3130,7 +3132,7 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to play가 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to drink enough water.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to drink enough water every day.",
             "options": [
               "important",
               "lazy",
@@ -3138,7 +3140,7 @@ export const courses = [
               "short"
             ],
             "answer": 0,
-            "explain": "'물을 충분히 마시는 것은 중요하다'는 뜻이므로 important가 알맞아요."
+            "explain": "'매일 물을 충분히 마시는 것은 중요하다'는 뜻이므로 important가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is nice ___ new friends.",
@@ -3155,9 +3157,9 @@ export const courses = [
             "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to run on the ice.",
             "options": [
               "dangerous",
-              "safe",
+              "calm",
               "easy",
-              "calm"
+              "warm"
             ],
             "answer": 0,
             "explain": "'얼음 위에서 달리는 것은 위험하다'는 뜻이므로 dangerous가 알맞아요."
@@ -3185,7 +3187,7 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to solve가 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to drink water every day.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to wear a helmet when you ride a bike.",
             "options": [
               "silly",
               "cold",
@@ -3193,7 +3195,7 @@ export const courses = [
               "necessary"
             ],
             "answer": 3,
-            "explain": "'매일 물을 마시는 것은 필요하다'는 뜻이므로 necessary가 알맞아요."
+            "explain": "'자전거를 탈 때 헬멧을 쓰는 것은 필요하다'는 뜻이므로 necessary가 알맞아요."
           },
           {
             "q": "빈칸에 알맞은 것을 고르세요.\nIt is exciting ___ new things.",
@@ -3207,7 +3209,7 @@ export const courses = [
             "explain": "진주어 to부정사이므로 to learn이 맞아요."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to drink enough water.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt is ___ to eat fresh fruit and vegetables.",
             "options": [
               "heavy",
               "healthy",
@@ -3215,7 +3217,7 @@ export const courses = [
               "hot"
             ],
             "answer": 1,
-            "explain": "'물을 충분히 마시는 것은 건강에 좋다'는 뜻이므로 healthy가 알맞아요."
+            "explain": "'신선한 과일과 채소를 먹는 것은 건강에 좋다'는 뜻이므로 healthy가 알맞아요."
           }
         ],
         "sa": [
@@ -3410,7 +3412,7 @@ export const courses = [
             "q": "빈칸에 알맞은 것을 고르세요.\nThe less you sleep, the ___ tired you feel.",
             "options": [
               "most",
-              "less",
+              "much",
               "very",
               "more"
             ],
@@ -3689,7 +3691,7 @@ export const courses = [
               "have",
               "having",
               "has",
-              "had"
+              "are having"
             ],
             "answer": 2,
             "explain": "Each + 단수명사는 단수 취급이므로 has."
@@ -3710,7 +3712,7 @@ export const courses = [
             "options": [
               "need",
               "are needing",
-              "needed",
+              "have",
               "needs"
             ],
             "answer": 3,
@@ -3733,7 +3735,7 @@ export const courses = [
               "like",
               "are liking",
               "likes",
-              "liked"
+              "liking"
             ],
             "answer": 2,
             "explain": "3인칭 단수 주어이므로 동사에 -s를 붙여 likes."
@@ -3744,7 +3746,7 @@ export const courses = [
               "boil",
               "boils",
               "are boiling",
-              "boiled"
+              "boiling"
             ],
             "answer": 1,
             "explain": "불가산명사 Water는 단수 취급이므로 boils."
@@ -3754,7 +3756,7 @@ export const courses = [
             "options": [
               "have",
               "having",
-              "had",
+              "are having",
               "has"
             ],
             "answer": 3,
@@ -3766,7 +3768,7 @@ export const courses = [
               "likes",
               "like",
               "are liking",
-              "liked"
+              "liking"
             ],
             "answer": 0,
             "explain": "Everybody는 단수 취급이므로 likes."
@@ -3777,7 +3779,7 @@ export const courses = [
               "looks",
               "is looking",
               "look",
-              "looked"
+              "looking"
             ],
             "answer": 2,
             "explain": "복수 주어 These books이므로 원형 look."
@@ -3788,7 +3790,7 @@ export const courses = [
               "watch",
               "watches",
               "are watching",
-              "watched"
+              "watching"
             ],
             "answer": 1,
             "explain": "3인칭 단수 주어이므로 watches."
@@ -3810,7 +3812,7 @@ export const courses = [
               "plays",
               "play",
               "are playing",
-              "played"
+              "playing"
             ],
             "answer": 0,
             "explain": "One of my + 복수명사는 단수 취급이므로 plays."
@@ -3821,7 +3823,7 @@ export const courses = [
               "have",
               "having",
               "has",
-              "had"
+              "are having"
             ],
             "answer": 2,
             "explain": "Every + 단수명사는 단수 취급이므로 has."
@@ -3865,7 +3867,7 @@ export const courses = [
               "have",
               "having",
               "has",
-              "had"
+              "are having"
             ],
             "answer": 2,
             "explain": "Each + 단수명사는 단수 취급이므로 has."
@@ -3876,7 +3878,7 @@ export const courses = [
               "works",
               "work",
               "is working",
-              "worked"
+              "working"
             ],
             "answer": 1,
             "explain": "복수 주어이므로 원형 work."
@@ -3920,7 +3922,7 @@ export const courses = [
               "know",
               "knows",
               "are knowing",
-              "knew"
+              "knowing"
             ],
             "answer": 1,
             "explain": "Everyone은 단수 취급이므로 knows."
@@ -3930,7 +3932,7 @@ export const courses = [
             "options": [
               "smells",
               "is smelling",
-              "smelled",
+              "smelling",
               "smell"
             ],
             "answer": 3,
@@ -3941,7 +3943,7 @@ export const courses = [
             "options": [
               "freeze",
               "are freezing",
-              "froze",
+              "freezing",
               "freezes"
             ],
             "answer": 3,
@@ -4815,15 +4817,15 @@ export const courses = [
             "explain": "'이겼기 때문에' 이유이므로 because."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWe went swimming, ___ it was cold outside.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ the water was cold, we went swimming.",
             "options": [
-              "so",
-              "because",
-              "although",
-              "and"
+              "So",
+              "Because",
+              "Although",
+              "And"
             ],
             "answer": 2,
-            "explain": "'비록 추웠지만' 양보이므로 although."
+            "explain": "'비록 물이 차가웠지만' 양보이므로 Although. 문장 앞에서 대조를 나타내요."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt was raining, ___ we stayed home.",
@@ -4848,15 +4850,15 @@ export const courses = [
             "explain": "'비록 피곤했지만' 양보이므로 Although."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nHe is not happy ___ he is rich.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ he practiced every day, he lost the match.",
             "options": [
-              "because",
-              "although",
-              "so",
-              "but"
+              "Because",
+              "Although",
+              "So",
+              "But"
             ],
             "answer": 1,
-            "explain": "'비록 부자지만' 양보이므로 although."
+            "explain": "'비록 매일 연습했지만' 양보이므로 Although. (연습이 진 이유가 아니므로 Because는 틀려요.)"
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nShe went to bed early ___ she was very tired.",
@@ -4870,15 +4872,15 @@ export const courses = [
             "explain": "'피곤했기 때문에' 이유이므로 because."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nHe studied hard, ___ he failed the test.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nHe was very tired, ___ he went to bed.",
             "options": [
               "because",
-              "so",
               "although",
-              "but"
+              "but",
+              "so"
             ],
             "answer": 3,
-            "explain": "'하지만' 앞뒤가 반대이므로 but. (although는 문장 앞에 쓰고 but과 함께 쓰지 않아요.)"
+            "explain": "'그래서' 결과이므로 so. (피곤해서 잠자리에 든 결과)"
           },
           {
             "q": "빈칸에 알맞은 동사를 고르세요.\nAlthough she ___ tired, she kept working.",
@@ -4936,7 +4938,7 @@ export const courses = [
             "explain": "'비록 어려웠지만' 양보이므로 Although."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nI was late ___ I missed the bus.",
+            "q": "빈칸에 알맞은 말을 고르세요.\nI was late ___ I overslept.",
             "options": [
               "although",
               "because",
@@ -4944,18 +4946,18 @@ export const courses = [
               "but"
             ],
             "answer": 1,
-            "explain": "'놓쳤기 때문에' 이유이므로 because."
+            "explain": "'늦잠 잤기 때문에' 이유이므로 because."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nShe is very wise, ___ she is young.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ she is young, she is very wise.",
             "options": [
-              "so",
-              "because",
-              "although",
-              "and"
+              "So",
+              "Because",
+              "Although",
+              "And"
             ],
             "answer": 2,
-            "explain": "'비록 어리지만' 양보이므로 although."
+            "explain": "'비록 어리지만' 양보이므로 Although."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nI was hungry, ___ I made a sandwich.",
@@ -4991,26 +4993,26 @@ export const courses = [
             "explain": "과거이므로 went."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nIt tasted bad ___ the food was expensive.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ the food was expensive, it tasted bad.",
             "options": [
-              "because",
-              "so",
-              "though",
-              "and"
+              "Because",
+              "So",
+              "Though",
+              "And"
             ],
             "answer": 2,
-            "explain": "though는 although와 같은 뜻(비록 ~일지라도)이에요."
+            "explain": "Though는 Although와 같은 뜻(비록 ~일지라도)이에요. '비록 비쌌지만 맛없었다' 양보."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nI tried it, ___ I was scared.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ I was afraid, I rode the roller coaster.",
             "options": [
-              "because",
-              "so",
-              "and",
-              "although"
+              "Because",
+              "So",
+              "And",
+              "Although"
             ],
             "answer": 3,
-            "explain": "'비록 무서웠지만' 양보이므로 although."
+            "explain": "'비록 무서웠지만' 양보이므로 Although."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\n___ it was raining, we could not play outside.",
@@ -5021,18 +5023,18 @@ export const courses = [
               "But"
             ],
             "answer": 0,
-            "explain": "'비가 왔기 때문에' 이유이므로 Because."
+            "explain": "'비가 왔기 때문에' 이유이므로 Because. (비가 원인이 되어 못 놀았어요.)"
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWe walked to school ___ it was raining.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ it was raining, we walked to school.",
             "options": [
-              "because",
-              "although",
-              "so",
-              "and"
+              "Because",
+              "Although",
+              "So",
+              "And"
             ],
             "answer": 1,
-            "explain": "'비록 비가 왔지만' 양보이므로 although."
+            "explain": "'비록 비가 왔지만' 양보이므로 Although."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nIt was cold ___ windy yesterday.",
@@ -5057,15 +5059,15 @@ export const courses = [
             "explain": "과거이므로 kept."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWe went on a picnic, ___ it rained a little.",
+            "q": "빈칸에 알맞은 말을 고르세요.\n___ it rained a little, we went on a picnic.",
             "options": [
-              "because",
-              "so",
-              "although",
-              "and"
+              "Because",
+              "So",
+              "Although",
+              "And"
             ],
             "answer": 2,
-            "explain": "'비록 비가 조금 왔지만' 양보이므로 although."
+            "explain": "'비록 비가 조금 왔지만' 양보이므로 Although."
           }
         ],
         "sa": [
@@ -5119,13 +5121,13 @@ export const courses = [
             "explain": "과거이므로 go의 과거형 went."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.\nShe is very wise, ___ she is young.",
+            "q": "빈칸에 알맞은 말을 쓰세요.\n___ she is young, she is very wise.",
             "ko": "비록 그녀는 어리지만 매우 현명하다.",
             "answers": [
-              "although",
-              "though"
+              "Although",
+              "Though"
             ],
-            "explain": "'비록 어리지만' 양보이므로 although(=though)."
+            "explain": "'비록 어리지만' 양보이므로 Although(=Though). 문장 앞이므로 대문자로."
           },
           {
             "q": "빈칸에 알맞은 말을 쓰세요.\nI was late ___ I missed the bus.",
@@ -5592,7 +5594,7 @@ export const courses = [
             "explain": "결과절 앞에는 that."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nThe tea was so ___ that I couldn't drink it.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nThe tea was so ___ that it burned my mouth.",
             "options": [
               "hot",
               "cold",
@@ -5600,7 +5602,7 @@ export const courses = [
               "fresh"
             ],
             "answer": 0,
-            "explain": "마실 수 없었으니 뜨거운(hot)."
+            "explain": "입을 데었으니 뜨거운(hot)."
           },
           {
             "q": "빈칸에 알맞은 동사를 고르세요.\nShe was so tired that she ___ asleep.",
@@ -5691,15 +5693,15 @@ export const courses = [
             "explain": "천장에 닿을 만큼 키가 큰(tall)."
           },
           {
-            "q": "빈칸에 알맞은 동사를 고르세요.\nIt was so cold that we ___ home.",
+            "q": "빈칸에 알맞은 동사를 고르세요.\nIt was so cold that the lake ___.",
             "options": [
-              "went",
-              "ran",
-              "left",
-              "stayed"
+              "melted",
+              "boiled",
+              "dried",
+              "froze"
             ],
             "answer": 3,
-            "explain": "추워서 집에 머물렀다(stayed home)."
+            "explain": "추워서 호수가 얼었다(froze)."
           },
           {
             "q": "빈칸에 알맞은 말을 고르세요.\nThe movie was ___ long that we got bored.",
@@ -5768,7 +5770,7 @@ export const courses = [
             "explain": "결과절 앞에는 that."
           },
           {
-            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt was so ___ that we stayed inside.",
+            "q": "빈칸에 알맞은 형용사를 고르세요.\nIt was so ___ that we turned on the fan.",
             "options": [
               "cold",
               "cool",
@@ -5776,12 +5778,12 @@ export const courses = [
               "mild"
             ],
             "answer": 2,
-            "explain": "안에 있었던 이유로 더운(hot)."
+            "explain": "선풍기를 켰으니 더운(hot)."
           },
           {
             "q": "빈칸에 알맞은 동사를 고르세요.\nThe joke was so funny that we ___ a lot.",
             "options": [
-              "cried",
+              "frowned",
               "slept",
               "talked",
               "laughed"
