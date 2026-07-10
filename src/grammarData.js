@@ -17,416 +17,361 @@ export const courses = [
         "concept": "want·hope·decide·need·plan 등의 동사 뒤에 「to+동사원형」이 와서 '~하기를/~하는 것을'로 해석한다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy older sister wants ___ a doctor, so she studies biology every night.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nI want ___ comics after dinner.",
             "options": [
-              "become",
-              "becoming",
-              "becomes",
-              "to become"
-            ],
-            "answer": 3,
-            "explain": "want는 to부정사를 목적어로 취하므로 to become이 맞다. becoming(동명사)·become(원형)·becomes는 want 뒤에 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAfter a long week at school, I really enjoy ___ movies with my family on Saturday.",
-            "options": [
-              "watched",
-              "watch",
-              "to watch",
-              "watching"
-            ],
-            "answer": 3,
-            "explain": "enjoy는 동명사만 목적어로 취하므로 watching이 맞다. enjoy 뒤에 to부정사(to watch)는 쓸 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nBecause it started raining hard, we finally decided ___ the picnic and go home.",
-            "options": [
-              "to cancel",
-              "canceled",
-              "cancel",
-              "canceling"
+              "to read",
+              "read",
+              "reading",
+              "reads"
             ],
             "answer": 0,
-            "explain": "decide는 to부정사를 취하므로 to cancel이 맞다. canceling(동명사)은 decide의 목적어가 될 수 없다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to read이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe students didn't leave until they finished ___ the classroom after the party.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe wants ___ on the stage.",
             "options": [
-              "clean",
+              "dances",
+              "to dance",
+              "dancing",
+              "dance"
+            ],
+            "answer": 1,
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to dance이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe decided ___ the classroom.",
+            "options": [
               "cleaning",
+              "cleans",
               "to clean",
-              "cleaned"
-            ],
-            "answer": 1,
-            "explain": "finish는 동명사만 취하므로 cleaning이 맞다. finish 뒤에 to부정사(to clean)는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI hope ___ you again next summer when I visit my grandparents' town.",
-            "options": [
-              "to see",
-              "saw",
-              "see",
-              "seeing"
-            ],
-            "answer": 0,
-            "explain": "hope는 to부정사를 취하므로 to see가 맞다. seeing(동명사)·saw(과거)·see(원형)는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nTo stay healthy, my coach told us to avoid ___ too much fast food.",
-            "options": [
-              "eat",
-              "eats",
-              "eating",
-              "to eat"
+              "clean"
             ],
             "answer": 2,
-            "explain": "avoid는 동명사만 취하므로 eating이 맞다. avoid 뒤에 to eat은 쓸 수 없다."
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to clean이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe club members plan ___ a small concert at the end of the semester.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nHe needs ___ his bike.",
             "options": [
-              "to hold",
-              "holding",
-              "hold",
-              "held"
-            ],
-            "answer": 0,
-            "explain": "plan은 to부정사를 취하므로 to hold가 맞다. holding(동명사)·hold(원형)는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWould you mind ___ the window? It's a little cold in here.",
-            "options": [
-              "closing",
-              "closed",
-              "to close",
-              "close"
-            ],
-            "answer": 0,
-            "explain": "mind는 동명사만 취하므로 closing이 맞다. 'Would you mind to close'는 틀린 표현이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy brother promised ___ me with my math homework after dinner tonight.",
-            "options": [
-              "help",
-              "helping",
-              "to help",
-              "helped"
-            ],
-            "answer": 2,
-            "explain": "promise는 to부정사를 취하므로 to help가 맞다. helping·help·helped는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nEven though she was tired, she kept ___ until she reached the finish line.",
-            "options": [
-              "running",
-              "ran",
-              "to run",
-              "run"
-            ],
-            "answer": 0,
-            "explain": "keep은 동명사를 취해 '계속 ~하다'가 되므로 running이 맞다. keep 뒤에 to run은 쓸 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe little boy refused ___ his vegetables, so his mom was upset.",
-            "options": [
-              "eat",
-              "to eat",
-              "ate",
-              "eating"
-            ],
-            "answer": 1,
-            "explain": "refuse는 to부정사를 취하므로 to eat이 맞다. eating(동명사)은 refuse의 목적어가 될 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAfter a long talk, both teams agreed ___ the rules of the new game.",
-            "options": [
-              "followed",
-              "follow",
-              "to follow",
-              "following"
-            ],
-            "answer": 2,
-            "explain": "agree는 to부정사를 취하므로 to follow가 맞다. following·follow·followed는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe expect ___ at the airport around noon, so please wait for us there.",
-            "options": [
-              "arrived",
-              "arrive",
-              "arriving",
-              "to arrive"
+              "fix",
+              "fixes",
+              "fixing",
+              "to fix"
             ],
             "answer": 3,
-            "explain": "expect는 to부정사를 취하므로 to arrive가 맞다. arriving·arrive·arrived는 올 수 없다."
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to fix이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nYou look really pale; I think you need ___ some rest right now.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThey plan ___ a bakery.",
+            "options": [
+              "to open",
+              "open",
+              "opening",
+              "opens"
+            ],
+            "answer": 0,
+            "explain": "plan 뒤에는 「to+동사원형」이 오므로 to open이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nI want ___ a cook.",
+            "options": [
+              "becomes",
+              "to become",
+              "becoming",
+              "become"
+            ],
+            "answer": 1,
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to become이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy sister hopes ___ the contest.",
+            "options": [
+              "winning",
+              "wins",
+              "to win",
+              "win"
+            ],
+            "answer": 2,
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to win이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nYou need ___ some sleep now.",
             "options": [
               "get",
-              "got",
-              "to get",
-              "getting"
+              "gets",
+              "getting",
+              "to get"
             ],
-            "answer": 2,
-            "explain": "need는 to부정사를 취하므로 to get이 맞다. getting·get·got는 올 수 없다."
+            "answer": 3,
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to get이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe customer wished ___ to the manager about the broken product.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThey plan ___ camping this weekend.",
             "options": [
-              "speaking",
+              "to go",
+              "go",
+              "going",
+              "goes"
+            ],
+            "answer": 0,
+            "explain": "plan 뒤에는 「to+동사원형」이 오므로 to go이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe wants ___ the song.",
+            "options": [
+              "learns",
+              "to learn",
+              "learning",
+              "learn"
+            ],
+            "answer": 1,
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to learn이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nI decided ___ my grandmother next month.",
+            "options": [
+              "visiting",
+              "visits",
+              "to visit",
+              "visit"
+            ],
+            "answer": 2,
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to visit이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nHe needs ___ a lot of water every day.",
+            "options": [
+              "drink",
+              "drinks",
+              "drinking",
+              "to drink"
+            ],
+            "answer": 3,
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to drink이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe hope ___ the mountain.",
+            "options": [
+              "to climb",
+              "climb",
+              "climbing",
+              "climbs"
+            ],
+            "answer": 0,
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to climb이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nI want ___ English fluently.",
+            "options": [
+              "speaks",
               "to speak",
-              "spoke",
+              "speaking",
               "speak"
             ],
             "answer": 1,
-            "explain": "wish는 to부정사를 취하므로 to speak이 맞다. speaking·speak·spoke는 올 수 없다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to speak이다."
           },
           {
-            "q": "어법상 옳은 문장을 고르세요.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe decided ___ an artist.",
             "options": [
-              "My friend wants join the drama club.",
-              "My friend want to join the drama club.",
-              "My friend wants joining the drama club.",
-              "My friend wants to join the drama club."
-            ],
-            "answer": 3,
-            "explain": "주어 My friend에 맞춰 wants를 쓰고, want는 to부정사를 취하므로 'wants to join'이 옳다."
-          },
-          {
-            "q": "어법상 틀린 문장을 고르세요.",
-            "options": [
-              "They decided to save more money.",
-              "We planned to meet at the library.",
-              "He enjoys to play basketball after school.",
-              "She hopes to travel around the world."
+              "being",
+              "is",
+              "to be",
+              "be"
             ],
             "answer": 2,
-            "explain": "enjoy는 동명사만 취하므로 'enjoys to play'는 틀렸다. 'enjoys playing'이 되어야 한다."
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to be이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe children want ___ to the amusement park this weekend.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe hope ___ you soon.",
             "options": [
-              "to go",
-              "go",
-              "to going",
-              "going"
-            ],
-            "answer": 0,
-            "explain": "want 뒤에는 to부정사가 오고 to 다음에는 동사원형이 오므로 to go가 맞다. 'to going'은 틀린 형태이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nOur teacher decided ___ the test until next Monday.",
-            "options": [
-              "postponed",
-              "postpone",
-              "to postpone",
-              "postponing"
-            ],
-            "answer": 2,
-            "explain": "decide는 to부정사를 취하므로 to postpone이 맞다. postponing(동명사)은 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nMy grandfather enjoys ___ in the garden every morning before breakfast.",
-            "options": [
-              "to work",
-              "working",
-              "work",
-              "works"
-            ],
-            "answer": 1,
-            "explain": "enjoy는 동명사만 취하므로 working이 맞다. 'enjoys to work'는 틀린 표현이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nDon't worry, you don't need ___ so early tomorrow; the trip starts at noon.",
-            "options": [
-              "to wake up",
-              "wake up",
-              "woke up",
-              "waking up"
-            ],
-            "answer": 0,
-            "explain": "need는 to부정사를 취하므로 to wake up이 맞다. waking up·wake up·woke up은 올 수 없다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.\n( to / we / hope / visit / the museum )",
-            "options": [
-              "We hope to visit the museum.",
-              "We visit hope to the museum.",
-              "We hope visit to the museum.",
-              "We to hope visit the museum."
-            ],
-            "answer": 0,
-            "explain": "hope + to visit의 어순으로 'We hope to visit the museum.'이 맞다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것을 고르세요.\n( refused / he / to / answer / the question )",
-            "options": [
-              "He refused to answer the question.",
-              "He answer refused to the question.",
-              "He to refused answer the question.",
-              "He refused answer to the question."
-            ],
-            "answer": 0,
-            "explain": "refuse + to answer의 어순으로 'He refused to answer the question.'이 맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nShe promised to ___ on time from now on.",
-            "options": [
-              "arrives",
-              "arrived",
-              "arriving",
-              "arrive"
-            ],
-            "answer": 3,
-            "explain": "to 뒤에는 동사원형이 오므로 arrive가 맞다. arriving·arrives·arrived는 to부정사 형태로 쓸 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nA: What are you going to do this vacation? B: I plan ___ swimming every day.",
-            "options": [
-              "go",
-              "to go",
-              "going",
-              "went"
-            ],
-            "answer": 1,
-            "explain": "plan은 to부정사를 취하므로 to go가 맞다('go swimming'은 '수영하러 가다'). going·go·went는 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe weather report says we can expect ___ some snow tonight.",
-            "options": [
-              "to see",
-              "saw",
+              "see",
+              "sees",
               "seeing",
-              "see"
+              "to see"
             ],
-            "answer": 0,
-            "explain": "expect는 to부정사를 취하므로 to see가 맞다. seeing·see·saw는 올 수 없다."
+            "answer": 3,
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to see이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI want to ___ a foreign language, so I signed up for a Spanish class.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nHe needs ___ his homework.",
             "options": [
-              "drink",
-              "watch",
-              "listen",
+              "to finish",
+              "finish",
+              "finishing",
+              "finishes"
+            ],
+            "answer": 0,
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to finish이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThey plan ___ a treehouse.",
+            "options": [
+              "builds",
+              "to build",
+              "building",
+              "build"
+            ],
+            "answer": 1,
+            "explain": "plan 뒤에는 「to+동사원형」이 오므로 to build이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nI want ___ a new language.",
+            "options": [
+              "learning",
+              "learns",
+              "to learn",
               "learn"
             ],
-            "answer": 3,
-            "explain": "언어는 '배우다(learn)'가 자연스럽다. listen/watch/drink는 language와 의미상 어울리지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nShe hopes to ___ the first prize in the science contest this year.",
-            "options": [
-              "lose",
-              "sell",
-              "win",
-              "buy"
-            ],
             "answer": 2,
-            "explain": "대회에서 상은 '타다(win)'가 맞다. lose/buy/sell은 prize와 의미상 맞지 않는다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to learn이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nWe decided to ___ money every month to buy a new computer.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe decided ___ on a picnic.",
             "options": [
-              "borrow",
-              "save",
-              "waste",
-              "spend"
+              "go",
+              "goes",
+              "going",
+              "to go"
             ],
-            "answer": 1,
-            "explain": "컴퓨터를 사려면 매달 돈을 '모으다(save)'가 자연스럽다. waste/spend/borrow는 문맥에 맞지 않는다."
+            "answer": 3,
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to go이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe firefighters refused to ___ until everyone was safely out of the building.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nI hope ___ well on this exam.",
             "options": [
-              "leave",
-              "stay",
-              "arrive",
-              "sleep"
+              "to do",
+              "do",
+              "doing",
+              "does"
             ],
             "answer": 0,
-            "explain": "모두 나올 때까지 '떠나기(leave)'를 거부한 것이 자연스럽다. stay/arrive/sleep은 문맥에 맞지 않는다."
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to do이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nHe wants ___ a new phone.",
+            "options": [
+              "buys",
+              "to buy",
+              "buying",
+              "buy"
+            ],
+            "answer": 1,
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to buy이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe plan ___ a party for her.",
+            "options": [
+              "having",
+              "has",
+              "to have",
+              "have"
+            ],
+            "answer": 2,
+            "explain": "plan 뒤에는 「to+동사원형」이 오므로 to have이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe needs ___ her room today.",
+            "options": [
+              "clean",
+              "cleans",
+              "cleaning",
+              "to clean"
+            ],
+            "answer": 3,
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to clean이다."
+          },
+          {
+            "q": "빈칸에 알맞은 것을 고르세요.\nThey decided ___ a movie tonight.",
+            "options": [
+              "to watch",
+              "watch",
+              "watching",
+              "watches"
+            ],
+            "answer": 0,
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to watch이다."
           }
         ],
         "sa": [
           {
-            "q": "빈칸을 채우세요. (동사 read 이용)\nI want ___ comics.",
-            "ko": "나는 만화를 읽고 싶다.",
+            "q": "빈칸을 채우세요.\nI want ___ comics after dinner.",
+            "ko": "나는 저녁을 먹고 만화를 읽고 싶다.",
             "answers": [
               "to read"
             ],
             "explain": "want 뒤에는 「to+동사원형」이 오므로 to read이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 meet 이용)\nI hope ___ my cousin.",
-            "ko": "나는 내 사촌을 만나기를 바란다.",
+            "q": "빈칸을 채우세요.\nShe wants ___ on the stage.",
+            "ko": "그녀는 무대 위에서 춤추고 싶어 한다.",
             "answers": [
-              "to meet"
+              "to dance"
             ],
-            "explain": "hope 뒤에는 to meet이 온다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to dance이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 clean 이용)\nWe decided ___ the classroom.",
+            "q": "빈칸을 채우세요.\nWe decided ___ the classroom.",
             "ko": "우리는 교실을 청소하기로 결정했다.",
             "answers": [
               "to clean"
             ],
-            "explain": "decide 뒤에는 to clean이 온다."
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to clean이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 open 이용)\nThey plan ___ a bakery.",
+            "q": "빈칸을 채우세요.\nHe needs ___ his bike.",
+            "ko": "그는 자전거를 고쳐야 한다.",
+            "answers": [
+              "to fix"
+            ],
+            "explain": "need 뒤에는 「to+동사원형」이 오므로 to fix이다."
+          },
+          {
+            "q": "빈칸을 채우세요.\nThey plan ___ a bakery.",
             "ko": "그들은 빵집을 열 계획이다.",
             "answers": [
               "to open"
             ],
-            "explain": "plan 뒤에는 to open이 온다."
+            "explain": "plan 뒤에는 「to+동사원형」이 오므로 to open이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 be 이용)\nI want ___ a cook.",
+            "q": "빈칸을 채우세요.\nI want ___ a cook.",
             "ko": "나는 요리사가 되고 싶다.",
             "answers": [
-              "to be"
+              "to become"
             ],
-            "explain": "want 뒤에는 to be가 오고 to 뒤에는 동사원형 be가 온다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to become이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 speak 이용)\nI want ___ English fluently.",
+            "q": "빈칸을 채우세요.\nMy sister hopes ___ the contest.",
+            "ko": "내 여동생은 대회에서 우승하기를 바란다.",
+            "answers": [
+              "to win"
+            ],
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to win이다."
+          },
+          {
+            "q": "빈칸을 채우세요.\nI decided ___ my grandmother next month.",
+            "ko": "나는 다음 달에 할머니를 방문하기로 결정했다.",
+            "answers": [
+              "to visit"
+            ],
+            "explain": "decide 뒤에는 「to+동사원형」이 오므로 to visit이다."
+          },
+          {
+            "q": "빈칸을 채우세요.\nI want ___ English fluently.",
             "ko": "나는 영어를 유창하게 말하고 싶다.",
             "answers": [
               "to speak"
             ],
-            "explain": "want 뒤에는 to speak이 온다."
+            "explain": "want 뒤에는 「to+동사원형」이 오므로 to speak이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 climb 이용)\nWe hope ___ the mountain.",
-            "ko": "우리는 그 산을 오르기를 바란다.",
+            "q": "빈칸을 채우세요.\nI hope ___ well on this exam.",
+            "ko": "나는 이번 시험을 잘 보기를 바란다.",
             "answers": [
-              "to climb"
+              "to do"
             ],
-            "explain": "hope 뒤에는 to climb이 온다."
-          },
-          {
-            "q": "빈칸을 채우세요. (동사 wash 이용)\nHe needs ___ his hands.",
-            "ko": "그는 손을 씻어야 한다.",
-            "answers": [
-              "to wash"
-            ],
-            "explain": "need 뒤에는 to wash가 온다."
-          },
-          {
-            "q": "빈칸을 채우세요. (동사 travel 이용)\nI plan ___ to Europe this summer.",
-            "ko": "나는 이번 여름에 유럽으로 여행 갈 계획이다.",
-            "answers": [
-              "to travel"
-            ],
-            "explain": "plan 뒤에는 to travel이 온다."
-          },
-          {
-            "q": "빈칸을 채우세요. (동사 join 이용)\nI decided ___ the film club.",
-            "ko": "나는 영화 동아리에 가입하기로 결정했다.",
-            "answers": [
-              "to join"
-            ],
-            "explain": "decide 뒤에는 to join이 온다."
+            "explain": "hope 뒤에는 「to+동사원형」이 오므로 to do이다."
           }
         ]
       },
