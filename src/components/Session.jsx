@@ -173,7 +173,19 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
 
       <div className="q-card">
         <div className="q-type-badge">{isMc ? '객관식' : '주관식'}</div>
-        <div className="q-text">{q.q}</div>
+        <div className="q-text">
+          {q.q.includes('\n')
+            ? (() => {
+                const nl = q.q.indexOf('\n')
+                return (
+                  <>
+                    {q.q.slice(0, nl)}
+                    <span className="q-en">{q.q.slice(nl + 1)}</span>
+                  </>
+                )
+              })()
+            : q.q}
+        </div>
 
         {!isMc && q.ko && (
           <div className="q-ko"><span className="q-ko-tag">해석</span>{q.ko}</div>

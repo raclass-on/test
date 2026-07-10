@@ -166,7 +166,13 @@ body {
   display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--primary);
   background: #e7f5ee; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
 }
-.q-text { font-size: 1.15rem; font-weight: 600; line-height: 1.55; margin-bottom: 12px; word-break: break-word; }
+.q-text { font-size: 1.15rem; font-weight: 600; line-height: 1.6; margin-bottom: 12px; word-break: break-word; white-space: pre-line; }
+/* 지시문(한국어) 다음 줄의 영어 문장이 눈에 띄도록 */
+.q-text .q-en {
+  display: block; margin-top: 8px; padding-left: 11px;
+  border-left: 3px solid var(--primary); color: var(--primary-dark);
+  font-size: 1.2rem; font-weight: 700;
+}
 .q-ko {
   display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
   background: #e7f5ee; color: var(--primary-dark); border-radius: 10px;

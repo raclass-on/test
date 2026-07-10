@@ -17,7 +17,7 @@ export const courses = [
         "concept": "want·hope·decide·need·plan 등의 동사 뒤에 「to+동사원형」이 와서 '~하기를/~하는 것을'로 해석한다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  My older sister wants ___ a doctor, so she studies biology every night.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy older sister wants ___ a doctor, so she studies biology every night.",
             "options": [
               "become",
               "becoming",
@@ -28,7 +28,7 @@ export const courses = [
             "explain": "want는 to부정사를 목적어로 취하므로 to become이 맞다. becoming(동명사)·become(원형)·becomes는 want 뒤에 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  After a long week at school, I really enjoy ___ movies with my family on Saturday.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nAfter a long week at school, I really enjoy ___ movies with my family on Saturday.",
             "options": [
               "watched",
               "watch",
@@ -39,7 +39,7 @@ export const courses = [
             "explain": "enjoy는 동명사만 목적어로 취하므로 watching이 맞다. enjoy 뒤에 to부정사(to watch)는 쓸 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  Because it started raining hard, we finally decided ___ the picnic and go home.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nBecause it started raining hard, we finally decided ___ the picnic and go home.",
             "options": [
               "to cancel",
               "canceled",
@@ -50,7 +50,7 @@ export const courses = [
             "explain": "decide는 to부정사를 취하므로 to cancel이 맞다. canceling(동명사)은 decide의 목적어가 될 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The students didn't leave until they finished ___ the classroom after the party.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe students didn't leave until they finished ___ the classroom after the party.",
             "options": [
               "clean",
               "cleaning",
@@ -61,7 +61,7 @@ export const courses = [
             "explain": "finish는 동명사만 취하므로 cleaning이 맞다. finish 뒤에 to부정사(to clean)는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  I hope ___ you again next summer when I visit my grandparents' town.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nI hope ___ you again next summer when I visit my grandparents' town.",
             "options": [
               "to see",
               "saw",
@@ -72,7 +72,7 @@ export const courses = [
             "explain": "hope는 to부정사를 취하므로 to see가 맞다. seeing(동명사)·saw(과거)·see(원형)는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  To stay healthy, my coach told us to avoid ___ too much fast food.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nTo stay healthy, my coach told us to avoid ___ too much fast food.",
             "options": [
               "eat",
               "eats",
@@ -83,7 +83,7 @@ export const courses = [
             "explain": "avoid는 동명사만 취하므로 eating이 맞다. avoid 뒤에 to eat은 쓸 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The club members plan ___ a small concert at the end of the semester.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe club members plan ___ a small concert at the end of the semester.",
             "options": [
               "to hold",
               "holding",
@@ -94,7 +94,7 @@ export const courses = [
             "explain": "plan은 to부정사를 취하므로 to hold가 맞다. holding(동명사)·hold(원형)는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  Would you mind ___ the window? It's a little cold in here.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWould you mind ___ the window? It's a little cold in here.",
             "options": [
               "closing",
               "closed",
@@ -105,7 +105,7 @@ export const courses = [
             "explain": "mind는 동명사만 취하므로 closing이 맞다. 'Would you mind to close'는 틀린 표현이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  My brother promised ___ me with my math homework after dinner tonight.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy brother promised ___ me with my math homework after dinner tonight.",
             "options": [
               "help",
               "helping",
@@ -116,7 +116,7 @@ export const courses = [
             "explain": "promise는 to부정사를 취하므로 to help가 맞다. helping·help·helped는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  Even though she was tired, she kept ___ until she reached the finish line.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nEven though she was tired, she kept ___ until she reached the finish line.",
             "options": [
               "running",
               "ran",
@@ -127,7 +127,7 @@ export const courses = [
             "explain": "keep은 동명사를 취해 '계속 ~하다'가 되므로 running이 맞다. keep 뒤에 to run은 쓸 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The little boy refused ___ his vegetables, so his mom was upset.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe little boy refused ___ his vegetables, so his mom was upset.",
             "options": [
               "eat",
               "to eat",
@@ -138,7 +138,7 @@ export const courses = [
             "explain": "refuse는 to부정사를 취하므로 to eat이 맞다. eating(동명사)은 refuse의 목적어가 될 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  After a long talk, both teams agreed ___ the rules of the new game.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nAfter a long talk, both teams agreed ___ the rules of the new game.",
             "options": [
               "followed",
               "follow",
@@ -149,7 +149,7 @@ export const courses = [
             "explain": "agree는 to부정사를 취하므로 to follow가 맞다. following·follow·followed는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  We expect ___ at the airport around noon, so please wait for us there.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe expect ___ at the airport around noon, so please wait for us there.",
             "options": [
               "arrived",
               "arrive",
@@ -160,7 +160,7 @@ export const courses = [
             "explain": "expect는 to부정사를 취하므로 to arrive가 맞다. arriving·arrive·arrived는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  You look really pale; I think you need ___ some rest right now.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nYou look really pale; I think you need ___ some rest right now.",
             "options": [
               "get",
               "got",
@@ -171,7 +171,7 @@ export const courses = [
             "explain": "need는 to부정사를 취하므로 to get이 맞다. getting·get·got는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The customer wished ___ to the manager about the broken product.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe customer wished ___ to the manager about the broken product.",
             "options": [
               "speaking",
               "to speak",
@@ -204,7 +204,7 @@ export const courses = [
             "explain": "enjoy는 동명사만 취하므로 'enjoys to play'는 틀렸다. 'enjoys playing'이 되어야 한다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The children want ___ to the amusement park this weekend.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe children want ___ to the amusement park this weekend.",
             "options": [
               "to go",
               "go",
@@ -215,7 +215,7 @@ export const courses = [
             "explain": "want 뒤에는 to부정사가 오고 to 다음에는 동사원형이 오므로 to go가 맞다. 'to going'은 틀린 형태이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  Our teacher decided ___ the test until next Monday.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nOur teacher decided ___ the test until next Monday.",
             "options": [
               "postponed",
               "postpone",
@@ -226,7 +226,7 @@ export const courses = [
             "explain": "decide는 to부정사를 취하므로 to postpone이 맞다. postponing(동명사)은 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  My grandfather enjoys ___ in the garden every morning before breakfast.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nMy grandfather enjoys ___ in the garden every morning before breakfast.",
             "options": [
               "to work",
               "working",
@@ -237,7 +237,7 @@ export const courses = [
             "explain": "enjoy는 동명사만 취하므로 working이 맞다. 'enjoys to work'는 틀린 표현이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  Don't worry, you don't need ___ so early tomorrow; the trip starts at noon.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nDon't worry, you don't need ___ so early tomorrow; the trip starts at noon.",
             "options": [
               "to wake up",
               "wake up",
@@ -248,7 +248,7 @@ export const courses = [
             "explain": "need는 to부정사를 취하므로 to wake up이 맞다. waking up·wake up·woke up은 올 수 없다."
           },
           {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( to / we / hope / visit / the museum )",
+            "q": "단어를 바르게 배열한 것을 고르세요.\n( to / we / hope / visit / the museum )",
             "options": [
               "We hope to visit the museum.",
               "We visit hope to the museum.",
@@ -259,7 +259,7 @@ export const courses = [
             "explain": "hope + to visit의 어순으로 'We hope to visit the museum.'이 맞다."
           },
           {
-            "q": "단어를 바르게 배열한 것을 고르세요.  ( refused / he / to / answer / the question )",
+            "q": "단어를 바르게 배열한 것을 고르세요.\n( refused / he / to / answer / the question )",
             "options": [
               "He refused to answer the question.",
               "He answer refused to the question.",
@@ -270,7 +270,7 @@ export const courses = [
             "explain": "refuse + to answer의 어순으로 'He refused to answer the question.'이 맞다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  She promised to ___ on time from now on.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe promised to ___ on time from now on.",
             "options": [
               "arrives",
               "arrived",
@@ -281,7 +281,7 @@ export const courses = [
             "explain": "to 뒤에는 동사원형이 오므로 arrive가 맞다. arriving·arrives·arrived는 to부정사 형태로 쓸 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  A: What are you going to do this vacation? B: I plan ___ swimming every day.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nA: What are you going to do this vacation? B: I plan ___ swimming every day.",
             "options": [
               "go",
               "to go",
@@ -292,7 +292,7 @@ export const courses = [
             "explain": "plan은 to부정사를 취하므로 to go가 맞다('go swimming'은 '수영하러 가다'). going·go·went는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The weather report says we can expect ___ some snow tonight.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe weather report says we can expect ___ some snow tonight.",
             "options": [
               "to see",
               "saw",
@@ -303,7 +303,7 @@ export const courses = [
             "explain": "expect는 to부정사를 취하므로 to see가 맞다. seeing·see·saw는 올 수 없다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  I want to ___ a foreign language, so I signed up for a Spanish class.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nI want to ___ a foreign language, so I signed up for a Spanish class.",
             "options": [
               "drink",
               "watch",
@@ -314,7 +314,7 @@ export const courses = [
             "explain": "언어는 '배우다(learn)'가 자연스럽다. listen/watch/drink는 language와 의미상 어울리지 않는다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  She hopes to ___ the first prize in the science contest this year.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nShe hopes to ___ the first prize in the science contest this year.",
             "options": [
               "lose",
               "sell",
@@ -325,7 +325,7 @@ export const courses = [
             "explain": "대회에서 상은 '타다(win)'가 맞다. lose/buy/sell은 prize와 의미상 맞지 않는다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  We decided to ___ money every month to buy a new computer.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nWe decided to ___ money every month to buy a new computer.",
             "options": [
               "borrow",
               "save",
@@ -336,7 +336,7 @@ export const courses = [
             "explain": "컴퓨터를 사려면 매달 돈을 '모으다(save)'가 자연스럽다. waste/spend/borrow는 문맥에 맞지 않는다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.  The firefighters refused to ___ until everyone was safely out of the building.",
+            "q": "빈칸에 알맞은 것을 고르세요.\nThe firefighters refused to ___ until everyone was safely out of the building.",
             "options": [
               "leave",
               "stay",
@@ -345,121 +345,11 @@ export const courses = [
             ],
             "answer": 0,
             "explain": "모두 나올 때까지 '떠나기(leave)'를 거부한 것이 자연스럽다. stay/arrive/sleep은 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  My parents promised to ___ me a puppy if I get good grades.",
-            "options": [
-              "throw",
-              "buy",
-              "lend",
-              "sell"
-            ],
-            "answer": 1,
-            "explain": "좋은 성적의 보상으로 강아지를 '사 주다(buy)'가 자연스럽다. sell/throw/lend는 의미상 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  You need to ___ your teeth twice a day to keep them healthy.",
-            "options": [
-              "brush",
-              "paint",
-              "break",
-              "cut"
-            ],
-            "answer": 0,
-            "explain": "이는 '닦다(brush)'가 올바른 표현이다. cut/break/paint는 teeth와 어울리지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  The movie was so ___ that many people fell asleep in the theater.",
-            "options": [
-              "boring",
-              "exciting",
-              "funny",
-              "scary"
-            ],
-            "answer": 0,
-            "explain": "사람들이 잠들었다는 문맥에는 '지루한(boring)'이 맞다. exciting/funny/scary는 반대 의미이다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  Please listen ___ because I will explain the rules only once.",
-            "options": [
-              "quickly",
-              "slowly",
-              "carefully",
-              "quietly"
-            ],
-            "answer": 2,
-            "explain": "한 번만 설명하니 '주의 깊게(carefully)' 들으라는 뜻이 자연스럽다. quickly/quietly/slowly는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  I hope to become a ___ so that I can help sick animals.",
-            "options": [
-              "vet",
-              "chef",
-              "pilot",
-              "singer"
-            ],
-            "answer": 0,
-            "explain": "아픈 동물을 돕는 직업은 '수의사(vet)'이다. pilot/chef/singer는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  It was raining, so we decided to ___ the game until next week.",
-            "options": [
-              "watch",
-              "delay",
-              "win",
-              "start"
-            ],
-            "answer": 1,
-            "explain": "비 때문에 경기를 '미루다(delay)'가 자연스럽다. start/watch/win은 until next week와 어울리지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  He expects to ___ the report before the meeting starts.",
-            "options": [
-              "forget",
-              "finish",
-              "lose",
-              "drop"
-            ],
-            "answer": 1,
-            "explain": "회의 전에 보고서를 '끝내다(finish)'가 자연스럽다. forget/lose/drop은 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  Her explanation was very ___, so everyone understood the lesson easily.",
-            "options": [
-              "clear",
-              "clearness",
-              "clearly",
-              "clearing"
-            ],
-            "answer": 0,
-            "explain": "be동사 뒤 보어 자리에는 형용사가 오므로 clear가 맞다. clearly(부사)·clearness(명사)·clearing은 올 수 없다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  The team worked ___ to finish the project on time.",
-            "options": [
-              "hardly",
-              "hard",
-              "hardness",
-              "harder"
-            ],
-            "answer": 1,
-            "explain": "'열심히'라는 뜻의 부사는 hard이다. hardly는 '거의 ~않다'라는 다른 뜻이고, harder(비교급)·hardness(명사)는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.  Getting enough ___ is important if you want to stay healthy.",
-            "options": [
-              "asleep",
-              "sleepy",
-              "sleeps",
-              "sleep"
-            ],
-            "answer": 3,
-            "explain": "enough 뒤에는 명사가 오므로 sleep이 맞다. sleepy(형용사)·asleep(형용사)·sleeps는 올 수 없다."
           }
         ],
         "sa": [
           {
-            "q": "빈칸을 채우세요. (동사 read 이용)  I want ___ comics.",
+            "q": "빈칸을 채우세요. (동사 read 이용)\nI want ___ comics.",
             "ko": "나는 만화를 읽고 싶다.",
             "answers": [
               "to read"
@@ -467,7 +357,7 @@ export const courses = [
             "explain": "want 뒤에는 「to+동사원형」이 오므로 to read이다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 meet 이용)  I hope ___ my cousin.",
+            "q": "빈칸을 채우세요. (동사 meet 이용)\nI hope ___ my cousin.",
             "ko": "나는 내 사촌을 만나기를 바란다.",
             "answers": [
               "to meet"
@@ -475,7 +365,7 @@ export const courses = [
             "explain": "hope 뒤에는 to meet이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 clean 이용)  We decided ___ the classroom.",
+            "q": "빈칸을 채우세요. (동사 clean 이용)\nWe decided ___ the classroom.",
             "ko": "우리는 교실을 청소하기로 결정했다.",
             "answers": [
               "to clean"
@@ -483,7 +373,7 @@ export const courses = [
             "explain": "decide 뒤에는 to clean이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 open 이용)  They plan ___ a bakery.",
+            "q": "빈칸을 채우세요. (동사 open 이용)\nThey plan ___ a bakery.",
             "ko": "그들은 빵집을 열 계획이다.",
             "answers": [
               "to open"
@@ -491,7 +381,7 @@ export const courses = [
             "explain": "plan 뒤에는 to open이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 be 이용)  I want ___ a cook.",
+            "q": "빈칸을 채우세요. (동사 be 이용)\nI want ___ a cook.",
             "ko": "나는 요리사가 되고 싶다.",
             "answers": [
               "to be"
@@ -499,7 +389,7 @@ export const courses = [
             "explain": "want 뒤에는 to be가 오고 to 뒤에는 동사원형 be가 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 speak 이용)  I want ___ English fluently.",
+            "q": "빈칸을 채우세요. (동사 speak 이용)\nI want ___ English fluently.",
             "ko": "나는 영어를 유창하게 말하고 싶다.",
             "answers": [
               "to speak"
@@ -507,7 +397,7 @@ export const courses = [
             "explain": "want 뒤에는 to speak이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 climb 이용)  We hope ___ the mountain.",
+            "q": "빈칸을 채우세요. (동사 climb 이용)\nWe hope ___ the mountain.",
             "ko": "우리는 그 산을 오르기를 바란다.",
             "answers": [
               "to climb"
@@ -515,7 +405,7 @@ export const courses = [
             "explain": "hope 뒤에는 to climb이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 wash 이용)  He needs ___ his hands.",
+            "q": "빈칸을 채우세요. (동사 wash 이용)\nHe needs ___ his hands.",
             "ko": "그는 손을 씻어야 한다.",
             "answers": [
               "to wash"
@@ -523,7 +413,7 @@ export const courses = [
             "explain": "need 뒤에는 to wash가 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 travel 이용)  I plan ___ to Europe this summer.",
+            "q": "빈칸을 채우세요. (동사 travel 이용)\nI plan ___ to Europe this summer.",
             "ko": "나는 이번 여름에 유럽으로 여행 갈 계획이다.",
             "answers": [
               "to travel"
@@ -531,7 +421,7 @@ export const courses = [
             "explain": "plan 뒤에는 to travel이 온다."
           },
           {
-            "q": "빈칸을 채우세요. (동사 join 이용)  I decided ___ the film club.",
+            "q": "빈칸을 채우세요. (동사 join 이용)\nI decided ___ the film club.",
             "ko": "나는 영화 동아리에 가입하기로 결정했다.",
             "answers": [
               "to join"
@@ -657,7 +547,7 @@ export const courses = [
             "explain": "2번의 It은 '그것'을 뜻하는 대명사이고, 나머지는 날씨·시간을 나타내는 비인칭 It이다."
           },
           {
-            "q": "A: Why did you bring an umbrella today?  B: Because ___ raining outside right now.",
+            "q": "A: Why did you bring an umbrella today?\nB: Because ___ raining outside right now.",
             "options": [
               "there's",
               "this is",
@@ -734,7 +624,7 @@ export const courses = [
             "explain": "온도(더움)를 나타낼 때는 비인칭 주어 It을 쓴다."
           },
           {
-            "q": "A: Is the airport close to here?  B: No, ___ quite far from the city center.",
+            "q": "A: Is the airport close to here?\nB: No, ___ quite far from the city center.",
             "options": [
               "it's",
               "there's",
@@ -767,7 +657,7 @@ export const courses = [
             "explain": "'It's a present from my mom.'의 It만 '그것'을 뜻하는 대명사이고, 나머지는 날씨·시간·계절을 나타내는 비인칭 It이다."
           },
           {
-            "q": "A: What time is it right now?  B: ___ a quarter past six, so dinner is almost ready.",
+            "q": "A: What time is it right now?\nB: ___ a quarter past six, so dinner is almost ready.",
             "options": [
               "That's",
               "There's",
@@ -875,116 +765,6 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "바람이 부는 날씨는 windy이다."
-          },
-          {
-            "q": "It's ___ now, so the flowers are blooming and the weather is getting warm.",
-            "options": [
-              "autumn",
-              "winter",
-              "night",
-              "spring"
-            ],
-            "answer": 3,
-            "explain": "꽃이 피고 따뜻해지는 계절은 spring(봄)이다."
-          },
-          {
-            "q": "Please shut the door. It's freezing ___ outside because of all the snow.",
-            "options": [
-              "cold",
-              "warm",
-              "bright",
-              "hot"
-            ],
-            "answer": 0,
-            "explain": "눈이 오고 얼 정도의 날씨는 cold(추운)이다."
-          },
-          {
-            "q": "A: What time is it?  B: It's a ___ to nine, so we still have fifteen minutes.",
-            "options": [
-              "half",
-              "minute",
-              "quarter",
-              "hour"
-            ],
-            "answer": 2,
-            "explain": "15분을 뜻하는 시간 표현은 quarter이다. 'a quarter to nine'은 9시 15분 전을 뜻한다."
-          },
-          {
-            "q": "It gets ___ very early in winter, so the sky is already black by six o'clock.",
-            "options": [
-              "clear",
-              "dark",
-              "bright",
-              "sunny"
-            ],
-            "answer": 1,
-            "explain": "하늘이 검어지는 것은 dark(어두운)이다."
-          },
-          {
-            "q": "Open the curtains, please! It's such a ___ and beautiful morning outside.",
-            "options": [
-              "bright",
-              "dark",
-              "rainy",
-              "cloudy"
-            ],
-            "answer": 0,
-            "explain": "밝고 아름다운 아침은 bright(밝은)이다."
-          },
-          {
-            "q": "Take your umbrella with you because it's very ___ and the streets are already wet.",
-            "options": [
-              "rainy",
-              "sunny",
-              "dry",
-              "clear"
-            ],
-            "answer": 0,
-            "explain": "비가 와서 거리가 젖는 날씨는 rainy이다."
-          },
-          {
-            "q": "It's ___ now, and the leaves on the trees are turning red, yellow, and orange.",
-            "options": [
-              "autumn",
-              "winter",
-              "summer",
-              "spring"
-            ],
-            "answer": 0,
-            "explain": "잎이 붉고 노랗게 물드는 계절은 autumn(가을)이다."
-          },
-          {
-            "q": "Everyone is going to the beach because it's really ___ today, over thirty degrees.",
-            "options": [
-              "cool",
-              "windy",
-              "hot",
-              "cold"
-            ],
-            "answer": 2,
-            "explain": "30도가 넘는 날씨는 hot(더운)이다."
-          },
-          {
-            "q": "The mountain looks close, but actually it's very ___ from our small town.",
-            "options": [
-              "short",
-              "low",
-              "far",
-              "near"
-            ],
-            "answer": 2,
-            "explain": "실제로 멀리 있는 것은 far(먼)이다. near(가까운)와 반대이다."
-          },
-          {
-            "q": "There is no sun in the sky; it's grey and ___ today, and it may rain soon.",
-            "options": [
-              "sunny",
-              "cloudy",
-              "clear",
-              "bright"
-            ],
-            "answer": 1,
-            "explain": "해가 없고 회색빛인 날씨는 cloudy(흐린)이다."
           }
         ],
         "sa": [
@@ -1176,7 +956,7 @@ export const courses = [
             "explain": "감각동사 sound 뒤에는 형용사가 와요. 부사 kindly가 아니라 형용사 kind가 정답이에요."
           },
           {
-            "q": "빈칸에 들어갈 수 없는 것은?  The milk in the fridge smells ___.",
+            "q": "빈칸에 들어갈 수 없는 것은?\nThe milk in the fridge smells ___.",
             "options": [
               "strangely",
               "fresh",
@@ -1405,121 +1185,11 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "며칠 밖에 둔 쓰레기 냄새는 '지독한' terrible이 맞아요. sweet, fresh는 반대 의미라 문맥에 안 맞아요."
-          },
-          {
-            "q": "After the rain finally stopped, the air smelled so ___ and clean.",
-            "options": [
-              "fresh",
-              "heavy",
-              "loud",
-              "sour"
-            ],
-            "answer": 0,
-            "explain": "비 온 뒤 깨끗한 공기 냄새는 '상쾌한' fresh가 자연스러워요. loud는 소리, sour는 신맛이라 어울리지 않아요."
-          },
-          {
-            "q": "She was telling a secret, so her voice sounded very ___.",
-            "options": [
-              "rough",
-              "sweet",
-              "bright",
-              "quiet"
-            ],
-            "answer": 3,
-            "explain": "비밀을 말할 때 목소리는 '조용한' quiet가 문맥에 맞아요. sound 뒤 형용사 중 의미상 quiet가 정답이에요."
-          },
-          {
-            "q": "The climbing wall felt ___ and rough against my bare hands.",
-            "options": [
-              "hard",
-              "sour",
-              "loud",
-              "sweet"
-            ],
-            "answer": 0,
-            "explain": "암벽 벽의 촉감은 '딱딱한' hard가 맞아요. sweet, loud, sour는 촉감을 나타내지 못해요."
-          },
-          {
-            "q": "The lemon candy tasted so ___ that it made my mouth pucker up.",
-            "options": [
-              "sour",
-              "soft",
-              "warm",
-              "quiet"
-            ],
-            "answer": 0,
-            "explain": "레몬 사탕 맛은 '신' sour가 자연스러워요. 입이 오므라들 정도라는 문맥과도 맞아요."
-          },
-          {
-            "q": "In the horror movie, the ghost looked so ___ that everyone in the theater screamed.",
-            "options": [
-              "sweet",
-              "scary",
-              "fresh",
-              "delicious"
-            ],
-            "answer": 1,
-            "explain": "공포 영화 속 유령의 모습은 '무서운' scary가 맞아요. delicious, sweet, fresh는 의미상 어울리지 않아요."
-          },
-          {
-            "q": "The baby's new blanket felt ___, just like a soft little cloud.",
-            "options": [
-              "bright",
-              "fluffy",
-              "sour",
-              "loud"
-            ],
-            "answer": 1,
-            "explain": "부드러운 담요의 촉감은 '푹신한' fluffy가 자연스러워요. loud, sour, bright는 촉감과 안 맞아요."
-          },
-          {
-            "q": "The drums at the concert sounded so ___ that I had to cover my ears.",
-            "options": [
-              "loud",
-              "soft",
-              "sweet",
-              "fresh"
-            ],
-            "answer": 0,
-            "explain": "귀를 막을 정도의 드럼 소리는 '시끄러운' loud가 맞아요. soft는 반대 의미라 문맥에 안 맞아요."
-          },
-          {
-            "q": "The honey on my morning toast tasted wonderfully ___.",
-            "options": [
-              "sour",
-              "salty",
-              "bitter",
-              "sweet"
-            ],
-            "answer": 3,
-            "explain": "꿀의 맛은 '단' sweet가 자연스러워요. salty, bitter, sour는 꿀의 맛과 어울리지 않아요."
-          },
-          {
-            "q": "The chips were covered in too much salt, so they tasted way too ___.",
-            "options": [
-              "fresh",
-              "salty",
-              "sweet",
-              "soft"
-            ],
-            "answer": 1,
-            "explain": "소금이 많이 묻은 감자칩은 '짠' salty가 맞아요. sweet, fresh는 반대이거나 어울리지 않는 맛이에요."
-          },
-          {
-            "q": "After the long workout, the water from the fountain felt so ___ and refreshing.",
-            "options": [
-              "sweet",
-              "bright",
-              "loud",
-              "cool"
-            ],
-            "answer": 3,
-            "explain": "운동 후 마시는 물의 촉감은 '시원한' cool이 자연스러워요. refreshing(상쾌한)이라는 문맥과도 맞아요."
           }
         ],
         "sa": [
           {
-            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  This juice tastes ___.  (이 주스는 단맛이 난다.)",
+            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.\nThis juice tastes ___.  (이 주스는 단맛이 난다.)",
             "ko": "이 주스는 단맛이 난다.",
             "answers": [
               "sweet"
@@ -1527,7 +1197,7 @@ export const courses = [
             "explain": "taste 뒤에는 형용사가 와요. '단맛이 난다'는 tastes sweet이에요."
           },
           {
-            "q": "괄호 안의 부사를 알맞은 형태(형용사)로 고쳐 쓰세요.  The music sounds (loudly).  →  The music sounds ___.",
+            "q": "괄호 안의 부사를 알맞은 형태(형용사)로 고쳐 쓰세요.\nThe music sounds (loudly).  →  The music sounds ___.",
             "ko": "그 음악은 시끄럽게 들린다.",
             "answers": [
               "loud"
@@ -1535,7 +1205,7 @@ export const courses = [
             "explain": "sound 뒤에는 형용사가 와요. 부사 loudly를 형용사 loud로 고쳐야 해요."
           },
           {
-            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  You look ___ today.  (너는 오늘 행복해 보인다.)",
+            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.\nYou look ___ today.  (너는 오늘 행복해 보인다.)",
             "ko": "너는 오늘 행복해 보인다.",
             "answers": [
               "happy"
@@ -1543,7 +1213,7 @@ export const courses = [
             "explain": "look 뒤에는 형용사가 와요. '행복해 보인다'는 look happy예요."
           },
           {
-            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  The bread smells (freshly).  →  The bread smells ___.",
+            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.\nThe bread smells (freshly).  →  The bread smells ___.",
             "ko": "그 빵은 신선한 냄새가 난다.",
             "answers": [
               "fresh"
@@ -1551,7 +1221,7 @@ export const courses = [
             "explain": "smell 뒤에는 형용사가 와요. 부사 freshly를 형용사 fresh로 고쳐야 해요."
           },
           {
-            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  This towel feels ___.  (이 수건은 따뜻하게 느껴진다.)",
+            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.\nThis towel feels ___.  (이 수건은 따뜻하게 느껴진다.)",
             "ko": "이 수건은 따뜻하게 느껴진다.",
             "answers": [
               "warm"
@@ -1559,7 +1229,7 @@ export const courses = [
             "explain": "feel 뒤에는 형용사가 와요. '따뜻하게 느껴진다'는 feels warm이에요."
           },
           {
-            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  This lemon tastes (sourly).  →  This lemon tastes ___.",
+            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.\nThis lemon tastes (sourly).  →  This lemon tastes ___.",
             "ko": "이 레몬은 신맛이 난다.",
             "answers": [
               "sour"
@@ -1567,7 +1237,7 @@ export const courses = [
             "explain": "taste 뒤에는 형용사가 와요. 부사 sourly를 형용사 sour로 고쳐야 해요."
           },
           {
-            "q": "빈칸에 알맞은 두 단어를 쓰세요.  You ___ ___ your father.  (너는 너의 아빠처럼 보인다.)",
+            "q": "빈칸에 알맞은 두 단어를 쓰세요.\nYou ___ ___ your father.  (너는 너의 아빠처럼 보인다.)",
             "ko": "너는 너의 아빠처럼 보인다.",
             "answers": [
               "look like",
@@ -1576,7 +1246,7 @@ export const courses = [
             "explain": "'~처럼 보이다'는 뒤에 명사가 오므로 look like를 써요."
           },
           {
-            "q": "다음 문장에서 틀린 한 단어를 바르게 고쳐 쓰세요.  He looks tiredly today.  →  He looks ___ today.",
+            "q": "다음 문장에서 틀린 한 단어를 바르게 고쳐 쓰세요.\nHe looks tiredly today.  →  He looks ___ today.",
             "ko": "그는 오늘 피곤해 보인다.",
             "answers": [
               "tired"
@@ -1584,7 +1254,7 @@ export const courses = [
             "explain": "look 뒤에는 형용사가 와야 해요. 부사 tiredly를 형용사 tired로 고쳐야 해요."
           },
           {
-            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.  The pillow feels ___.  (그 베개는 부드럽게 느껴진다.)",
+            "q": "빈칸에 알맞은 형용사 한 단어를 쓰세요.\nThe pillow feels ___.  (그 베개는 부드럽게 느껴진다.)",
             "ko": "그 베개는 부드럽게 느껴진다.",
             "answers": [
               "soft"
@@ -1592,7 +1262,7 @@ export const courses = [
             "explain": "feel 뒤에는 형용사가 와요. '부드럽게 느껴진다'는 feels soft예요."
           },
           {
-            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.  Your voice sounds (greatly).  →  Your voice sounds ___.",
+            "q": "괄호 안의 단어를 알맞은 형태로 고쳐 쓰세요.\nYour voice sounds (greatly).  →  Your voice sounds ___.",
             "ko": "너의 목소리는 멋지게 들린다.",
             "answers": [
               "great"
@@ -1936,116 +1606,6 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "정크푸드를 '먹는 것'을 피해야 한다는 의미이므로 eating이 알맞다. 나머지는 의미상 맞지 않는다."
-          },
-          {
-            "q": "She keeps ___ the same song again and again because she loves it.",
-            "options": [
-              "cutting",
-              "closing",
-              "buying",
-              "playing"
-            ],
-            "answer": 3,
-            "explain": "같은 노래를 계속 '틀다/연주하다'라는 의미이므로 playing이 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "Thank you for ___ me with these heavy bags today.",
-            "options": [
-              "meeting",
-              "missing",
-              "helping",
-              "losing"
-            ],
-            "answer": 2,
-            "explain": "무거운 가방 드는 것을 '도와주다'라는 의미이므로 helping이 알맞다. 나머지는 의미가 맞지 않는다."
-          },
-          {
-            "q": "The children enjoy ___ big snowmen in the park in winter.",
-            "options": [
-              "building",
-              "borrowing",
-              "boiling",
-              "brushing"
-            ],
-            "answer": 0,
-            "explain": "눈사람을 '만들다'라는 의미이므로 building이 알맞다. 나머지는 문맥상 어색하다."
-          },
-          {
-            "q": "I finished ___ all my books into the box before the move.",
-            "options": [
-              "packing",
-              "pushing",
-              "printing",
-              "painting"
-            ],
-            "answer": 0,
-            "explain": "책을 상자에 '싸다/담다'라는 의미이므로 packing이 알맞다. 나머지는 의미상 맞지 않는다."
-          },
-          {
-            "q": "He gave up ___ soda every day so that he could become healthier.",
-            "options": [
-              "diving",
-              "drawing",
-              "drinking",
-              "driving"
-            ],
-            "answer": 2,
-            "explain": "탄산음료를 '마시는 것'을 포기했다는 의미이므로 drinking이 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "Do you mind ___ the volume a little? The music is too loud.",
-            "options": [
-              "raising",
-              "lowering",
-              "closing",
-              "opening"
-            ],
-            "answer": 1,
-            "explain": "소리가 너무 크므로 볼륨을 '낮추다'라는 의미의 lowering이 알맞다. raising은 반대 의미이다."
-          },
-          {
-            "q": "My older brother is interested in ___ foreign languages like French.",
-            "options": [
-              "cooking",
-              "learning",
-              "cutting",
-              "cleaning"
-            ],
-            "answer": 1,
-            "explain": "외국어를 '배우다'라는 의미이므로 learning이 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "The soccer players practice ___ the ball into the goal every afternoon.",
-            "options": [
-              "kneeling",
-              "knocking",
-              "kissing",
-              "kicking"
-            ],
-            "answer": 3,
-            "explain": "공을 '차다'라는 의미이므로 kicking이 알맞다. 나머지는 의미상 맞지 않는다."
-          },
-          {
-            "q": "I'm seriously thinking about ___ a new bike for my birthday.",
-            "options": [
-              "selling",
-              "throwing",
-              "breaking",
-              "buying"
-            ],
-            "answer": 3,
-            "explain": "생일 선물로 자전거를 '사다'라는 의미이므로 buying이 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "After ___ dinner, we all washed the dishes together in the kitchen.",
-            "options": [
-              "eating",
-              "driving",
-              "sleeping",
-              "running"
-            ],
-            "answer": 0,
-            "explain": "저녁을 '먹은' 후 설거지를 했다는 의미이므로 eating이 알맞다. 나머지는 문맥에 맞지 않는다."
           }
         ],
         "sa": [
@@ -2466,116 +2026,6 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "useful은 긴 단어라 more useful로 써야 합니다. usefuller는 틀린 형태입니다."
-          },
-          {
-            "q": "The second question was ______ difficult than the first one, so many students got it wrong.",
-            "options": [
-              "so more",
-              "much more",
-              "more much",
-              "very"
-            ],
-            "answer": 1,
-            "explain": "긴 단어 비교급 more difficult를 강조할 때는 much more difficult로 씁니다. very는 비교급을 강조하지 못합니다."
-          },
-          {
-            "q": "다음 중 어법상 옳은 문장은?",
-            "options": [
-              "This is better than that.",
-              "This is more good than that.",
-              "This is best than that.",
-              "This is gooder than that."
-            ],
-            "answer": 0,
-            "explain": "good의 비교급은 better입니다. best는 최상급이라 than과 쓸 수 없습니다."
-          },
-          {
-            "q": "After a good night's sleep, I felt ______ than before and finished all my work.",
-            "options": [
-              "best",
-              "more well",
-              "better",
-              "gooder"
-            ],
-            "answer": 2,
-            "explain": "몸 상태가 '더 좋은'은 good/well의 비교급 better로 나타냅니다."
-          },
-          {
-            "q": "단어를 바르게 배열한 것은? ( is / than / this / more / expensive / phone / that / one )",
-            "options": [
-              "This phone is more than expensive that one.",
-              "This phone is expensive more than that one.",
-              "This phone more is expensive than that one.",
-              "This phone is more expensive than that one."
-            ],
-            "answer": 3,
-            "explain": "긴 단어는 'is more expensive than' 순서로 씁니다."
-          },
-          {
-            "q": "Turtles move ______ than rabbits, so the rabbit was sure it would win the race.",
-            "options": [
-              "slowlier",
-              "most slowly",
-              "more slowly",
-              "slowly"
-            ],
-            "answer": 2,
-            "explain": "-ly로 끝나는 부사 slowly는 앞에 more를 붙여 more slowly로 비교급을 만듭니다."
-          },
-          {
-            "q": "This water bottle is ______ than that thermos, so it's easy to hold, but it gets warm fast.",
-            "options": [
-              "thiner",
-              "thinnest",
-              "thinner",
-              "more thin"
-            ],
-            "answer": 2,
-            "explain": "thin은 「단모음+단자음」이라 n을 겹쳐 thinner가 됩니다."
-          },
-          {
-            "q": "Winter days are ______ than summer days; the sun sets before dinner.",
-            "options": [
-              "brighter",
-              "warmer",
-              "shorter",
-              "longer"
-            ],
-            "answer": 2,
-            "explain": "겨울에는 낮이 더 짧아 해가 일찍 지므로 '더 짧은' shorter가 문맥에 맞습니다."
-          },
-          {
-            "q": "After exercising every day, I feel ______ than before; I rarely catch a cold now.",
-            "options": [
-              "healthier",
-              "sicker",
-              "lazier",
-              "weaker"
-            ],
-            "answer": 0,
-            "explain": "운동 후 감기에 잘 안 걸린다는 문맥이므로 '더 건강한' healthier가 맞습니다."
-          },
-          {
-            "q": "The library is ______ than the cafeteria, so I always go there to study for tests.",
-            "options": [
-              "noisier",
-              "quieter",
-              "busier",
-              "louder"
-            ],
-            "answer": 1,
-            "explain": "공부하기 좋은 곳이라는 문맥이므로 '더 조용한' quieter가 맞습니다."
-          },
-          {
-            "q": "A diamond is ______ than glass, so it does not get scratched easily.",
-            "options": [
-              "harder",
-              "cheaper",
-              "lighter",
-              "softer"
-            ],
-            "answer": 0,
-            "explain": "흠집이 잘 안 난다는 문맥이므로 '더 단단한' harder가 맞습니다."
           }
         ],
         "sa": [
@@ -2996,116 +2446,6 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "'물을 줄 때 식물이 잘 자란다'가 자연스러우므로 grow가 알맞습니다."
-          },
-          {
-            "q": "다음 문장에서 when의 역할로 알맞은 것을 고르세요.\nMy grandmother tells old stories when we visit her house.",
-            "options": [
-              "'무엇'이라는 뜻의 의문사",
-              "'어디'라는 뜻의 접속사",
-              "'~할 때'라는 뜻의 접속사",
-              "'언제'라는 뜻의 의문사"
-            ],
-            "answer": 2,
-            "explain": "두 문장을 이어 주며 '우리가 방문할 때'라는 뜻을 나타내는 접속사입니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the bus is very late, many people at the stop become ___.",
-            "options": [
-              "happy",
-              "angry",
-              "proud",
-              "quiet"
-            ],
-            "answer": 1,
-            "explain": "'버스가 많이 늦을 때' 사람들은 화가 나므로 angry가 알맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 동사 형태를 고르세요.\nWhen my father ___ home from work, we all have dinner together.",
-            "options": [
-              "comes",
-              "coming",
-              "come",
-              "to come"
-            ],
-            "answer": 0,
-            "explain": "주어 my father가 3인칭 단수이고 현재의 반복적인 일이므로 comes가 알맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen the teacher explains a hard rule, we listen ___ to understand it.",
-            "options": [
-              "care",
-              "carefully",
-              "careful",
-              "careless"
-            ],
-            "answer": 1,
-            "explain": "동사 listen을 꾸며 주는 부사가 필요하므로 carefully가 알맞습니다. careful은 형용사입니다."
-          },
-          {
-            "q": "밑줄 친 부분이 어법상 틀린 것을 고르세요.",
-            "options": [
-              "When the dog sees a cat, it runs fast.",
-              "When the bell rings, class begins.",
-              "When it snow, the road becomes white.",
-              "We stay home when it rains hard."
-            ],
-            "answer": 2,
-            "explain": "it은 3인칭 단수이므로 snow가 아니라 snows가 되어야 합니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nThe whole class becomes quiet ___ the principal enters the room.",
-            "options": [
-              "what",
-              "when",
-              "where",
-              "which"
-            ],
-            "answer": 1,
-            "explain": "'교장 선생님이 들어오실 때'라는 시간의 뜻이므로 접속사 when이 알맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen our team won the match, all the players felt very ___.",
-            "options": [
-              "afraid",
-              "bored",
-              "proud",
-              "sad"
-            ],
-            "answer": 2,
-            "explain": "'경기를 이겼을 때'는 자랑스러우므로 proud가 알맞습니다."
-          },
-          {
-            "q": "다음 두 문장을 when절이 문장 앞에 오도록 연결한 것을 고르세요.\nThe holidays begin. + We visit our grandparents.",
-            "options": [
-              "When the holidays begin, we visit our grandparents.",
-              "When the holidays begin we visit our grandparents.",
-              "We visit our grandparents when the holidays begin.",
-              "When begin the holidays, we visit our grandparents."
-            ],
-            "answer": 0,
-            "explain": "when절이 앞에 오면 그 뒤(begin 다음)에 콤마를 씁니다. ②는 콤마가 빠졌고, ③은 when절이 뒤에 있어 조건에 맞지 않습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 말을 고르세요.\nWhen I wake up too late in the morning, I often ___ the school bus.",
-            "options": [
-              "catch",
-              "miss",
-              "ride",
-              "meet"
-            ],
-            "answer": 1,
-            "explain": "'늦게 일어날 때 버스를 놓친다'가 자연스러우므로 miss가 알맞습니다. catch/ride는 의미가 맞지 않습니다."
-          },
-          {
-            "q": "다음 중 밑줄 친 when의 우리말 해석이 바르지 않은 것을 고르세요.",
-            "options": [
-              "When is the next class? → 다음 수업이 언제니?",
-              "I feel calm when I listen to music. → 나는 음악을 들을 때 차분해진다.",
-              "When it is sunny, we walk to school. → 화창할 때, 우리는 학교에 걸어간다.",
-              "She reads a book when the train is late. → 그녀는 언제 기차가 늦는지 읽는다."
-            ],
-            "answer": 3,
-            "explain": "④의 when은 '~할 때'라는 접속사이므로 '기차가 늦을 때 그녀는 책을 읽는다'로 해석해야 합니다."
           }
         ],
         "sa": [
@@ -3532,116 +2872,6 @@ export const courses = [
             ],
             "answer": 0,
             "explain": "'주다'는 give. gives free bread to children. ask/take/buy는 문맥상 의미가 맞지 않아요."
-          },
-          {
-            "q": "다음 문장을 3형식으로 바르게 바꾼 것을 고르세요.\nGrandma knitted me a pair of gloves.",
-            "options": [
-              "Grandma knitted a pair of gloves for me.",
-              "Grandma knitted a pair of gloves to me.",
-              "Grandma knitted for me a pair of gloves.",
-              "Grandma knitted a pair of gloves me."
-            ],
-            "answer": 0,
-            "explain": "knit(make류)은 3형식에서 for를 써요. knitted a pair of gloves for me. to나 어순 오류는 틀려요."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n웨이터가 우리에게 메뉴판을 가져다주었다.\nThe waiter ______ us the menu.",
-            "options": [
-              "took",
-              "asked",
-              "brought",
-              "borrowed"
-            ],
-            "answer": 2,
-            "explain": "'가져다주다'는 bring의 과거형 brought. brought us the menu. take는 '가져가다', ask/borrow는 뜻이 달라요."
-          },
-          {
-            "q": "다음 중 빈칸에 to가 들어갈 수 없는 문장을 고르세요.",
-            "options": [
-              "My mom made a dress ______ my sister.",
-              "She showed her homework ______ the teacher.",
-              "They sent a letter ______ the mayor.",
-              "He told the news ______ his parents."
-            ],
-            "answer": 0,
-            "explain": "make는 for를 써요. 나머지 show/tell/send는 모두 to를 쓰므로, make가 to가 들어갈 수 없는 문장이에요."
-          },
-          {
-            "q": "빈칸에 알맞은 전치사끼리 바르게 짝지은 것을 고르세요.\nThe teacher taught grammar ______ us and got new pens ______ us.",
-            "options": [
-              "for / for",
-              "to / for",
-              "for / to",
-              "to / to"
-            ],
-            "answer": 1,
-            "explain": "teach는 to, get은 for를 써요. 따라서 to / for가 정답이에요."
-          },
-          {
-            "q": "The bank clerk said she could ______ us some money if we filled out the forms correctly.",
-            "options": [
-              "borrow",
-              "lend",
-              "keep",
-              "buy"
-            ],
-            "answer": 1,
-            "explain": "은행이 고객에게 '빌려주다'는 lend. lend us some money. borrow(빌리다)는 반대이고 buy/keep은 문맥에 맞지 않아요."
-          },
-          {
-            "q": "다음 대화의 빈칸에 알맞은 것을 고르세요.\nA: Could you get me a glass of water, please?\nB: Sure, I will get ______ right now.",
-            "options": [
-              "to you a glass of water",
-              "you a glass of water",
-              "a glass of water you",
-              "for you a glass of water you"
-            ],
-            "answer": 1,
-            "explain": "4형식 '동사 + 사람 + 사물'. get you a glass of water. 나머지는 어순 오류이거나 you가 중복돼요."
-          },
-          {
-            "q": "다음 문장을 4형식으로 바르게 바꾼 것을 고르세요.\nThe teacher read a fairy tale to the young students.",
-            "options": [
-              "The teacher read the young students a fairy tale.",
-              "The teacher read a fairy tale the young students.",
-              "The teacher read the young students to a fairy tale.",
-              "The teacher read to the young students a fairy tale."
-            ],
-            "answer": 0,
-            "explain": "3형식 'read 사물 to 사람'을 4형식으로 바꾸면 'read 사람 사물'. read the young students a fairy tale."
-          },
-          {
-            "q": "우리말과 같도록 빈칸에 알맞은 것을 고르세요.\n나는 아픈 친구에게 내 노트를 빌려주었다.\nI ______ my sick friend my notebook.",
-            "options": [
-              "borrowed",
-              "lent",
-              "took",
-              "kept"
-            ],
-            "answer": 1,
-            "explain": "'빌려주다'는 lend의 과거형 lent. lent my friend my notebook. borrow(빌리다)/keep/take는 뜻이 달라요."
-          },
-          {
-            "q": "밑줄 친 부분이 어법상 틀린 문장을 고르세요.",
-            "options": [
-              "He cooked a tasty meal for his friends.",
-              "The teacher showed a video for the class.",
-              "She gave a warm hug to her mother.",
-              "They sent a thank-you card to their coach."
-            ],
-            "answer": 1,
-            "explain": "show는 3형식에서 to를 써야 해요. showed a video for the class → showed a video to the class."
-          },
-          {
-            "q": "The kind old man at the park often ______ hungry pigeons some bread from his pocket.",
-            "options": [
-              "takes",
-              "feeds",
-              "asks",
-              "borrows"
-            ],
-            "answer": 1,
-            "explain": "'먹이를 주다'는 feed. feeds pigeons some bread. take/ask/borrow는 문맥상 의미가 맞지 않아요."
           }
         ],
         "sa": [
@@ -4064,116 +3294,6 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "창문이 열려 있는 것을 '알아차렸다'는 뜻이므로 noticed가 알맞다. 나머지는 의미가 어울리지 않는다."
-          },
-          {
-            "q": "After breaking the vase, the little boy ___ that it was his fault and said sorry to his mother.",
-            "options": [
-              "denied",
-              "admitted",
-              "refused",
-              "pretended"
-            ],
-            "answer": 1,
-            "explain": "자기 잘못임을 '인정했다'는 뜻이므로 admitted가 알맞다. deny(부인)/refuse(거절)/pretend(~인 척)는 반대 의미이다."
-          },
-          {
-            "q": "The sky is full of dark clouds, so I ___ that we will be able to play soccer this afternoon.",
-            "options": [
-              "hope",
-              "know",
-              "doubt",
-              "promise"
-            ],
-            "answer": 2,
-            "explain": "날씨가 나빠 경기를 못 할 것 같다는 문맥이므로 '~일지 의심스럽다'의 doubt가 알맞다."
-          },
-          {
-            "q": "Because she has studied so hard all year, we all ___ that she will get the highest score in the class.",
-            "options": [
-              "regret",
-              "expect",
-              "doubt",
-              "worry"
-            ],
-            "answer": 1,
-            "explain": "열심히 공부했으니 높은 점수를 '기대한다'는 뜻이므로 expect가 알맞다. 나머지는 문맥과 반대이거나 어울리지 않는다."
-          },
-          {
-            "q": "My brother ___ that he would help me clean the room, but he fell asleep on the sofa instead.",
-            "options": [
-              "denied",
-              "promised",
-              "doubted",
-              "feared"
-            ],
-            "answer": 1,
-            "explain": "방 청소를 도와주겠다고 '약속했다'는 뜻이므로 promised가 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "Before the school trip, my mother ___ that the weather might be too cold for us at the mountain.",
-            "options": [
-              "hoped",
-              "promised",
-              "worried",
-              "agreed"
-            ],
-            "answer": 2,
-            "explain": "날씨가 추울까 봐 '걱정했다'는 뜻이므로 worried가 알맞다. 나머지는 의미가 어울리지 않는다."
-          },
-          {
-            "q": "During the tour, the guide ___ that the old castle had been built more than 500 years ago.",
-            "options": [
-              "refused",
-              "explained",
-              "doubted",
-              "complained"
-            ],
-            "answer": 1,
-            "explain": "성의 역사를 '설명했다'는 뜻이므로 explained가 알맞다. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "Everyone agreed that the volunteers had worked very ___ to clean up the whole park.",
-            "options": [
-              "harder",
-              "hardly",
-              "hardness",
-              "hard"
-            ],
-            "answer": 3,
-            "explain": "동사(worked)를 꾸미며 '열심히'를 뜻하는 부사는 hard이다. hardly는 '거의 ~않다'로 의미가 반대이고, hardness는 명사, harder는 비교급이다."
-          },
-          {
-            "q": "We all know that good health is very ___, so our family exercises together every morning.",
-            "options": [
-              "importance",
-              "important",
-              "importantly",
-              "import"
-            ],
-            "answer": 1,
-            "explain": "be동사(is) 뒤 보어 자리에는 형용사 important가 온다. importantly(부사)/importance(명사)/import(동사)는 알맞지 않다."
-          },
-          {
-            "q": "The scientist explained that the ___ of the sun's surface is extremely high, about 5,500 degrees.",
-            "options": [
-              "temper",
-              "temperate",
-              "temperature",
-              "temporary"
-            ],
-            "answer": 2,
-            "explain": "'온도'를 뜻하는 명사 temperature가 알맞다. temporary(임시의)/temperate(온화한)/temper(성질)는 의미가 맞지 않는다."
-          },
-          {
-            "q": "I really think that Sujin sings more ___ than anyone else in our school choir.",
-            "options": [
-              "beauty",
-              "beautiful",
-              "beautifully",
-              "beautify"
-            ],
-            "answer": 2,
-            "explain": "동사(sings)를 꾸미는 부사가 필요하므로 beautifully가 알맞다. beautiful(형용사)/beauty(명사)/beautify(동사)는 알맞지 않다."
           }
         ],
         "sa": [
@@ -4308,7 +3428,7 @@ export const courses = [
             "explain": "「It is + 형용사 + to부정사」 가주어 구문이 올바르다. There/That은 이 구문의 가주어가 될 수 없고, 주어 없이 Is로 시작할 수도 없다."
           },
           {
-            "q": "A: Why do you go to bed so early every night?  B: Because ___ is not easy for me to wake up at six in the morning.",
+            "q": "A: Why do you go to bed so early every night?\nB: Because ___ is not easy for me to wake up at six in the morning.",
             "options": [
               "there",
               "that",
@@ -4603,121 +3723,11 @@ export const courses = [
             ],
             "answer": 0,
             "explain": "물을 충분히 마시는 것은 '필요하다'는 뜻이므로 necessary가 알맞다."
-          },
-          {
-            "q": "After the long hike, we found a bench under a tree, and it felt ___ to rest our tired legs for a while.",
-            "options": [
-              "strict",
-              "angry",
-              "loud",
-              "nice"
-            ],
-            "answer": 3,
-            "explain": "쉬는 것이 '좋게/편하게' 느껴진다는 뜻이므로 nice가 문맥에 맞다."
-          },
-          {
-            "q": "The lock on the classroom door was broken, so it was ___ for anyone to open it and take things.",
-            "options": [
-              "easy",
-              "heavy",
-              "quiet",
-              "polite"
-            ],
-            "answer": 0,
-            "explain": "잠금장치가 고장 나 누구나 열 수 있으니 '쉽다'는 뜻으로 easy가 알맞다."
-          },
-          {
-            "q": "Learning about other countries is interesting, so it is ___ to make friends from all around the world.",
-            "options": [
-              "sour",
-              "dirty",
-              "exciting",
-              "sleepy"
-            ],
-            "answer": 2,
-            "explain": "세계 친구를 사귀는 것은 '신난다'는 뜻이므로 exciting이 문맥에 맞다."
-          },
-          {
-            "q": "The road was covered with thick ice this morning, so it was ___ to walk slowly and carefully to school.",
-            "options": [
-              "tastier",
-              "richer",
-              "safer",
-              "louder"
-            ],
-            "answer": 2,
-            "explain": "얼음길에서는 천천히 걷는 것이 더 '안전하다'는 뜻이므로 safer가 알맞다."
-          },
-          {
-            "q": "He practiced the piano for many years, so now it is ___ for him to play even very difficult songs.",
-            "options": [
-              "impossible",
-              "easy",
-              "hard",
-              "strange"
-            ],
-            "answer": 1,
-            "explain": "오랜 연습으로 어려운 곡도 '쉽게' 연주한다는 흐름이므로 easy가 알맞다."
-          },
-          {
-            "q": "Telling lies can hurt people you love, so it is always ___ to be honest with your family and friends.",
-            "options": [
-              "worse",
-              "emptier",
-              "better",
-              "weaker"
-            ],
-            "answer": 2,
-            "explain": "정직한 것이 '더 낫다'는 뜻이므로 better가 문맥에 맞다."
-          },
-          {
-            "q": "The museum has thousands of old paintings, so it is ___ to see all of them in just one afternoon.",
-            "options": [
-              "comfortable",
-              "impossible",
-              "cheap",
-              "friendly"
-            ],
-            "answer": 1,
-            "explain": "수천 점을 하루에 다 보기는 '불가능하다'는 뜻이므로 impossible이 알맞다."
-          },
-          {
-            "q": "Everyone shares the classroom, so it is ___ to keep your desk and the floor around it clean.",
-            "options": [
-              "boring",
-              "empty",
-              "angry",
-              "important"
-            ],
-            "answer": 3,
-            "explain": "공용 교실을 깨끗이 유지하는 것은 '중요하다'는 뜻이므로 important가 알맞다."
-          },
-          {
-            "q": "The baby was finally sleeping, so it was ___ for everyone to stay very quiet in the small room.",
-            "options": [
-              "funny",
-              "necessary",
-              "delicious",
-              "colorful"
-            ],
-            "answer": 1,
-            "explain": "자는 아기를 위해 조용히 있는 것이 '필요하다'는 뜻이므로 necessary가 알맞다."
-          },
-          {
-            "q": "He forgot his umbrella and it started to rain hard, so it was ___ for him to walk home in the storm.",
-            "options": [
-              "easy",
-              "hard",
-              "sweet",
-              "cheap"
-            ],
-            "answer": 1,
-            "explain": "폭우 속을 걷는 것은 '힘들다'는 뜻이므로 hard가 문맥에 맞다."
           }
         ],
         "sa": [
           {
-            "q": "To learn English is important.  →  ___ is important to learn English. (가주어)",
+            "q": "To learn English is important.\n→  ___ is important to learn English. (가주어)",
             "ko": "영어를 배우는 것은 중요하다.",
             "answers": [
               "It"
@@ -4741,7 +3751,7 @@ export const courses = [
             "explain": "진주어 to부정사 to read가 알맞다."
           },
           {
-            "q": "빈칸을 채워 문장을 완성하시오.  ___ ___ dangerous to play with fire. (가주어 + be동사, 두 단어)",
+            "q": "빈칸을 채워 문장을 완성하시오.\n___ ___ dangerous to play with fire. (가주어 + be동사, 두 단어)",
             "ko": "불을 가지고 노는 것은 위험하다.",
             "answers": [
               "It is",
@@ -5134,116 +4144,6 @@ export const courses = [
             ],
             "answer": 0,
             "explain": "유창해지려면 언어를 '공부해야(study)' 한다. ignore/avoid/quit은 문맥상 반대이다."
-          },
-          {
-            "q": "The more you ___ others, the more they will trust you. (남을 도울수록 더 신뢰받는다)",
-            "options": [
-              "help",
-              "blame",
-              "ignore",
-              "cheat"
-            ],
-            "answer": 0,
-            "explain": "신뢰를 얻으려면 남을 '도와야(help)' 한다. cheat(속이다)/ignore(무시하다)/blame(탓하다)은 의미상 맞지 않는다."
-          },
-          {
-            "q": "The clearer the road signs are, the ___ it is for drivers to find their way. (표지판이 명확할수록 더 쉽다)",
-            "options": [
-              "slower",
-              "worse",
-              "harder",
-              "easier"
-            ],
-            "answer": 3,
-            "explain": "표지판이 명확하면 길 찾기가 '더 쉬워진다(easier)'. harder/slower/worse는 반대 의미이다."
-          },
-          {
-            "q": "The more customers a shop ___, the more money it earns. (손님을 많이 끌수록 돈을 많이 번다)",
-            "options": [
-              "attracts",
-              "refuses",
-              "ignores",
-              "loses"
-            ],
-            "answer": 0,
-            "explain": "돈을 많이 벌려면 손님을 '끌어야(attracts)' 한다. loses/ignores/refuses는 문맥상 맞지 않는다."
-          },
-          {
-            "q": "The more you ___, the more mistakes you will notice and fix. (연습할수록 실수를 발견해 고친다)",
-            "options": [
-              "hide",
-              "forget",
-              "rush",
-              "practice"
-            ],
-            "answer": 3,
-            "explain": "실수를 발견해 고치려면 '연습해야(practice)' 한다. forget/hide/rush는 의미상 어울리지 않는다."
-          },
-          {
-            "q": "The colder it gets, the more ___ people become without warm clothes. (추울수록 더 불편해진다)",
-            "options": [
-              "uncomfortable",
-              "relaxed",
-              "active",
-              "comfortable"
-            ],
-            "answer": 0,
-            "explain": "따뜻한 옷 없이 추워지면 사람들은 '더 불편해진다(uncomfortable)'. comfortable/relaxed/active는 문맥상 맞지 않는다."
-          },
-          {
-            "q": "The more time you spend outdoors, the ___ you feel. (야외에 오래 있을수록 더 상쾌하다)",
-            "options": [
-              "dirtier",
-              "sadder",
-              "lazier",
-              "fresher"
-            ],
-            "answer": 3,
-            "explain": "야외 활동은 기분을 '더 상쾌하게(fresher)' 한다. dirtier/lazier/sadder는 반대 의미이다."
-          },
-          {
-            "q": "The more he ___ to the teacher, the more he learned in class. (선생님 말을 들을수록 많이 배웠다)",
-            "options": [
-              "lied",
-              "slept",
-              "listened",
-              "shouted"
-            ],
-            "answer": 2,
-            "explain": "많이 배우려면 선생님 말을 '들어야(listened)' 한다. shouted/lied/slept는 문맥상 맞지 않는다."
-          },
-          {
-            "q": "The more difficult the puzzle is, the more ___ you feel when you solve it. (어려운 퍼즐을 풀수록 더 뿌듯하다)",
-            "options": [
-              "angry",
-              "proud",
-              "tired",
-              "bored"
-            ],
-            "answer": 1,
-            "explain": "어려운 퍼즐을 풀면 '뿌듯함(proud)'을 느낀다. bored/tired/angry는 문맥상 어울리지 않는다."
-          },
-          {
-            "q": "The faster the runner is, the ___ he finishes the race. (빠를수록 더 일찍 완주한다)",
-            "options": [
-              "slower",
-              "sooner",
-              "later",
-              "harder"
-            ],
-            "answer": 1,
-            "explain": "빠른 주자는 경주를 '더 일찍(sooner)' 끝낸다. later/slower/harder는 반대 의미이다."
-          },
-          {
-            "q": "The more books a library ___, the more visitors it welcomes. (책이 많을수록 방문객이 많다)",
-            "options": [
-              "hides",
-              "sells",
-              "burns",
-              "holds"
-            ],
-            "answer": 3,
-            "explain": "방문객이 많으려면 도서관이 책을 많이 '보유해야(holds)' 한다. burns/hides/sells는 의미상 맞지 않는다."
           }
         ],
         "sa": [
@@ -5609,7 +4509,7 @@ export const courses = [
             "explain": "진짜 주어는 The girl(단수), with the two big suitcases는 수식어구이므로 is. 복수형 are/were는 오답."
           },
           {
-            "q": "A: Where are the boys?  B: They ___ in the gym practicing basketball now.",
+            "q": "A: Where are the boys?\nB: They ___ in the gym practicing basketball now.",
             "options": [
               "are",
               "was",
@@ -5673,116 +4573,6 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "'중요한 날짜를 적으려면' 달력이 필요하므로 calendar. 나머지는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "The weather today is very ___, so remember to take your umbrella with you.",
-            "options": [
-              "dry",
-              "rainy",
-              "sunny",
-              "windy"
-            ],
-            "answer": 1,
-            "explain": "'우산을 챙기라'는 단서로 보아 rainy(비 오는). sunny/dry는 반대 의미라 오답."
-          },
-          {
-            "q": "My little brother enjoys ___ new songs on his guitar every evening.",
-            "options": [
-              "playing",
-              "planning",
-              "praying",
-              "paying"
-            ],
-            "answer": 0,
-            "explain": "'기타로 노래를 연주한다'는 문맥이므로 playing. 발음이 비슷한 paying/praying은 의미가 다르다."
-          },
-          {
-            "q": "Please speak more ___ so that everyone at the back of the room can hear you.",
-            "options": [
-              "slowly",
-              "politely",
-              "loudly",
-              "quietly"
-            ],
-            "answer": 2,
-            "explain": "'뒤에서도 들리게'라는 문맥이므로 loudly(크게). quietly는 반대 의미라 오답."
-          },
-          {
-            "q": "Everybody in the office ___ hard to finish the big project before Friday.",
-            "options": [
-              "washes",
-              "works",
-              "walks",
-              "waits"
-            ],
-            "answer": 1,
-            "explain": "'프로젝트를 끝내려고 열심히'라는 문맥이므로 works. 나머지는 의미가 맞지 않는다."
-          },
-          {
-            "q": "The library is a quiet place where students can ___ for their exams in peace.",
-            "options": [
-              "sleep",
-              "study",
-              "shop",
-              "shout"
-            ],
-            "answer": 1,
-            "explain": "'시험 준비를 하는 조용한 곳'이므로 study. shout/sleep/shop은 도서관 문맥에 어색하다."
-          },
-          {
-            "q": "Both of the sisters are very ___; they always help other people without complaining.",
-            "options": [
-              "rude",
-              "selfish",
-              "lazy",
-              "kind"
-            ],
-            "answer": 3,
-            "explain": "'남을 잘 돕는다'는 문맥이므로 kind(친절한). lazy/rude/selfish는 반대 의미라 오답."
-          },
-          {
-            "q": "There is a warm ___ of fresh bread on the kitchen table for breakfast.",
-            "options": [
-              "loaf",
-              "leaf",
-              "proof",
-              "roof"
-            ],
-            "answer": 0,
-            "explain": "'빵 한 덩이'를 뜻하는 loaf가 정답. 발음이 비슷한 leaf/roof/proof는 의미가 다르다."
-          },
-          {
-            "q": "My parents always ___ me to study hard and to do my best in everything.",
-            "options": [
-              "encourage",
-              "interrupt",
-              "punish",
-              "ignore"
-            ],
-            "answer": 0,
-            "explain": "'열심히 하라고 격려한다'는 문맥이므로 encourage. interrupt/punish/ignore는 의미가 맞지 않는다."
-          },
-          {
-            "q": "Everyone found the instructions very ___, so building the toy robot was easy.",
-            "options": [
-              "heavy",
-              "loud",
-              "clear",
-              "dark"
-            ],
-            "answer": 2,
-            "explain": "'쉽게 만들었다'는 결과로 보아 설명이 clear(명확한)해야 하므로 clear. 나머지는 문맥에 안 맞는다."
-          },
-          {
-            "q": "Our class ___ a special prize for collecting the most books this semester.",
-            "options": [
-              "lost",
-              "paid",
-              "sold",
-              "won"
-            ],
-            "answer": 3,
-            "explain": "'가장 많이 모아서 상을 받았다'는 문맥이므로 won(받았다/이겼다). lost는 반대 의미라 오답."
           }
         ],
         "sa": [
@@ -6029,7 +4819,7 @@ export const courses = [
             "explain": "지각동사 heard 뒤에는 동사원형이나 -ing만 온다. to blow가 들어간 문장이 틀리다."
           },
           {
-            "q": "다음 빈칸에 들어갈 수 없는 것은?  On the field trip, we watched the dolphins ___ in the deep blue sea.",
+            "q": "다음 빈칸에 들어갈 수 없는 것은?\nOn the field trip, we watched the dolphins ___ in the deep blue sea.",
             "options": [
               "to swim",
               "jump",
@@ -6051,7 +4841,7 @@ export const courses = [
             "explain": "목적격보어로 동사원형 climb이 왔으므로 지각동사 watched가 알맞다. want·tell·allow는 to부정사를 취한다."
           },
           {
-            "q": "다음 빈칸에 알맞은 것은?  We ___ the actor perform on the stage for almost two hours.",
+            "q": "다음 빈칸에 알맞은 것은?\nWe ___ the actor perform on the stage for almost two hours.",
             "options": [
               "expected",
               "wanted",
@@ -6128,7 +4918,7 @@ export const courses = [
             "explain": "'right now' 지금 진행 중인 생생한 동작이므로 -ing falling이 알맞다. to fall·fell·falls는 틀리다."
           },
           {
-            "q": "다음 우리말을 영어로 옳게 옮긴 것은?  '우리는 그 새들이 노래하는 것을 들었다.'",
+            "q": "다음 우리말을 영어로 옳게 옮긴 것은?\n'우리는 그 새들이 노래하는 것을 들었다.'",
             "options": [
               "We heard the birds to singing.",
               "We heard the birds sing.",
@@ -6139,7 +4929,7 @@ export const courses = [
             "explain": "지각동사 heard의 목적격보어는 동사원형 sing(또는 singing)이다. to sing·sang·to singing은 틀리다."
           },
           {
-            "q": "밑줄 친 부분을 바르게 고친 것으로 알맞지 않은 것은?  I saw the man to enter the building.",
+            "q": "밑줄 친 부분을 바르게 고친 것으로 알맞지 않은 것은?\nI saw the man to enter the building.",
             "options": [
               "to enter → entered",
               "enter 또는 entering 둘 다 가능하다",
@@ -6203,121 +4993,11 @@ export const courses = [
             ],
             "answer": 3,
             "explain": "멀리 있는 산을 눈으로 본다는 의미이므로 see가 알맞다. listen·hear는 청각, smell은 후각이라 맞지 않는다."
-          },
-          {
-            "q": "The careful scientist quietly ___ the small insect moving slowly across the green leaf.",
-            "options": [
-              "decided",
-              "forgot",
-              "shouted",
-              "observed"
-            ],
-            "answer": 3,
-            "explain": "곤충을 관찰한다는 의미이므로 observed가 알맞다. shout·forget·decide는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "The audience sat silently and listened very ___ to the pianist during the whole performance.",
-            "options": [
-              "careful",
-              "careless",
-              "care",
-              "carefully"
-            ],
-            "answer": 3,
-            "explain": "동사 listened를 꾸미는 부사가 필요하므로 carefully가 알맞다. careful·careless는 형용사, care는 명사·동사이다."
-          },
-          {
-            "q": "Everyone felt a ___ wind blow through the open window on that freezing winter night.",
-            "options": [
-              "colds",
-              "coldness",
-              "coldly",
-              "cold"
-            ],
-            "answer": 3,
-            "explain": "명사 wind를 꾸미는 형용사가 필요하므로 cold가 알맞다. coldly는 부사, coldness는 명사이다."
-          },
-          {
-            "q": "The whole family listened ___ the radio as the exciting soccer match continued late into the night.",
-            "options": [
-              "on",
-              "at",
-              "for",
-              "to"
-            ],
-            "answer": 3,
-            "explain": "'~을 듣다'는 listen to이므로 전치사 to가 알맞다. at·on·for는 함께 쓰지 않는다."
-          },
-          {
-            "q": "The little girl quietly looked ___ the bright stars in the clear night sky for a long time.",
-            "options": [
-              "of",
-              "at",
-              "in",
-              "to"
-            ],
-            "answer": 1,
-            "explain": "'~을 바라보다'는 look at이므로 전치사 at이 알맞다. to·in·of는 어색하다."
-          },
-          {
-            "q": "The kitchen was suddenly full of smoke, and we could clearly ___ something burning on the stove.",
-            "options": [
-              "listen",
-              "hear",
-              "sound",
-              "smell"
-            ],
-            "answer": 3,
-            "explain": "타는 냄새를 맡는다는 의미이므로 smell이 알맞다. hear·listen·sound는 소리와 관련되어 맞지 않는다."
-          },
-          {
-            "q": "The old wooden stairs made a strange noise, so she walked up them very ___ so no one would wake up.",
-            "options": [
-              "quiet",
-              "quietly",
-              "quietness",
-              "quieter"
-            ],
-            "answer": 1,
-            "explain": "동사 walked를 꾸미는 부사가 필요하므로 quietly가 알맞다. quiet는 형용사, quietness는 명사이다."
-          },
-          {
-            "q": "When I touched the metal gate in the middle of winter, I could really ___ how cold it was.",
-            "options": [
-              "feel",
-              "hear",
-              "smell",
-              "see"
-            ],
-            "answer": 0,
-            "explain": "차가움을 손으로 느낀다는 의미이므로 feel이 알맞다. hear·see·smell은 문맥에 맞지 않는다."
-          },
-          {
-            "q": "The music at the birthday party was so ___ that we could hear it from the next street.",
-            "options": [
-              "loudness",
-              "loud",
-              "louder",
-              "loudly"
-            ],
-            "answer": 1,
-            "explain": "'so ___ that' 구문에서 be동사 뒤 보어로 형용사 loud가 알맞다. loudly는 부사, loudness는 명사이다."
-          },
-          {
-            "q": "Standing quietly near the river, the children ___ the fish jumping out of the clear water.",
-            "options": [
-              "heard",
-              "tasted",
-              "watched",
-              "smelled"
-            ],
-            "answer": 2,
-            "explain": "물고기가 뛰는 모습을 지켜본다는 의미이므로 watched가 알맞다. hear·taste·smell은 문맥에 맞지 않는다."
           }
         ],
         "sa": [
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  She heard the baby ___ .  (cry)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nShe heard the baby ___ .  (cry)",
             "ko": "그녀는 아기가 우는 소리를 들었다.",
             "answers": [
               "cry",
@@ -6326,7 +5006,7 @@ export const courses = [
             "explain": "지각동사 heard의 목적격보어는 동사원형 cry 또는 -ing crying. to cry는 틀리다."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  We watched them ___ on the stage.  (dance)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nWe watched them ___ on the stage.  (dance)",
             "ko": "우리는 그들이 무대에서 춤추는 것을 보았다.",
             "answers": [
               "dance",
@@ -6335,7 +5015,7 @@ export const courses = [
             "explain": "지각동사 watched의 목적격보어는 동사원형 dance 또는 -ing dancing."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  I saw a bird ___ over the lake.  (fly)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nI saw a bird ___ over the lake.  (fly)",
             "ko": "나는 새가 호수 위로 날아가는 것을 보았다.",
             "answers": [
               "fly",
@@ -6344,7 +5024,7 @@ export const courses = [
             "explain": "지각동사 saw의 목적격보어는 동사원형 fly 또는 -ing flying."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  He felt the ground ___ .  (shake)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nHe felt the ground ___ .  (shake)",
             "ko": "그는 땅이 흔들리는 것을 느꼈다.",
             "answers": [
               "shake",
@@ -6353,7 +5033,7 @@ export const courses = [
             "explain": "지각동사 felt의 목적격보어는 동사원형 shake 또는 -ing shaking."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  I heard him ___ the piano.  (play)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nI heard him ___ the piano.  (play)",
             "ko": "나는 그가 피아노를 치는 소리를 들었다.",
             "answers": [
               "play",
@@ -6362,7 +5042,7 @@ export const courses = [
             "explain": "지각동사 heard의 목적격보어는 동사원형 play 또는 -ing playing."
           },
           {
-            "q": "밑줄 친 틀린 부분을 바르게 고치세요.  I saw him to run fast.  →  I saw him ___ fast.",
+            "q": "밑줄 친 틀린 부분을 바르게 고치세요.\nI saw him to run fast.  →  I saw him ___ fast.",
             "ko": "나는 그가 빨리 달리는 것을 보았다.",
             "answers": [
               "run",
@@ -6371,7 +5051,7 @@ export const courses = [
             "explain": "지각동사 뒤 목적격보어는 to run(X)이 아니라 동사원형 run 또는 running으로 고친다."
           },
           {
-            "q": "밑줄 친 틀린 부분을 바르게 고치세요.  She heard someone to call her name.  →  She heard someone ___ her name.",
+            "q": "밑줄 친 틀린 부분을 바르게 고치세요.\nShe heard someone to call her name.  →  She heard someone ___ her name.",
             "ko": "그녀는 누군가 그녀의 이름을 부르는 소리를 들었다.",
             "answers": [
               "call",
@@ -6380,7 +5060,7 @@ export const courses = [
             "explain": "지각동사 heard의 목적격보어는 to call(X)이 아니라 동사원형 call 또는 calling."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  They heard a dog ___ loudly.  (bark)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nThey heard a dog ___ loudly.  (bark)",
             "ko": "그들은 개가 크게 짖는 소리를 들었다.",
             "answers": [
               "bark",
@@ -6389,7 +5069,7 @@ export const courses = [
             "explain": "지각동사 heard의 목적격보어는 동사원형 bark 또는 -ing barking."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰세요.  We saw the sun ___ behind the hills.  (set)",
+            "q": "빈칸에 알맞은 말을 쓰세요.\nWe saw the sun ___ behind the hills.  (set)",
             "ko": "우리는 해가 언덕 뒤로 지는 것을 보았다.",
             "answers": [
               "set",
@@ -6398,7 +5078,7 @@ export const courses = [
             "explain": "지각동사 saw의 목적격보어는 동사원형 set 또는 -ing setting."
           },
           {
-            "q": "밑줄 친 틀린 부분을 바르게 고치세요.  I felt the wind to blow.  →  I felt the wind ___ .",
+            "q": "밑줄 친 틀린 부분을 바르게 고치세요.\nI felt the wind to blow.  →  I felt the wind ___ .",
             "ko": "나는 바람이 부는 것을 느꼈다.",
             "answers": [
               "blow",
@@ -6743,116 +5423,6 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "영화의 '줄거리(plot)'가 흥미진진하다는 뜻이 자연스럽다. price(가격), menu(메뉴), weather(날씨)는 영화와 어울리지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe clothes which she bought were on ___, so they were cheap.",
-            "options": [
-              "stage",
-              "time",
-              "sale",
-              "fire"
-            ],
-            "answer": 2,
-            "explain": "'세일 중(on sale)'이라 저렴했다는 뜻이므로 sale이 맞다. on stage/on time/on fire는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe advice that my mother gave me was really ___.",
-            "options": [
-              "useless",
-              "helpful",
-              "careless",
-              "harmful"
-            ],
-            "answer": 1,
-            "explain": "어머니의 조언이 '도움이 되었다'는 긍정적 문맥이므로 helpful이 맞다. harmful(해로운), careless(부주의한), useless(쓸모없는)는 어울리지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe bag that I lost yesterday ___ my wallet and keys.",
-            "options": [
-              "invited",
-              "refused",
-              "contained",
-              "borrowed"
-            ],
-            "answer": 2,
-            "explain": "가방이 지갑과 열쇠를 '담고 있었다'는 뜻이므로 contained가 맞다. 나머지는 사물 주어와 의미가 맞지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe friend whom I trust always keeps my ___.",
-            "options": [
-              "garden",
-              "secret",
-              "window",
-              "ticket"
-            ],
-            "answer": 1,
-            "explain": "'비밀을 지킨다(keep one's secret)'는 표현이 자연스럽다. garden, ticket, window는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe restaurant that we visited was famous for its ___ service.",
-            "options": [
-              "excellent",
-              "terrible",
-              "empty",
-              "broken"
-            ],
-            "answer": 0,
-            "explain": "'유명한(famous for)' 이유로는 긍정적인 excellent(훌륭한)가 자연스럽다. terrible/empty/broken은 긍정 문맥과 어울리지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe problem which the students finally solved was very ___.",
-            "options": [
-              "delicious",
-              "quiet",
-              "difficult",
-              "tasty"
-            ],
-            "answer": 2,
-            "explain": "학생들이 어렵게 푼 '문제'이므로 difficult가 맞다. delicious/quiet/tasty는 problem과 어울리지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe photo which I took on the mountain shows beautiful ___.",
-            "options": [
-              "noise",
-              "scenery",
-              "homework",
-              "traffic"
-            ],
-            "answer": 1,
-            "explain": "산에서 찍은 사진이 보여주는 것은 아름다운 '경치(scenery)'이다. homework/traffic/noise는 문맥에 맞지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe gift that my best friend gave me was really ___ to me.",
-            "options": [
-              "precious",
-              "useless",
-              "noisy",
-              "boring"
-            ],
-            "answer": 0,
-            "explain": "친한 친구의 선물이 '소중했다'는 뜻이므로 precious가 맞다. useless/boring/noisy는 긍정 문맥과 어울리지 않는다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe house which they recently bought has a large ___ in the back.",
-            "options": [
-              "garden",
-              "holiday",
-              "weather",
-              "language"
-            ],
-            "answer": 0,
-            "explain": "집 뒤에 있는 넓은 공간으로는 '정원(garden)'이 자연스럽다. weather/holiday/language는 장소가 될 수 없다."
-          },
-          {
-            "q": "문맥에 맞는 단어를 고르시오.\nThe email that the boss sent this morning was very ___, so we read it carefully.",
-            "options": [
-              "delicious",
-              "sleepy",
-              "important",
-              "hungry"
-            ],
-            "answer": 2,
-            "explain": "주의 깊게 읽을 만큼 '중요한' 이메일이므로 important가 맞다. delicious/sleepy/hungry는 email과 어울리지 않는다."
           }
         ],
         "sa": [
@@ -7282,116 +5852,6 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "연습을 많이 했지만 그래도 긴장했다는 양보이므로 nervous(긴장한)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe students had to ___ the difficult problem, although the teacher gave them only ten minutes.",
-            "options": [
-              "solve",
-              "enjoy",
-              "forget",
-              "buy"
-            ],
-            "answer": 0,
-            "explain": "어려운 문제를 짧은 시간 안에 처리하는 상황이므로 solve(풀다)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the forecast promised sunshine, the sky suddenly turned ___ and it began to pour.",
-            "options": [
-              "sunny",
-              "bright",
-              "clear",
-              "cloudy"
-            ],
-            "answer": 3,
-            "explain": "'비가 쏟아지기 시작했다'는 내용과 어울리므로 cloudy(흐린)가 알맞다. 나머지는 맑은 날씨라 문맥에 맞지 않는다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nDespite her very busy schedule, the doctor always found time to ___ her patients kindly.",
-            "options": [
-              "ignore",
-              "lose",
-              "sell",
-              "treat"
-            ],
-            "answer": 3,
-            "explain": "환자를 친절히 대하는 상황이므로 treat(치료하다, 대하다)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the shoes were quite ___, Mina bought them because they were very comfortable.",
-            "options": [
-              "free",
-              "cheap",
-              "expensive",
-              "broken"
-            ],
-            "answer": 2,
-            "explain": "비쌌지만 편해서 샀다는 대조가 자연스러우므로 expensive(비싼)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe firefighters entered the building ___ to rescue the family, even though the flames were spreading fast.",
-            "options": [
-              "slowly",
-              "bravely",
-              "lazily",
-              "silently"
-            ],
-            "answer": 1,
-            "explain": "불이 번지는데도 사람을 구하러 들어갔으므로 bravely(용감하게)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the museum was free to enter, very few visitors ___ it on weekdays.",
-            "options": [
-              "closed",
-              "painted",
-              "visited",
-              "built"
-            ],
-            "answer": 2,
-            "explain": "박물관을 찾는 사람에 관한 문맥이므로 visited(방문했다)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nDespite the heavy snow all day, the postman ___ every letter to the right house on time.",
-            "options": [
-              "lost",
-              "delivered",
-              "burned",
-              "threw"
-            ],
-            "answer": 1,
-            "explain": "편지를 제때 배달한 상황이므로 delivered(배달했다)가 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the test results were ___, the teacher encouraged the students to try again next time.",
-            "options": [
-              "perfect",
-              "amazing",
-              "disappointing",
-              "exciting"
-            ],
-            "answer": 2,
-            "explain": "다시 도전하라고 격려한 것으로 보아 결과가 실망스러웠음을 알 수 있으므로 disappointing(실망스러운)이 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nThe little boy stayed ___ during the thunderstorm, although his younger sister was crying loudly.",
-            "options": [
-              "angry",
-              "afraid",
-              "noisy",
-              "calm"
-            ],
-            "answer": 3,
-            "explain": "동생은 울었지만 그는 침착했다는 대조이므로 calm(침착한)이 알맞다."
-          },
-          {
-            "q": "빈칸에 알맞은 것을 고르세요.\nAlthough the journey was long and tiring, the travelers finally ___ at the beautiful old city.",
-            "options": [
-              "started",
-              "returned",
-              "disappeared",
-              "arrived"
-            ],
-            "answer": 3,
-            "explain": "긴 여정 끝에 도시에 도착한 상황이므로 arrived(도착했다)가 알맞다. 'finally ~ at'과도 자연스럽게 이어진다."
           }
         ],
         "sa": [
@@ -7829,116 +6289,6 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "'어디서 돌지 물어보다'가 자연스러우므로 ask가 맞습니다. 나머지는 의미가 맞지 않습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nStanding in front of the huge library, the freshman began to ___ how to find one small book.",
-            "options": [
-              "enjoy",
-              "wonder",
-              "clean",
-              "water"
-            ],
-            "answer": 1,
-            "explain": "'어떻게 찾을지 궁금해하다'가 자연스러우므로 wonder가 맞습니다. 나머지는 문맥상 어색합니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nI have no ___ what to buy for my dad's birthday this year.",
-            "options": [
-              "window",
-              "idea",
-              "hand",
-              "chair"
-            ],
-            "answer": 1,
-            "explain": "have no idea what to ~는 '무엇을 ~할지 전혀 모르다'라는 표현이므로 idea가 맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nOur art teacher promised to ___ us how to mix colors like a real painter.",
-            "options": [
-              "teach",
-              "miss",
-              "borrow",
-              "throw"
-            ],
-            "answer": 0,
-            "explain": "'색 섞는 법을 가르쳐 주다'가 자연스러우므로 teach가 맞습니다. 나머지는 의미가 맞지 않습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nTom stood at the crossroad, not ___ which way to go to reach the stadium.",
-            "options": [
-              "empty",
-              "sure",
-              "late",
-              "hungry"
-            ],
-            "answer": 1,
-            "explain": "not sure which way to go는 '어느 길로 갈지 확신하지 못하다'라는 뜻이므로 sure가 맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nPlease ___ when to water the plants while I am away on my trip.",
-            "options": [
-              "spill",
-              "waste",
-              "break",
-              "remember"
-            ],
-            "answer": 3,
-            "explain": "'언제 물을 줄지 기억하라'가 자연스러우므로 remember가 맞습니다. 나머지는 문맥상 어색합니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nDuring the meeting, the team members will ___ how to save more energy at school.",
-            "options": [
-              "discuss",
-              "swim",
-              "sleep",
-              "cry"
-            ],
-            "answer": 0,
-            "explain": "'어떻게 에너지를 아낄지 논의하다'가 자연스러우므로 discuss가 맞습니다. 나머지는 의미가 맞지 않습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nThe students made a careful ___ about when to hold the school festival.",
-            "options": [
-              "meal",
-              "plan",
-              "storm",
-              "noise"
-            ],
-            "answer": 1,
-            "explain": "'언제 축제를 열지에 대한 계획을 세웠다'가 자연스러우므로 plan이 맞습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nIt was hard to ___ what to wear because all the clothes looked so nice.",
-            "options": [
-              "choose",
-              "drive",
-              "dig",
-              "drink"
-            ],
-            "answer": 0,
-            "explain": "'무엇을 입을지 고르기 어려웠다'가 자연스러우므로 choose가 맞습니다. 나머지는 의미가 맞지 않습니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nThe manual gave very ___ directions about how to set up the new printer.",
-            "options": [
-              "clear",
-              "angry",
-              "salty",
-              "sleepy"
-            ],
-            "answer": 0,
-            "explain": "'프린터 설치 방법에 대한 명확한 안내'가 자연스러우므로 clear가 맞습니다. 나머지는 문맥상 어색합니다."
-          },
-          {
-            "q": "빈칸에 알맞은 단어를 고르세요.\nExcuse me, could you please ___ me how to log in to the school website?",
-            "options": [
-              "throw",
-              "boil",
-              "tell",
-              "fold"
-            ],
-            "answer": 2,
-            "explain": "'로그인 방법을 알려 주다'가 자연스러우므로 tell이 맞습니다. 나머지는 의미가 맞지 않습니다."
           }
         ],
         "sa": [
@@ -8274,7 +6624,7 @@ export const courses = [
             "explain": "「so+형용사+a+명사」어순도 가능하다: so exciting a match. such는 「such+a+형용사+명사」어순."
           },
           {
-            "q": "우리말에 맞게 빈칸을 채울 때 알맞은 것은?  그는 너무 조용히 말해서 아무도 그의 말을 들을 수 없었다.  He spoke so softly that nobody ___ hear him.",
+            "q": "우리말에 맞게 빈칸을 채울 때 알맞은 것은?\n그는 너무 조용히 말해서 아무도 그의 말을 들을 수 없었다.  He spoke so softly that nobody ___ hear him.",
             "options": [
               "so",
               "such",
@@ -8285,7 +6635,7 @@ export const courses = [
             "explain": "부정 주어 nobody가 이미 '아무도 ~않다'를 나타내므로 뒤에는 could를 쓴다. nobody could hear him = 아무도 들을 수 없었다."
           },
           {
-            "q": "다음 두 문장을 한 문장으로 바르게 연결한 것은?  The room was very messy. We spent an hour cleaning it.",
+            "q": "다음 두 문장을 한 문장으로 바르게 연결한 것은?\nThe room was very messy. We spent an hour cleaning it.",
             "options": [
               "The room was too messy that we spent an hour cleaning it.",
               "The room was so messy to spend an hour cleaning it.",
@@ -8296,7 +6646,7 @@ export const courses = [
             "explain": "very를 so로 바꾸고 that으로 연결한다. so+형용사(messy)+that+주어+동사."
           },
           {
-            "q": "다음 두 문장을 「so ~ that」으로 연결한 것으로 알맞은 것은?  The lake was very deep. The children were not allowed to swim.",
+            "q": "다음 두 문장을 「so ~ that」으로 연결한 것으로 알맞은 것은?\nThe lake was very deep. The children were not allowed to swim.",
             "options": [
               "The lake was too deep that the children were not allowed to swim.",
               "The lake was so deep that the children were not allowed to swim.",
@@ -8360,121 +6710,11 @@ export const courses = [
             ],
             "answer": 1,
             "explain": "뒷줄까지 또렷이 들렸다는 결과와 맞는 부사는 loudly(크게)."
-          },
-          {
-            "q": "The medicine worked so ___ that his fever was gone within an hour.",
-            "options": [
-              "rarely",
-              "quickly",
-              "hardly",
-              "slowly"
-            ],
-            "answer": 1,
-            "explain": "한 시간 안에 열이 내렸다는 결과와 맞는 부사는 quickly(빠르게)."
-          },
-          {
-            "q": "It was such a ___ day that we canceled the picnic and stayed inside.",
-            "options": [
-              "stormy",
-              "gentle",
-              "sunny",
-              "peaceful"
-            ],
-            "answer": 0,
-            "explain": "소풍을 취소하고 안에 있었다는 결과에는 stormy(폭풍우 치는)가 어울린다."
-          },
-          {
-            "q": "The teacher was so ___ that she explained the same idea three times until we understood.",
-            "options": [
-              "nervous",
-              "strict",
-              "lazy",
-              "patient"
-            ],
-            "answer": 3,
-            "explain": "이해할 때까지 세 번 설명했다는 문맥에는 patient(참을성 있는)가 맞다."
-          },
-          {
-            "q": "The bag was so ___ that I could carry it with just one finger.",
-            "options": [
-              "light",
-              "expensive",
-              "heavy",
-              "dirty"
-            ],
-            "answer": 0,
-            "explain": "손가락 하나로 들 수 있다는 결과에는 light(가벼운)가 맞다."
-          },
-          {
-            "q": "The joke was so ___ that even the teacher couldn't stop laughing.",
-            "options": [
-              "sad",
-              "serious",
-              "boring",
-              "funny"
-            ],
-            "answer": 3,
-            "explain": "웃음을 멈추지 못했다는 결과에는 funny(웃긴)가 어울린다."
-          },
-          {
-            "q": "The soup was so ___ that I had to add some water before eating it.",
-            "options": [
-              "empty",
-              "salty",
-              "fresh",
-              "cold"
-            ],
-            "answer": 1,
-            "explain": "물을 타야 했다는 결과에는 salty(짠)가 맞다."
-          },
-          {
-            "q": "The classroom became so ___ during the test that you could hear a pin drop.",
-            "options": [
-              "silent",
-              "crowded",
-              "noisy",
-              "messy"
-            ],
-            "answer": 0,
-            "explain": "핀 떨어지는 소리도 들릴 만큼이라는 표현과 맞는 것은 silent(조용한)."
-          },
-          {
-            "q": "He studied so ___ for the exam that he easily answered every question.",
-            "options": [
-              "hard",
-              "late",
-              "hardly",
-              "little"
-            ],
-            "answer": 0,
-            "explain": "모든 문제를 쉽게 풀었다는 결과와 맞는 부사는 hard(열심히). hardly는 '거의 ~않다'로 뜻이 반대다."
-          },
-          {
-            "q": "The gift was such a ___ that she hugged everyone with tears in her eyes.",
-            "options": [
-              "mistake",
-              "problem",
-              "surprise",
-              "danger"
-            ],
-            "answer": 2,
-            "explain": "눈물을 흘리며 안았다는 문맥에 맞는 명사는 surprise(놀라움/뜻밖의 선물)."
-          },
-          {
-            "q": "The road was so ___ after the snowstorm that all the buses stopped running.",
-            "options": [
-              "narrow",
-              "icy",
-              "clean",
-              "smooth"
-            ],
-            "answer": 1,
-            "explain": "눈보라 뒤 버스가 멈췄다는 결과에는 icy(얼음으로 뒤덮인)가 알맞다."
           }
         ],
         "sa": [
           {
-            "q": "빈칸에 알맞은 말을 쓰시오.  It was ___ hot that we couldn't play. (너무 ~해서)",
+            "q": "빈칸에 알맞은 말을 쓰시오.\nIt was ___ hot that we couldn't play. (너무 ~해서)",
             "ko": "너무 더워서 우리는 놀 수 없었다.",
             "answers": [
               "so"
@@ -8482,7 +6722,7 @@ export const courses = [
             "explain": "so + 형용사 + that: so가 정답."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 쓰시오.  He is so tall ___ he can touch the ceiling.",
+            "q": "빈칸에 알맞은 접속사를 쓰시오.\nHe is so tall ___ he can touch the ceiling.",
             "ko": "그는 너무 키가 커서 천장을 만질 수 있다.",
             "answers": [
               "that"
@@ -8490,7 +6730,7 @@ export const courses = [
             "explain": "결과절을 이끄는 접속사 that."
           },
           {
-            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  It was ___ a long movie that we got bored.",
+            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.\nIt was ___ a long movie that we got bored.",
             "ko": "그것은 너무 긴 영화여서 우리는 지루해졌다.",
             "answers": [
               "such"
@@ -8498,7 +6738,7 @@ export const courses = [
             "explain": "「such+a+형용사+명사(a long movie)」이므로 such."
           },
           {
-            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  She was ___ tired that she fell asleep.",
+            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.\nShe was ___ tired that she fell asleep.",
             "ko": "그녀는 너무 피곤해서 잠들었다.",
             "answers": [
               "so"
@@ -8506,7 +6746,7 @@ export const courses = [
             "explain": "형용사 tired 앞이므로 so."
           },
           {
-            "q": "다음 문장을 too ~ to로 바꿀 때 빈칸에 알맞은 두 단어를 쓰시오.  The box was so heavy that I couldn't lift it. → The box was ___ heavy to lift.",
+            "q": "다음 문장을 too ~ to로 바꿀 때 빈칸에 알맞은 두 단어를 쓰시오.\nThe box was so heavy that I couldn't lift it. → The box was ___ heavy to lift.",
             "ko": "그 상자는 너무 무거워서 들 수 없었다.",
             "answers": [
               "too"
@@ -8514,7 +6754,7 @@ export const courses = [
             "explain": "so ~ that + couldn't = too ~ to. 빈칸에는 too."
           },
           {
-            "q": "다음을 so ~ that으로 바꿀 때 빈칸에 알맞은 한 단어를 쓰시오.  The tea was too hot to drink. → The tea was so hot that I ___ drink it.",
+            "q": "다음을 so ~ that으로 바꿀 때 빈칸에 알맞은 한 단어를 쓰시오.\nThe tea was too hot to drink. → The tea was so hot that I ___ drink it.",
             "ko": "그 차는 너무 뜨거워서 나는 마실 수 없었다.",
             "answers": [
               "couldn't",
@@ -8525,7 +6765,7 @@ export const courses = [
             "explain": "too ~ to = so ~ that + couldn't. 부정어 couldn't가 알맞다."
           },
           {
-            "q": "빈칸에 알맞은 말을 쓰시오. (한 단어)  The music was ___ loud that we couldn't talk.",
+            "q": "빈칸에 알맞은 말을 쓰시오. (한 단어)\nThe music was ___ loud that we couldn't talk.",
             "ko": "음악이 너무 시끄러워서 우리는 이야기할 수 없었다.",
             "answers": [
               "so"
@@ -8533,7 +6773,7 @@ export const courses = [
             "explain": "형용사 loud 앞이므로 so."
           },
           {
-            "q": "우리말에 맞게 빈칸을 채우시오. (두 단어)  나는 너무 바빠서 …  I was ___ ___ that I skipped lunch.",
+            "q": "우리말에 맞게 빈칸을 채우시오. (두 단어)\n나는 너무 바빠서 …  I was ___ ___ that I skipped lunch.",
             "ko": "나는 너무 바빠서 점심을 걸렀다.",
             "answers": [
               "so busy"
@@ -8541,7 +6781,7 @@ export const courses = [
             "explain": "so + busy(형용사): so busy."
           },
           {
-            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.  He had ___ many books that his bag was heavy.",
+            "q": "빈칸에 so 또는 such 중 알맞은 말을 쓰시오.\nHe had ___ many books that his bag was heavy.",
             "ko": "그는 책이 너무 많아서 가방이 무거웠다.",
             "answers": [
               "so"
@@ -8549,7 +6789,7 @@ export const courses = [
             "explain": "「so many + 명사」는 so를 쓴다."
           },
           {
-            "q": "다음 문장을 too ~ to로 바꿀 때 밑줄에 알맞은 세 단어를 쓰시오.  It was so dark that I couldn't see. → It was ___ ___ ___.",
+            "q": "다음 문장을 too ~ to로 바꿀 때 밑줄에 알맞은 세 단어를 쓰시오.\nIt was so dark that I couldn't see. → It was ___ ___ ___.",
             "ko": "너무 어두워서 볼 수 없었다.",
             "answers": [
               "too dark to see"
