@@ -1114,313 +1114,321 @@ export const courses = [
         "concept": "동사원형+ing인 동명사는 '~하기/~하는 것'으로 해석하며 주어·목적어·보어·전치사의 목적어 자리에 쓰고 enjoy/finish/mind/keep/practice/avoid/give up 뒤에 온다.",
         "mc": [
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nI enjoy ___ books.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (책 읽는 것을 즐기다)\nI ___ every evening.",
             "options": [
-              "reading",
-              "read",
-              "to read",
-              "reads"
+              "enjoy reading",
+              "enjoy to read",
+              "enjoy to reading",
+              "enjoys reading"
             ],
             "answer": 0,
-            "explain": "enjoy 뒤에는 동명사가 오므로 reading이다."
+            "explain": "enjoy 뒤에는 동명사가 와서 '~하는 것을 즐기다'는 enjoy reading이다. (enjoy to read는 틀린 형태)"
           },
           {
-            "q": "알맞은 형태를 고르세요.\nShe avoids ___ late at night.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (축구하는 것을 즐기다)\nWe ___ after school.",
             "options": [
-              "eat",
-              "eating",
-              "to eat",
-              "eats"
+              "enjoy to play soccer",
+              "enjoy playing soccer",
+              "enjoy to playing soccer",
+              "enjoys playing soccer"
             ],
             "answer": 1,
-            "explain": "avoid 뒤에는 동명사가 오므로 eating이다."
+            "explain": "enjoy 뒤에는 동명사가 오므로 '축구하는 것을 즐기다'는 enjoy playing soccer이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nI finished ___ my homework.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (사진 찍는 것을 즐기다)\nThey ___ on trips.",
             "options": [
-              "do",
-              "to do",
-              "doing",
-              "does"
+              "enjoy to take pictures",
+              "enjoy to taking pictures",
+              "enjoy taking pictures",
+              "enjoys taking pictures"
             ],
             "answer": 2,
-            "explain": "finish 뒤에는 동명사가 오므로 doing이다."
+            "explain": "enjoy 뒤에는 동명사가 오므로 '사진 찍는 것을 즐기다'는 enjoy taking pictures이다. (주어가 They라 enjoys는 틀림)"
           },
           {
-            "q": "알맞은 말을 고르세요.\nPlease stop ___ so loudly.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (설거지하는 것을 끝내다)\nI ___ after dinner.",
             "options": [
-              "talk",
-              "to talk",
-              "talks",
-              "talking"
+              "finish to wash the dishes",
+              "finish to washing the dishes",
+              "finishes washing the dishes",
+              "finish washing the dishes"
             ],
             "answer": 3,
-            "explain": "stop 뒤에는 동명사가 오므로 talking이다."
+            "explain": "finish 뒤에는 동명사가 오므로 '설거지하는 것을 끝내다'는 finish washing the dishes이다."
           },
           {
-            "q": "빈칸에 알맞은 형태를 고르세요.\nDo you mind ___ the window?",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (숙제하는 것을 끝내다)\nThey ___ before lunch.",
             "options": [
-              "opening",
-              "open",
-              "to open",
-              "opens"
+              "finish doing their homework",
+              "finish to do their homework",
+              "finish to doing their homework",
+              "finishes doing their homework"
             ],
             "answer": 0,
-            "explain": "mind 뒤에는 동명사가 오므로 opening이다."
+            "explain": "finish 뒤에는 동명사가 오므로 '숙제하는 것을 끝내다'는 finish doing their homework이다."
           },
           {
-            "q": "알맞은 것을 고르세요.\nShe suggested ___ home early.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (말하는 것을 멈추다)\nPlease ___ now.",
             "options": [
-              "go",
-              "going",
-              "to go",
-              "goes"
+              "stop to talk",
+              "stop talking",
+              "stop to talking",
+              "stops talking"
             ],
             "answer": 1,
-            "explain": "suggest 뒤에는 동명사가 오므로 going이다."
+            "explain": "stop 뒤에 동명사가 오면 '~하는 것을 멈추다'는 stop talking이다. (stop to talk는 '말하려고 멈추다')"
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nHe gave up ___ last year.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (게임하는 것을 멈추다)\nYou should ___ at night.",
             "options": [
-              "smoke",
-              "to smoke",
-              "smoking",
-              "smokes"
+              "stop to play games",
+              "stop to playing games",
+              "stop playing games",
+              "stops playing games"
             ],
             "answer": 2,
-            "explain": "give up 뒤에는 동명사가 오므로 smoking이다."
+            "explain": "stop 뒤에 동명사가 오면 '게임하는 것을 멈추다'는 stop playing games이다. (stop to play는 '게임하려고 멈추다')"
           },
           {
-            "q": "알맞은 형태를 고르세요.\nThey postponed ___ the town.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (먹는 것을 멈추다)\nWe ___ when we are full.",
             "options": [
-              "leave",
-              "to leave",
-              "leaves",
-              "leaving"
+              "stop to eat",
+              "stop to eating",
+              "stops eating",
+              "stop eating"
             ],
             "answer": 3,
-            "explain": "postpone 뒤에는 동명사가 오므로 leaving이다."
+            "explain": "stop 뒤에 동명사가 오면 '먹는 것을 멈추다'는 stop eating이다. (주어가 We라 stops는 틀림)"
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nHe admitted ___ the vase.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (기다리는 것을 꺼리다)\nDo you ___ here?",
             "options": [
-              "breaking",
-              "break",
-              "to break",
-              "breaks"
+              "mind waiting",
+              "mind to wait",
+              "mind to waiting",
+              "minds waiting"
             ],
             "answer": 0,
-            "explain": "admit 뒤에는 동명사가 오므로 breaking이다."
+            "explain": "mind 뒤에는 동명사가 오므로 '기다리는 것을 꺼리다'는 mind waiting이다."
           },
           {
-            "q": "알맞은 말을 고르세요.\nWe enjoy ___ soccer.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (창문 여는 것을 꺼리다)\nDo you ___?",
             "options": [
-              "play",
-              "playing",
-              "to play",
-              "plays"
+              "mind to open the window",
+              "mind opening the window",
+              "mind to opening the window",
+              "minds opening the window"
             ],
             "answer": 1,
-            "explain": "enjoy 뒤에는 동명사가 오므로 playing이다."
+            "explain": "mind 뒤에는 동명사가 오므로 '창문 여는 것을 꺼리다'는 mind opening the window이다."
           },
           {
-            "q": "빈칸에 알맞은 형태를 고르세요.\nI avoid ___ cold water.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (문 닫는 것을 꺼리다)\nWould you ___?",
             "options": [
-              "drink",
-              "to drink",
-              "drinking",
-              "drinks"
+              "mind to close the door",
+              "mind to closing the door",
+              "mind closing the door",
+              "minds closing the door"
             ],
             "answer": 2,
-            "explain": "avoid 뒤에는 동명사가 오므로 drinking이다."
+            "explain": "mind 뒤에는 동명사가 오므로 '문 닫는 것을 꺼리다'는 mind closing the door이다."
           },
           {
-            "q": "알맞은 것을 고르세요.\nHe finished ___ the dishes.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (탄산음료 마시는 것을 피하다)\nI ___ for my health.",
             "options": [
-              "wash",
-              "to wash",
-              "washes",
-              "washing"
+              "avoid to drink soda",
+              "avoid to drinking soda",
+              "avoids drinking soda",
+              "avoid drinking soda"
             ],
             "answer": 3,
-            "explain": "finish 뒤에는 동명사가 오므로 washing이다."
+            "explain": "avoid 뒤에는 동명사가 오므로 '탄산음료 마시는 것을 피하다'는 avoid drinking soda이다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nThe kids stopped ___ in the hall.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (패스트푸드 먹는 것을 피하다)\nWe ___ every day.",
             "options": [
-              "running",
-              "run",
-              "to run",
-              "runs"
+              "avoid eating fast food",
+              "avoid to eat fast food",
+              "avoid to eating fast food",
+              "avoids eating fast food"
             ],
             "answer": 0,
-            "explain": "stop 뒤에는 동명사가 오므로 running이다."
+            "explain": "avoid 뒤에는 동명사가 오므로 '패스트푸드 먹는 것을 피하다'는 avoid eating fast food이다."
           },
           {
-            "q": "알맞은 형태를 고르세요.\nDo you mind ___ the door?",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (늦게 일어나는 것을 피하다)\nThey ___ on weekends.",
             "options": [
-              "close",
-              "closing",
-              "to close",
-              "closes"
+              "avoid to get up late",
+              "avoid getting up late",
+              "avoid to getting up late",
+              "avoids getting up late"
             ],
             "answer": 1,
-            "explain": "mind 뒤에는 동명사가 오므로 closing이다."
+            "explain": "avoid 뒤에는 동명사가 오므로 '늦게 일어나는 것을 피하다'는 avoid getting up late이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nShe suggested ___ a bus.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (단것 먹는 것을 포기하다)\nI ___ this year.",
             "options": [
-              "take",
-              "to take",
-              "taking",
-              "takes"
+              "give up to eat sweets",
+              "give up to eating sweets",
+              "give up eating sweets",
+              "gives up eating sweets"
             ],
             "answer": 2,
-            "explain": "suggest 뒤에는 동명사가 오므로 taking이다."
+            "explain": "give up 뒤에는 동명사가 오므로 '단것 먹는 것을 포기하다'는 give up eating sweets이다."
           },
           {
-            "q": "알맞은 말을 고르세요.\nHe gave up ___ junk food.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (게임하는 것을 그만두다)\nWe ___ before the exam.",
             "options": [
-              "eat",
-              "to eat",
-              "eats",
-              "eating"
+              "give up to play games",
+              "give up to playing games",
+              "gives up playing games",
+              "give up playing games"
             ],
             "answer": 3,
-            "explain": "give up 뒤에는 동명사가 오므로 eating이다."
+            "explain": "give up 뒤에는 동명사가 오므로 '게임하는 것을 그만두다'는 give up playing games이다."
           },
           {
-            "q": "빈칸에 알맞은 형태를 고르세요.\nWe postponed ___ our friends.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (초콜릿 먹는 것을 끊다)\nThey ___ for their health.",
             "options": [
-              "meeting",
-              "meet",
-              "to meet",
-              "meets"
+              "give up eating chocolate",
+              "give up to eat chocolate",
+              "give up to eating chocolate",
+              "gives up eating chocolate"
             ],
             "answer": 0,
-            "explain": "postpone 뒤에는 동명사가 오므로 meeting이다."
+            "explain": "give up 뒤에는 동명사가 오므로 '초콜릿 먹는 것을 끊다'는 give up eating chocolate이다."
           },
           {
-            "q": "알맞은 것을 고르세요.\nShe admitted ___ my pen.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (그 경기하는 것을 미루다)\nWe ___ because of the snow.",
             "options": [
-              "take",
-              "taking",
-              "to take",
-              "takes"
+              "postpone to play the game",
+              "postpone playing the game",
+              "postpone to playing the game",
+              "postpones playing the game"
             ],
             "answer": 1,
-            "explain": "admit 뒤에는 동명사가 오므로 taking이다."
+            "explain": "postpone 뒤에는 동명사가 오므로 '경기하는 것을 미루다'는 postpone playing the game이다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nThey enjoy ___ in the sea.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (회의하는 것을 미루다)\nThey ___ until Friday.",
             "options": [
-              "swim",
-              "to swim",
-              "swimming",
-              "swims"
+              "postpone to have the meeting",
+              "postpone to having the meeting",
+              "postpone having the meeting",
+              "postpones having the meeting"
             ],
             "answer": 2,
-            "explain": "enjoy 뒤에는 동명사가 오므로 swimming이다."
+            "explain": "postpone 뒤에는 동명사가 오므로 '회의하는 것을 미루다'는 postpone having the meeting이다."
           },
           {
-            "q": "알맞은 형태를 고르세요.\nWe avoid ___ up late.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (여행 가는 것을 미루다)\nI ___ because of the rain.",
             "options": [
-              "get",
-              "to get",
-              "gets",
-              "getting"
+              "postpone to go on a trip",
+              "postpone to going on a trip",
+              "postpones going on a trip",
+              "postpone going on a trip"
             ],
             "answer": 3,
-            "explain": "avoid 뒤에는 동명사가 오므로 getting이다."
+            "explain": "postpone 뒤에는 동명사가 오므로 '여행 가는 것을 미루다'는 postpone going on a trip이다."
           },
           {
-            "q": "빈칸에 알맞은 것을 고르세요.\nShe finished ___ her room.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (거짓말한 것을 인정하다)\nYou must ___.",
             "options": [
-              "cleaning",
-              "clean",
-              "to clean",
-              "cleans"
+              "admit telling a lie",
+              "admit to tell a lie",
+              "admit to telling a lie",
+              "admits telling a lie"
             ],
             "answer": 0,
-            "explain": "finish 뒤에는 동명사가 오므로 cleaning이다."
+            "explain": "admit 뒤에는 동명사가 오므로 '거짓말한 것을 인정하다'는 admit telling a lie이다."
           },
           {
-            "q": "알맞은 말을 고르세요.\nThe baby stopped ___ at night.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (실수한 것을 인정하다)\nThey ___ at last.",
             "options": [
-              "cry",
-              "crying",
-              "to cry",
-              "cries"
+              "admit to make a mistake",
+              "admit making a mistake",
+              "admit to making a mistake",
+              "admits making a mistake"
             ],
             "answer": 1,
-            "explain": "stop 뒤에는 동명사가 오므로 crying이다."
+            "explain": "admit 뒤에는 동명사가 오므로 '실수한 것을 인정하다'는 admit making a mistake이다."
           },
           {
-            "q": "빈칸에 알맞은 형태를 고르세요.\nDo you mind ___ outside?",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (영화 보는 것을 제안하다)\nThey ___ tonight.",
             "options": [
-              "wait",
-              "to wait",
-              "waiting",
-              "waits"
+              "suggest to watch a movie",
+              "suggest to watching a movie",
+              "suggest watching a movie",
+              "suggests watching a movie"
             ],
             "answer": 2,
-            "explain": "mind 뒤에는 동명사가 오므로 waiting이다."
+            "explain": "suggest 뒤에는 동명사가 오므로 '영화 보는 것을 제안하다'는 suggest watching a movie이다."
           },
           {
-            "q": "알맞은 것을 고르세요.\nHe suggested ___ the museum.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (함께 공부하는 것을 제안하다)\nWe ___ for the test.",
             "options": [
-              "visit",
-              "to visit",
-              "visits",
-              "visiting"
+              "suggest to study together",
+              "suggest to studying together",
+              "suggests studying together",
+              "suggest studying together"
             ],
             "answer": 3,
-            "explain": "suggest 뒤에는 동명사가 오므로 visiting이다."
+            "explain": "suggest 뒤에는 동명사가 오므로 '함께 공부하는 것을 제안하다'는 suggest studying together이다."
           },
           {
-            "q": "빈칸에 알맞은 말을 고르세요.\nMy dad gave up ___ coffee.",
+            "q": "우리말 뜻에 맞게 빈칸에 알맞은 것을 고르세요. (밖에서 먹는 것을 제안하다)\nI ___ tonight.",
             "options": [
-              "drink",
-              "drinking",
-              "to drink",
-              "drinks"
+              "suggest eating out",
+              "suggest to eat out",
+              "suggest to eating out",
+              "suggests eating out"
             ],
-            "answer": 1,
-            "explain": "give up 뒤에는 동명사가 오므로 drinking이다."
+            "answer": 0,
+            "explain": "suggest 뒤에는 동명사가 오므로 '밖에서 먹는 것을 제안하다'는 suggest eating out이다."
           }
         ],
         "sa": [
           {
-            "q": "빈칸을 채우세요.\nI enjoy ___ books.",
-            "ko": "나는 책 읽는 것을 즐긴다.",
+            "q": "빈칸을 채우세요.\nI enjoy ___ books every evening.",
+            "ko": "나는 매일 저녁 책 읽는 것을 즐긴다.",
             "answers": [
               "reading"
             ],
-            "explain": "enjoy 뒤에는 동명사가 오므로 reading이다."
+            "explain": "enjoy 뒤에는 동명사가 오므로 read → reading."
           },
           {
-            "q": "빈칸을 채우세요.\nShe avoids ___ late at night.",
-            "ko": "그녀는 밤 늦게 먹는 것을 피한다.",
+            "q": "빈칸을 채우세요.\nThey enjoy ___ pictures on trips.",
+            "ko": "그들은 여행에서 사진 찍는 것을 즐긴다.",
             "answers": [
-              "eating"
+              "taking"
             ],
-            "explain": "avoid 뒤에는 동명사가 오므로 eating이다."
+            "explain": "enjoy 뒤에는 동명사가 오므로 take → taking."
           },
           {
-            "q": "빈칸을 채우세요.\nI finished ___ my homework.",
-            "ko": "나는 숙제하는 것을 끝냈다.",
+            "q": "빈칸을 채우세요.\nI finish ___ the dishes after dinner.",
+            "ko": "나는 저녁 식사 후 설거지하는 것을 끝낸다.",
             "answers": [
-              "doing"
+              "washing"
             ],
-            "explain": "finish 뒤에는 동명사가 오므로 doing이다."
+            "explain": "finish 뒤에는 동명사가 오므로 wash → washing."
           },
           {
-            "q": "빈칸을 채우세요.\nPlease stop ___ so loudly.",
-            "ko": "그렇게 크게 말하는 것을 멈춰라.",
+            "q": "빈칸을 채우세요.\nPlease stop ___ now.",
+            "ko": "이제 말하는 것을 멈추세요.",
             "answers": [
               "talking"
             ],
-            "explain": "stop 뒤에는 동명사가 오므로 talking이다."
+            "explain": "stop 뒤에 동명사가 오면 '~하는 것을 멈추다', talk → talking."
+          },
+          {
+            "q": "빈칸을 채우세요.\nDo you mind ___ here?",
+            "ko": "여기서 기다리는 것을 꺼리니?",
+            "answers": [
+              "waiting"
+            ],
+            "explain": "mind 뒤에는 동명사가 오므로 wait → waiting."
           },
           {
             "q": "빈칸을 채우세요.\nDo you mind ___ the window?",
@@ -1428,47 +1436,39 @@ export const courses = [
             "answers": [
               "opening"
             ],
-            "explain": "mind 뒤에는 동명사가 오므로 opening이다."
+            "explain": "mind 뒤에는 동명사가 오므로 open → opening."
           },
           {
-            "q": "빈칸을 채우세요.\nShe suggested ___ home early.",
-            "ko": "그녀는 집에 일찍 가는 것을 제안했다.",
+            "q": "빈칸을 채우세요.\nI avoid ___ soda for my health.",
+            "ko": "나는 건강을 위해 탄산음료 마시는 것을 피한다.",
             "answers": [
-              "going"
+              "drinking"
             ],
-            "explain": "suggest 뒤에는 동명사가 오므로 going이다."
+            "explain": "avoid 뒤에는 동명사가 오므로 drink → drinking."
           },
           {
-            "q": "빈칸을 채우세요.\nHe gave up ___ last year.",
-            "ko": "그는 작년에 담배 피우는 것을 그만두었다.",
+            "q": "빈칸을 채우세요.\nThey avoid ___ up late on weekends.",
+            "ko": "그들은 주말에 늦게 일어나는 것을 피한다.",
             "answers": [
-              "smoking"
+              "getting"
             ],
-            "explain": "give up 뒤에는 동명사가 오므로 smoking이다."
+            "explain": "avoid 뒤에는 동명사가 오므로 get → getting."
           },
           {
-            "q": "빈칸을 채우세요.\nThey postponed ___ the town.",
-            "ko": "그들은 마을을 떠나는 것을 미뤘다.",
+            "q": "빈칸을 채우세요.\nThey postpone ___ the meeting until Friday.",
+            "ko": "그들은 회의하는 것을 금요일까지 미룬다.",
             "answers": [
-              "leaving"
+              "having"
             ],
-            "explain": "postpone 뒤에는 동명사가 오므로 leaving이다."
+            "explain": "postpone 뒤에는 동명사가 오므로 have → having."
           },
           {
-            "q": "빈칸을 채우세요.\nHe admitted ___ the vase.",
-            "ko": "그는 꽃병을 깬 것을 인정했다.",
+            "q": "빈칸을 채우세요.\nWe suggest ___ together for the test.",
+            "ko": "우리는 시험을 위해 함께 공부하는 것을 제안한다.",
             "answers": [
-              "breaking"
+              "studying"
             ],
-            "explain": "admit 뒤에는 동명사가 오므로 breaking이다."
-          },
-          {
-            "q": "빈칸을 채우세요.\nThey enjoy ___ in the sea.",
-            "ko": "그들은 바다에서 수영하는 것을 즐긴다.",
-            "answers": [
-              "swimming"
-            ],
-            "explain": "enjoy 뒤에는 동명사가 오므로 swimming이다."
+            "explain": "suggest 뒤에는 동명사가 오므로 study → studying."
           }
         ]
       },
