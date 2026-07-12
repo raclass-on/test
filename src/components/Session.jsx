@@ -1,17 +1,18 @@
 import { useMemo, useState, useEffect, useRef } from 'react'
 import Stars from './Stars'
 import { starsFor } from '../config'
+import { addWrong, removeWrong } from '../wrongs'
 
 function normalize(str) {
   return String(str).trim().toLowerCase().replace(/\s+/g, ' ').replace(/[’‘]/g, "'")
 }
 
-export default function Session({ unit, onDone, onExit, progressKey }) {
-  // 40 객관식 → 10 주관식 순서
+export default function Session({ unit, onDone, onExit, progressKey, student, review }) {
+  // 객관식 → 주관식 순서. uid/oNo는 오답노트용 원본 식별자(복습 세션에서도 원래 위치를 가리킴).
   const questions = useMemo(
     () => [
-      ...unit.mc.map((q, i) => ({ ...q, type: 'mc', no: i })),
-      ...unit.sa.map((q, i) => ({ ...q, type: 'sa', no: i })),
+      ...unit.mc.map((q, i) => ({ ...q, type: 'mc', no: i, uid: q._uid || unit.id, oNo: q._no ?? i })),
+      ...unit.sa.map((q, i) => ({ ...q, type: 'sa', no: i, uid: q._uid || unit.id, oNo: q._no ?? i })),
     ],
     [unit]
   )
@@ -20,12 +21,13 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
 
   // 이전에 풀다 나간 진행 상태 복원 (이어풀기)
   const saved = useMemo(() => {
+    if (review) return null // 오답 복습은 이어풀기/이력 저장을 하지 않는다
     try {
       const s = JSON.parse(localStorage.getItem(progressKey) || 'null')
       if (s && typeof s.idx === 'number' && s.idx > 0 && s.idx < questions.length) return s
     } catch { /* ignore */ }
     return null
-  }, [progressKey, questions.length])
+  }, [progressKey, questions.length, review])
 
   const [idx, setIdx] = useState(saved ? saved.idx : 0)
   const [selected, setSelected] = useState(null)
@@ -40,6 +42,7 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
   const [resumeHint, setResumeHint] = useState(!!saved)
 
   const saveProgress = (nextIdx) => {
+    if (review) return
     try {
       localStorage.setItem(
         progressKey,
@@ -77,6 +80,12 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
     if (ok) {
       if (isMc) setMcScore((s) => s + 1)
       else setSaScore((s) => s + 1)
+    }
+    // 오답노트: 틀리면 추가, 맞히면 제거
+    if (student) {
+      const ref = { unitId: q.uid, type: q.type, no: q.oNo }
+      if (ok) removeWrong(student.courseId, student.name, ref)
+      else addWrong(student.courseId, student.name, { ...ref, given: isMc ? selected : input })
     }
   }
 
@@ -124,7 +133,7 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
     return (
       <div className="session-result">
         <div className="result-emoji">{percent >= 90 ? '🏆' : percent >= 60 ? '👍' : '💪'}</div>
-        <h2>{unit.title} 완료!</h2>
+        <h2>{review ? '오답 복습 완료!' : `${unit.title} 완료!`}</h2>
         <div className="result-scoreline">
           <div className="result-box">
             <div className="result-num">{mcScore}<span>/{mcTotal}</span></div>
@@ -142,9 +151,13 @@ export default function Session({ unit, onDone, onExit, progressKey }) {
         <div className="result-stars">
           숙제 성취도 <Stars count={stars} />
         </div>
-        <p className="result-msg">오늘 점수가 기록되었어요. 복습하면 별점이 올라가요!</p>
+        <p className="result-msg">
+          {review
+            ? '맞힌 문제는 오답노트에서 빠졌어요. 남은 오답은 계속 복습해요!'
+            : '오늘 점수가 기록되었어요. 복습하면 별점이 올라가요!'}
+        </p>
         <div className="result-actions">
-          <button className="btn btn-outline" onClick={onExit}>유닛 목록으로</button>
+          <button className="btn btn-outline" onClick={onExit}>{review ? '오답노트로' : '유닛 목록으로'}</button>
         </div>
       </div>
     )

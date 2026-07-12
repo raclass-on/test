@@ -3,13 +3,15 @@ import Login from './components/Login'
 import UnitBoard from './components/UnitBoard'
 import Session from './components/Session'
 import ParentReport from './components/ParentReport'
+import WrongNote from './components/WrongNote'
 import AdminDashboard from './components/AdminDashboard'
 import { courses } from './grammarData'
 import { siteInfo } from './config'
 import { api } from './api'
+import { loadWrongs } from './wrongs'
 import './App.css'
 
-const TABS = ['문제풀이', '나의 성취도']
+const TABS = ['문제풀이', '오답노트', '나의 성취도']
 
 export default function App() {
   const [student, setStudent] = useState(() => {
@@ -19,6 +21,7 @@ export default function App() {
   const [records, setRecords] = useState(() => student?.scores || {})
   const [tab, setTab] = useState('문제풀이')
   const [activeUnitId, setActiveUnitId] = useState(null)
+  const [reviewUnit, setReviewUnit] = useState(null) // 오답 다시 풀기(합성 유닛)
   const [banner, setBanner] = useState('')
   const [autoLoggedOut, setAutoLoggedOut] = useState(false)
 
@@ -31,14 +34,16 @@ export default function App() {
   // 세션(문제풀이) 중 뒤로가기 처리 — 앱을 벗어나지 않고 유닛 목록으로 복귀시킨다.
   // (라우터가 없어 히스토리 항목이 하나뿐이라, 세션 중 폰 뒤로가기를 누르면
   //  사이트 자체를 벗어나 인앱 브라우저에서 흰 화면/먹통이 되던 문제 해결)
+  const inSessionKey = activeUnitId ? `unit:${activeUnitId}` : reviewUnit ? 'review' : null
   useEffect(() => {
-    if (!activeUnitId) return
+    if (!inSessionKey) return
     // 세션 진입 시 히스토리 항목을 하나 쌓는다 → 뒤로가기가 이 항목을 소비하며 세션만 닫힘
     window.history.pushState({ raclassSession: true }, '')
     let closedByBack = false
     const onPop = () => {
       closedByBack = true
       setActiveUnitId(null)
+      setReviewUnit(null)
     }
     window.addEventListener('popstate', onPop)
     return () => {
@@ -46,7 +51,7 @@ export default function App() {
       // 인앱 '나가기'·'유닛 목록으로' 버튼 등으로 닫힌 경우, 쌓아둔 히스토리 항목을 되돌려 정리
       if (!closedByBack) window.history.back()
     }
-  }, [activeUnitId])
+  }, [inSessionKey])
 
   const loginStudent = (u) => {
     setStudent(u)
@@ -131,6 +136,23 @@ export default function App() {
   const course = courses.find((c) => c.id === student.courseId)
   const activeUnit = course.units.find((u) => u.id === activeUnitId)
 
+  // 오답노트의 틀린 문제만 모아 합성 유닛을 만들어 복습 세션 시작
+  const startReview = () => {
+    const wrongs = loadWrongs(student.courseId, student.name)
+    const mc = [], sa = []
+    wrongs.forEach((w) => {
+      const u = course.units.find((x) => x.id === w.unitId)
+      if (!u) return
+      const src = w.type === 'mc' ? u.mc[w.no] : u.sa[w.no]
+      if (!src) return
+      const item = { ...src, _uid: w.unitId, _no: w.no }
+      if (w.type === 'mc') mc.push(item)
+      else sa.push(item)
+    })
+    if (mc.length + sa.length === 0) { alert('다시 풀 오답이 없어요.'); return }
+    setReviewUnit({ id: 'REVIEW', title: '오답 다시 풀기', mc, sa })
+  }
+
   const onSessionDone = async (result) => {
     // 낙관적 반영 (중도 기록은 최고기록·별점을 갱신하지 않고 이력에만 남긴다)
     if (!result.partial) {
@@ -168,7 +190,7 @@ export default function App() {
         </div>
       </header>
 
-      {!activeUnit && (
+      {!activeUnit && !reviewUnit && (
         <nav className="tabs">
           {TABS.map((t) => (
             <button key={t} className={`tab-btn ${tab === t ? 'active' : ''}`} onClick={() => setTab(t)}>{t}</button>
@@ -178,16 +200,29 @@ export default function App() {
 
       <main className="main">
         {banner && <div className="banner-warn">{banner}</div>}
-        {activeUnit ? (
+        {reviewUnit ? (
+          <Session
+            key="review"
+            unit={reviewUnit}
+            review
+            student={student}
+            onDone={() => {}}
+            onExit={() => setReviewUnit(null)}
+            progressKey={`raclass-review:${student.courseId}:${student.name}`}
+          />
+        ) : activeUnit ? (
           <Session
             key={activeUnit.id}
             unit={activeUnit}
+            student={student}
             onDone={onSessionDone}
             onExit={() => setActiveUnitId(null)}
             progressKey={`raclass-progress:${student.courseId}:${student.name}:${activeUnit.id}`}
           />
         ) : tab === '문제풀이' ? (
           <UnitBoard course={course} records={records} onStart={setActiveUnitId} />
+        ) : tab === '오답노트' ? (
+          <WrongNote course={course} student={student} onReview={startReview} />
         ) : (
           <ParentReport course={course} studentName={student.name} records={records} />
         )}

@@ -265,6 +265,24 @@ body {
 .btn-success { background: var(--success); color: white; }
 .btn-success:hover { background: #0e9f6e; }
 
+/* ---------- 오답노트 ---------- */
+.wn { display: flex; flex-direction: column; gap: 12px; }
+.wn-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.wn-title { font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+.wn-actions { display: flex; align-items: center; gap: 10px; }
+.wn-unit { display: flex; flex-direction: column; gap: 8px; }
+.wn-unit-title { font-size: 0.95rem; font-weight: 700; margin-top: 6px; }
+.wn-item { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--danger); border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+.wn-badge { align-self: flex-start; font-size: 0.7rem; font-weight: 700; color: var(--primary); background: #e7f5ee; padding: 2px 9px; border-radius: 20px; }
+.wn-q { font-size: 1rem; font-weight: 600; line-height: 1.55; white-space: pre-line; word-break: break-word; }
+.wn-q-en { display: block; margin-top: 6px; padding-left: 10px; border-left: 3px solid var(--primary); color: var(--primary-dark); font-weight: 700; }
+.wn-answers { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 0.9rem; font-weight: 700; }
+.wn-wrong { color: #991b1b; }
+.wn-wrong::before { content: '✗ '; }
+.wn-correct { color: #166534; }
+.wn-correct::before { content: '✓ '; }
+.wn-explain { font-size: 0.88rem; color: var(--text); line-height: 1.55; background: var(--bg); border-radius: 8px; padding: 8px 11px; }
+
 /* ---------- Segmented (login/signup) ---------- */
 .seg { display: flex; background: var(--bg); border-radius: 10px; padding: 4px; gap: 4px; margin: 4px 0 6px; }
 .seg-btn {
