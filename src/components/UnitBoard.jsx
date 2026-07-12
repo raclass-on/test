@@ -4,7 +4,7 @@ export default function UnitBoard({ course, records, onStart }) {
   return (
     <div className="unit-board">
       <p className="board-hint">
-        유닛을 눌러 <b>객관식 40 + 주관식 10</b>문제를 풀어요. 예습으로 미리 풀고, 복습으로 다시 풀면 별점이 올라가요! 🌟
+        유닛을 눌러 <b>객관식 25 + 주관식 10</b>문제를 풀어요. 예습으로 미리 풀고, 복습으로 다시 풀면 별점이 올라가요! 🌟
       </p>
       <div className="unit-grid">
         {course.units.map((u) => {
@@ -23,7 +23,7 @@ export default function UnitBoard({ course, records, onStart }) {
                   최고: 객관식 {best.mc}/{best.mcTotal} · 주관식 {best.sa}/{best.saTotal}
                 </div>
               ) : (
-                <div className="unit-best muted">아직 풀지 않았어요 · 문제 50개</div>
+                <div className="unit-best muted">아직 풀지 않았어요 · 문제 {u.mc.length + u.sa.length}개</div>
               )}
             </button>
           )
