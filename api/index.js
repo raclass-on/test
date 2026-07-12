@@ -24,6 +24,7 @@ function getRedis() {
 
 const sKey = (course, name) => `student:${course}:${encodeURIComponent(name)}`
 const scKey = (course, name) => `scores:${course}:${encodeURIComponent(name)}`
+const wKey = (course, name) => `wrongs:${course}:${encodeURIComponent(name)}`
 
 async function listKeys(prefix) {
   const db = getRedis()
@@ -161,6 +162,7 @@ export default async function handler(req, res) {
         if (rec.status !== 'approved')
           return res.status(200).json({ ok: false, status: rec.status }) // pending / rejected
         const scores = (await db.get(scKey(course, name.trim()))) || {}
+        const wrongs = (await db.get(wKey(course, name.trim()))) || []
         return res.status(200).json({
           ok: true,
           status: 'approved',
@@ -168,6 +170,7 @@ export default async function handler(req, res) {
           name: rec.name,
           course,
           scores,
+          wrongs: Array.isArray(wrongs) ? wrongs : [],
         })
       }
 
@@ -204,6 +207,40 @@ export default async function handler(req, res) {
         return res.status(200).json({ ok: true, percent, stars, unit: scores[unitId] })
       }
 
+      // ── 학생: 오답노트 조회 ──────────────────────────
+      case 'my-wrongs': {
+        const db = getRedis()
+        const auth = verifyToken(body.token)
+        if (!auth) return res.status(401).json({ error: 'auth' })
+        const wrongs = (await db.get(wKey(auth.course, auth.name))) || []
+        return res.status(200).json({ ok: true, wrongs: Array.isArray(wrongs) ? wrongs : [] })
+      }
+
+      // ── 학생: 오답노트 갱신 (틀림 추가 / 맞힘 제거 / 전체 비우기) ──
+      case 'wrong': {
+        const db = getRedis()
+        const auth = verifyToken(body.token)
+        if (!auth) return res.status(401).json({ error: 'auth' })
+        const key = wKey(auth.course, auth.name)
+        let arr = (await db.get(key)) || []
+        if (!Array.isArray(arr)) arr = []
+        const { op, item } = body
+        const same = (a, b) => a.unitId === b.unitId && a.type === b.type && a.no === b.no
+        if (op === 'clear') {
+          arr = []
+        } else if (op === 'add' || op === 'remove') {
+          if (!item || typeof item.unitId !== 'string' || (item.type !== 'mc' && item.type !== 'sa') || typeof item.no !== 'number')
+            return res.status(400).json({ error: 'bad wrong item' })
+          arr = arr.filter((x) => !same(x, item))
+          if (op === 'add') arr.push({ unitId: item.unitId, type: item.type, no: item.no, given: item.given ?? null, ts: Date.now() })
+          arr = arr.slice(-500)
+        } else {
+          return res.status(400).json({ error: 'bad wrong op' })
+        }
+        await db.set(key, arr)
+        return res.status(200).json({ ok: true, wrongs: arr })
+      }
+
       // ── 어드민: 학생 목록(승인 관리) ────────────────
       case 'admin-list': {
         if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
@@ -227,6 +264,7 @@ export default async function handler(req, res) {
         if (op === 'delete') {
           await db.del(key)
           await db.del(scKey(course, name))
+          await db.del(wKey(course, name))
           return res.status(200).json({ ok: true })
         }
         const rec = await db.get(key)

@@ -40,3 +40,16 @@ export function removeWrong(courseId, name, item) {
 export function clearWrongs(courseId, name) {
   save(courseId, name, [])
 }
+
+// 서버에서 받은 오답과 로컬 캐시를 합쳐(union) 저장한다.
+// 다른 기기(폰↔태블릿)에서 쌓인 오답이 로그인/동기화 시 이 기기에도 반영됨.
+export function mergeServer(courseId, name, serverArr) {
+  if (!Array.isArray(serverArr)) return loadWrongs(courseId, name)
+  const local = loadWrongs(courseId, name)
+  const merged = [...serverArr]
+  for (const l of local) {
+    if (!merged.some((s) => sameRef(s, l))) merged.push(l)
+  }
+  save(courseId, name, merged)
+  return merged
+}

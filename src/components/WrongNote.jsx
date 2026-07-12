@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { loadWrongs, clearWrongs } from '../wrongs'
+import { api } from '../api'
 
 // 문제 텍스트: 지시문(한글) + 영어문장 줄바꿈 표시
 function QText({ q }) {
@@ -40,8 +41,9 @@ export default function WrongNote({ course, student, onReview }) {
   const total = byUnit.reduce((s, g) => s + g.items.length, 0)
 
   const clearAll = () => {
-    if (!confirm('오답노트를 전부 비울까요?')) return
+    if (!confirm('오답노트를 전부 비울까요? (모든 기기에서 지워져요)')) return
     clearWrongs(student.courseId, student.name)
+    if (student.token) api.wrong(student.token, 'clear').catch(() => {})
     setWrongs([])
   }
 

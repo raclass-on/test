@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect, useRef } from 'react'
 import Stars from './Stars'
 import { starsFor } from '../config'
 import { addWrong, removeWrong } from '../wrongs'
+import { api } from '../api'
 
 function normalize(str) {
   return String(str).trim().toLowerCase().replace(/\s+/g, ' ').replace(/[’‘]/g, "'")
@@ -81,11 +82,17 @@ export default function Session({ unit, onDone, onExit, progressKey, student, re
       if (isMc) setMcScore((s) => s + 1)
       else setSaScore((s) => s + 1)
     }
-    // 오답노트: 틀리면 추가, 맞히면 제거
+    // 오답노트: 틀리면 추가, 맞히면 제거 (로컬 즉시 반영 + 서버 동기화)
     if (student) {
       const ref = { unitId: q.uid, type: q.type, no: q.oNo }
-      if (ok) removeWrong(student.courseId, student.name, ref)
-      else addWrong(student.courseId, student.name, { ...ref, given: isMc ? selected : input })
+      if (ok) {
+        removeWrong(student.courseId, student.name, ref)
+        if (student.token) api.wrong(student.token, 'remove', ref).catch(() => {})
+      } else {
+        const item = { ...ref, given: isMc ? selected : input }
+        addWrong(student.courseId, student.name, item)
+        if (student.token) api.wrong(student.token, 'add', item).catch(() => {})
+      }
     }
   }
 

@@ -31,7 +31,7 @@ export default function Login({ onLogin, onAdmin }) {
       } else {
         const res = await api.login(courseId, name.trim(), password)
         if (res.ok) {
-          onLogin({ courseId, name: res.name, token: res.token, scores: res.scores || {} })
+          onLogin({ courseId, name: res.name, token: res.token, scores: res.scores || {}, wrongs: res.wrongs || [] })
         } else if (res.status === 'pending') {
           setError('아직 승인 대기 중이에요. 선생님 승인 후 로그인해 주세요.')
         } else if (res.status === 'rejected') {

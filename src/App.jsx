@@ -8,7 +8,7 @@ import AdminDashboard from './components/AdminDashboard'
 import { courses } from './grammarData'
 import { siteInfo } from './config'
 import { api } from './api'
-import { loadWrongs } from './wrongs'
+import { loadWrongs, mergeServer } from './wrongs'
 import './App.css'
 
 const TABS = ['문제풀이', '오답노트', '나의 성취도']
@@ -22,14 +22,21 @@ export default function App() {
   const [tab, setTab] = useState('문제풀이')
   const [activeUnitId, setActiveUnitId] = useState(null)
   const [reviewUnit, setReviewUnit] = useState(null) // 오답 다시 풀기(합성 유닛)
+  const [wrongsVersion, setWrongsVersion] = useState(0) // 서버 오답 동기화 후 오답노트 새로고침용
   const [banner, setBanner] = useState('')
   const [autoLoggedOut, setAutoLoggedOut] = useState(false)
 
-  // 로그인 상태면 최신 점수 동기화
+  // 로그인 상태면 최신 점수·오답노트 동기화 (기기가 바뀌어도 서버에서 받아옴)
   useEffect(() => {
     if (!student?.token) return
     api.myScores(student.token).then((r) => r.scores && setRecords(r.scores)).catch(() => {})
-  }, [student?.token])
+    api.myWrongs(student.token).then((r) => {
+      if (r.wrongs) {
+        mergeServer(student.courseId, student.name, r.wrongs)
+        setWrongsVersion((v) => v + 1)
+      }
+    }).catch(() => {})
+  }, [student?.token, student?.courseId, student?.name])
 
   // 세션(문제풀이) 중 뒤로가기 처리 — 앱을 벗어나지 않고 유닛 목록으로 복귀시킨다.
   // (라우터가 없어 히스토리 항목이 하나뿐이라, 세션 중 폰 뒤로가기를 누르면
@@ -56,6 +63,8 @@ export default function App() {
   const loginStudent = (u) => {
     setStudent(u)
     setRecords(u.scores || {})
+    mergeServer(u.courseId, u.name, u.wrongs || []) // 서버에 쌓인 오답을 이 기기에 반영
+    setWrongsVersion((v) => v + 1)
     sessionStorage.setItem('student', JSON.stringify(u))
     setTab('문제풀이'); setActiveUnitId(null); setAutoLoggedOut(false)
   }
@@ -222,7 +231,7 @@ export default function App() {
         ) : tab === '문제풀이' ? (
           <UnitBoard course={course} records={records} onStart={setActiveUnitId} />
         ) : tab === '오답노트' ? (
-          <WrongNote course={course} student={student} onReview={startReview} />
+          <WrongNote key={wrongsVersion} course={course} student={student} onReview={startReview} />
         ) : (
           <ParentReport course={course} studentName={student.name} records={records} />
         )}
