@@ -139,6 +139,7 @@ export default function AdminDashboard({ adminToken }) {
           rows={filteredRows}
           selectedKey={selectedKey}
           onSelect={setSelectedKey}
+          adminToken={adminToken}
         />
       )}
     </div>
@@ -217,7 +218,7 @@ function starsOf(p) {
   return p >= 90 ? 5 : p >= 75 ? 4 : p >= 60 ? 3 : p >= 40 ? 2 : 1
 }
 
-function StudentProgress({ rows, selectedKey, onSelect }) {
+function StudentProgress({ rows, selectedKey, onSelect, adminToken }) {
   const [showReport, setShowReport] = useState(false)
   useEffect(() => { setShowReport(false) }, [selectedKey])
 

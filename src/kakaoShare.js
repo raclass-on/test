@@ -44,18 +44,23 @@ export async function shareSmart({ title, text, linkUrl, buttonTitle }, jsKey) {
   const btn = (buttonTitle || '전체 레포트 보기').trim()
 
   // 1) 카카오 카드 (키가 있을 때) — 카톡 text 템플릿 200자 제한
+  //    SDK 로드 실패(네트워크 등) 시엔 아래 복사·공유 폴백으로 내려간다.
   if ((jsKey || '').trim()) {
-    await loadKakaoSdk(jsKey)
-    const body = text.length > 200 ? text.slice(0, 199) + '…' : text
-    const payload = { objectType: 'text', text: body }
-    if (url) {
-      payload.link = { mobileWebUrl: url, webUrl: url }
-      payload.buttonTitle = btn
-    } else {
-      payload.link = { mobileWebUrl: window.location.origin, webUrl: window.location.origin }
+    try {
+      await loadKakaoSdk(jsKey)
+      const body = text.length > 200 ? text.slice(0, 199) + '…' : text
+      const payload = { objectType: 'text', text: body }
+      if (url) {
+        payload.link = { mobileWebUrl: url, webUrl: url }
+        payload.buttonTitle = btn
+      } else {
+        payload.link = { mobileWebUrl: window.location.origin, webUrl: window.location.origin }
+      }
+      window.Kakao.Share.sendDefault(payload)
+      return 'kakao'
+    } catch {
+      // 카카오 로드/전송 실패 → 복사·기기공유로 폴백
     }
-    window.Kakao.Share.sendDefault(payload)
-    return 'kakao'
   }
 
   // 버튼이 없는 폴백에서는 링크를 본문 끝에 붙여 전달
