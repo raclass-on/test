@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { courses } from '../grammarData'
 import { api } from '../api'
 import { kakaoJsKey } from '../config'
@@ -8,7 +8,7 @@ import Stars from './Stars'
 const courseName = (id) => courses.find((c) => c.id === id)?.name || id
 const unitsOf = (id) => courses.find((c) => c.id === id)?.units || []
 
-export default function AdminDashboard({ adminToken }) {
+export default function AdminDashboard({ adminToken, onExitHome }) {
   const [tab, setTab] = useState('승인 관리')
   const [students, setStudents] = useState([])
   const [rows, setRows] = useState([])
@@ -16,6 +16,48 @@ export default function AdminDashboard({ adminToken }) {
   const [courseFilter, setCourseFilter] = useState('all')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [showReport, setShowReport] = useState(false)
+  // 학생을 바꾸거나 목록으로 나가면 레포트 열림 상태 해제
+  useEffect(() => { setShowReport(false) }, [selectedKey])
+
+  // ── 브라우저 뒤로가기: 한 단계씩 (레포트 → 학생 상세 → 학생 목록 → 홈) ──
+  // 화면 깊이(navDepth)에 맞춰 히스토리 항목 수를 유지하고, 뒤로가기 시 가장 깊은 단계만 닫는다.
+  const navDepth = 1 + (selectedKey ? 1 : 0) + (showReport ? 1 : 0) // 1=루트, 2=학생상세, 3=레포트
+  const pushedRef = useRef(0)
+  const ignorePopRef = useRef(0)
+  const stateRef = useRef({ selectedKey, showReport })
+  stateRef.current = { selectedKey, showReport }
+
+  useEffect(() => {
+    if (navDepth > pushedRef.current) {
+      for (let i = pushedRef.current; i < navDepth; i++) window.history.pushState({ adminNav: i + 1 }, '')
+      pushedRef.current = navDepth
+    } else if (navDepth < pushedRef.current) {
+      // 인앱 ← 버튼으로 얕아진 경우: 초과 항목만큼 뒤로 정리(자체 popstate는 무시)
+      const diff = pushedRef.current - navDepth
+      pushedRef.current = navDepth
+      ignorePopRef.current += diff
+      for (let i = 0; i < diff; i++) window.history.back()
+    }
+  }, [navDepth])
+
+  useEffect(() => {
+    const onPop = () => {
+      if (ignorePopRef.current > 0) { ignorePopRef.current--; return } // 우리가 부른 history.back()
+      pushedRef.current = Math.max(0, pushedRef.current - 1)
+      const { selectedKey: sk, showReport: sr } = stateRef.current
+      if (sr) setShowReport(false)          // 레포트 → 학생 상세
+      else if (sk) setSelectedKey(null)     // 학생 상세 → 학생 목록
+      else if (onExitHome) onExitHome()     // 루트 → 홈(로그아웃)
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [onExitHome])
+
+  // 로그아웃 버튼·자동 로그아웃 등으로 나갈 때 쌓아둔 히스토리 항목 정리
+  useEffect(() => () => {
+    if (pushedRef.current > 0) { const n = pushedRef.current; pushedRef.current = 0; window.history.go(-n) }
+  }, [])
 
   const refresh = useCallback(async () => {
     setLoading(true); setError('')
@@ -140,6 +182,8 @@ export default function AdminDashboard({ adminToken }) {
           selectedKey={selectedKey}
           onSelect={setSelectedKey}
           adminToken={adminToken}
+          showReport={showReport}
+          setShowReport={setShowReport}
         />
       )}
     </div>
@@ -218,10 +262,7 @@ function starsOf(p) {
   return p >= 90 ? 5 : p >= 75 ? 4 : p >= 60 ? 3 : p >= 40 ? 2 : 1
 }
 
-function StudentProgress({ rows, selectedKey, onSelect, adminToken }) {
-  const [showReport, setShowReport] = useState(false)
-  useEffect(() => { setShowReport(false) }, [selectedKey])
-
+function StudentProgress({ rows, selectedKey, onSelect, adminToken, showReport, setShowReport }) {
   if (rows.length === 0) return <p className="admin-empty">승인된 학생이 아직 없어요.</p>
 
   // 상세 보기
