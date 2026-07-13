@@ -76,10 +76,37 @@ function todayStr() {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
 }
 
+// 게시된 레포트가 없을 때 보여줄 안내 페이지
+function reportNotFoundHtml() {
+  return `<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>레포트를 찾을 수 없습니다</title></head>
+<body style="margin:0;font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:#eef2f7;">
+<div style="max-width:480px;margin:80px auto;padding:40px 28px;background:#fff;border-radius:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+<div style="font-size:20px;font-weight:900;color:#1f2937;margin-bottom:10px;">레포트를 찾을 수 없어요</div>
+<div style="font-size:14px;color:#6b7280;line-height:1.7;">링크가 만료되었거나(6개월) 잘못된 주소일 수 있습니다.<br>학원에 문의해주세요.</div>
+</div></body></html>`
+}
+
 // ── 메인 핸들러 (Vercel Serverless, Node) ───────────────────────
 export default async function handler(req, res) {
   // 진단용: 브라우저로 /api 를 열면(GET) 상태를 보여준다. (비밀값은 노출 안 함)
   if (req.method === 'GET') {
+    // 게시된 레포트 열람: /report/:id → (vercel rewrite) /api?report=:id
+    const reportId = typeof req.query?.report === 'string' ? req.query.report.trim() : ''
+    if (reportId) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8')
+      try {
+        const db = getRedis()
+        const rec = await db.get(`report:${reportId}`)
+        const html = rec && typeof rec === 'object' ? rec.html : rec
+        if (!html) { res.setHeader('Cache-Control', 'no-store'); return res.status(404).send(reportNotFoundHtml()) }
+        res.setHeader('Cache-Control', 'public, max-age=600')
+        return res.status(200).send(html)
+      } catch {
+        res.setHeader('Cache-Control', 'no-store')
+        return res.status(500).send(reportNotFoundHtml())
+      }
+    }
     const env = {
       adminPassword: ADMIN_PASSWORD !== 'admin1234' ? '설정됨(custom)' : '미설정(기본 admin1234)',
       authSecret: AUTH_SECRET !== 'dev-secret-change-me' ? '설정됨(custom)' : '미설정(기본값)',
@@ -305,6 +332,19 @@ export default async function handler(req, res) {
         }
         rows.sort((a, b) => (a.course + a.name < b.course + b.name ? -1 : 1))
         return res.status(200).json({ ok: true, rows })
+      }
+
+      // ── 어드민: 전체 레포트 게시(카톡 링크용) ────────
+      case 'save-report': {
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
+        const html = typeof body.html === 'string' ? body.html : ''
+        if (!html) return res.status(400).json({ error: '레포트 내용이 없어요.' })
+        if (html.length > 500000) return res.status(413).json({ error: '레포트 용량이 너무 커요.' })
+        const db = getRedis()
+        const id = crypto.randomBytes(9).toString('hex')
+        // 6개월 뒤 자동 만료
+        await db.set(`report:${id}`, { html, createdAt: new Date().toISOString() }, { ex: 60 * 60 * 24 * 180 })
+        return res.status(200).json({ ok: true, id })
       }
 
       default:

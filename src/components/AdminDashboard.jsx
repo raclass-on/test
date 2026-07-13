@@ -1,6 +1,8 @@
 import { useEffect, useState, useCallback } from 'react'
 import { courses } from '../grammarData'
 import { api } from '../api'
+import { kakaoJsKey } from '../config'
+import { shareSmart } from '../kakaoShare'
 import Stars from './Stars'
 
 const courseName = (id) => courses.find((c) => c.id === id)?.name || id
@@ -224,7 +226,7 @@ function StudentProgress({ rows, selectedKey, onSelect }) {
   // 상세 보기
   const selected = rows.find((r) => r.course + '::' + r.name === selectedKey)
   if (selected) {
-    if (showReport) return <StudentReport selected={selected} onBack={() => setShowReport(false)} />
+    if (showReport) return <StudentReport selected={selected} adminToken={adminToken} onBack={() => setShowReport(false)} />
     const units = unitsOf(selected.course)
     const done = units.filter((u) => selected.scores[u.id]?.best)
     const touched = units.filter((u) => {
@@ -310,7 +312,7 @@ function StudentProgress({ rows, selectedKey, onSelect }) {
 }
 
 // 학생 종합 성취 레포트 (인쇄 → 'PDF로 저장')
-function StudentReport({ selected, onBack }) {
+function StudentReport({ selected, onBack, adminToken }) {
   const units = unitsOf(selected.course)
   const done = units.filter((u) => selected.scores[u.id]?.best) // 기록이 있는(완료한) 유닛
   // 레포트/카톡에 넣을 유닛 선택 (기본: 완료한 유닛 전체)
@@ -354,25 +356,72 @@ function StudentReport({ selected, onBack }) {
       `✔️종합 : ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
     ].join('\n')
 
+  // 카톡 카드에 넣을 짧은 요약 (200자 제한)
+  const shareSummary = () =>
+    `[레이첼영어학원] 문법특강 · ${selected.course} ${selected.name} 주간 레포트\n` +
+    `완료 ${done.length}/${units.length}유닛 · 평균 정답률 ${avgPct}% · 종합 ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`
+
+  // 웹에 게시할 "전체 레포트" HTML (버튼을 누르면 열림 — 잘림 없이 전체)
+  const buildReportHtml = () => {
+    const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+    const rows = chosen.map((u) => {
+      const b = selected.scores[u.id].best
+      const c = b.percent >= 75 ? '#0d9488' : b.percent >= 50 ? '#ea580c' : '#dc2626'
+      return `<div style="padding:14px 16px;background:#f9fafb;border-radius:10px;margin-bottom:10px;border-left:4px solid ${c};">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+          <div style="font-size:14px;font-weight:600;color:#1f2937;">${esc(u.title)}</div>
+          <div style="font-size:13px;font-weight:700;color:${c};">${'★'.repeat(b.stars)}${'☆'.repeat(5 - b.stars)}</div>
+        </div>
+        <div style="font-size:12px;color:#6b7280;margin-top:5px;">객관식 ${b.mc}/${b.mcTotal} · 주관식 ${b.sa}/${b.saTotal} · 정답률 ${b.percent}%</div>
+      </div>`
+    }).join('')
+    return `<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학습 레포트 - ${esc(selected.name)}</title></head>
+<body style="margin:0;padding:0;background:#eef2f7;font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;">
+<div style="max-width:640px;margin:0 auto;padding:28px 16px;">
+  <div style="background:#0f1f3d;border-radius:16px 16px 0 0;padding:32px;">
+    <div style="font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:14px;">레이첼 영어학원 · 여름방학 문법 특강</div>
+    <div style="font-size:26px;font-weight:900;color:#fff;margin-bottom:6px;">${esc(selected.name)}</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.55);">${esc(courseName(selected.course))} · ${dateStr}</div>
+  </div>
+  <div style="background:#fff;padding:28px 32px 8px;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <div style="padding:14px;border-radius:10px;background:#e0e7ff;text-align:center;"><div style="font-size:22px;font-weight:900;color:#4f46e5;">${done.length}/${units.length}</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">완료 유닛</div></div>
+      <div style="padding:14px;border-radius:10px;background:#ccfbf1;text-align:center;"><div style="font-size:22px;font-weight:900;color:#0d9488;">${avgPct}%</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">평균 정답률</div></div>
+      <div style="padding:14px;border-radius:10px;background:#fffbeb;text-align:center;"><div style="font-size:20px;font-weight:900;color:#b45309;">${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">종합 성취도</div></div>
+    </div>
+  </div>
+  <div style="background:#fff;padding:8px 32px 28px;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
+    <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;font-weight:700;margin:14px 0;">유닛별 성취</div>
+    ${rows}
+  </div>
+  <div style="background:#f9fafb;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 16px 16px;padding:16px 32px;display:flex;justify-content:space-between;font-size:11px;color:#9ca3af;"><span>레이첼 영어학원 · 문법 특강</span><span>${dateStr}</span></div>
+  <p style="text-align:center;font-size:11px;color:#9ca3af;margin-top:14px;">※ 점수는 각 유닛 최고 기록 기준입니다.</p>
+</div></body></html>`
+  }
+
   const share = async () => {
     if (chosen.length === 0) { alert('보낼 유닛을 하나 이상 선택하세요.'); return }
-    const text = shareText()
+    // 1) 전체 레포트를 웹에 게시 → 공개 URL (실패해도 요약만이라도 공유되게 폴백)
+    let url = ''
     try {
-      // 모바일: 공유 시트가 열리고 거기서 '카카오톡'을 고르면 바로 전송됨
-      if (navigator.share) {
-        await navigator.share({ title: `${selected.name} 학생 주간학습성취레포트`, text })
-        return
-      }
-    } catch {
-      // 사용자가 공유를 취소한 경우 등은 조용히 무시
-      return
-    }
-    // 공유 기능이 없는 환경(PC 브라우저 등): 클립보드로 복사
+      const { id } = await api.saveReport(adminToken, buildReportHtml())
+      if (id) url = `${window.location.origin}/report/${id}`
+    } catch { /* 게시 실패 → 링크 없이 전체 텍스트로 폴백 */ }
+    // 2) 카톡 카드(키 있으면) / 기기 공유 시트 / 복사
     try {
-      await navigator.clipboard.writeText(text)
-      alert('레포트 내용을 복사했어요. 카톡 대화창에 붙여넣어 보내세요.')
-    } catch {
-      alert(text)
+      const how = await shareSmart({
+        title: `${selected.name} 학생 주간학습성취레포트`,
+        text: url ? shareSummary() : shareText(),   // 링크 있으면 짧은 요약, 없으면 기존 전체 텍스트
+        linkUrl: url,
+        buttonTitle: '전체 레포트 보기',
+      }, kakaoJsKey)
+      if (how === 'copied') alert(url
+        ? '레포트 요약과 전체 레포트 링크를 복사했어요. 카톡 대화창에 붙여넣어 보내세요.'
+        : '레포트 내용을 복사했어요. 카톡 대화창에 붙여넣어 보내세요.')
+    } catch (e) {
+      if (e?.name !== 'AbortError') alert('공유 실패: ' + (e?.message || e))
     }
   }
 

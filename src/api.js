@@ -34,4 +34,5 @@ export const api = {
   adminUpdate: (adminToken, course, name, op) => call('admin-update', { adminToken, course, name, op }),
   adminSetPassword: (adminToken, course, name, newPassword) => call('admin-set-password', { adminToken, course, name, newPassword }),
   adminScores: (adminToken) => call('admin-scores', { adminToken }),
+  saveReport: (adminToken, html) => call('save-report', { adminToken, html }),
 }
