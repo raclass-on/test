@@ -1,4 +1,4 @@
-// 백엔드(Netlify Function /api) 호출 클라이언트
+// 백엔드(Vercel 서버리스 함수 /api) 호출 클라이언트
 const ENDPOINT = '/api'
 
 async function call(action, payload = {}) {

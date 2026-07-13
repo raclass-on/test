@@ -21,16 +21,17 @@
 ## 아키텍처
 
 - **프론트엔드**: React + Vite (모바일 최적화). `src/` 아래 컴포넌트.
-- **백엔드**: Netlify Functions (`netlify/functions/api.mjs`) — 가입/로그인/점수/어드민 API.
-- **저장소**: Netlify Blobs (무설정). 학생 계정·점수를 서버에 저장.
+- **백엔드**: Vercel 서버리스 함수 (`api/index.js`) — 가입/로그인/점수/어드민 API.
+- **저장소**: Upstash Redis (Vercel 연동). 학생 계정·점수를 서버에 저장.
 - **인증**: 비밀번호는 솔트 해시로 저장, 세션은 HMAC 토큰.
 
-## 환경변수 (Netlify)
+## 환경변수 (Vercel)
 
 | 변수 | 설명 |
 |---|---|
 | `ADMIN_PASSWORD` | 어드민(선생님) 로그인 비밀번호 |
 | `AUTH_SECRET` | 세션 토큰 서명용 시크릿(랜덤 문자열) |
+| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | Upstash Redis 연동값 (별칭 `UPSTASH_REDIS_REST_URL` / `_TOKEN` 도 지원) |
 
 ## 문제 내용 수정
 
@@ -42,6 +43,6 @@
 
 ```bash
 npm install
-npm run dev      # 개발 서버 (백엔드 함수는 `netlify dev` 필요)
+npm run dev      # 개발 서버 (백엔드 함수는 `vercel dev` 필요)
 npm run build    # 프로덕션 빌드
 ```
