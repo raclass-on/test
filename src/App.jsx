@@ -60,6 +60,25 @@ export default function App() {
     }
   }, [inSessionKey])
 
+  // 어드민(선생님) 화면에서 브라우저 뒤로가기 → 사이트를 벗어나지 않고 홈(로그인/랜딩)으로.
+  // (SPA라 히스토리 항목이 하나뿐이라, 어드민에서 뒤로가기를 누르면 사이트 자체를 벗어나던 문제 해결)
+  useEffect(() => {
+    if (!adminToken) return
+    window.history.pushState({ raclassAdmin: true }, '')
+    let poppedByBack = false
+    const onPop = () => {
+      poppedByBack = true
+      setAdminToken(null)
+      sessionStorage.removeItem('adminToken')
+    }
+    window.addEventListener('popstate', onPop)
+    return () => {
+      window.removeEventListener('popstate', onPop)
+      // 로그아웃 버튼 등으로 나간 경우, 쌓아둔 히스토리 항목을 되돌려 정리
+      if (!poppedByBack) window.history.back()
+    }
+  }, [adminToken])
+
   const loginStudent = (u) => {
     setStudent(u)
     setRecords(u.scores || {})
