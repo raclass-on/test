@@ -2717,7 +2717,7 @@ export const courses = [
             "explain": "'말한다'는 say(says)."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 고르세요.\nI think ___ you did your best.",
+            "q": "빈칸에 알맞은 접속사를 고르세요.\nI think ___ you did well.",
             "options": [
               "what",
               "that",
@@ -2794,7 +2794,7 @@ export const courses = [
             "explain": "과거로 '말했다'는 said."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 고르세요.\nI feel ___ it is fair.",
+            "q": "빈칸에 알맞은 접속사를 고르세요.\nI feel ___ it is fun.",
             "options": [
               "that",
               "what",
@@ -2827,7 +2827,7 @@ export const courses = [
             "explain": "'안다'는 know."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 고르세요.\nShe believes ___ she will pass the exam.",
+            "q": "빈칸에 알맞은 접속사를 고르세요.\nShe believes ___ she will pass the test.",
             "options": [
               "what",
               "if",
@@ -2915,16 +2915,16 @@ export const courses = [
             "explain": "주어가 My teacher이므로 know는 knows."
           },
           {
-            "q": "빈칸에 알맞은 동사를 쓰세요.\nI ___ that it is fair.",
-            "ko": "나는 그것이 공정하다고 느낀다.",
+            "q": "빈칸에 알맞은 동사를 쓰세요.\nI ___ that it is fun.",
+            "ko": "나는 그것이 재미있다고 느낀다.",
             "answers": [
               "feel"
             ],
             "explain": "'느낀다'는 feel."
           },
           {
-            "q": "빈칸에 알맞은 접속사를 쓰세요.\nI know ___ you did your best.",
-            "ko": "나는 네가 최선을 다했다는 것을 안다.",
+            "q": "빈칸에 알맞은 접속사를 쓰세요.\nI know ___ you did well.",
+            "ko": "나는 네가 잘했다는 것을 안다.",
             "answers": [
               "that"
             ],
