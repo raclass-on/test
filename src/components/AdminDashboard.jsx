@@ -8,6 +8,19 @@ import Stars from './Stars'
 const courseName = (id) => courses.find((c) => c.id === id)?.name || id
 const unitsOf = (id) => courses.find((c) => c.id === id)?.units || []
 
+// 문제 텍스트: 지시문(한글) + 영어문장 줄바꿈 표시
+function QLines({ q }) {
+  const s = String(q ?? '')
+  const nl = s.indexOf('\n')
+  if (nl < 0) return <div className="rd-wrong-q">{s}</div>
+  return (
+    <div className="rd-wrong-q">
+      {s.slice(0, nl)}
+      <span className="rd-wrong-q-en">{s.slice(nl + 1)}</span>
+    </div>
+  )
+}
+
 export default function AdminDashboard({ adminToken, onExitHome }) {
   const [tab, setTab] = useState('승인 관리')
   const [students, setStudents] = useState([])
@@ -359,6 +372,18 @@ function StudentReport({ selected, onBack, adminToken }) {
   const done = units.filter((u) => selected.scores[u.id]?.best) // 기록이 있는(완료한) 유닛
   // 레포트/카톡에 넣을 유닛 선택 (기본: 완료한 유닛 전체)
   const [picked, setPicked] = useState(() => new Set(done.map((u) => u.id)))
+  // 선생님 메모(숙제·안내) — 레포트에 함께 실림
+  const [memo, setMemo] = useState('')
+  // 틀린 문제 포함 여부(기본 켜짐) + 서버에서 불러온 오답
+  const [includeWrongs, setIncludeWrongs] = useState(true)
+  const [wrongs, setWrongs] = useState([])
+  useEffect(() => {
+    let alive = true
+    api.adminWrongs(adminToken, selected.course, selected.name)
+      .then((r) => { if (alive) setWrongs(Array.isArray(r.wrongs) ? r.wrongs : []) })
+      .catch(() => {})
+    return () => { alive = false }
+  }, [adminToken, selected.course, selected.name])
   const toggle = (id) =>
     setPicked((prev) => {
       const n = new Set(prev)
@@ -376,6 +401,25 @@ function StudentReport({ selected, onBack, adminToken }) {
   const avgPct = chosen.length
     ? Math.round(chosen.reduce((s, u) => s + (selected.scores[u.id].best.percent || 0), 0) / chosen.length)
     : 0
+  // 선택된 유닛 안에서 아직 남아있는 오답을 실제 문제로 해석
+  const wrongByUnit = chosen
+    .map((u) => {
+      const items = wrongs
+        .filter((w) => w.unitId === u.id)
+        .map((w) => {
+          const src = w.type === 'mc' ? u.mc?.[w.no] : u.sa?.[w.no]
+          if (!src) return null
+          const correct = w.type === 'mc' ? src.options[src.answer] : src.answers.join(' / ')
+          const given = w.type === 'mc' ? (src.options[w.given] ?? '(무응답)') : (w.given || '(무응답)')
+          return { key: `${w.type}-${w.no}`, q: src.q, correct, given, explain: src.explain, type: w.type }
+        })
+        .filter(Boolean)
+      return { unit: u, items }
+    })
+    .filter((g) => g.items.length > 0)
+  const wrongTotal = wrongByUnit.reduce((s, g) => s + g.items.length, 0)
+  const showWrongs = includeWrongs && wrongTotal > 0
+
   const now = new Date()
   const dateStr = `${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()}.`
 
@@ -396,6 +440,7 @@ function StudentReport({ selected, onBack, adminToken }) {
       `✔️진행완료 ${done.length}주 /${units.length}주 유닛`,
       `✔️평균 정답률 : ${avgPct}%`,
       `✔️종합 : ${'★'.repeat(avgStars)}${'☆'.repeat(5 - avgStars)}`,
+      ...(memo.trim() ? ['', '📌 선생님 메모/숙제', memo.trim()] : []),
     ].join('\n')
 
   // 카톡 카드에 넣을 짧은 요약 (200자 제한)
@@ -406,6 +451,36 @@ function StudentReport({ selected, onBack, adminToken }) {
   // 웹에 게시할 "전체 레포트" HTML (버튼을 누르면 열림 — 잘림 없이 전체)
   const buildReportHtml = () => {
     const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+    // 문제 지시문(한글) + 영어문장 줄바꿈 표시
+    const qHtml = (q) => {
+      const s = String(q ?? '')
+      const nl = s.indexOf('\n')
+      if (nl < 0) return esc(s)
+      return `${esc(s.slice(0, nl))}<br><span style="font-weight:700;color:#1f2937;">${esc(s.slice(nl + 1))}</span>`
+    }
+    // 선생님 메모(숙제·안내) 박스
+    const memoHtml = memo.trim()
+      ? `<div style="background:#fff;padding:0 32px;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
+    <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px 16px;margin-bottom:6px;">
+      <div style="font-size:12px;font-weight:800;color:#b45309;margin-bottom:6px;">📌 선생님 메모 · 숙제 안내</div>
+      <div style="font-size:13px;color:#374151;line-height:1.7;white-space:pre-wrap;">${esc(memo.trim())}</div>
+    </div>
+  </div>`
+      : ''
+    // 틀린 문제 다시 보기 섹션
+    const wrongHtml = showWrongs
+      ? `<div style="background:#fff;padding:8px 32px 28px;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
+    <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;font-weight:700;margin:14px 0;">틀린 문제 다시 보기 · ${wrongTotal}문제</div>
+    ${wrongByUnit.map((g) => `
+    <div style="font-size:13px;font-weight:800;color:#1f2937;margin:12px 0 8px;">${esc(g.unit.title)} <span style="color:#9ca3af;font-weight:600;">· ${g.items.length}문제</span></div>
+    ${g.items.map((it) => `<div style="padding:12px 14px;background:#f9fafb;border-radius:10px;margin-bottom:8px;border-left:4px solid #dc2626;">
+      <div style="font-size:12px;color:#dc2626;font-weight:700;margin-bottom:4px;">${it.type === 'mc' ? '객관식' : '주관식'}</div>
+      <div style="font-size:13px;color:#374151;line-height:1.6;">${qHtml(it.q)}</div>
+      <div style="font-size:12px;margin-top:6px;"><span style="color:#dc2626;">내 답: ${esc(it.given)}</span> &nbsp;·&nbsp; <span style="color:#0d9488;font-weight:700;">정답: ${esc(it.correct)}</span></div>
+      ${it.explain ? `<div style="font-size:12px;color:#6b7280;margin-top:5px;">💬 ${esc(it.explain)}</div>` : ''}
+    </div>`).join('')}`).join('')}
+  </div>`
+      : ''
     const rows = chosen.map((u) => {
       const b = selected.scores[u.id].best
       const c = b.percent >= 75 ? '#0d9488' : b.percent >= 50 ? '#ea580c' : '#dc2626'
@@ -438,6 +513,8 @@ function StudentReport({ selected, onBack, adminToken }) {
     <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;font-weight:700;margin:14px 0;">유닛별 성취</div>
     ${rows}
   </div>
+  ${memoHtml}
+  ${wrongHtml}
   <div style="background:#f9fafb;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 16px 16px;padding:16px 32px;display:flex;justify-content:space-between;font-size:11px;color:#9ca3af;"><span>레이첼 영어학원 · 문법 특강</span><span>${dateStr}</span></div>
   <p style="text-align:center;font-size:11px;color:#9ca3af;margin-top:14px;">※ 점수는 각 유닛 최고 기록 기준입니다.</p>
 </div></body></html>`
@@ -500,6 +577,24 @@ function StudentReport({ selected, onBack, adminToken }) {
         )}
       </div>
 
+      <div className="unit-pick no-print">
+        <div className="unit-pick-head">
+          <span className="unit-pick-title">선생님 메모 · 숙제 안내</span>
+          <span className="muted small">부모님께 보이는 레포트에 함께 실려요</span>
+        </div>
+        <textarea
+          className="report-memo"
+          rows={3}
+          value={memo}
+          onChange={(e) => setMemo(e.target.value)}
+          placeholder="예) 이번 주 숙제: 워크북 12~15p 풀어오기. 지각동사 유닛 한 번 더 복습해요!"
+        />
+        <label className="report-wrong-toggle">
+          <input type="checkbox" checked={includeWrongs} onChange={(e) => setIncludeWrongs(e.target.checked)} />
+          <span>틀린 문제 함께 보여주기 {wrongTotal > 0 ? `(${wrongTotal}문제)` : '(남은 오답 없음)'}</span>
+        </label>
+      </div>
+
       <p className="admin-empty no-print" style={{ marginTop: 0 }}>
         선택한 유닛만 아래 레포트·PDF·카톡에 담겨요. 버튼을 누르면 인쇄창이 열리고, 프린터를 <b>‘PDF로 저장’</b>으로 선택하면 PDF로 저장됩니다.
       </p>
@@ -543,6 +638,35 @@ function StudentReport({ selected, onBack, adminToken }) {
           <div><span className="rd-label">평균 정답률</span><span className="rd-val">{avgPct}%</span></div>
           <div><span className="rd-label">종합 별점</span><span className="rd-val rd-star">{'★'.repeat(avgStars)}{'☆'.repeat(5 - avgStars)} <span style={{ color: '#111827' }}>({avgStars}/5)</span></span></div>
         </div>
+
+        {memo.trim() && (
+          <div className="rd-memo">
+            <div className="rd-memo-title">📌 선생님 메모 · 숙제 안내</div>
+            <div className="rd-memo-body">{memo.trim()}</div>
+          </div>
+        )}
+
+        {showWrongs && (
+          <div className="rd-wrongs">
+            <div className="rd-wrongs-title">틀린 문제 다시 보기 · {wrongTotal}문제</div>
+            {wrongByUnit.map((g) => (
+              <div key={g.unit.id} className="rd-wrong-unit">
+                <div className="rd-wrong-unit-title">{g.unit.title} <span className="muted small">· {g.items.length}문제</span></div>
+                {g.items.map((it) => (
+                  <div key={it.key} className="rd-wrong-item">
+                    <div className="rd-wrong-badge">{it.type === 'mc' ? '객관식' : '주관식'}</div>
+                    <QLines q={it.q} />
+                    <div className="rd-wrong-ans">
+                      <span className="rd-wrong-given">내 답: {it.given}</span>
+                      <span className="rd-wrong-correct">정답: {it.correct}</span>
+                    </div>
+                    {it.explain && <div className="rd-wrong-explain">💬 {it.explain}</div>}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="report-doc-foot">※ 점수는 각 유닛 최고 기록 기준입니다. · 레이첼 영어학원</div>
       </div>

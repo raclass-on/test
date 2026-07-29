@@ -366,6 +366,37 @@ body {
 .rd-val { font-size: 1rem; font-weight: 700; color: #111827; }
 .report-doc-comment { margin-top: 14px; }
 .rd-comment-box { border: 1px dashed var(--border); border-radius: 8px; height: 70px; margin-top: 4px; }
+
+/* 레포트 입력: 선생님 메모칸 + 틀린 문제 토글 */
+.report-memo {
+  width: 100%; box-sizing: border-box; resize: vertical; min-height: 64px;
+  border: 2px solid var(--border); border-radius: 10px; padding: 10px 12px;
+  font-family: inherit; font-size: 0.9rem; line-height: 1.6; color: var(--text);
+  background: var(--bg);
+}
+.report-memo:focus { outline: none; border-color: var(--primary); }
+.report-wrong-toggle { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+.report-wrong-toggle input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+
+/* 레포트 문서: 메모 박스 */
+.rd-memo { margin-top: 14px; padding: 12px 14px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; }
+.rd-memo-title { font-size: 0.78rem; font-weight: 800; color: #b45309; margin-bottom: 5px; }
+.rd-memo-body { font-size: 0.86rem; color: #374151; line-height: 1.7; white-space: pre-wrap; }
+
+/* 레포트 문서: 틀린 문제 */
+.rd-wrongs { margin-top: 18px; }
+.rd-wrongs-title { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9ca3af; font-weight: 800; margin-bottom: 8px; }
+.rd-wrong-unit { margin-bottom: 10px; }
+.rd-wrong-unit-title { font-size: 0.9rem; font-weight: 800; color: #1f2937; margin: 10px 0 6px; }
+.rd-wrong-item { padding: 10px 12px; background: #f9fafb; border-radius: 8px; margin-bottom: 7px; border-left: 4px solid #dc2626; page-break-inside: avoid; }
+.rd-wrong-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; color: #dc2626; margin-bottom: 4px; }
+.rd-wrong-q { font-size: 0.86rem; color: #374151; line-height: 1.6; }
+.rd-wrong-q-en { display: block; font-weight: 700; color: #1f2937; margin-top: 2px; }
+.rd-wrong-ans { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; font-size: 0.82rem; }
+.rd-wrong-given { color: #dc2626; }
+.rd-wrong-correct { color: #0d9488; font-weight: 700; }
+.rd-wrong-explain { font-size: 0.8rem; color: #6b7280; margin-top: 5px; }
+
 .report-doc-foot { margin-top: 16px; font-size: 0.72rem; color: var(--text-muted); text-align: center; }
 
 @media print {

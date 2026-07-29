@@ -318,6 +318,16 @@ export default async function handler(req, res) {
         return res.status(200).json({ ok: true })
       }
 
+      // ── 어드민: 특정 학생 오답 조회(레포트용) ────────
+      case 'admin-wrongs': {
+        if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
+        const db = getRedis()
+        const { course, name } = body
+        if (!course || !name) return res.status(400).json({ error: 'bad request' })
+        const wrongs = (await db.get(wKey(course, name))) || []
+        return res.status(200).json({ ok: true, wrongs: Array.isArray(wrongs) ? wrongs : [] })
+      }
+
       // ── 어드민: 전체 점수 조회 ──────────────────────
       case 'admin-scores': {
         if (!isAdmin(body.adminToken)) return res.status(401).json({ error: 'auth' })
