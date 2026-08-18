@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>빈칸추론 Chapter 01 — 문항별 강의 정리 노트</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+    background:#fff; color:#1e2430; width:210mm; margin:0 auto;
+  }
+  .page { padding:9mm 12mm 8mm; page-break-after:always; }
+  .page:last-child { page-break-after:auto; }
+
+  .doc-header {
+    background:#1f2d4e; color:#fff; border-radius:14px;
+    padding:22px 28px; margin-bottom:18px;
+  }
+  .doc-header .kicker { font-size:13px; letter-spacing:2px; color:#9db4e8; font-weight:700; }
+  .doc-header h1 { font-size:22px; margin-top:6px; font-weight:800; }
+  .doc-header .meta { margin-top:8px; font-size:13px; color:#c7d4f2; }
+
+  .overview { border:1px solid #d8dfeb; border-radius:12px; overflow:hidden; margin-bottom:16px; }
+  .overview table { width:100%; border-collapse:collapse; font-size:13px; }
+  .overview th { background:#f0f3f9; color:#1f2d4e; font-weight:800; padding:9px 10px; border-bottom:1px solid #d8dfeb; text-align:left; }
+  .overview td { padding:8px 10px; border-bottom:1px solid #edf1f7; vertical-align:top; }
+  .overview tr:last-child td { border-bottom:none; }
+  .ans { font-weight:800; color:#1a7f4b; }
+
+  .intro-note {
+    font-size:12.5px; line-height:1.7; background:#fffbea; border:1px solid #f0e2ad;
+    border-radius:10px; padding:12px 16px;
+  }
+
+  .q-head {
+    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+    padding-bottom:9px; border-bottom:2px solid #1f2d4e; margin-bottom:11px;
+  }
+  .q-num {
+    background:#1f2d4e; color:#fff; font-weight:800; font-size:16px;
+    padding:6px 14px; border-radius:8px;
+  }
+  .badge { font-size:12px; font-weight:700; padding:5px 11px; border-radius:999px; }
+  .b-type { background:#e8effc; color:#2456b8; }
+  .b-ans  { background:#e6f6ec; color:#1a7f4b; }
+  .b-src  { background:#f3f0fb; color:#6b4fb8; }
+  .b-diff { background:#fdecec; color:#c03434; }
+
+  .sec { margin-bottom:8px; }
+  .sec-title {
+    display:flex; align-items:center; gap:8px;
+    font-size:13.5px; font-weight:800; margin-bottom:5px;
+  }
+  .sec-title .no {
+    width:21px; height:21px; border-radius:6px; color:#fff;
+    font-size:12px; display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .sec-body {
+    font-size:12.3px; line-height:1.56; background:#f7f9fc;
+    border:1px solid #e3e9f2; border-radius:10px; padding:9px 13px;
+  }
+  .c1 .no{background:#2456b8;} .c1 .t{color:#2456b8;}
+  .c2 .no{background:#0e8a6d;} .c2 .t{color:#0e8a6d;}
+  .c3 .no{background:#b8762a;} .c3 .t{color:#b8762a;}
+  .c4 .no{background:#c03434;} .c4 .t{color:#c03434;}
+  .c5 .no{background:#6b4fb8;} .c5 .t{color:#6b4fb8;}
+
+  .sent { font-family:Georgia, serif; font-size:12.8px; color:#12203c; }
+  .chunk { color:#2456b8; font-weight:700; }
+  .gloss { color:#5d6b82; font-size:12px; margin-bottom:6px; }
+  .arrow { color:#0e8a6d; font-weight:700; }
+  ul, ol { padding-left:19px; }
+  li { margin:1.5px 0; }
+  .tag { font-weight:700; color:#12203c; }
+  .wrong { color:#c03434; font-weight:700; }
+  .right { color:#1a7f4b; font-weight:800; }
+  .tip-box { background:#fffbea; border:1px solid #f0e2ad; }
+  .memo { background:#fff; border:1.5px dashed #b7c3d6; color:#8b98ad; min-height:26px; }
+  .divide { border-top:1px solid #dbe3ee; margin:6px 0; }
+  .sec, .q-head { page-break-inside:avoid; }
+  @page { size:A4; margin:0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== 표지 / 개요 ===================== -->
+<div class="page">
+  <div class="doc-header">
+    <div class="kicker">고등부 수업 준비 · 강의 정리 노트</div>
+    <h1>빈칸추론 Chapter 01 — 문항별 정리 (예제 + 01~04)</h1>
+    <div class="meta">교재: V빈칸 · 정리일: 2026-08-18 · 총 5문항 · 기출: 평가원 4 / 교육청 1</div>
+  </div>
+
+  <div class="overview">
+    <table>
+      <tr><th style="width:12%">문항</th><th style="width:20%">출처</th><th style="width:10%">정답</th><th>핵심 한 줄</th></tr>
+      <tr><td><b>예제</b></td><td>2020.06 평가원 34</td><td class="ans">②</td><td>보는 것 = 기대하는 것 → 뇌는 마음속 이미지를 세상에 투영한다</td></tr>
+      <tr><td><b>01</b></td><td>2009.09 평가원 28</td><td class="ans">⑤</td><td>사적 삶을 준 기술이 감시도 가능케 함 → 자유로움 = 벌거벗음(fishbowl)</td></tr>
+      <tr><td><b>02</b></td><td>2018.04 교육청 33</td><td class="ans">②</td><td>마가린 착색의 목적 = deception → 소비자 행동 조작(manipulate)</td></tr>
+      <tr><td><b>03</b></td><td>2021.09 평가원 32</td><td class="ans">②</td><td>실패 피드백 → TV 오래 시청 → 주의분산으로 고통스러운 자기인식 회피</td></tr>
+      <tr><td><b>04</b></td><td>2011.09 평가원 27</td><td class="ans">①</td><td>정보 과잉 → 과부하·결정 회피 → 정보 평가의 어려움이 악화</td></tr>
+    </table>
+  </div>
+
+  <div class="intro-note">
+    <b>이 노트의 근거:</b> 교재 지문 + 교재 POINT(V check·V focus·선지분석)를 기반으로 정리했습니다.
+    강의 스크립트를 주시면 각 문항의 "풀이 순서"와 "조언·팁"에 강사의 실제 멘트·타임코드를 추가해 업데이트합니다.<br>
+    <b>수업 활용:</b> 각 문항 카드는 ① 독해 흐름 → ② 구문분석 → ③ 풀이 순서 → ④ 선지 분석 → ⑤ 팁 순서로,
+    판서 흐름 그대로 쓸 수 있게 구성했습니다. 맨 아래 메모란은 반별 적용 사항 기록용입니다.
+  </div>
+</div>
+
+<!-- ===================== 예제 ===================== -->
+<div class="page">
+  <div class="q-head">
+    <span class="q-num">예제</span>
+    <span class="badge b-src">2020.06 평가원 34</span>
+    <span class="badge b-type">유형 · 빈칸추론 (빈칸 = 마지막 문장)</span>
+    <span class="badge b-ans">정답 ②</span>
+    <span class="badge b-diff">기본기 점검용</span>
+  </div>
+
+  <div class="sec c1">
+    <div class="sec-title"><span class="no">1</span><span class="t">지문 독해 — 글의 흐름 한눈에</span></div>
+    <div class="sec-body">
+      <b>주제:</b> 우리가 보는 것의 대부분은 우리가 <b>기대하는 것</b>이다 (첫 문장 = 주제문)<br>
+      <b>전개:</b> 주제 제시(see = expect to see) <span class="arrow">→</span> 예시 1: 모닥불·구름에서 얼굴을 "본다"
+      <span class="arrow">→</span> 예시 2: 다빈치 — 빈 벽의 얼룩을 응시해 모티프를 찾으라
+      <span class="arrow">→</span> 대조 구체화: 불(끊임없이 변하는 시각 정보 → 뇌가 가설 놀이) vs 벽(단서 부족 → 뇌가 더 많은 가설 + 필사적 확인)
+      <span class="arrow">→</span> 예시 3: 벽의 금 → 코 옆모습 → 얼굴·말·춤추는 사람 <span class="arrow">→</span> 결론(빈칸): 이런 경우 뇌의 시각 전략은 ___<br>
+      <b>교재 강조(V focus):</b> 철학적·고난도 문항의 사고력을 기르기 전에, 이 정도 수준은 <b>단순 이해</b>가 되어야 하는 기준 문항.
+      첫 문장 이후는 전부 같은 내용의 <b>재진술</b>이다.
+    </div>
+  </div>
+
+  <div class="sec c2">
+    <div class="sec-title"><span class="no">2</span><span class="t">구문분석 — 핵심 문장 끊어읽기</span></div>
+    <div class="sec-body">
+      <div class="sent">A large part / <span class="chunk">of what we see</span> / is / <span class="chunk">what we expect</span> to see.</div>
+      <div class="gloss">대부분은 / 우리가 보는 것의 / 이다 / 우리가 보기를 기대하는 것</div>
+      <ul>
+        <li><span class="tag">what 명사절</span> — 전치사 of의 목적어(what we see), 보어(what we expect to see)로 두 번 사용</li>
+      </ul>
+      <div class="divide"></div>
+      <div class="sent">A fire provides / a constant flickering change in visual information / <span class="chunk">that never integrates</span> into anything solid / and <span class="chunk">thereby allows</span> the brain / <span class="chunk">to engage in</span> a play of hypotheses.</div>
+      <div class="gloss">불은 제공한다 / 시각 정보의 끊임없이 흔들리는 변화를 / 결코 단단한 어떤 것으로도 통합되지 않는 / 그리고 그렇게 함으로써 뇌가 ~하게 해 준다 / 가설 놀이에 참여하도록</div>
+      <ul>
+        <li><span class="tag">that 주격 관계절</span> — 선행사는 a constant flickering change (단수 → integrates)</li>
+        <li><span class="tag">provides ~ and allows</span> — 동사 병렬 / <span class="tag">allow + O + to-V</span> 5형식</li>
+        <li><span class="tag">thereby</span> — "그렇게 함으로써" (앞 내용 전체를 원인으로 받음)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec c3">
+    <div class="sec-title"><span class="no">3</span><span class="t">풀이 순서 — 접근법</span></div>
+    <div class="sec-body">
+      <ol>
+        <li>첫 문장에서 등식을 세운다: <b>see = expect to see</b> (이후 문장은 전부 이 등식의 재진술)</li>
+        <li>불 vs 벽 대조(On the other hand)에서 이해를 구체화 — 벽은 단서가 없어서 <b>오히려</b> 뇌가 더 많은 가설을 만든다</li>
+        <li>빈칸 문장의 <b>In cases like these</b> — 지시어가 앞의 사례 전부를 받으므로, 빈칸 = 지금까지 내용의 총정리</li>
+        <li>정답이 명확히 "떠오르기"를 기다리지 말고, 내용 이해를 기준으로 <b>선지 소거</b>로 푼다 (교재 강조)</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec c4">
+    <div class="sec-title"><span class="no">4</span><span class="t">선지 분석 — 오답이 오답인 이유</span></div>
+    <div class="sec-body">
+      ① <span class="wrong">무언급</span> — "방해 정보 무시"는 지문에 나온 적 없음<br>
+      <span class="right">② 정답 — 마음속 이미지를 세상 밖으로 투영(projecting images from within the mind out onto the world) = 불·벽을 보며 기대하는 것을 형상화해 사물에 입히는 과정 그 자체</span><br>
+      ③ <span class="wrong">무언급</span> — "실제/상상 그룹으로 분류(categorizing)"는 나온 적 없는 정보<br>
+      ④ <span class="wrong">방향 왜곡</span> — 현실 사물<b>끼리</b>의 연결이 아니라, 현실 사물과 <b>내 머릿속 이미지</b>의 연결임<br>
+      ⑤ <span class="wrong">무관</span> — 원본 이미지의 깨진 부분 복원은 전혀 다른 이야기
+    </div>
+  </div>
+
+  <div class="sec c5">
+    <div class="sec-title"><span class="no">5</span><span class="t">조언 · 팁</span></div>
+    <div class="sec-body tip-box">
+      학생 지도 포인트: 빈칸 유형에서 "머릿속에 답 문장이 안 떠올라요"라는 학생에게 —
+      <b>떠올리는 게 아니라 소거하는 것</b>임을 이 문항으로 보여주기 좋다.
+      또한 다빈치 문장을 처음에 이해 못 해도 괜찮다는 점(뒤의 대조에서 이해됨)을 짚어,
+      <b>모르는 문장은 보류하고 진행하는 습관</b>을 훈련시킬 것.
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no" style="background:#8b98ad">＋</span><span style="color:#8b98ad">수업 활용 메모</span></div>
+    <div class="sec-body memo"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 01 ===================== -->
+<div class="page">
+  <div class="q-head">
+    <span class="q-num">문항 01</span>
+    <span class="badge b-src">2009.09 평가원 28</span>
+    <span class="badge b-type">유형 · 빈칸추론 (빈칸 = 마지막 문장)</span>
+    <span class="badge b-ans">정답 ⑤</span>
+    <span class="badge b-diff">비유 해석형</span>
+  </div>
+
+  <div class="sec c1">
+    <div class="sec-title"><span class="no">1</span><span class="t">지문 독해 — 글의 흐름 한눈에</span></div>
+    <div class="sec-body">
+      <b>주제:</b> 우리를 자유롭게(사적으로) 만들어 준 기술이 동시에 우리를 노출시킨다<br>
+      <b>전개:</b> 풍요·단독주택·TV·컴퓨터 <span class="arrow">→</span> 이전 세대는 상상 못 할 <b>사적인 삶(private lives)</b> 가능(이웃·대중교통·극장 사례)
+      <span class="arrow">→</span> <b>However</b> 대반전: 우리를 군중에서 분리해 준 바로 그 기술이 <b>감시·기록(monitor and record)</b>도 가능케 함
+      <span class="arrow">→</span> 모르는 다수가 우리에 대해 무언가를 안다
+      <span class="arrow">→</span> 해방시켜 줄 것이라던 기술 = 정보 고속도로인 만큼이나 <b>어항(fishbowl)</b>
+      <span class="arrow">→</span> 결론(빈칸): 현대사회에서 우리가 발견한 것 = ___<br>
+      <b>교재 강조(V check):</b> 전반부 = private lives 확산의 재진술 / However 이후 = monitor and record의 재진술 — 글이 딱 두 덩어리.
+    </div>
+  </div>
+
+  <div class="sec c2">
+    <div class="sec-title"><span class="no">2</span><span class="t">구문분석 — 핵심 문장 끊어읽기</span></div>
+    <div class="sec-body">
+      <div class="sent">However, / the same technologies / <span class="chunk">that help separate us</span> from the crowds / also <span class="chunk">make it possible</span> / <span class="chunk">to monitor and record</span> our behaviors.</div>
+      <div class="gloss">그러나 / 바로 그 기술이 / 우리를 군중으로부터 분리하는 것을 돕는 / 또한 가능하게 만든다 / 우리의 행동을 감시하고 기록하는 것을</div>
+      <ul>
+        <li><span class="tag">the same ~ that ...</span> — "...한 바로 그 ~" / <span class="tag">help (to) separate</span> — help + 원형부정사</li>
+        <li><span class="tag">make it possible to-V</span> — 가목적어 it, 진목적어 to부정사 (모니터링과 기록이 병렬)</li>
+      </ul>
+      <div class="divide"></div>
+      <div class="sent">The very technology / <span class="chunk">that was supposed to free us</span> from mass society / <span class="chunk">has turned out to be</span> / <span class="chunk">as much a fishbowl as</span> an information highway.</div>
+      <div class="gloss">바로 그 기술이 / 우리를 대중사회로부터 해방시켜 줄 것으로 여겨졌던 / ~인 것으로 판명되었다 / 정보 고속도로인 만큼이나 어항인 것으로</div>
+      <ul>
+        <li><span class="tag">the very + 명사</span> — "다름 아닌 바로 그" (강조) / <span class="tag">be supposed to-V</span> — ~하기로 되어 있다</li>
+        <li><span class="tag">turn out to be</span> — ~로 판명되다 / <span class="tag">as much A as B</span> — B인 만큼이나 A인</li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec c3">
+    <div class="sec-title"><span class="no">3</span><span class="t">풀이 순서 — 접근법</span></div>
+    <div class="sec-body">
+      <ol>
+        <li>빈칸이 마지막 문장 → <b>결론 = 글 전체 요약</b>임을 확인하고 읽기 시작</li>
+        <li>However 앞뒤로 글을 두 덩어리로 나눈다: <b>자유·사생활</b> ↔ <b>감시·노출</b></li>
+        <li>fishbowl 비유를 추상어로 번역한다: 어항 속 물고기 = <b>훤히 들여다보이는 존재</b></li>
+        <li>빈칸에는 두 덩어리가 <b>모두</b> 담긴 선지가 와야 함 — 자유(free) + 노출(naked)</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec c4">
+    <div class="sec-title"><span class="no">4</span><span class="t">선지 분석 — 오답이 오답인 이유</span></div>
+    <div class="sec-body">
+      ① <span class="wrong">반대 진술</span> — 혼잡 없이 이동할 수 있게 되었다고 했음 (지문 표현 crowding 재활용 함정)<br>
+      ② <span class="wrong">무관</span> — 자연환경으로부터의 독립은 소재 자체가 없음<br>
+      ③ <span class="wrong">무언급</span> — 풍요의 확산에 대한 "무관심"은 나온 적 없음 (prosperity 단어만 재활용)<br>
+      ④ <span class="wrong">무관</span> — 협력과 잘못된 결론은 전혀 다른 이야기<br>
+      <span class="right">⑤ 정답 — being free often means also being naked: free = 사적인 삶·해방(전반부), naked = fishbowl 속 노출(후반부). 두 덩어리를 모두 담은 유일한 선지</span>
+    </div>
+  </div>
+
+  <div class="sec c5">
+    <div class="sec-title"><span class="no">5</span><span class="t">조언 · 팁</span></div>
+    <div class="sec-body tip-box">
+      학생 지도 포인트: 정답 ⑤는 지문 단어를 안 쓰고 <b>비유(fishbowl)를 비유(naked)로 받은</b> 선지 — "빈칸 정답은 패러프레이즈"의 극단적 사례.
+      오답 ①③은 지문 단어(crowding, prosperity)를 그대로 쓴 전형적 함정 — "낯익은 단어가 보이면 의심하라."
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no" style="background:#8b98ad">＋</span><span style="color:#8b98ad">수업 활용 메모</span></div>
+    <div class="sec-body memo"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 02 ===================== -->
+<div class="page">
+  <div class="q-head">
+    <span class="q-num">문항 02</span>
+    <span class="badge b-src">2018.04 교육청 33</span>
+    <span class="badge b-type">유형 · 빈칸추론 (빈칸 = 첫 문장)</span>
+    <span class="badge b-ans">정답 ②</span>
+    <span class="badge b-diff">근거 후치형</span>
+  </div>
+
+  <div class="sec c1">
+    <div class="sec-title"><span class="no">1</span><span class="t">지문 독해 — 글의 흐름 한눈에</span></div>
+    <div class="sec-body">
+      <b>주제:</b> 식품업계의 착색(베타카로틴)은 소비자를 속여 행동을 조작하려는 시도다<br>
+      <b>전개:</b> 도입(빈칸): 식품업계가 합성 베타카로틴 같은 색소를 쓰는 것은 ___하기 위한 시도
+      <span class="arrow">→</span> 예시: 마가린 — 원래는 흰색에 기름진 맛인데, 베타카로틴을 넣어 버터처럼 보이고 더 크리미해 보이게 함
+      <span class="arrow">→</span> 역사적 근거: 1895년 Petersen 강연 — "왜 마가린을 버터색으로 물들이는가? 답은 하나,
+      사람들이 <b>버터를 먹고 있다고 믿게</b> 하려는 것"
+      <span class="arrow">→</span> 결정타: 무해하다고 해도 그것은 <b>"기만(deception)의 목적"</b>으로 행해진 것<br>
+      <b>교재 강조(V check):</b> 빈칸 문장의 in an attempt to ~ = "~하기 위하여"(인과관계) / <b>마지막 문장이 핵심</b> / 키워드 manipulate.
+    </div>
+  </div>
+
+  <div class="sec c2">
+    <div class="sec-title"><span class="no">2</span><span class="t">구문분석 — 핵심 문장 끊어읽기</span></div>
+    <div class="sec-body">
+      <div class="sent">The addition of beta-carotene / <span class="chunk">makes margarine look</span> more like butter, / and it <span class="chunk">appears creamier</span> / <span class="chunk">than it really is</span>.</div>
+      <div class="gloss">베타카로틴의 첨가는 / 마가린이 더 버터처럼 보이게 만든다 / 그리고 그것은 더 크리미해 보인다 / 실제보다</div>
+      <ul>
+        <li><span class="tag">make + O + 동사원형(look)</span> — 사역동사 5형식 / <span class="tag">appear + 형용사</span> — 2형식 (~해 보이다)</li>
+        <li><span class="tag">than it really is</span> — 비교급 + 실제와의 대비 ("실제보다 ~하게") — 기만의 뉘앙스가 문법에 이미 들어 있음</li>
+      </ul>
+      <div class="divide"></div>
+      <div class="sent">the only possible answer to that question is / <span class="chunk">because it is believed that</span> / it will <span class="chunk">make people think</span> / <span class="chunk">that they are in fact consuming</span> butter.</div>
+      <div class="gloss">그 질문에 대한 유일하게 가능한 답은 ~이다 / ~라고 믿어지기 때문 / 그것이 사람들로 하여금 생각하게 만들 것이라고 / 자신들이 사실은 버터를 먹고 있다고</div>
+      <ul>
+        <li><span class="tag">it is believed that</span> — 가주어 구문 / <span class="tag">make people think that ~</span> — 사역 + that절 (이중 내포)</li>
+        <li><span class="tag">in fact</span> — "사실은" (착각 유도의 핵심어) / that절 안에 that절 — <b>절 속의 절</b> 구조 훈련용</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec c3">
+    <div class="sec-title"><span class="no">3</span><span class="t">풀이 순서 — 접근법</span></div>
+    <div class="sec-body">
+      <ol>
+        <li>빈칸이 <b>첫 문장</b>에 있음 → 근거는 반드시 뒤에 나온다 (예시·인용을 끝까지 읽고 판단)</li>
+        <li>in an attempt to = 목적 표현 → "색소를 쓰는 <b>목적</b>이 무엇인가?"로 질문을 만든다</li>
+        <li>마가린 예시에서 방향을 잡고(버터처럼 보이게), 마지막 문장 <b>"purpose of deception"</b>에서 확정</li>
+        <li>deception(기만)의 패러프레이즈를 선지에서 찾는다 → <b>manipulate(조작하다)</b></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec c4">
+    <div class="sec-title"><span class="no">4</span><span class="t">선지 분석 — 오답이 오답인 이유</span></div>
+    <div class="sec-body">
+      ① <span class="wrong">무관</span> — 제조 공정 단순화는 소재 자체가 없음<br>
+      <span class="right">② 정답 — to manipulate customer behavior: deception(기만) = 소비자가 버터라고 믿게 만들어 구매 행동을 조작하는 것</span><br>
+      ③ <span class="wrong">무관</span> — 부패(spoilage) 최소화는 언급 없음<br>
+      ④ <span class="wrong">무관</span> — 영양 강화는 언급 없음<br>
+      ⑤ <span class="wrong">지엽·왜곡</span> — 맛(taste) 언급은 있지만 색소의 목적은 맛 강화가 아니라 <b>겉모습을 통한 착각 유도</b>
+    </div>
+  </div>
+
+  <div class="sec c5">
+    <div class="sec-title"><span class="no">5</span><span class="t">조언 · 팁</span></div>
+    <div class="sec-body tip-box">
+      학생 지도 포인트: "빈칸이 앞에 있으면 <b>답은 뒤에 있다</b>" 원칙을 심어주는 대표 문항.
+      특히 인용문이 나오면 <b>인용문의 마지막 절</b>이 필자의 결론인 경우가 많음을 짚을 것.
+      deception → manipulate 처럼 지문 핵심어와 선지 정답어를 <b>단어짝(패러프레이즈 페어)</b>으로 정리시키면 어휘 학습과 연결된다.
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no" style="background:#8b98ad">＋</span><span style="color:#8b98ad">수업 활용 메모</span></div>
+    <div class="sec-body memo"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 03 ===================== -->
+<div class="page">
+  <div class="q-head">
+    <span class="q-num">문항 03</span>
+    <span class="badge b-src">2021.09 평가원 32</span>
+    <span class="badge b-type">유형 · 빈칸추론 (빈칸 = 첫 문장 / 실험형)</span>
+    <span class="badge b-ans">정답 ②</span>
+    <span class="badge b-diff">해석력 측정형</span>
+  </div>
+
+  <div class="sec c1">
+    <div class="sec-title"><span class="no">1</span><span class="t">지문 독해 — 글의 흐름 한눈에</span></div>
+    <div class="sec-body">
+      <b>주제:</b> TV 시청 같은 평범한 행동은 주의분산을 통해 고통스러운 자기인식에서 도피하는 수단일 수 있다<br>
+      <b>전개(실험형 4단 구조):</b>
+      <b>가설(빈칸)</b>: TV 시청조차 어떤 사람들에게는 ___하는 방법일 수 있다
+      <span class="arrow">→</span> <b>방법</b>: 참가자에게 시험 성적에 대한 가짜 피드백(성공/실패)을 주고, 홀로 자연 다큐 영상 앞에 남겨둠
+      <span class="arrow">→</span> <b>결과</b>: 실패 피드백을 받은 참가자가 성공 집단보다 영상을 훨씬 오래 시청
+      <span class="arrow">→</span> <b>결론</b>: TV를 통한 주의분산(distraction)이 실패·자기 불일치의 불편감을 효과적으로 완화 /
+      대조: 성공한 참가자는 자기 생각에서 벗어나고 싶은 마음이 거의 없었음<br>
+      <b>교재 강조(V check):</b> 단순 해석력 측정 — <b>실험 스토리 이해</b>가 곧 정답. (mundane: 보통의)
+    </div>
+  </div>
+
+  <div class="sec c2">
+    <div class="sec-title"><span class="no">2</span><span class="t">구문분석 — 핵심 문장 끊어읽기</span></div>
+    <div class="sec-body">
+      <div class="sent"><span class="chunk">Even as mundane a behavior as</span> watching TV / may be a way for some people / to ___.</div>
+      <div class="gloss">TV 시청만큼 평범한 행동조차도 / 어떤 사람들에게는 방법일 수 있다 / ~하는</div>
+      <ul>
+        <li><span class="tag">as + 형용사 + a + 명사 + as</span> — 원급 비교에서 <b>관사의 어순 도치</b> (a mundane behavior → as mundane a behavior as) ★판서 포인트</li>
+        <li><span class="tag">for some people</span> — to부정사의 의미상 주어 / a way to-V: ~하는 방법</li>
+      </ul>
+      <div class="divide"></div>
+      <div class="sent">The researchers concluded / <span class="chunk">that</span> distraction through television viewing / can effectively relieve the discomfort / <span class="chunk">associated with</span> painful failures / or mismatches <span class="chunk">between</span> the self <span class="chunk">and</span> self-guides.</div>
+      <div class="gloss">연구자들은 결론지었다 / TV 시청을 통한 주의분산이 / 불편감을 효과적으로 완화할 수 있다고 / 고통스러운 실패와 연관된 / 또는 자아와 자기지침 사이의 불일치와 (연관된)</div>
+      <ul>
+        <li><span class="tag">associated with</span> — 과거분사의 후치수식 (discomfort를 수식) / <span class="tag">A or B</span> 병렬: failures or mismatches</li>
+        <li>이 결론 문장이 <b>빈칸의 정답 근거</b> — 실험형 지문에서 concluded 뒤가 답이라는 공식 확인</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec c3">
+    <div class="sec-title"><span class="no">3</span><span class="t">풀이 순서 — 접근법</span></div>
+    <div class="sec-body">
+      <ol>
+        <li>빈칸 문장 = 가설 → "To test this idea"가 보이는 순간 <b>실험형 구조(가설–방법–결과–결론)</b>로 전환해 읽는다</li>
+        <li>실험 설계에서 <b>비교 대상</b>을 표시: 실패 피드백 집단 vs 성공 피드백 집단</li>
+        <li>결과의 차이(실패 집단이 오래 시청)에서 방향을 잡고, <b>The researchers concluded that ~</b>에서 확정</li>
+        <li>결론의 핵심어 distraction + relieve discomfort를 담은 선지 선택</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec c4">
+    <div class="sec-title"><span class="no">4</span><span class="t">선지 분석 — 오답이 오답인 이유</span></div>
+    <div class="sec-body">
+      ① <span class="wrong">무관</span> — 또래(peers)의 불편한 말은 소재 자체가 없음<br>
+      <span class="right">② 정답 — escape painful self-awareness through distraction: distraction(지문 그대로) + painful failures/mismatches를 "고통스러운 자기인식"으로 압축한 패러프레이즈</span><br>
+      ③ <span class="wrong">왜곡</span> — 미디어에서 "건설적 피드백"을 받는 게 아니라 피드백에서 <b>도피</b>하는 것<br>
+      ④ <span class="wrong">반대</span> — 주의를 과제로 재집중하는 게 아니라 주의를 <b>분산</b>시키는 것<br>
+      ⑤ <span class="wrong">정반대</span> — 강렬한 자기성찰은 실패 집단이 <b>피하려던 것</b> (self 단어 재활용 함정)
+    </div>
+  </div>
+
+  <div class="sec c5">
+    <div class="sec-title"><span class="no">5</span><span class="t">조언 · 팁</span></div>
+    <div class="sec-body tip-box">
+      학생 지도 포인트: 실험형 지문은 <b>"결론 문장(concluded/suggest/show that ~)이 곧 빈칸의 답"</b>이라는 공식을 세워주기 좋은 문항.
+      ⑤처럼 지문의 self 계열 단어를 재활용하되 방향이 정반대인 선지가 최다 오답이 되는 패턴을 보여줄 것.
+      구문 포인트 "as mundane a behavior as"는 어법 문제로도 출제되는 어순이므로 별도 판서 권장.
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no" style="background:#8b98ad">＋</span><span style="color:#8b98ad">수업 활용 메모</span></div>
+    <div class="sec-body memo"></div>
+  </div>
+</div>
+
+<!-- ===================== 문항 04 ===================== -->
+<div class="page">
+  <div class="q-head">
+    <span class="q-num">문항 04</span>
+    <span class="badge b-src">2011.09 평가원 27</span>
+    <span class="badge b-type">유형 · 빈칸추론 (빈칸 = 첫 문장 주어)</span>
+    <span class="badge b-ans">정답 ①</span>
+    <span class="badge b-diff">어휘 장벽 돌파형</span>
+  </div>
+
+  <div class="sec c1">
+    <div class="sec-title"><span class="no">1</span><span class="t">지문 독해 — 글의 흐름 한눈에</span></div>
+    <div class="sec-body">
+      <b>주제:</b> 정보가 넘쳐날수록 정보를 평가하기는 더 어려워진다 (정보 과부하 → 혼란·결정 회피)<br>
+      <b>전개:</b> 도입(빈칸): ___은 우리가 쓸 수 있는 정보의 과잉으로 악화된다
+      <span class="arrow">→</span> 명백한 사례: MS 주식 가치 평가에 잠재적으로 관련된 정보가 얼마나 많은가
+      <span class="arrow">→</span> 확장: 정보가 덜 복잡해 보일 때조차 <b>information overload(혼란과 결정 회피 상태)</b>는 발생
+      <span class="arrow">→</span> 실험: 잼 시식 — 적은 종류 vs 많은 종류 → 많은 쪽이 사람은 더 끌었지만 <b>판매는 적은 쪽이 최다</b>
+      <span class="arrow">→</span> 이유(마지막 문장): 많은 선택지 → 정보 과부하 → "결정이 너무 복잡하다"는 느낌<br>
+      <b>교재 강조(V check):</b> aggravated 뜻을 몰라도 선지 소거로 풀 수 있다 / While~ 문장은 완벽 해석 안 돼도 주절 핵심만 /
+      슈퍼마켓 예시에서 확정 + 마지막 문장에서 확신.
+    </div>
+  </div>
+
+  <div class="sec c2">
+    <div class="sec-title"><span class="no">2</span><span class="t">구문분석 — 핵심 문장 끊어읽기</span></div>
+    <div class="sec-body">
+      <div class="sent"><span class="chunk">While</span> everyone likes the idea of abundant choice, / and indeed the table with the greater selection attracted larger crowds, / <span class="chunk">it was</span> the table with fewer samples / <span class="chunk">that led to</span> the most sales.</div>
+      <div class="gloss">모두가 풍부한 선택이라는 생각을 좋아하지만 / 그리고 실제로 더 많은 종류의 테이블이 더 큰 무리를 끌었지만 / 바로 더 적은 샘플의 테이블이었다 / 최다 판매로 이어진 것은</div>
+      <ul>
+        <li><span class="tag">While 양보절</span> — "~이지만" (두 개의 절이 and로 병렬된 긴 양보절) ← 교재: 완벽 해석 안 돼도 <b>주절만</b> 잡으면 됨</li>
+        <li><span class="tag">it was ~ that ...</span> — <b>강조구문</b>: 주어(the table with fewer samples)를 강조 ★판서 포인트</li>
+        <li>대조 포인트: attracted crowds(모으기) ≠ led to sales(사게 하기)</li>
+      </ul>
+      <div class="divide"></div>
+      <div class="sent">information overload, / <span class="chunk">a state of confusion and decision avoidance</span>, / can still occur.</div>
+      <div class="gloss">정보 과부하 / 즉 혼란과 결정 회피의 상태는 / 여전히 발생할 수 있다</div>
+      <ul>
+        <li><span class="tag">동격 삽입구</span> — 콤마 사이 명사구가 information overload를 정의 — <b>필자가 직접 준 단어 뜻풀이</b>는 반드시 표시</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec c3">
+    <div class="sec-title"><span class="no">3</span><span class="t">풀이 순서 — 접근법</span></div>
+    <div class="sec-body">
+      <ol>
+        <li>빈칸 문장에서 aggravated(악화되다)를 몰라도 멈추지 않는다 — "___이 정보 과잉으로 <b>어떻게든 나빠진다</b>" 정도로 잡고 진행</li>
+        <li>동격 삽입구에서 information overload의 정의(혼란·결정 회피)를 확보</li>
+        <li>잼 실험에서 방향 확정: 선택지 多 → 구매 少 = 결정이 어려워짐</li>
+        <li>마지막 문장 "the decision was too complicated"에서 확신 → 빈칸 = <b>정보를 평가(assess)하기 어려움</b></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec c4">
+    <div class="sec-title"><span class="no">4</span><span class="t">선지 분석 — 오답이 오답인 이유</span></div>
+    <div class="sec-body">
+      <span class="right">① 정답 — Difficulty in assessing information: 정보가 많아질수록 평가·판단이 어려워진다는 글 전체 요약. overload·decision too complicated의 패러프레이즈</span><br>
+      ② <span class="wrong">무관</span> — 정보원의 "신뢰성"은 소재가 아님 (양의 문제이지 질·신뢰의 문제가 아님)<br>
+      ③ <span class="wrong">왜곡</span> — misleading(오도하는) 정보가 아니라 <b>너무 많은</b> 정보가 문제<br>
+      ④ <span class="wrong">왜곡</span> — indirect(간접) 정보라는 조건은 지문에 없음<br>
+      ⑤ <span class="wrong">지엽·왜곡</span> — 소비자 행동 "변화시키기"의 복잡성이 아니라 소비자 <b>자신의 결정</b>이 복잡해지는 것 (실험 소재 재활용 함정)
+    </div>
+  </div>
+
+  <div class="sec c5">
+    <div class="sec-title"><span class="no">5</span><span class="t">조언 · 팁</span></div>
+    <div class="sec-body tip-box">
+      학생 지도 포인트: "빈칸 문장에 모르는 단어(aggravated)가 있으면 그 문항은 못 푼다"는 착각을 깨는 문항 —
+      <b>모르는 단어는 '+/– 방향'만 잡고 통과</b>하는 훈련. 동격 삽입구(콤마, 명사구, 콤마)는 필자가 주는 공짜 힌트임을 강조.
+      it ~ that 강조구문은 이 지문의 실험 결과 문장으로 문법 수업과 연계 가능.
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no" style="background:#8b98ad">＋</span><span style="color:#8b98ad">수업 활용 메모</span></div>
+    <div class="sec-body memo"></div>
+  </div>
+</div>
+
+</body>
+</html>
