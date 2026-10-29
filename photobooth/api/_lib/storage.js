@@ -3,9 +3,10 @@ import { dirname, join, relative } from 'node:path'
 import { BlobNotFoundError, del, get, head, list, put } from '@vercel/blob'
 
 // 사진은 비공개(private) Vercel Blob 저장소에 두고, 항상 우리 함수를 거쳐서만 내려보냄.
-// BLOB_READ_WRITE_TOKEN이 없으면(로컬 개발) .blob-dev 폴더를 대신 사용
+// 저장소를 프로젝트에 연결하면 BLOB_STORE_ID(+ 요청마다 오는 OIDC 토큰) 또는 BLOB_READ_WRITE_TOKEN이 생김.
+// 둘 다 없으면(로컬 개발) .blob-dev 폴더를 대신 사용
 const ACCESS = 'private'
-const useBlob = Boolean(process.env.BLOB_READ_WRITE_TOKEN)
+const useBlob = Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN)
 
 export class StorageNotConfigured extends Error {}
 

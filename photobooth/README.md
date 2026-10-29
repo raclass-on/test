@@ -31,7 +31,7 @@ QR로 사진을 받으려면 인터넷 주소가 필요하고, 카메라는 **ht
 1. Vercel에서 이 저장소로 새 프로젝트를 만들고 **Root Directory** 를 `photobooth` 로 지정
    (빌드 설정은 `vercel.json`과 Vite 기본값을 사용)
 2. **Storage → Create → Blob** 으로 저장소를 만들고(접근: **Private**, 지역: 서울 `icn1` 권장) 프로젝트에 연결
-   → `BLOB_READ_WRITE_TOKEN` 환경변수가 자동으로 추가됨
+   → `BLOB_STORE_ID`(또는 `BLOB_READ_WRITE_TOKEN`) 환경변수가 자동으로 추가됨
 3. 다시 배포
 
 ### 설정
