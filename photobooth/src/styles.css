@@ -842,10 +842,18 @@ input {
   border-top: 1px solid var(--line);
 }
 
-.qr-btn {
-  grid-column: 1 / -1;
-  min-height: 66px;
-  font-size: 22px;
+.editor .topbar {
+  position: relative;
+}
+
+.top-qr {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  min-height: 54px;
+  padding: 0 26px;
+  border-radius: 99px;
+  font-size: 20px;
 }
 
 /* 가로 화면(태블릿 가로·PC): 미리보기 왼쪽, 도구 오른쪽 */

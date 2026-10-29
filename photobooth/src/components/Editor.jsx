@@ -191,6 +191,10 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
         <button className="icon-btn" onClick={() => setConfirmHome(true)} aria-label="처음으로">
           <HomeIcon size={28} />
         </button>
+        {/* 거치대에 세우면 아래쪽은 손이 잘 안 닿아서 맨 위 가운데에 둠 */}
+        <button className="primary-btn top-qr" onClick={openQr}>
+          <QrIcon /> QR 코드
+        </button>
         <div className="topbar-right">
           <button className="icon-btn" onClick={print} aria-label="인쇄">
             <PrintIcon size={28} />
@@ -254,9 +258,6 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
           </button>
           <button className="soft-btn" onClick={savePhoto}>
             <ImageIcon /> 사진 저장
-          </button>
-          <button className="primary-btn qr-btn" onClick={openQr}>
-            <QrIcon /> QR 코드
           </button>
         </div>
       </section>
