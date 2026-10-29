@@ -27,7 +27,8 @@ let stickerSeq = 0
 
 function friendlyError(err) {
   if (err instanceof TypeError) return '인터넷 연결을 확인해 주세요.'
-  if (err.status === 404) return '저장 서버를 찾을 수 없어요. Netlify에 배포된 주소에서 열었는지 확인해 주세요.'
+  if (err.status === 404) return '저장 서버를 찾을 수 없어요. 배포된 주소에서 열었는지 확인해 주세요.'
+  if (err.message === 'storage_not_configured') return '사진 저장소(Vercel Blob)가 연결되지 않았어요.'
   if (err.status === 413) return '파일이 너무 커요.'
   if (err.status === 429) return '요청이 너무 많아요. 잠시 후 다시 시도해 주세요.'
   if (err.status) return `서버에 저장하지 못했어요. 잠시 후 다시 시도해 주세요. (${err.status})`

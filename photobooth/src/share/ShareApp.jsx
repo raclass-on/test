@@ -75,7 +75,7 @@ export default function ShareApp() {
       }
     }
     const a = document.createElement('a')
-    a.href = `${fileUrl(tab)}?download=1`
+    a.href = `${fileUrl(tab)}/download`
     a.download = ''
     document.body.appendChild(a)
     a.click()

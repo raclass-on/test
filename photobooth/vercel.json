@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "regions": ["icn1"],
+  "rewrites": [
+    { "source": "/s/:id", "destination": "/share.html" },
+    { "source": "/api/upload/:id/video", "destination": "/api/upload?id=:id" },
+    { "source": "/api/share/:id", "destination": "/api/files?id=:id" },
+    { "source": "/api/file/:id/:kind", "destination": "/api/files?id=:id&kind=:kind" },
+    { "source": "/api/file/:id/:kind/download", "destination": "/api/files?id=:id&kind=:kind&download=1" }
+  ],
+  "crons": [{ "path": "/api/cleanup", "schedule": "0 18 * * *" }]
+}

@@ -1,24 +1,19 @@
-import { getStore } from '@netlify/blobs'
+import { StorageNotConfigured } from './storage.js'
 
 const DAY = 24 * 60 * 60 * 1000
 const ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const ID_RE = /^([0-9a-z]{6,12})-[0-9A-Za-z]{12}$/
 
+// Vercel 함수 요청 본문은 최대 4.5MB
 export const KINDS = {
-  photo: { types: ['image/jpeg', 'image/png', 'image/webp'], maxBytes: 5 * 1024 * 1024, ext: { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' } },
-  video: { types: ['video/mp4', 'video/webm'], maxBytes: 5 * 1024 * 1024, ext: { 'video/mp4': 'mp4', 'video/webm': 'webm' } },
+  photo: { types: ['image/jpeg', 'image/png', 'image/webp'], maxBytes: 4 * 1024 * 1024, ext: { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' } },
+  video: { types: ['video/mp4', 'video/webm'], maxBytes: 4 * 1024 * 1024, ext: { 'video/mp4': 'mp4', 'video/webm': 'webm' } },
 }
 
-export function store() {
-  return getStore({ name: 'photobooth', consistency: 'strong' })
-}
-
-function env(key) {
-  return globalThis.Netlify?.env?.get(key) ?? process.env[key]
-}
+export const blobPath = (id, kind) => `booth/${id}/${kind}`
 
 export function retentionMs() {
-  const days = Number(env('PHOTO_RETENTION_DAYS'))
+  const days = Number(process.env.PHOTO_RETENTION_DAYS)
   return (days > 0 ? days : 7) * DAY
 }
 
@@ -35,6 +30,18 @@ export function parseId(id) {
   if (!m) return null
   const createdAt = parseInt(m[1], 36)
   return { createdAt, expiresAt: createdAt + retentionMs() }
+}
+
+// vercel.json 리라이트로 넘어온 값(?id=)과 원래 주소(/api/share/<id>) 둘 다 지원
+export function routeParams(request) {
+  const url = new URL(request.url)
+  const q = url.searchParams
+  const m = /^\/api\/(?:share\/([^/]+)|file\/([^/]+)\/([^/]+)(\/download)?|upload\/([^/]+)\/video)\/?$/.exec(url.pathname)
+  return {
+    id: q.get('id') ?? m?.[1] ?? m?.[2] ?? m?.[5] ?? null,
+    kind: q.get('kind') ?? m?.[3] ?? null,
+    download: q.has('download') || Boolean(m?.[4]),
+  }
 }
 
 // 클라이언트가 보낸 Content-Type 대신 실제 파일 내용으로 형식을 판별
@@ -54,4 +61,14 @@ function ascii(b, start, end) {
 
 export function json(data, status = 200, headers = {}) {
   return Response.json(data, { status, headers: { 'cache-control': 'no-store', ...headers } })
+}
+
+export async function handleErrors(task) {
+  try {
+    return await task()
+  } catch (err) {
+    console.error(err)
+    if (err instanceof StorageNotConfigured) return json({ error: 'storage_not_configured' }, 500)
+    return json({ error: 'server_error' }, 500)
+  }
 }
