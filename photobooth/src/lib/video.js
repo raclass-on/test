@@ -25,7 +25,7 @@ export function canMakeVideo(shots) {
 }
 
 // 촬영하면서 녹화한 4개의 짧은 영상을 프레임 안에 동시에 재생하며 하나의 영상으로 녹화
-export async function exportVideo({ layout, frame, filter, shots, stickers, date, onProgress }) {
+export async function exportVideo({ layout, frame, filter, shots, stickers, date }) {
   await ensureFonts()
   const type = pickVideoType()
   const scale = layout.videoScale
@@ -56,9 +56,7 @@ export async function exportVideo({ layout, frame, filter, shots, stickers, date
     await new Promise((resolve) => {
       const tick = () => {
         draw()
-        const t = performance.now() - startedAt
-        onProgress?.(Math.min(1, t / durationMs))
-        if (t >= durationMs + 400) resolve()
+        if (performance.now() - startedAt >= durationMs + 400) resolve()
         else requestAnimationFrame(tick)
       }
       requestAnimationFrame(tick)

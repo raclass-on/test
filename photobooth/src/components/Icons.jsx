@@ -40,22 +40,6 @@ export const InstagramIcon = (p) => (
   </Svg>
 )
 
-export const PlayIcon = (p) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="9" />
-    <path d="m10 8.5 5 3.5-5 3.5z" />
-  </Svg>
-)
-
-export const ImageIcon = (p) => (
-  <Svg {...p}>
-    <rect x="3" y="5" width="16" height="14" rx="2" />
-    <path d="M7 5V3h14v14h-2" />
-    <circle cx="8" cy="10" r="1.5" />
-    <path d="m3 17 5-5 4 4 2-2 5 5" />
-  </Svg>
-)
-
 export const QrIcon = (p) => (
   <Svg {...p}>
     <rect x="3" y="3" width="7" height="7" rx="1.5" />

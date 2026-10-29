@@ -7,11 +7,11 @@ import { cls, useFitBox, useToast } from '../lib/hooks'
 import { LAYOUTS } from '../lib/layouts'
 import { printPhoto } from '../lib/print'
 import { exportPhoto, renderComposite } from '../lib/render'
-import { canShareFile, downloadBlob, extensionFor, shareFile, stamp } from '../lib/save'
+import { canShareFile, shareFile, stamp } from '../lib/save'
 import { canMakeVideo, exportVideo } from '../lib/video'
 import FilterPanel from './FilterPanel'
 import FramePanel from './FramePanel'
-import { HomeIcon, ImageIcon, InstagramIcon, PlayIcon, PrintIcon, QrIcon } from './Icons'
+import { HomeIcon, InstagramIcon, PrintIcon, QrIcon } from './Icons'
 import Modal from './Modal'
 import QrModal from './QrModal'
 import StickerLayer from './StickerLayer'
@@ -90,7 +90,7 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
   }
   const exportArgs = { layout, frame, filter, shots, stickers, date }
   const getPhoto = () => memo('photo', () => exportPhoto(exportArgs))
-  const getVideo = (onProgress) => memo('video', () => exportVideo({ ...exportArgs, onProgress }))
+  const getVideo = () => memo('video', () => exportVideo(exportArgs))
 
   function addSticker(def) {
     const uid = ++stickerSeq
@@ -121,19 +121,6 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
       setBusy(null)
     }
   }
-
-  const savePhoto = () =>
-    withBusy('사진 만드는 중…', async () => {
-      downloadBlob(await getPhoto(), `fourcut-${stamp(date)}.jpg`)
-      showToast('사진을 저장했어요')
-    })
-
-  const saveVideo = () =>
-    withBusy('영상 만드는 중… (약 5초)', async () => {
-      const blob = await getVideo((p) => setBusy(`영상 만드는 중… ${Math.round(p * 100)}%`))
-      downloadBlob(blob, `fourcut-${stamp(date)}.${extensionFor(blob.type)}`)
-      showToast('영상을 저장했어요')
-    })
 
   const print = () =>
     withBusy('인쇄 준비 중…', async () => {
@@ -193,7 +180,7 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
         </button>
         {/* 거치대에 세우면 아래쪽은 손이 잘 안 닿아서 맨 위 가운데에 둠 */}
         <button className="primary-btn top-qr" onClick={openQr}>
-          <QrIcon /> QR 코드
+          <QrIcon size={30} /> QR 코드
         </button>
         <div className="topbar-right">
           <button className="icon-btn" onClick={print} aria-label="인쇄">
@@ -248,18 +235,6 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
           {tab === 'filter' && <FilterPanel filterId={filterId} onFilter={setFilterId} shots={shots} />}
         </div>
 
-        <div className="actions">
-          <button
-            className="soft-btn"
-            onClick={videoAvailable ? saveVideo : () => showToast('갤러리에서 고른 사진은 영상을 만들 수 없어요')}
-            aria-disabled={!videoAvailable}
-          >
-            <PlayIcon /> 영상 저장
-          </button>
-          <button className="soft-btn" onClick={savePhoto}>
-            <ImageIcon /> 사진 저장
-          </button>
-        </div>
       </section>
 
       {busy && (
