@@ -49,7 +49,7 @@ export function thumbnail(canvas, maxSide = 480) {
   return t.toDataURL('image/jpeg', 0.8)
 }
 
-// 카운트다운 동안 짧은 영상을 녹화 (영상 저장용). 지원하지 않으면 null
+// 카운트다운 동안 짧은 영상을 녹화 (QR로 받는 움직이는 네컷용). 지원하지 않으면 null
 export function startClip(stream) {
   const type = pickVideoType()
   if (type === null) return null

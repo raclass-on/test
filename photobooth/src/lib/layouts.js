@@ -15,7 +15,7 @@ function makeSlots({ cols, rows, W, H, side, gap, top, bottom }) {
 const grid = { W: 1080, H: 1920, side: 60, gap: 24, top: 130, bottom: 290 }
 const strip = { W: 720, H: 2160, side: 44, gap: 22, top: 92, bottom: 268 }
 
-// W×H: 저장되는 사진 크기(px). video: 영상 저장 시 축소 비율
+// W×H: 저장되는 사진 크기(px). videoScale: 영상을 만들 때 축소 비율
 export const LAYOUTS = {
   grid: {
     id: 'grid',

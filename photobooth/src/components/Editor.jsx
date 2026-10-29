@@ -131,7 +131,7 @@ export default function Editor({ initialLayoutId, shots, onHome }) {
     withBusy('사진 만드는 중…', async () => {
       const file = new File([await getPhoto()], `fourcut-${stamp(date)}.jpg`, { type: 'image/jpeg' })
       if (!canShareFile(file)) {
-        showToast('이 기기에서는 바로 공유할 수 없어요. 사진 저장 후 인스타그램에 올려 주세요')
+        showToast('이 기기에서는 바로 공유할 수 없어요. QR 코드로 받은 사진을 인스타그램에 올려 주세요')
         return
       }
       await shareFile(file, BRAND)
