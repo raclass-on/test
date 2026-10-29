@@ -21,6 +21,19 @@ async function fetchFile(kind, type) {
   return new File([blob], `fourcut-${id.slice(-4)}.${extensionFor(type)}`, { type })
 }
 
+// 일시적인 서버 오류는 한 번 더 시도
+async function loadInfo(retries = 1) {
+  const res = await fetch(`/api/share/${encodeURIComponent(id)}`).catch(() => null)
+  if (res?.status === 404) throw new Error('사진을 찾을 수 없어요. QR 코드를 다시 찍어 주세요.')
+  if (res?.status === 410) throw new Error('보관 기간이 지나 사진이 삭제되었어요.')
+  if (res?.ok) return res.json()
+  if (retries > 0) {
+    await new Promise((r) => setTimeout(r, 1500))
+    return loadInfo(retries - 1)
+  }
+  throw new Error(res ? '잠시 후 다시 시도해 주세요.' : '인터넷 연결을 확인해 주세요.')
+}
+
 export default function ShareApp() {
   const [info, setInfo] = useState(null)
   const [error, setError] = useState(null)
@@ -29,24 +42,23 @@ export default function ShareApp() {
   const [notice, setNotice] = useState(null)
 
   useEffect(() => {
-    fetch(`/api/share/${encodeURIComponent(id)}`)
-      .then(async (res) => {
-        if (res.status === 404) throw new Error('사진을 찾을 수 없어요. QR 코드를 다시 찍어 주세요.')
-        if (res.status === 410) throw new Error('보관 기간이 지나 사진이 삭제되었어요.')
-        if (!res.ok) throw new Error('잠시 후 다시 시도해 주세요.')
-        return res.json()
-      })
+    let cancelled = false
+    loadInfo()
       .then((data) => {
+        if (cancelled) return
         setInfo(data)
         // 공유 시트는 클릭 직후에만 열 수 있어서 파일을 미리 받아 둠
         for (const kind of ['photo', 'video']) {
           if (!data[kind]) continue
           fetchFile(kind, data[kind].type)
-            .then((file) => setFiles((f) => ({ ...f, [kind]: file })))
+            .then((file) => !cancelled && setFiles((f) => ({ ...f, [kind]: file })))
             .catch(() => {})
         }
       })
-      .catch((err) => setError(err.message))
+      .catch((err) => !cancelled && setError(err.message))
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const file = files[tab]
@@ -107,7 +119,7 @@ export default function ShareApp() {
 
       {info && (
         <main className="share-main">
-          <p className="share-title">오늘의 네컷이 도착했어요 📸</p>
+          <p className="share-title">네컷 사진이 도착했어요 📸</p>
           {info.video && (
             <div className="share-tabs">
               <button className={tab === 'photo' ? 'active' : ''} onClick={() => setTab('photo')}>

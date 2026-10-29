@@ -1,4 +1,4 @@
-# 오늘의 네컷 📸
+# 레이첼영어학원 네컷 📸
 
 태블릿(또는 노트북) 하나로 운영하는 네컷 사진 부스 웹앱입니다.
 
@@ -46,7 +46,7 @@ netlify deploy --build --prod
 
 | 항목 | 위치 | 기본값 |
 | --- | --- | --- |
-| 부스 이름 (프레임 하단 글씨) | `src/config.js` 의 `BRAND`, `BRAND_SMALL` | 오늘의 네컷 |
+| 학원 이름 (첫 화면, 프레임 위·아래 글씨, 저장 페이지) | `src/config.js` 의 `BRAND`, `BRAND_SMALL` | 레이첼영어학원 / Rachel English Academy |
 | 카운트다운 초 / 촬영 장수 | `src/config.js` | 4초 / 4장 |
 | 사진 보관 기간 | Netlify 환경변수 `PHOTO_RETENTION_DAYS` (Functions 범위) | 7일 |
 
