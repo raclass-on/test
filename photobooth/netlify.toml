@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+# QR 코드로 들어오는 다운로드 페이지 (/s/<id>)
+[[redirects]]
+  from = "/s/*"
+  to = "/share.html"
+  status = 200
