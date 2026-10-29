@@ -101,11 +101,6 @@ export default function Shoot({ layout, onDone, onCancel }) {
     setPhase('review')
   }
 
-  function retakeAll() {
-    setShots(Array(SHOT_COUNT).fill(null))
-    run(ALL)
-  }
-
   async function importFiles(fileList) {
     const files = [...fileList].filter((f) => f.type.startsWith('image/')).slice(0, SHOT_COUNT)
     if (!files.length) return
@@ -217,18 +212,13 @@ export default function Shoot({ layout, onDone, onCancel }) {
         {phase === 'review' && (
           <div className="shoot-actions">
             <p className="shoot-hint small">다시 찍고 싶은 사진을 눌러 고를 수 있어요</p>
-            <div className="review-actions">
-              <button
-                className="soft-btn"
-                disabled={selected === null || camera.status !== 'ready'}
-                onClick={() => run([selected])}
-              >
-                선택한 컷 다시 찍기
-              </button>
-              <button className="soft-btn" disabled={camera.status !== 'ready'} onClick={retakeAll}>
-                전체 다시 찍기
-              </button>
-            </div>
+            <button
+              className="soft-btn retake-btn"
+              disabled={selected === null || camera.status !== 'ready'}
+              onClick={() => run([selected])}
+            >
+              선택한 컷 다시 찍기
+            </button>
             <button className="primary-btn shutter-btn" onClick={() => onDone(shots)}>
               꾸미러 가기 →
             </button>

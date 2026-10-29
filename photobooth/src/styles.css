@@ -436,11 +436,8 @@ input {
   border-radius: 20px;
 }
 
-.review-actions {
+.retake-btn {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
 }
 
 .shoot-hint {
@@ -866,6 +863,10 @@ input {
 
 .confirm-modal .modal-actions {
   grid-template-columns: 1fr 1fr;
+}
+
+.modal-actions.single {
+  grid-template-columns: 1fr;
 }
 
 .qr-sub {

@@ -21,7 +21,7 @@ export default function QrModal({ state, onClose, onRetry, onFinish }) {
   }, [state.status, state.url])
 
   return (
-    <Modal onClose={state.status === 'working' ? undefined : onClose} className="qr-modal">
+    <Modal onClose={state.status === 'error' ? onClose : undefined} className="qr-modal">
       {state.status === 'working' && (
         <div className="qr-working">
           <div className="spinner" />
@@ -59,10 +59,7 @@ export default function QrModal({ state, onClose, onRetry, onFinish }) {
               {state.url.replace(/^https?:\/\//, '')}
             </a>
           </p>
-          <div className="modal-actions">
-            <button className="soft-btn" onClick={onClose}>
-              더 꾸미기
-            </button>
+          <div className="modal-actions single">
             <button className="primary-btn" onClick={onFinish}>
               다 찍었어요 · 처음으로
             </button>
