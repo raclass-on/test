@@ -343,6 +343,48 @@ input {
   font-size: 18px;
 }
 
+.start-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.start-shutter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: clamp(150px, 28vmin, 220px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: clamp(20px, 3.2vmin, 26px);
+  font-weight: 800;
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.35),
+    0 12px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.08s;
+}
+
+.start-shutter:active {
+  transform: scale(0.95);
+}
+
+.start-overlay p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
 .flash {
   position: absolute;
   inset: 0;

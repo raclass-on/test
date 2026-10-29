@@ -166,6 +166,16 @@ export default function Shoot({ layout, onDone, onCancel }) {
             </div>
           )}
           {flash && <div className="flash" />}
+          {/* 태블릿을 거치대에 세우면 아래쪽은 손이 잘 안 닿아서 화면 가운데에 둠 */}
+          {phase === 'ready' && camera.status === 'ready' && (
+            <div className="start-overlay">
+              <button className="start-shutter" onClick={() => run(remaining.length ? remaining : ALL)}>
+                <CameraIcon size={40} />
+                촬영 시작
+              </button>
+              <p>누르면 {COUNTDOWN_SECONDS}초 뒤에 첫 사진을 찍어요</p>
+            </div>
+          )}
           {camera.status === 'loading' && <div className="cam-msg">카메라 준비 중…</div>}
           {camera.status === 'error' && (
             <div className="cam-msg">
@@ -196,13 +206,6 @@ export default function Shoot({ layout, onDone, onCancel }) {
 
         {phase === 'ready' && (
           <div className="shoot-actions">
-            <button
-              className="primary-btn shutter-btn"
-              disabled={camera.status !== 'ready'}
-              onClick={() => run(remaining.length ? remaining : ALL)}
-            >
-              <CameraIcon size={26} /> 촬영 시작
-            </button>
             <button className="text-btn" onClick={() => fileRef.current.click()}>
               <GalleryIcon size={20} /> 갤러리에서 고르기
             </button>
