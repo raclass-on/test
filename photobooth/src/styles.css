@@ -478,8 +478,32 @@ input {
   border-radius: 20px;
 }
 
-.retake-btn {
+.review-actions {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 10px;
+}
+
+.review-actions button {
+  min-height: 68px;
+  font-size: 20px;
+  border-radius: 18px;
+}
+
+/* 다 찍은 뒤: 사진 고르는 칸과 버튼을 화면 위쪽으로 */
+.shoot.review .topbar {
+  order: -2;
+}
+
+.shoot.review .shoot-bottom {
+  order: -1;
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+.shoot.review .shoot-stage {
+  margin-bottom: 20px;
 }
 
 .shoot-hint {

@@ -129,7 +129,8 @@ export default function Shoot({ layout, onDone, onCancel }) {
   const preview = phase === 'review' && selected !== null ? shots[selected]?.thumb : frozen
 
   return (
-    <div className="shoot">
+    // 다 찍은 뒤에는 고르는 칸과 버튼을 위로 (거치대에 세우면 아래쪽은 손이 잘 안 닿음)
+    <div className={cls('shoot', phase === 'review' && 'review')}>
       <header className="topbar dark">
         <button className="icon-btn" onClick={onCancel} aria-label="처음으로">
           <CloseIcon />
@@ -215,16 +216,18 @@ export default function Shoot({ layout, onDone, onCancel }) {
         {phase === 'review' && (
           <div className="shoot-actions">
             <p className="shoot-hint small">다시 찍고 싶은 사진을 눌러 고를 수 있어요</p>
-            <button
-              className="soft-btn retake-btn"
-              disabled={selected === null || camera.status !== 'ready'}
-              onClick={() => run([selected])}
-            >
-              선택한 컷 다시 찍기
-            </button>
-            <button className="primary-btn shutter-btn" onClick={() => onDone(shots)}>
-              꾸미러 가기 →
-            </button>
+            <div className="review-actions">
+              <button
+                className="soft-btn"
+                disabled={selected === null || camera.status !== 'ready'}
+                onClick={() => run([selected])}
+              >
+                선택한 컷 다시 찍기
+              </button>
+              <button className="primary-btn" onClick={() => onDone(shots)}>
+                꾸미러 가기 →
+              </button>
+            </div>
           </div>
         )}
       </footer>
